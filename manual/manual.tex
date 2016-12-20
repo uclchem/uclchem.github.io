@@ -33,7 +33,7 @@ Follow the instructions in this section to set up \textsc{uclchem} and start run
 \begin{itemize}
 \item For each run of the model, parameters.f90 needs to be altered to set the values of variables and the names of output files. For large grid you may wish to override this with a simple read in. See Section~\ref{sec:alter}.
 \item After each change to parameters.f90, run "make". Unlike the full build, this takes negligible time.
-\item Run "./main" to run \textsc{uclchem} with your parameters.
+\item Run "./uclchem" to run \textsc{uclchem} with your parameters.
 \end{itemize}
 %
 %
@@ -46,7 +46,7 @@ The other major output is the analysis file. For every species appearing in the 
 %
 \section{Networks and MakeRates}
 \label{sec:network}
-\textsc{Uclchem} requires four files relating to the network to run: species.csv, reactions.csv, odes.f90 and evaplists.csv. Each of these is produced by MakeRates from user defined files. species.csv and reactions.csv are columnated lists of species, reactions and various related values such as masses and rate constants. odes.f90 is an automatically generated FORTRAN file containing every ODE in the network and evaplists.csv is a list of mantle species and the fraction evaporated in each type of desorption event.\par
+\textsc{Uclchem} requires four files relating to the network to run: species.csv, reactions.csv, odes.f90 and evaplists.csv. Each of these is produced by MakeRates from user defined files. species.csv and reactions.csv are columnated lists of species, reactions and various related values such as masses and rate constants. odes.f90 is an automatically generated Fortran file containing every ODE in the network and evaplists.csv is a list of mantle species and the fraction evaporated in each type of desorption event. It is important to note that whilst the csv files are read in, odes.f90 is a compiled file. It is included in chem.f90 as part of the F subroutine. Therefore, the code must be recompiled via make if odes.f90 is changed. Small changes to the other files (for example, changing some alphas in reactions.csv) do not require recompilng the code as long as the number of species/reactions or the odes do not change. \par
 The required input files are a species list, a grain/custom reaction file and a UMIST file for gas-phase reactions. For every species, the grain reaction file should contain freeze out routes and desorption reactions, see MakeRates/inputFiles/uclgrainbasic.csv for examples. The species list should be a list of every species, along with their mass and the fraction desorbed in each evaporation event if it is a mantle species. There is, unfortunately, no way to automate this. Once the files are prepared, check MakeRates.py refers to the correct input files and run "python MakeRates.py" from the MakeRates/ directory. MakeRates will place all required files in the outputFiles/ directory. It will also print important information to the terminal. This includes notes of possible duplicate reactions and a list of species that freeze out along multiple reaction pathways. \par
 It is important to ensure all the $\alpha$ values for the freeze out reactions of a single species sum to 1. For example, if there are two freeze out reactions for CO,
 \begin{eqnarray}
@@ -79,7 +79,7 @@ Hydro.f90 is a simple physics module that reads in temperature, density and time
 \label{sec:alter}
 It is impossible to predict all the changes one may wish to make to the code. However, there are a few common changes one may wish to consider.\par
 Firstly, the parameters file is a useful way to set up a single model and to understand the variables that a user may wish to edit. It avoids the awkwardness of FORTRAN's read/write functions and the possible errors that arises from misread variables. However, for a large grid of models running simultaneously, it is cumbersome. A simple edit is to insert a read input line in main.f90 after "include parameters.f90"; an example is commented out in main.f90. This way, if a grid of models is being run varying a small number of parameters, the code can be run as,\\
- \centerline{"./main \textless ~variable1 variable2 ... variableN".}\\
+ \centerline{"./uclchem \textless ~variable1 variable2 ... variableN".}\\
 Eliminating the need to edit parameters.f90 programmatically, make the executable and run for each model.\par
 The other obvious edit is the physics, physics-template.f90 is provided to encourage this. If none of the physics modules included in the repository suit the objects you wish to modle, then physics-template.f90 provides a base from which you can produce a new module. Ultimately, it needs to set the density, temperature and visual extinction of the gas as well as setting flags for the chemistry module to know that it should evaporate the mantle species. Anything else is entirely optional. We would like to encourage users who create physics modules to share them in the main repository once they've reached a usable state.
  
