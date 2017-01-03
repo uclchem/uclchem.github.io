@@ -8,7 +8,7 @@
 \maketitle
 
 \section{Introduction}
-\textsc{uclchem} is a gas-grain chemical code written in FORTRAN 95. It solves a couple system of ODEs that give the abundance of every species from a user defined set of species and reactions. As well as the user defined reactions it implements optional processes such as thermal and non-thermal desorption and self-shielding of H2 and CO. This document explains the code generally and explains how to use it. Detailed information and references for individual processes in the code can be found in the comments. In Section~\ref{sec:quick}, the basic process of setting up and running the code is explained and Section~\ref{sec:output} gives further explanation of the inputs and outputs of the code. The later sections then go into depth about the main components of the code so that the physical models can be well understood. 
+\textsc{uclchem} is a gas-grain chemical code written in FORTRAN 95. It solves a couple system of ODEs that give the abundance of every species from a user defined set of species and reactions. As well as the user defined reactions it implements optional processes such as thermal and non-thermal desorption and self-shielding of H2 and CO. This document explains the code generally and explains how to use it. Detailed information and references for individual processes in the code can be found in the comments. In Section~\ref{sec:quick}, the basic process of setting up and running the code is explained and Section~\ref{sec:output} gives further explanation of the inputs and outputs of the code. The later sections then go into depth about the main components of the code so that the physical models can be well understood. At the end of the document, Section~\ref{sec:trouble} gives troubleshooting advice for problems encountered by first time users.
 
 \section{Quick Start Guide}
 \label{sec:quick}
@@ -18,7 +18,7 @@ Follow the instructions in this section to set up \textsc{uclchem} and start run
 \begin{itemize}
 \item In the MakeRates/inputFiles directory, there should be a UMIST database file, a custom reaction file and a species file (UMIST12, uclgrainbasic.csv and basicspecies.csv are the default). Alter these as required. Only species in the species file will be included in your network, reactions not involving them are dropped. UMIST is gas phase only, all grain processes (including freeze out) are in the custom reaction file.
 \item Check MakeRates.py refers to your input files and from the MakeRates/ directory, run "python MakeRates.py"
-\item Copy the contents of MakeRates/outputFiles into your \textsc{uclchem} directory. 
+\item Copy the contents of MakeRates/outputFiles into your \textsc{uclchem} directory.
 \end{itemize}
 %
 \subsection{Setup and Compiling}
@@ -53,7 +53,7 @@ It is important to ensure all the $\alpha$ values for the freeze out reactions o
 CO + Freeze \rightarrow \#CO \\
 CO + Freeze \rightarrow \#HCO
 \end{eqnarray}
- and you wish 90\% of CO to freeze as itself (\#CO) and 10\% to \#HCO, the alphas should be 0.9 and 0.1 respectively. This will make the overall freeze out rate of CO correct for the model, whilst setting the proportions according to your assumptions.     
+ and you wish 90\% of CO to freeze as itself (\#CO) and 10\% to \#HCO, the alphas should be 0.9 and 0.1 respectively. This will make the overall freeze out rate of CO correct for the model, whilst setting the proportions according to your assumptions.
 %
 %
 \section{Physics}
@@ -67,7 +67,7 @@ In phase 1, the parcel is initialised with an extremely low density and allowed 
 In phase 2, collapse is generally turned off, though this is optional. The temperature profiles for cores surrounding protostars of a number of different masses are detailed in parameters.f90 and so the effects of warming the gas around a protostar can be studied. In this phase, evaporation is also introduced. At pre-determined temperatures, evaporation flags are activated so that the chemistry module will remove species from the grains. See \citet{viti2004} for more information on the temperature profiles and evaporation events.
 %
 \subsection{C-shock}
-The C-shock module is the combination of \textsc{uclchem} with the C-shock parameterization of \citet{jimenez2008}. Phase 1 can be run in the same way as the cloud model. However, in phase 2 the gas properties are entirely determined by the shock model. Evaporation occurs as a complete ejection of all mantle species into the gas phase at a time t$_{sat}$, the time when there is no further desorption in full C-shock models. The time from desorption beginning to t$_sat$ is short compared to the timescales in the model and so it implemented as a single event. The C-shock model outputs the temperature, density and neutral and ion velocities of the gas as well as the usual \textsc{uclchem} outputs. We encourage the user to read \citet{jimenez2008} for a full technical discussion of the model as well as \citet{viti2011} and \citet{Holdship2016b} for its combination and application with \textsc{uclchem}. 
+The C-shock module is the combination of \textsc{uclchem} with the C-shock parameterization of \citet{jimenez2008}. Phase 1 can be run in the same way as the cloud model. However, in phase 2 the gas properties are entirely determined by the shock model. Evaporation occurs as a complete ejection of all mantle species into the gas phase at a time t$_{sat}$, the time when there is no further desorption in full C-shock models. The time from desorption beginning to t$_sat$ is short compared to the timescales in the model and so it implemented as a single event. The C-shock model outputs the temperature, density and neutral and ion velocities of the gas as well as the usual \textsc{uclchem} outputs. We encourage the user to read \citet{jimenez2008} for a full technical discussion of the model as well as \citet{viti2011} and \citet{Holdship2016b} for its combination and application with \textsc{uclchem}.
 %
 \subsection{Turbulent Fragmentation}
 
@@ -82,7 +82,14 @@ Firstly, the parameters file is a useful way to set up a single model and to und
  \centerline{"./uclchem \textless ~variable1 variable2 ... variableN".}\\
 Eliminating the need to edit parameters.f90 programmatically, make the executable and run for each model.\par
 The other obvious edit is the physics, physics-template.f90 is provided to encourage this. If none of the physics modules included in the repository suit the objects you wish to modle, then physics-template.f90 provides a base from which you can produce a new module. Ultimately, it needs to set the density, temperature and visual extinction of the gas as well as setting flags for the chemistry module to know that it should evaporate the mantle species. Anything else is entirely optional. We would like to encourage users who create physics modules to share them in the main repository once they've reached a usable state.
- 
+
+\section{Troubleshooting}
+\label{sec:trouble}
+\subsubsection{Bad Parameters}
+If UCLCHEM crashes on running, its often due to incorrect values in the parameter file. In particular, if firstRun=0 when running UCLCHEM for the first time, the program will crash as it will not find a file with initial abundances. Equally, if the reactions or species files are not named correctly in parameters.f90, the program will fail.
+\subsubsection{Convergence Failure}
+\textsc{uclchem} uses DVODE to integrate the ODEs for the species' abundances. Variables controlling DVODE can be found in paramters.f90, set to values that are optimal for simple cloud models in phase 1. Most DVODE related errors and warnings can be fixed by adjusting these parameters. In particular, abstol and reltol control the integration accuracy. The default values function well for a variety of standard model runs, achieving fast runs without sacrificing accuracy compared to smaller tolerances. However, for larger networks or models where variables change more quickly, lowering these tolerances will improve stability.
+
 \bibliographystyle{nat}
 \bibliography{manual.bib}
 
