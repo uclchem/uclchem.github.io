@@ -1,0 +1,51 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Holdship and Viti(2015)]{Holdship2015}
+Jonathan Holdship and Serena Viti.
+\newblock {Chemical tracers of pre-brown dwarf cores formed through turbulent
+  fragmentation}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  455\penalty0 (3):\penalty0 1--10, nov 2015.
+\newblock ISSN 0035-8711.
+\newblock \doi{10.1093/mnras/stv2460}.
+\newblock URL \url{http://arxiv.org/abs/1510.06576}.
+
+\bibitem[Holdship et~al.(2016)Holdship, Viti, Jimenez-Serra, Makrymallis, and
+  Priestley]{Holdship2016b}
+Jonathan Holdship, Serena Viti, Izaskun Jimenez-Serra, Antonios Makrymallis,
+  and Felix Priestley.
+\newblock {Chemistry in C-shocks with UCLCHEM}.
+\newblock \emph{ApJ}, ?\penalty0 (?):\penalty0 ?, ? 2016.
+\newblock URL \url{http://jonholdship.github.io/uclchem}.
+
+\bibitem[Jim{\'{e}}nez-Serra et~al.(2008)Jim{\'{e}}nez-Serra, Caselli,
+  Mart{\'{i}}n-Pintado, and Hartquist]{jimenez2008}
+I.~Jim{\'{e}}nez-Serra, Paola Caselli, J~Mart{\'{i}}n-Pintado, and T.W.
+  Hartquist.
+\newblock {Parametrization of C-shocks. Evolution of the sputtering of grains}.
+\newblock \emph{Astronomy {\&} Astrophysics}, 482\penalty0 (2):\penalty0
+  549--559, 2008.
+
+\bibitem[Viti et~al.(2004)Viti, Collings, Dever, McCoustra, and
+  Williams]{viti2004}
+Serena Viti, Mark~P. Collings, John~W Dever, Martin R~S McCoustra, and David~A
+  Williams.
+\newblock {Evaporation of ices near massive stars: models based on laboratory
+  temperature programmed desorption data}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  354\penalty0 (4):\penalty0 1141--1145, 2004.
+
+\bibitem[Viti et~al.(2011)Viti, Jim{\'{e}}nez-Serra, Yates, Codella, Vasta,
+  Caselli, Lefloch, and Ceccarelli]{viti2011}
+Serena Viti, I.~Jim{\'{e}}nez-Serra, J~A Yates, C.~Codella, M~Vasta, Paola
+  Caselli, Bertrand Lefloch, and Cecilia Ceccarelli.
+\newblock {L1157-B1: Water and ammonia as diagnostics of shock temperature}.
+\newblock \emph{The Astrophysical Journal Letters}, 740\penalty0 (1):\penalty0
+  L3, 2011.
+
+\end{thebibliography}

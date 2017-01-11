@@ -90,7 +90,7 @@ If UCLCHEM crashes on running, its often due to incorrect values in the paramete
 \subsubsection{Convergence Failure}
 \textsc{uclchem} uses DVODE to integrate the ODEs for the species' abundances. Variables controlling DVODE can be found in paramters.f90, set to values that are optimal for simple cloud models in phase 1. Most DVODE related errors and warnings can be fixed by adjusting these parameters. In particular, abstol and reltol control the integration accuracy. The default values function well for a variety of standard model runs, achieving fast runs without sacrificing accuracy compared to smaller tolerances. However, for larger networks or models where variables change more quickly, lowering these tolerances will improve stability.
 
-\bibliographystyle{nat}
+\bibliographystyle{plainnat}
 \bibliography{manual.bib}
 
 \end{document}
