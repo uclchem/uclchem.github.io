@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -30,6 +30,15 @@ I.~Jim{\'{e}}nez-Serra, Paola Caselli, J~Mart{\'{i}}n-Pintado, and T.W.
 \newblock {Parametrization of C-shocks. Evolution of the sputtering of grains}.
 \newblock \emph{Astronomy {\&} Astrophysics}, 482\penalty0 (2):\penalty0
   549--559, 2008.
+
+\bibitem[{Qu{\'e}nard} et~al.(2018){Qu{\'e}nard}, {Jim{\'e}nez-Serra}, {Viti},
+  {Holdship}, and {Coutens}]{Quenard2018}
+D.~{Qu{\'e}nard}, I.~{Jim{\'e}nez-Serra}, S.~{Viti}, J.~{Holdship}, and
+  A.~{Coutens}.
+\newblock {Chemical modelling of complex organic molecules with peptide-like
+  bonds in star-forming regions}.
+\newblock \emph{\mnras}, 474:\penalty0 2796--2812, feb 2018.
+\newblock \doi{10.1093/mnras/stx2960}.
 
 \bibitem[Viti et~al.(2004)Viti, Collings, Dever, McCoustra, and
   Williams]{viti2004}
