@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,13 +31,21 @@ I.~Jim{\'{e}}nez-Serra, Paola Caselli, J~Mart{\'{i}}n-Pintado, and T.W.
 \newblock \emph{Astronomy {\&} Astrophysics}, 482\penalty0 (2):\penalty0
   549--559, 2008.
 
+\bibitem[{Priestley} et~al.(2018){Priestley}, {Viti}, and
+  {Williams}]{Priestley2018}
+F.~D. {Priestley}, S.~{Viti}, and D.~A. {Williams}.
+\newblock {An Efficient Method for Determining the Chemical Evolution of
+  Gravitationally Collapsing Prestellar Cores}.
+\newblock \emph{AJ}, 156:\penalty0 51, Aug 2018.
+\newblock \doi{10.3847/1538-3881/aac957}.
+
 \bibitem[{Qu{\'e}nard} et~al.(2018){Qu{\'e}nard}, {Jim{\'e}nez-Serra}, {Viti},
   {Holdship}, and {Coutens}]{Quenard2018}
 D.~{Qu{\'e}nard}, I.~{Jim{\'e}nez-Serra}, S.~{Viti}, J.~{Holdship}, and
   A.~{Coutens}.
 \newblock {Chemical modelling of complex organic molecules with peptide-like
   bonds in star-forming regions}.
-\newblock \emph{\mnras}, 474:\penalty0 2796--2812, feb 2018.
+\newblock \emph{MNRAS}, 474:\penalty0 2796--2812, feb 2018.
 \newblock \doi{10.1093/mnras/stx2960}.
 
 \bibitem[Viti et~al.(2004)Viti, Collings, Dever, McCoustra, and

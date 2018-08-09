@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.4.30)  5 JUN 2018 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.4.30)  9 AUG 2018 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**manual
+**manual.tex
 (./manual.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
@@ -263,54 +263,52 @@ Overfull \hbox (1.18272pt too wide) in paragraph at lines 42--42
 nd highly com-mented
  []
 
-[2] [3] [4]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 84.
+[2] [3] [4] [5]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 92.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 84.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 92.
 
-Overfull \hbox (2.84822pt too wide) in paragraph at lines 93--94
+Overfull \hbox (2.84822pt too wide) in paragraph at lines 101--102
 \OT1/cmr/m/n/10 species' abun-dances. Vari-ables con-trol-ling DVODE can be fou
 nd in paramters.f90,
  []
 
-[5] (./manual.bbl [6]
+[6] (./manual.bbl [7]
 Underfull \hbox (badness 1715) in paragraph at lines 28--33
 []\OT1/cmr/m/n/10 I. Jim^^Senez-Serra, Paola Caselli, J Mart^^S^^Pn-Pintado, an
 d T.W. Hartquist.
  []
 
-! Undefined control sequence.
-<recently read> \mnras 
-                       
-l.40 \newblock \emph{\mnras}
-                            , 474:\penalty0 2796--2812, feb 2018.
-? 
-) [7
+) [8
 
-] (./manual.aux) ) 
+] (./manual.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2222 strings out of 494847
- 30096 string characters out of 6179080
- 93864 words of memory out of 5000000
- 5538 multiletter control sequences out of 15000+600000
+ 2224 strings out of 494847
+ 30154 string characters out of 6179080
+ 93936 words of memory out of 5000000
+ 5540 multiletter control sequences out of 15000+600000
  6104 words of font info for 22 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 41i,6n,25p,983b,166s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on manual.pdf (7 pages, 119469 bytes).
+ 41i,6n,25p,987b,166s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti10.pfb>
+Output written on manual.pdf (8 pages, 122387 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
