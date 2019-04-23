@@ -22,6 +22,8 @@
       <p>3D-PDR is a three-dimensional photodissociation region code written in Fortran. It uses the <a href="http://computation.llnl.gov/projects/sundials">Sundials package </a>(written in C) to solve the set of ordinary differential equations and it is the successor of UCL_PDR, a one-dimensional PDR code written at UCL. Using the HEALpix ray-tracing scheme, 3D-PDR solves a three-dimensional escape probability routine and evaluates the attenuation of the far-ultraviolet radiation in the PDR and the propagation of FIR/submm emission lines out of the PDR.</p>
 
 			<p>The code is parallelized (OpenMP) and can be applied to 1D and 3D problems. The GitHub package includes: the 3D-PDR code, three different chemical networks (33, 58, and 128 species) and molecular data, the Sundials solver, and a set of various 1D uniform density clouds and a uniform density spherical distribution to test the 3D version of the code. To `make' 3D-PDR, you will first need to install the Sundials package and link 3D-PDR with the ODE solver. Please see the <a href="https://uclchem.github.io/manual/3DPDR_manual.pdf"> manual </a> for instructions on how to do this step-by-step.</p>
+	    
+	    		<p>(Update: 23/04/2019) The file [3dpdr_cr.tar] that can be found in the main tarball, contains a totally new version of 3D-PDR treating cosmic-ray sources. This version was developed by Brandt Gaches [email: bgaches .at. astro.umass.edu] and is presented in Gaches et al. (2019, submitted). The tarball contains a short additional manual. Please contact Brandt Gaches for any question regarding this version.</p>
 
 			<p>3D-PDR works with the gfortran version 4.8.4 and the ifort version 14.0.4. Later compiler versions may require adjustments in the code.
 
