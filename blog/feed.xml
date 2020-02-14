@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>UCLCHEM Blog</title>
+        <link>https://uclchem.github.io/blog</link>
+        <description>The best place to stay up-to-date with the latest UCLCHEM news and events.</description>
+        <lastBuildDate>Fri, 14 Feb 2020 06:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>UCLCHEM Blog</title>
+            <url>https://uclchem.github.io/img/uclchem-logo.jpg</url>
+            <link>https://uclchem.github.io/blog</link>
+        </image>
+        <copyright>Copyright © 2020 Jon Holdship</copyright>
+        <item>
+            <title><![CDATA[New Website]]></title>
+            <link>https://uclchem.github.io/blog/2020/02/14/New-Website.html</link>
+            <guid>https://uclchem.github.io/blog/2020/02/14/New-Website.html</guid>
+            <pubDate>Fri, 14 Feb 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We've replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to da...</p>]]></description>
+        </item>
+    </channel>
+</rss>

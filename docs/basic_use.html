@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Basic Use · UCLCHEM</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Compiling"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Basic Use · UCLCHEM"/><meta property="og:type" content="website"/><meta property="og:url" content="https://uclchem.github.io/"/><meta property="og:description" content="## Compiling"/><meta property="og:image" content="https://uclchem.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://uclchem.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/uclchem-logo.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://uclchem.github.io/blog/atom.xml" title="UCLCHEM Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://uclchem.github.io/blog/feed.xml" title="UCLCHEM Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/uclchem-logo.jpg" alt="UCLCHEM"/><h2 class="headerTitleWithLogo">UCLCHEM</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/basic_use" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="/3d_pdr" target="_self">3D-PDR</a></li><li class=""><a href="/ucl_pdr" target="_self">UCLPDR</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started:</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started:</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/basic_use">Basic Use</a></li><li class="navListItem"><a class="navItem" href="/docs/network">Creating a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/grids">Advanced Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/parameters">Model Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials">Tutorials</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Physics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/physics">Physics Modules</a></li><li class="navListItem"><a class="navItem" href="/docs/cloud">Cloud/Core Model</a></li><li class="navListItem"><a class="navItem" href="/docs/shocks">Shock Models</a></li><li class="navListItem"><a class="navItem" href="/docs/collapse">Collapse Models</a></li><li class="navListItem"><a class="navItem" href="/docs/hydro">Hydro (Post Processing)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Chemistry</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/gas">Gas Phase Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/grain">Grain Surface Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/desorb">Desorption Reactions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Basic Use</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="compiling"></a><a href="#compiling" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compiling</h2>
+<p>UCLCHEM can be compiled and run from the top directory in the following way:</p>
+<pre><code class="hljs"><span class="hljs-keyword">cd</span> src
+make
+<span class="hljs-keyword">cd</span> <span class="hljs-string">..</span>
+<span class="hljs-string">./uclchem</span>
+</code></pre>
+<p>The makefile <code>src/Makefile</code> contains a small number of user choices. Namely, the compiler and physics module. UCLCHEM comes with various physical models which can be chosen by setting the variable <code>PHYSICS</code> in the makefile to the correct fortran file.</p>
+<h2><a class="anchor" aria-hidden="true" id="input-parameters"></a><a href="#input-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input parameters</h2>
+<p>All possible input parameters for UCLCHEM can be found in <code>src/defaultparameters.f90</code>. When the code is compiled, each parameter is set the value given in this file. Any changes to this file require a recompile.</p>
+<p>Beyond this, any subset of parameters can be written to a file and the file path given to UCLCHEM at run time. This will modify the parameters for a single run. For example if we create a file called test.inp:</p>
+<pre><code class="hljs">initialDens <span class="hljs-number">1.0</span>d2
+finalDens <span class="hljs-number">1.0</span>d4
+collapse <span class="hljs-number">1</span>
+</code></pre>
+<p>and then run UCLCHEM:</p>
+<pre><code class="hljs">./uclchem <span class="hljs-keyword">test</span>.<span class="hljs-keyword">inp</span>
+</code></pre>
+<p>The code will run using the values in <code>src/defaultparameters.f90</code> except for the three parameters listed in test.inp which will take the values from that file.</p>
+<h2><a class="anchor" aria-hidden="true" id="outputs"></a><a href="#outputs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Outputs</h2>
+<p>UCLCHEM has two major outputs. The first is the ”full” output including the major gas properties and the fractional abundance of every single species in the network. This is written to the file given by the <code>outputFile</code> parameter and is written at every timestep.  For those using the full output, a set of python functions to read and plot the abundances from the full output file are provided in <code>scripts/</code></p>
+<p>Optionally, a more machine readable output can be created by suppling the <code>columnFile</code> and <code>outputSpecies</code> as inputs. This produces columnated file of time, density and temperature along with the abundances of the species in the <code>outputSpecies</code> array. The parameter <code>writeStep</code> sets how often this is written.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/network"><span>Creating a Network</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#compiling">Compiling</a></li><li><a href="#input-parameters">Input parameters</a></li><li><a href="#outputs">Outputs</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/uclchem-logo.jpg" alt="UCLCHEM" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/basic_use.html">Getting Started</a><a href="/docs/en/tutorials.html">Tutorials (coming soon)</a></div><div></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/uclchem/uclchem">GitHub</a><a class="github-button" href="https://github.com/uclchem/uclchem" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Jon Holdship</section></footer></div></body></html>

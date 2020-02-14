@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Model Parameters · UCLCHEM</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Model Parameters · UCLCHEM"/><meta property="og:type" content="website"/><meta property="og:url" content="https://uclchem.github.io/"/><meta property="og:description" content="Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model."/><meta property="og:image" content="https://uclchem.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://uclchem.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/uclchem-logo.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://uclchem.github.io/blog/atom.xml" title="UCLCHEM Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://uclchem.github.io/blog/feed.xml" title="UCLCHEM Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/uclchem-logo.jpg" alt="UCLCHEM"/><h2 class="headerTitleWithLogo">UCLCHEM</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/basic_use" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="/3d_pdr" target="_self">3D-PDR</a></li><li class=""><a href="/ucl_pdr" target="_self">UCLPDR</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started:</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started:</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/basic_use">Basic Use</a></li><li class="navListItem"><a class="navItem" href="/docs/network">Creating a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/grids">Advanced Usage</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/parameters">Model Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials">Tutorials</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Physics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/physics">Physics Modules</a></li><li class="navListItem"><a class="navItem" href="/docs/cloud">Cloud/Core Model</a></li><li class="navListItem"><a class="navItem" href="/docs/shocks">Shock Models</a></li><li class="navListItem"><a class="navItem" href="/docs/collapse">Collapse Models</a></li><li class="navListItem"><a class="navItem" href="/docs/hydro">Hydro (Post Processing)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Chemistry</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/gas">Gas Phase Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/grain">Grain Surface Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/desorb">Desorption Reactions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Model Parameters</h1></header><article><div><span><p>Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model.</p>
+<p>All other parameters are listed in the header of the relevant Fortran module and we do not recommend that they are altered.</p>
+<h2><a class="anchor" aria-hidden="true" id="physical-variables"></a><a href="#physical-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Physical Variables</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>initialTemp</td><td>Initial gas temperature for all gas parcels in model</td></tr>
+<tr><td>maxTemp</td><td>Maximum temperature the gas can reach</td></tr>
+<tr><td>initialDens</td><td>Initial gas density for all gas parcels in model</td></tr>
+<tr><td>finalDens</td><td>Final gas density achieve through any collapse process</td></tr>
+<tr><td>currentTime</td><td>Time at start of model</td></tr>
+<tr><td>finalTime</td><td>Time at model finish (see switch)</td></tr>
+<tr><td>radfield</td><td>Interstellar radiatin field in Habing</td></tr>
+<tr><td>zeta</td><td>Cosmic ray ionisation rate as multiple of 1.3e-17</td></tr>
+<tr><td>rout</td><td>Outer radius of cloud being modelled</td></tr>
+<tr><td>rin</td><td>Minimum radial distance from center of cloud to consider</td></tr>
+<tr><td>baseAV</td><td>Extinction at cloud edge - Av of a parcel at rout</td></tr>
+<tr><td>points</td><td>Number of gas parcels equally distributed between rin and rout to consider</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="behavioural-modifiers"></a><a href="#behavioural-modifiers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Behavioural Modifiers</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>phase</td><td>Most physics modules will simulate a static cloud for phase=1 and the intended physics for phase=2</td></tr>
+<tr><td>fr</td><td>Scale freeze out efficiency by an aribtrary value.0.0-1.0</td></tr>
+<tr><td>switch</td><td>Choose if model ends at finalTime (switch=0) of when gas reachees finalDens (1)</td></tr>
+<tr><td>collapse</td><td>Controls whether gas collapses in freefall (0/1). collapse.f90 uses 2/3/4 for different collapse modes</td></tr>
+<tr><td>bc</td><td>Scale factor 0-1.0 controlling speed of freefall.</td></tr>
+<tr><td>readAbunds</td><td>Choose whether to read initial abundances from startFile (=1) or write to startFile at end of run (=0)</td></tr>
+<tr><td>desorb</td><td>Turns all non-thermal desorption processes off if set to 0 otherwise allows them</td></tr>
+<tr><td>h2desorb</td><td>Individually turn on and off non-thermal desorption due to H2 formation</td></tr>
+<tr><td>crdesorb</td><td>Individually turn on and off non-thermal desorption due to cosmic rays</td></tr>
+<tr><td>uvcr</td><td>Individually turn on and off non-thermal desorption due to UV photons</td></tr>
+<tr><td>instantSublimation</td><td>If set to 1 will immediately inject all grain surface material into gas otherwise will follow physics module</td></tr>
+<tr><td>ion</td><td>Control how much elemental C is initialised in atomic and ionic form (see chemistry.initialize_chemistry)</td></tr>
+<tr><td>Tempindx</td><td>Only for phase=2 of cloud model. Sets mass of protostar for hot core 1=1Msol,2=5,3=10M,4=15M,5=25M,6=60M</td></tr>
+<tr><td>vs</td><td>Shock velocity for cshock.f90 and jshock.f90</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="input-and-output"></a><a href="#input-and-output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input and Output</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>outputFile</td><td>A full output of abundances is written by default and is written to this file</td></tr>
+<tr><td>columnFile</td><td>If outSpecies is set a columnated output of time,density,temperature and abundances of those species is written to this file</td></tr>
+<tr><td>abundFile</td><td>File to either read initial abundances from or write final abundances to (see readAbunds)</td></tr>
+<tr><td>outSpecies</td><td>Array of species names for writing to column file. Fortran will reject this array if species names are not padded with spaces to all be the same length.</td></tr>
+<tr><td>writeStep</td><td>Sets how often columns written out. Columns written every n steps for writeStep=n.</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/grids"><span class="arrow-prev">← </span><span>Advanced Usage</span></a><a class="docs-next button" href="/docs/tutorials"><span>Tutorials</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#physical-variables">Physical Variables</a></li><li><a href="#behavioural-modifiers">Behavioural Modifiers</a></li><li><a href="#input-and-output">Input and Output</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/uclchem-logo.jpg" alt="UCLCHEM" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/basic_use.html">Getting Started</a><a href="/docs/en/tutorials.html">Tutorials (coming soon)</a></div><div></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/uclchem/uclchem">GitHub</a><a class="github-button" href="https://github.com/uclchem/uclchem" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Jon Holdship</section></footer></div></body></html>

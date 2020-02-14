@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Shock Models · UCLCHEM</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**Main Contributors**: Izaskun Jimenez-Serra, Tom James, Jon Holdship"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Shock Models · UCLCHEM"/><meta property="og:type" content="website"/><meta property="og:url" content="https://uclchem.github.io/"/><meta property="og:description" content="**Main Contributors**: Izaskun Jimenez-Serra, Tom James, Jon Holdship"/><meta property="og:image" content="https://uclchem.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://uclchem.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/uclchem-logo.jpg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://uclchem.github.io/blog/atom.xml" title="UCLCHEM Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://uclchem.github.io/blog/feed.xml" title="UCLCHEM Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/uclchem-logo.jpg" alt="UCLCHEM"/><h2 class="headerTitleWithLogo">UCLCHEM</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/basic_use" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="/3d_pdr" target="_self">3D-PDR</a></li><li class=""><a href="/ucl_pdr" target="_self">UCLPDR</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Physics</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started:</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/basic_use">Basic Use</a></li><li class="navListItem"><a class="navItem" href="/docs/network">Creating a Network</a></li><li class="navListItem"><a class="navItem" href="/docs/grids">Advanced Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/parameters">Model Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorials">Tutorials</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Physics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/physics">Physics Modules</a></li><li class="navListItem"><a class="navItem" href="/docs/cloud">Cloud/Core Model</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/shocks">Shock Models</a></li><li class="navListItem"><a class="navItem" href="/docs/collapse">Collapse Models</a></li><li class="navListItem"><a class="navItem" href="/docs/hydro">Hydro (Post Processing)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Chemistry</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/gas">Gas Phase Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/grain">Grain Surface Reactions</a></li><li class="navListItem"><a class="navItem" href="/docs/desorb">Desorption Reactions</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Shock Models</h1></header><article><div><span><p><strong>Main Contributors</strong>: Izaskun Jimenez-Serra, Tom James, Jon Holdship</p>
+<h3><a class="anchor" aria-hidden="true" id="shock-profiles"></a><a href="#shock-profiles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shock Profiles</h3>
+<p>UCLCHEM has two physics modules to deal with shocks: cshock.f90 and jshock.f90. c-shock.f90 is based on <a href="https://dx.doi.org/10.1051/0004-6361:20078054">Jimenez-Serra et al. 2008</a> which parameterizes the density, temperature and velocity profiles of c-shocks as a function of shock velocity, initial gas density and magnetic field. These were validated against the results of the detailed shock modelling of <a href="https://dx.doi.org/10.1046/j.1365-8711.2003.06716.x">Flower et al. 2003</a></p>
+<p>jshock.f90 is a similar parameterization for j-shocks from <a href="https://dx.doi.org/10.1051/0004-6361/201936536">James et al.</a> validated against more recent results from MHDvode (<a href="https://dx.doi.org/10.1051/0004-6361/201525740">Flower et al. 2015</a>).</p>
+<p>A key assumption of these parameterizations is that the chemistry and microphysics of the MHD models was sufficiently accurate that the chemistry and physics can be decoupled. That is to say, including the more detailed chemistry of UCLCHEM in MHDvode would not improve their shock profiles. Thus, more detailed chemistry can be safely post-processed using the physical outputs from those models.</p>
+<h3><a class="anchor" aria-hidden="true" id="sputtering"></a><a href="#sputtering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sputtering</h3>
+<p>Both models use the same sputtering process described by <a href="https://dx.doi.org/10.1051/0004-6361:20078054">Jimenez-Serra et al. 2008</a>. Briefly, we calculate the average energy imparted on the grains from a collision between the shocked gas and the grains. We then combine this with the collision rate and average yield for a given energy to calculate the sputtering rate which we integrate through time.</p>
+<p>Once the shock reaches 130 K, all remaining grain surface material is injected into the gas phase. This is the temperature at which water ice sublimates and we expect all material to co-desorb with that sublimation.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/cloud"><span class="arrow-prev">← </span><span>Cloud/Core Model</span></a><a class="docs-next button" href="/docs/collapse"><span>Collapse Models</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/uclchem-logo.jpg" alt="UCLCHEM" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/basic_use.html">Getting Started</a><a href="/docs/en/tutorials.html">Tutorials (coming soon)</a></div><div></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/uclchem/uclchem">GitHub</a><a class="github-button" href="https://github.com/uclchem/uclchem" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Jon Holdship</section></footer></div></body></html>

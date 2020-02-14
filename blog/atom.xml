@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://uclchem.github.io/blog</id>
+    <title>UCLCHEM Blog</title>
+    <updated>2020-02-14T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://uclchem.github.io/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest UCLCHEM news and events.</subtitle>
+    <logo>https://uclchem.github.io/img/uclchem-logo.jpg</logo>
+    <rights>Copyright © 2020 Jon Holdship</rights>
+    <entry>
+        <title type="html"><![CDATA[New Website]]></title>
+        <id>https://uclchem.github.io/blog/2020/02/14/New-Website.html</id>
+        <link href="https://uclchem.github.io/blog/2020/02/14/New-Website.html"/>
+        <updated>2020-02-14T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>We've replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to da...</p>]]></summary>
+        <author>
+            <name>Jon Holdship</name>
+            <email/>
+            <uri>https://gtihub.com/jonholdship</uri>
+        </author>
+    </entry>
+</feed>
