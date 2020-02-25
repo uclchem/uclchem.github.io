@@ -41,7 +41,7 @@ const siteConfig = {
     {doc: 'basic_use', label: 'Docs'},
     //{page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
-    {page: '3d_pdr', label: '3D-PDR'},
+    {page: '3dpdr', label: '3D-PDR'},
     {page: 'ucl_pdr', label: 'UCLPDR'},
 
   ],
