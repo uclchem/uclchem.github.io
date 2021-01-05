@@ -97,8 +97,7 @@ const siteConfig = {
   twitterImage: 'img/undraw_tweetstorm.svg',
 
   // Google Analytics tracking
-  gaTrackingID: 'G-DPH99XNRZV',
-  gaGtag: true,
+  gaTrackingID: 'UA-186542401-1',
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
