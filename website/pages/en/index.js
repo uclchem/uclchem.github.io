@@ -129,6 +129,7 @@ class Index extends React.Component {
               '<p>UCLCHEM is freely available for use and/or modification for any astrochemical purpose. Please reference <a href="https://doi.org/10.3847/1538-3881/aa773f">'+
               'our release paper</a> if UCLCHEM is used for work in a publication and feel free to contact us with suggestions, questions or to ask for advice using the code.<p>',
             image: `${baseUrl}img/undraw_alien_science_nonm.svg`,
+            imageAlt: 'An alien handing an astrochemist a vial of astrochemical liquid.',
             imageAlign: 'right',
             align:'left',
             title: 'Description',
@@ -158,18 +159,21 @@ class Index extends React.Component {
             content: 'Detailed, consistent treatment of chemistry across the gas-phase and a single solid phase.',
             image: `${baseUrl}img/undraw_react.svg`,
             imageAlign: 'top',
+            imageAlt: 'An astrochemical model',
             title: 'Gas-Grain Chemistry',
           },
           {
             content: 'Flexible, interchangeable modules to model all kinds of astrophysical objects such as molecular clouds, protostellar cores and C/J-type shocks.',
             image: `${baseUrl}img/undraw_operating_system.svg`,
             imageAlign: 'top',
+            imageAlt: 'flexible physics',
             title: 'Modular Physics',
           },
           {
             content: 'Teams at UCL and Leiden Observatory are working with international collaborators to extend and improve UCLCHEM. Check <a href=/blog>our blog for recent updates.</a>',
             image: `${baseUrl}img/undraw_version_control_9bpv.svg`,
             imageAlign: 'top',
+            imageAlt: 'developed by astrochemists',
             title: 'Active Development',
           },
         ]}
