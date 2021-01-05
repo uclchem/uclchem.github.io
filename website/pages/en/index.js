@@ -122,10 +122,11 @@ class Index extends React.Component {
         {[
           {
             content:
-              '<p>UCLCHEM is a gas-grain chemical code written in Modern Fortran. It propagates the abundances of chemical species through a network of'+
-              ' user-defined reactions according to the physical conditions of the gas. Included in the repository is MakeRates, a python script to combine a'+
-              ' species list, UMIST reaction file and user-defined reaction file into a consistent network with all files required by UCLCHEM.</P>'+
-              '<p>UCLCHEM is freely available for use and/or modification for any astrochemical use. Please reference <a href="https://doi.org/10.3847/1538-3881/aa773f">'+
+              '<p>UCLCHEM is a gas-grain chemical code for astrochemical modelling that can be used as a stand alone Fortran program or a Python module. It propagates the abundances of chemical species through a network of'+
+              ' user-defined reactions according to the physical conditions of the gas.' +
+              '<p>Included in the repository is MakeRates, a python script to easily produce all the files related to the chemical network required by UCLCHEM.'+
+              ' By combining a reaction list from an astrochemistry database such as UMIST with a custom list of reactions, the user can quickly generate a complex network. </p>'+
+              '<p>UCLCHEM is freely available for use and/or modification for any astrochemical purpose. Please reference <a href="https://doi.org/10.3847/1538-3881/aa773f">'+
               'our release paper</a> if UCLCHEM is used for work in a publication and feel free to contact us with suggestions, questions or to ask for advice using the code.<p>',
             image: `${baseUrl}img/undraw_alien_science_nonm.svg`,
             imageAlign: 'right',
@@ -160,13 +161,13 @@ class Index extends React.Component {
             title: 'Gas-Grain Chemistry',
           },
           {
-            content: 'Flexible, interchangeable modules to model clouds, cores and shocks ',
+            content: 'Flexible, interchangeable modules to model all kinds of astrophysical objects such as molecular clouds, protostellar cores and C/J-type shocks.',
             image: `${baseUrl}img/undraw_operating_system.svg`,
             imageAlign: 'top',
             title: 'Modular Physics',
           },
           {
-            content: 'Teams at UCL and Leiden Observatory are working with international collaborators to extend and improve UCLCHEM.',
+            content: 'Teams at UCL and Leiden Observatory are working with international collaborators to extend and improve UCLCHEM. Check <a href=/blog>our blog for recent updates.</a>',
             image: `${baseUrl}img/undraw_version_control_9bpv.svg`,
             imageAlign: 'top',
             title: 'Active Development',

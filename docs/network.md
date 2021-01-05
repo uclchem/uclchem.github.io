@@ -4,9 +4,7 @@ title: Creating a Network
 ---
 
 ## Makerates
-In order to make a chemical model flexible, the ability to solve a user supplied chemical network is a must. However, this requires a number of input files either in the form of readable lists of species and reactions that are turned into ODEs on the fly or hard coded network file.#
-
-Makerates is a python script that will produce all the required Fortran files for UCLCHEM to run with a user-supplied network. It combines the UMIST-12 gas phase reaction database with user supplied lists of species and additional reactions into odes.f90 and network.f90 which contain all necessary information. It also supplies a number of human readable outputs.
+In order to make a chemical model flexible, the ability to solve a user supplied chemical network is a must. UCLCHEM uses a preprocessing python script the turns csv lists of species and reactions into fortran files for use in the main code. This script is called Makerates and can be found in a subdirectory of the repository. It combines the UMIST-12 gas phase reaction database with user supplied lists of species and additional reactions into odes.f90 and network.f90 which contain all necessary information. It also supplies a number of human readable outputs.
 
 **Any output from Makerates requires that the code be recompiled**
 
@@ -17,7 +15,7 @@ Inputs for Makerates can be found in ```Makerates/inputFiles/``` and the specifi
 - The UMIST12 gas phase reaction database
 - A user supplied reaction database including all freeze out reactions at a minimum
 
-A basic version of each of these is supplied with UCLCHEM. We do not endorse that network and strongly suggest any published work be based on a network in which the user has confidence. However, they do serve as useful test cases and as a template for user defined networks.
+A basic version of each of these is supplied with UCLCHEM. **We do not endorse that network**, we have simply produced a simple grain surface network that was relatively up to date in 2018 and produces reasonable ice mantle abundances for major species and ignores larger COMs.  We strongly suggest any published work be based on a network in which the user has confidence. However, where the user is not greatly concerned with grain surface chemistry, the default network is a good starting point.
 
 ## Outputs
 
@@ -42,6 +40,7 @@ Makerates does the following:
 
 ## Creating your own Network
 To create your own network you need to produce a species list and a reaction list.
+
 ##### Species list
 The species list should simply be a list with one row per species in the network. Each row should contain the species name, mass, binding energy and enthalpy. The latter two are only used for surface species so can be set to zero for the gas phase species. Makerates will check the mass is correct for each species and alert you of discrepancies.
 

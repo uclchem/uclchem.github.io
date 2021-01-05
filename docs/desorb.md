@@ -21,3 +21,6 @@ Cosmic rays which impact the grains can free molecules from the surface.
 
 ##### UV photons
 Surface molecules which absorb a UV photon may gain sufficient energy to escape the surface. We consider secondary photons created by cosmic rays as well as the interstellar radiation field.
+
+##### Chemical Desorption
+Other than H2 formation, the desorption of species due to exothermic reactions happening nearby on the grain is not treated. However, as described in the grain surface reaction section, any exothermic grain surface reaction has a probability of releasing the products into the gas phase and this is accounted for.

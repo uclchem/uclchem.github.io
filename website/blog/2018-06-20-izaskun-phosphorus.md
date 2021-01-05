@@ -1,0 +1,9 @@
+---
+title: The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena
+author: Jon Holdship
+authorURL: https://jonholdship.github.io
+authorImageURL:https://jonholdship.github.io/img/me-serious.png
+---
+Izaskun Jimenez-Serra has published a study of the chemistry of phosophorus bearing species using UCLCHEM. The [paper can be found here](https://arxiv.org/pdf/1806.07281.pdf) and the abstract is below.
+
+For decades, the detection of phosphorus-bearing molecules in the interstellar medium was restricted to high-mass star-forming regions (e.g., SgrB2 and Orion KL) and the circumstellar envelopes of evolved stars. However, recent higher-sensitivity observations have revealed that molecules such as PN and PO are present not only toward cold massive cores and low-mass star-forming regions with PO/PN ratios ≥1 but also toward the giant molecular clouds in the Galactic center known to be exposed to highly energetic phenomena such as intense UV radiation fields, shock waves, and cosmic rays. In this paper, we carry out a comprehensive study of the chemistry of phosphorus-bearing molecules across different astrophysical environments that cover a range of physical conditions (cold molecular dark clouds, warm clouds, and hot cores/hot corinos) and are exposed to different physical processes and energetic phenomena (proto-stellar heating, shock waves, intense UV radiation, and cosmic rays). We show how the measured PO/PN ratio (either ≥1, as in, e.g., hot molecular cores, or ≤1, as in UV strongly illuminated environments) can provide constraints on the physical conditions and energetic processing of the source. We propose that the reaction P + OH → PO + H, not included in previous works, could be an efficient gas-phase PO formation route in shocks. Our modeling provides a template with which to study the detectability of P-bearing species not only in regions in our own Galaxy but also in extragalactic sources.

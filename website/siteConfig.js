@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'UCLCHEM', // Title for your website.
-  tagline: 'A Gas-Grain Chemical Code',
+  tagline: 'A Gas-Grain Chemical Code for astrochemical modelling',
   url: 'https://uclchem.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -41,8 +41,10 @@ const siteConfig = {
     {doc: 'basic_use', label: 'Docs'},
     //{page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {page:'index',label:'UCLCHEM'},
     {page: '3dpdr', label: '3D-PDR'},
     {page: 'ucl_pdr', label: 'UCLPDR'},
+    {page: 'spectralradex', label:"SpectralRadex"}
 
   ],
 
