@@ -1,5 +1,5 @@
 ---
-title: Nitrogen fractionation in external galaxies
+title: Ambipolar diffusion and the molecular abundances inprestellar cores
 author: Jon Holdship
 authorURL: https://jonholdship.github.io
 authorImageURL:https://jonholdship.github.io/img/me-serious.png
