@@ -96,6 +96,10 @@ const siteConfig = {
   ogImage: 'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
+  // Google Analytics tracking
+  gaTrackingID: 'G-DPH99XNRZV',
+  gaGtag: true,
+
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
   // docsSideNavCollapsible: true,
