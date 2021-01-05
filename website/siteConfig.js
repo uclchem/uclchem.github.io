@@ -44,7 +44,7 @@ const siteConfig = {
     {page:'index',label:'UCLCHEM'},
     {page: '3dpdr', label: '3D-PDR'},
     {page: 'ucl_pdr', label: 'UCLPDR'},
-    {page: 'spectralradex', label:"SpectralRadex"}
+    //{page: 'spectralradex', label:"SpectralRadex"}
 
   ],
 
