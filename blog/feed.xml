@@ -28,6 +28,13 @@
             <description><![CDATA[<p>We're replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to da...</p>]]></description>
         </item>
         <item>
+            <title><![CDATA[Tracing shock type with chemical diagnostics - an application to L1157]]></title>
+            <link>https://uclchem.github.io/blog/2019/12/10/tom-shock.html</link>
+            <guid>https://uclchem.github.io/blog/2019/12/10/tom-shock.html</guid>
+            <pubDate>Tue, 10 Dec 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>The physical structure of a shock wave may take a form unique to its shock type, implying that the chemistry of each shock type is unique as well. <a href="https://arxiv.org/pdf/1912.03721.pdf">In our recent paper</a>, we investigate the different chemistries of J-type and C-type shocks using paramet...</p>]]></description>
+        </item>
+        <item>
             <title><![CDATA[A chemical study of carbon fractionation in external galaxies]]></title>
             <link>https://uclchem.github.io/blog/2019/08/13/serena-carbon-frac.html</link>
             <guid>https://uclchem.github.io/blog/2019/08/13/serena-carbon-frac.html</guid>
