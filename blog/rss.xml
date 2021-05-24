@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>UCLCHEM Blog</title>
+        <link>https://uclchem.github.io/blog</link>
+        <description>UCLCHEM Blog</description>
+        <lastBuildDate>Mon, 07 Dec 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI]]></title>
+            <link>https://uclchem.github.io/blog/2020/12/07/milena-nitrogen-solis</link>
+            <guid>First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI</guid>
+            <pubDate>Mon, 07 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[As part of the SOLIS observational programme, various isotopologues of HCN were observed towards L1157 in order to study the nitrogen fractionation in a protostellar outflow. The modelling work for this study was done using UCLCHEM. You can find the paper here and the abstract below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[New Website]]></title>
+            <link>https://uclchem.github.io/blog/2020/02/14/New-Website</link>
+            <guid>New Website</guid>
+            <pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to date and are open to comments from users as we're keen to make UCLCHEM as easy to use as possible.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tracing shock type with chemical diagnostics - an application to L1157]]></title>
+            <link>https://uclchem.github.io/blog/2019/12/10/tom-shock</link>
+            <guid>Tracing shock type with chemical diagnostics - an application to L1157</guid>
+            <pubDate>Tue, 10 Dec 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[The physical structure of a shock wave may take a form unique to its shock type, implying that the chemistry of each shock type is unique as well. In our recent paper, we investigate the different chemistries of J-type and C-type shocks using parameterised forms of their physical structures in order to identify unique molecular tracers of both shock types. We apply these diagnostics to the protostellar outflow L1157 to establish whether the B2 clump could host shocks exhibiting type-specific behaviour.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[A chemical study of carbon fractionation in external galaxies]]></title>
+            <link>https://uclchem.github.io/blog/2019/08/13/serena-carbon-frac</link>
+            <guid>A chemical study of carbon fractionation in external galaxies</guid>
+            <pubDate>Tue, 13 Aug 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[UCLCHEM has recently been used to study carbon fractionation in external galaxies. You can find the paper here and the abstract below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ambipolar diffusion and the molecular abundances inprestellar cores]]></title>
+            <link>https://uclchem.github.io/blog/2019/07/08/felix-ambipolar</link>
+            <guid>Ambipolar diffusion and the molecular abundances inprestellar cores</guid>
+            <pubDate>Mon, 08 Jul 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[Felix Priestley has used UCLCHEM in an investigation of the chemical differences caused by the magnetic fields in prestellar cores. You can find the paper here and the abstract below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Nitrogen fractionation in external galaxies]]></title>
+            <link>https://uclchem.github.io/blog/2019/04/19/serena-nitrogen-frac</link>
+            <guid>Nitrogen fractionation in external galaxies</guid>
+            <pubDate>Fri, 19 Apr 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[UCLCHEM has recently been used to study nitrogen fractionation in external galaxies. You can find the paper here and the abstract below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Collapsing Prestellar Cores - a new physics module]]></title>
+            <link>https://uclchem.github.io/blog/2018/07/12/felix-collapse</link>
+            <guid>Collapsing Prestellar Cores - a new physics module</guid>
+            <pubDate>Thu, 12 Jul 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Felix Priestley has used UCLCHEM to study the collapse of prestellar cores. In the process, he's created a new physics module collapse.f90 which follows a sphere of gas collapsing in different ways. The paper can be found here and the abstract is below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena]]></title>
+            <link>https://uclchem.github.io/blog/2018/06/20/izaskun-phosphorus</link>
+            <guid>The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena</guid>
+            <pubDate>Wed, 20 Jun 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Izaskun Jimenez-Serra has published a study of the chemistry of phosophorus bearing species using UCLCHEM. The paper can be found here and the abstract is below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions]]></title>
+            <link>https://uclchem.github.io/blog/2018/03/27/audrey-coms</link>
+            <guid>Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions</guid>
+            <pubDate>Tue, 27 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[Audrey Coutens has published modelling work on glycoaldehyde and ethylene glycol using UCLCHEM. You can find the paper here and the abstract below.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions]]></title>
+            <link>https://uclchem.github.io/blog/2018/02/05/david-grains</link>
+            <guid>Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions</guid>
+            <pubDate>Mon, 05 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[David Quenard just published an update to the UCLCHEM with an application to COMs in prestellar cores you can find the paper here and the abstract below.]]></description>
+        </item>
+    </channel>
+</rss>
