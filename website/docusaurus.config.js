@@ -74,7 +74,7 @@ module.exports={
           "position": "left"
         },
         {
-          "href": "3dpdr",
+          "href": "/3dpdr",
           "label": "3D-PDR",
           "position": "left"
         },
