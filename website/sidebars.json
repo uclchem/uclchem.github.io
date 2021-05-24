@@ -1,10 +1,9 @@
 {
   "docs": {
-    "Getting Started:": ["basic_use","network","grids","parameters","tutorials"],
+    "Getting Started": ["basicuse","network","parameters","trouble"],
+    "Python" : ["pythoncompiling","pythonstart","pythonapi"],
     "Physics": ["physics","cloud","shocks","collapse","hydro"],
-    "Chemistry": ["gas","grain","desorb"]
-  },
-  "UCL-PDR": {
-    "Getting Started": ["uclpdr"]
+    "Chemistry": ["gas","grain","desorb","bulk"]
   }
+
 }

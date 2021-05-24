@@ -1,8 +1,8 @@
 ---
 title: A chemical study of carbon fractionation in external galaxies
 author: Serena Viti
-authorURL:https://home.strw.leidenuniv.nl/~viti/
-authorImageURL:https://www.strw.leidenuniv.nl/org/fotos/viti.jpg
+authorURL: https://home.strw.leidenuniv.nl/~viti/
+authorImageURL: https://www.strw.leidenuniv.nl/org/fotos/viti.jpg
 ---
 UCLCHEM has recently been used to study carbon fractionation in external galaxies. You can find [the paper here](https://arxiv.org/pdf/2007.12405.pdf) and the abstract below.
 

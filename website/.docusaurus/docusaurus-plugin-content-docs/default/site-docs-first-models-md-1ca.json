@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pythonstart",
+  "id": "pythonstart",
+  "isDocsHomePage": false,
+  "title": "Running Your First Models",
+  "description": "A Jupyter notebook in the Python/ demonstrates how to use the Python UCLCHEM module. This page was automatically generated from that notebook.",
+  "source": "@site/docs/first_models.md",
+  "sourceDirName": ".",
+  "slug": "/pythonstart",
+  "permalink": "/docs/pythonstart",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "pythonstart",
+    "title": "Python Examples"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Compiling for Python",
+    "permalink": "/docs/pythoncompiling"
+  },
+  "next": {
+    "title": "Python API",
+    "permalink": "/docs/pythonapi"
+  }
+}

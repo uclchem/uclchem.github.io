@@ -1,0 +1,19 @@
+{
+  "permalink": "/blog/2018/07/12/felix-collapse",
+  "source": "@site/blog/2018-07-12-felix-collapse.md",
+  "title": "Collapsing Prestellar Cores - a new physics module",
+  "description": "Felix Priestley has used UCLCHEM to study the collapse of prestellar cores. In the process, he's created a new physics module collapse.f90 which follows a sphere of gas collapsing in different ways. The paper can be found here and the abstract is below.",
+  "date": "2018-07-12T00:00:00.000Z",
+  "formattedDate": "July 12, 2018",
+  "tags": [],
+  "readingTime": 1.505,
+  "truncated": false,
+  "prevItem": {
+    "title": "Nitrogen fractionation in external galaxies",
+    "permalink": "/blog/2019/04/19/serena-nitrogen-frac"
+  },
+  "nextItem": {
+    "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+    "permalink": "/blog/2018/06/20/izaskun-phosphorus"
+  }
+}

@@ -2,7 +2,7 @@
 title: Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions
 author: Jon Holdship
 authorURL: https://jonholdship.github.io
-authorImageURL:https://jonholdship.github.io/img/me-serious.png
+authorImageURL: https://jonholdship.github.io/img/me-serious.png
 ---
 David Quenard just published an update to the UCLCHEM with an application to COMs in prestellar cores [you can find the paper here](https://arxiv.org/abs/1711.05184) and the abstract below.
 

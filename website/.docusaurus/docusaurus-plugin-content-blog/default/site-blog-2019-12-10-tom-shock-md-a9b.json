@@ -1,0 +1,19 @@
+{
+  "permalink": "/blog/2019/12/10/tom-shock",
+  "source": "@site/blog/2019-12-10-tom-shock.md",
+  "title": "Tracing shock type with chemical diagnostics - an application to L1157",
+  "description": "The physical structure of a shock wave may take a form unique to its shock type, implying that the chemistry of each shock type is unique as well. In our recent paper, we investigate the different chemistries of J-type and C-type shocks using parameterised forms of their physical structures in order to identify unique molecular tracers of both shock types. We apply these diagnostics to the protostellar outflow L1157 to establish whether the B2 clump could host shocks exhibiting type-specific behaviour.",
+  "date": "2019-12-10T00:00:00.000Z",
+  "formattedDate": "December 10, 2019",
+  "tags": [],
+  "readingTime": 0.77,
+  "truncated": false,
+  "prevItem": {
+    "title": "New Website",
+    "permalink": "/blog/2020/02/14/New-Website"
+  },
+  "nextItem": {
+    "title": "A chemical study of carbon fractionation in external galaxies",
+    "permalink": "/blog/2019/08/13/serena-carbon-frac"
+  }
+}

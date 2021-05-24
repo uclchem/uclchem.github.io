@@ -1,0 +1,19 @@
+{
+  "unversionedId": "grids",
+  "id": "grids",
+  "isDocsHomePage": false,
+  "title": "Advanced Usage",
+  "description": "Python Module",
+  "source": "@site/docs/grids.md",
+  "sourceDirName": ".",
+  "slug": "/grids",
+  "permalink": "/docs/grids",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "grids",
+    "title": "Advanced Usage"
+  }
+}

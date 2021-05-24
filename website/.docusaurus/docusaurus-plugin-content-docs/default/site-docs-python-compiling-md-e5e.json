@@ -1,0 +1,28 @@
+{
+  "unversionedId": "python_compiling",
+  "id": "python_compiling",
+  "isDocsHomePage": false,
+  "title": "Compiling for Python",
+  "description": "Compiling",
+  "source": "@site/docs/python_compiling.md",
+  "sourceDirName": ".",
+  "slug": "/python_compiling",
+  "permalink": "/docs/python_compiling",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "python_compiling",
+    "title": "Compiling for Python"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
+  },
+  "next": {
+    "title": "Python API",
+    "permalink": "/docs/python_api"
+  }
+}

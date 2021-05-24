@@ -1,0 +1,19 @@
+{
+  "unversionedId": "uclpdr",
+  "id": "uclpdr",
+  "isDocsHomePage": false,
+  "title": "UCLPDR",
+  "description": "UCLPDR",
+  "source": "@site/docs/uclpdr.md",
+  "sourceDirName": ".",
+  "slug": "/uclpdr",
+  "permalink": "/docs/uclpdr",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "uclpdr",
+    "title": "UCLPDR"
+  }
+}

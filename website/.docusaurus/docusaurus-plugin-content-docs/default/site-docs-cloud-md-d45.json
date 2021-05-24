@@ -1,0 +1,28 @@
+{
+  "unversionedId": "cloud",
+  "id": "cloud",
+  "isDocsHomePage": false,
+  "title": "Cloud Core Model",
+  "description": "Main Contributors: Serena Viti, Jon Holdship",
+  "source": "@site/docs/cloud.md",
+  "sourceDirName": ".",
+  "slug": "/cloud",
+  "permalink": "/docs/cloud",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "cloud",
+    "title": "Cloud Core Model"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Physics Modules",
+    "permalink": "/docs/physics"
+  },
+  "next": {
+    "title": "Shock Models",
+    "permalink": "/docs/shocks"
+  }
+}

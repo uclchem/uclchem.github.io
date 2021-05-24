@@ -1,0 +1,28 @@
+{
+  "unversionedId": "network",
+  "id": "network",
+  "isDocsHomePage": false,
+  "title": "Creating a Network",
+  "description": "MakeRates",
+  "source": "@site/docs/network.md",
+  "sourceDirName": ".",
+  "slug": "/network",
+  "permalink": "/docs/network",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "network",
+    "title": "Creating a Network"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Basic Use",
+    "permalink": "/docs/"
+  },
+  "next": {
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
+  }
+}

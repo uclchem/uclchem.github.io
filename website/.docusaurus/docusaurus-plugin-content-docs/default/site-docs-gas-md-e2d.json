@@ -1,0 +1,28 @@
+{
+  "unversionedId": "gas",
+  "id": "gas",
+  "isDocsHomePage": false,
+  "title": "Gas Phase Reactions",
+  "description": "Gas phase ODEs",
+  "source": "@site/docs/gas.md",
+  "sourceDirName": ".",
+  "slug": "/gas",
+  "permalink": "/docs/gas",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "gas",
+    "title": "Gas Phase Reactions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Hydro Post Processing",
+    "permalink": "/docs/hydro"
+  },
+  "next": {
+    "title": "Grain Surface Reactions",
+    "permalink": "/docs/grain"
+  }
+}

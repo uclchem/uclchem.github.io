@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pythoncompiling",
+  "id": "pythoncompiling",
+  "isDocsHomePage": false,
+  "title": "Compiling for Python",
+  "description": "Compiling",
+  "source": "@site/docs/pythoncompiling.md",
+  "sourceDirName": ".",
+  "slug": "/pythoncompiling",
+  "permalink": "/docs/pythoncompiling",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "pythoncompiling",
+    "title": "Compiling for Python"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Troubleshooting",
+    "permalink": "/docs/trouble"
+  },
+  "next": {
+    "title": "Running Your First Models",
+    "permalink": "/docs/pythonstart"
+  }
+}

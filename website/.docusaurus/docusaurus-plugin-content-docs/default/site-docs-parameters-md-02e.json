@@ -1,0 +1,28 @@
+{
+  "unversionedId": "parameters",
+  "id": "parameters",
+  "isDocsHomePage": false,
+  "title": "Model Parameters",
+  "description": "Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model.",
+  "source": "@site/docs/parameters.md",
+  "sourceDirName": ".",
+  "slug": "/parameters",
+  "permalink": "/docs/parameters",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "parameters",
+    "title": "Model Parameters"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Creating a Network",
+    "permalink": "/docs/network"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/docs/trouble"
+  }
+}

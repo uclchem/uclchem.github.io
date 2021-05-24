@@ -1,8 +1,8 @@
 ---
 title: Nitrogen fractionation in external galaxies
 author: Serena Viti
-authorURL:https://home.strw.leidenuniv.nl/~viti/
-authorImageURL:https://www.strw.leidenuniv.nl/org/fotos/viti.jpg
+authorURL: https://home.strw.leidenuniv.nl/~viti/
+authorImageURL: https://www.strw.leidenuniv.nl/org/fotos/viti.jpg
 ---
 UCLCHEM has recently been used to study nitrogen fractionation in external galaxies. You can find [the paper here](https://arxiv.org/pdf/1904.11725.pdf) and the abstract below.
 

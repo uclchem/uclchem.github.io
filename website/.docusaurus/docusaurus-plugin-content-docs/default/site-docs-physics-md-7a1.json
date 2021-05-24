@@ -1,0 +1,28 @@
+{
+  "unversionedId": "physics",
+  "id": "physics",
+  "isDocsHomePage": false,
+  "title": "Physics Modules",
+  "description": "UCLCHEM is built using Fortran modules and one advantage of this is the ability to swap out the physical model that the code uses with relative ease. UCLCHEM comes with the following files:",
+  "source": "@site/docs/physics.md",
+  "sourceDirName": ".",
+  "slug": "/physics",
+  "permalink": "/docs/physics",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "physics",
+    "title": "Physics Modules"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Python API",
+    "permalink": "/docs/pythonapi"
+  },
+  "next": {
+    "title": "Cloud Core Model",
+    "permalink": "/docs/cloud"
+  }
+}

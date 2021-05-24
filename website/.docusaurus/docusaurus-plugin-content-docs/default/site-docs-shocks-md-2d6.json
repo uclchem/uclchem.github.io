@@ -1,0 +1,28 @@
+{
+  "unversionedId": "shocks",
+  "id": "shocks",
+  "isDocsHomePage": false,
+  "title": "Shock Models",
+  "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
+  "source": "@site/docs/shocks.md",
+  "sourceDirName": ".",
+  "slug": "/shocks",
+  "permalink": "/docs/shocks",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "shocks",
+    "title": "Shock Models"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Cloud Core Model",
+    "permalink": "/docs/cloud"
+  },
+  "next": {
+    "title": "Collapse Models",
+    "permalink": "/docs/collapse"
+  }
+}

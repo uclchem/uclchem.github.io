@@ -1,0 +1,28 @@
+{
+  "unversionedId": "pythonapi",
+  "id": "pythonapi",
+  "isDocsHomePage": false,
+  "title": "Python API",
+  "description": "The .so or .dll object created by make python can be directly imported into a python script. However, for convenience, we suggest you import it through the uclchem module provided with the code. This provides convenient functions to call UCLCHEM, each of which are detailed below.",
+  "source": "@site/docs/uclchemwrap.md",
+  "sourceDirName": ".",
+  "slug": "/pythonapi",
+  "permalink": "/docs/pythonapi",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "pythonapi",
+    "title": "Python API"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Running Your First Models",
+    "permalink": "/docs/pythonstart"
+  },
+  "next": {
+    "title": "Physics Modules",
+    "permalink": "/docs/physics"
+  }
+}

@@ -1,0 +1,25 @@
+:root{
+  --ifm-color-primary-lightest: #7E5FAC;
+  --ifm-color-primary-lighter: #6E519B;
+  --ifm-color-primary-light: #6A4D94;
+  --ifm-color-primary: #604687;
+  --ifm-color-primary-dark: #563F79;
+  --ifm-color-primary-darker: #523C73;
+  --ifm-color-primary-darkest: #43315E;
+}
+
+.mycontainer {
+ 	padding-top: 64px;
+	text-align: center;
+	margin-right: 20%;
+	margin-left: 20%;
+
+}
+
+.mybuttons {
+  align-items: center;
+  justify-content: center;
+  margin-left:4px;
+  margin-right: 4px;
+
+}

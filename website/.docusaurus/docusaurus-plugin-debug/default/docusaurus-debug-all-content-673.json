@@ -1,0 +1,882 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/sidebars.json",
+          "contentPath": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/docs",
+          "contentPathLocalized": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "mainDocId": "basicuse",
+          "sidebars": {
+            "docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Getting Started",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "basicuse"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "network"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "parameters"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "trouble"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Python",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "pythoncompiling"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pythonstart"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pythonapi"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Physics",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "physics"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "cloud"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "shocks"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "collapse"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "hydro"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Chemistry",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "gas"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "grain"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "desorb"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "bulk"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/docs/": "docs",
+            "/docs/bulk": "docs",
+            "/docs/cloud": "docs",
+            "/docs/collapse": "docs",
+            "/docs/desorb": "docs",
+            "/docs/gas": "docs",
+            "/docs/grain": "docs",
+            "/docs/hydro": "docs",
+            "/docs/network": "docs",
+            "/docs/parameters": "docs",
+            "/docs/physics": "docs",
+            "/docs/pythonapi": "docs",
+            "/docs/pythoncompiling": "docs",
+            "/docs/pythonstart": "docs",
+            "/docs/shocks": "docs",
+            "/docs/trouble": "docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "basicuse",
+              "id": "basicuse",
+              "isDocsHomePage": false,
+              "title": "Basic Use",
+              "description": "Compiling",
+              "source": "@site/docs/basicuse.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/docs/",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "basicuse",
+                "title": "Basic Use",
+                "slug": "/"
+              },
+              "sidebar": "docs",
+              "next": {
+                "title": "Creating a Network",
+                "permalink": "/docs/network"
+              }
+            },
+            {
+              "unversionedId": "bulk",
+              "id": "bulk",
+              "isDocsHomePage": false,
+              "title": "Bulk Ice Processes",
+              "description": "For a three phase network, we must include reactions in the bulk and the process by which it is formed. To do this, MakeRates automatically duplicates all LH reactions so that a reaction on the surface and one in the bulk ice exists in the network. We then include two methods by which material can move between the bulk and the surface. First is the accumulation of the bulk as new surface layers are formed and second is the individual swapping of a particle from the bulk with one on the surface. Both of these processes are taken from Garrod & Pauly 2011",
+              "source": "@site/docs/bulk.md",
+              "sourceDirName": ".",
+              "slug": "/bulk",
+              "permalink": "/docs/bulk",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "bulk",
+                "title": "Bulk Ice Processes"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Adsorption & Desorption Reactions",
+                "permalink": "/docs/desorb"
+              }
+            },
+            {
+              "unversionedId": "cloud",
+              "id": "cloud",
+              "isDocsHomePage": false,
+              "title": "Cloud Core Model",
+              "description": "Main Contributors: Serena Viti, Jon Holdship",
+              "source": "@site/docs/cloud.md",
+              "sourceDirName": ".",
+              "slug": "/cloud",
+              "permalink": "/docs/cloud",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "cloud",
+                "title": "Cloud Core Model"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Physics Modules",
+                "permalink": "/docs/physics"
+              },
+              "next": {
+                "title": "Shock Models",
+                "permalink": "/docs/shocks"
+              }
+            },
+            {
+              "unversionedId": "collapse",
+              "id": "collapse",
+              "isDocsHomePage": false,
+              "title": "Collapse Models",
+              "description": "Main Contributors: Felix Priestley",
+              "source": "@site/docs/collapse.md",
+              "sourceDirName": ".",
+              "slug": "/collapse",
+              "permalink": "/docs/collapse",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "collapse",
+                "title": "Collapse Models"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Shock Models",
+                "permalink": "/docs/shocks"
+              },
+              "next": {
+                "title": "Hydro Post Processing",
+                "permalink": "/docs/hydro"
+              }
+            },
+            {
+              "unversionedId": "desorb",
+              "id": "desorb",
+              "isDocsHomePage": false,
+              "title": "Adsorption & Desorption Reactions",
+              "description": "Coupling between the gas and the grain chemistry primarily comes from the freeze out of material from the gas phase onto the dust grains (adsorption) and the sublimation of material from the grains into the gas phase (desorption). The major processes considered by UCLCHEM are listed below.",
+              "source": "@site/docs/desorb.md",
+              "sourceDirName": ".",
+              "slug": "/desorb",
+              "permalink": "/docs/desorb",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "desorb",
+                "title": "Adsorption & Desorption Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Grain Surface Reactions",
+                "permalink": "/docs/grain"
+              },
+              "next": {
+                "title": "Bulk Ice Processes",
+                "permalink": "/docs/bulk"
+              }
+            },
+            {
+              "unversionedId": "gas",
+              "id": "gas",
+              "isDocsHomePage": false,
+              "title": "Gas Phase Reactions",
+              "description": "Gas phase ODEs",
+              "source": "@site/docs/gas.md",
+              "sourceDirName": ".",
+              "slug": "/gas",
+              "permalink": "/docs/gas",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "gas",
+                "title": "Gas Phase Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Hydro Post Processing",
+                "permalink": "/docs/hydro"
+              },
+              "next": {
+                "title": "Grain Surface Reactions",
+                "permalink": "/docs/grain"
+              }
+            },
+            {
+              "unversionedId": "grain",
+              "id": "grain",
+              "isDocsHomePage": false,
+              "title": "Grain Surface Reactions",
+              "description": "Whilst the basic treatment of gas phase chemistry is well established, grain surface chemistry is more complex. There are three possible ways to treat grain surface chemistry in UCLCHEM. In general we assume that:",
+              "source": "@site/docs/grain.md",
+              "sourceDirName": ".",
+              "slug": "/grain",
+              "permalink": "/docs/grain",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "grain",
+                "title": "Grain Surface Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Gas Phase Reactions",
+                "permalink": "/docs/gas"
+              },
+              "next": {
+                "title": "Adsorption & Desorption Reactions",
+                "permalink": "/docs/desorb"
+              }
+            },
+            {
+              "unversionedId": "hydro",
+              "id": "hydro",
+              "isDocsHomePage": false,
+              "title": "Hydro Post Processing",
+              "description": "Main Contributors: Jon Holdship",
+              "source": "@site/docs/hydro.md",
+              "sourceDirName": ".",
+              "slug": "/hydro",
+              "permalink": "/docs/hydro",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "hydro",
+                "title": "Hydro Post Processing"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Collapse Models",
+                "permalink": "/docs/collapse"
+              },
+              "next": {
+                "title": "Gas Phase Reactions",
+                "permalink": "/docs/gas"
+              }
+            },
+            {
+              "unversionedId": "network",
+              "id": "network",
+              "isDocsHomePage": false,
+              "title": "Creating a Network",
+              "description": "MakeRates",
+              "source": "@site/docs/network.md",
+              "sourceDirName": ".",
+              "slug": "/network",
+              "permalink": "/docs/network",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "network",
+                "title": "Creating a Network"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Basic Use",
+                "permalink": "/docs/"
+              },
+              "next": {
+                "title": "Model Parameters",
+                "permalink": "/docs/parameters"
+              }
+            },
+            {
+              "unversionedId": "parameters",
+              "id": "parameters",
+              "isDocsHomePage": false,
+              "title": "Model Parameters",
+              "description": "Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model.",
+              "source": "@site/docs/parameters.md",
+              "sourceDirName": ".",
+              "slug": "/parameters",
+              "permalink": "/docs/parameters",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "parameters",
+                "title": "Model Parameters"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Creating a Network",
+                "permalink": "/docs/network"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/docs/trouble"
+              }
+            },
+            {
+              "unversionedId": "physics",
+              "id": "physics",
+              "isDocsHomePage": false,
+              "title": "Physics Modules",
+              "description": "UCLCHEM is built using Fortran modules and one advantage of this is the ability to swap out the physical model that the code uses with relative ease. UCLCHEM comes with the following files:",
+              "source": "@site/docs/physics.md",
+              "sourceDirName": ".",
+              "slug": "/physics",
+              "permalink": "/docs/physics",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "physics",
+                "title": "Physics Modules"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Python API",
+                "permalink": "/docs/pythonapi"
+              },
+              "next": {
+                "title": "Cloud Core Model",
+                "permalink": "/docs/cloud"
+              }
+            },
+            {
+              "unversionedId": "pythonapi",
+              "id": "pythonapi",
+              "isDocsHomePage": false,
+              "title": "Python API",
+              "description": "The .so or .dll object created by make python can be directly imported into a python script. However, for convenience, we suggest you import it through the uclchem module provided with the code. This provides convenient functions to call UCLCHEM, each of which are detailed below.",
+              "source": "@site/docs/pythonapi.md",
+              "sourceDirName": ".",
+              "slug": "/pythonapi",
+              "permalink": "/docs/pythonapi",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "pythonapi",
+                "title": "Python API"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Running Your First Models",
+                "permalink": "/docs/pythonstart"
+              },
+              "next": {
+                "title": "Physics Modules",
+                "permalink": "/docs/physics"
+              }
+            },
+            {
+              "unversionedId": "pythoncompiling",
+              "id": "pythoncompiling",
+              "isDocsHomePage": false,
+              "title": "Compiling for Python",
+              "description": "Compiling",
+              "source": "@site/docs/pythoncompiling.md",
+              "sourceDirName": ".",
+              "slug": "/pythoncompiling",
+              "permalink": "/docs/pythoncompiling",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "pythoncompiling",
+                "title": "Compiling for Python"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Troubleshooting",
+                "permalink": "/docs/trouble"
+              },
+              "next": {
+                "title": "Running Your First Models",
+                "permalink": "/docs/pythonstart"
+              }
+            },
+            {
+              "unversionedId": "pythonstart",
+              "id": "pythonstart",
+              "isDocsHomePage": false,
+              "title": "Running Your First Models",
+              "description": "A Jupyter notebook in the Python/ demonstrates how to use the Python UCLCHEM module. This page was automatically generated from that notebook.",
+              "source": "@site/docs/first_models.md",
+              "sourceDirName": ".",
+              "slug": "/pythonstart",
+              "permalink": "/docs/pythonstart",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "pythonstart",
+                "title": "Python Examples"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Compiling for Python",
+                "permalink": "/docs/pythoncompiling"
+              },
+              "next": {
+                "title": "Python API",
+                "permalink": "/docs/pythonapi"
+              }
+            },
+            {
+              "unversionedId": "shocks",
+              "id": "shocks",
+              "isDocsHomePage": false,
+              "title": "Shock Models",
+              "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
+              "source": "@site/docs/shocks.md",
+              "sourceDirName": ".",
+              "slug": "/shocks",
+              "permalink": "/docs/shocks",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "shocks",
+                "title": "Shock Models"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Cloud Core Model",
+                "permalink": "/docs/cloud"
+              },
+              "next": {
+                "title": "Collapse Models",
+                "permalink": "/docs/collapse"
+              }
+            },
+            {
+              "unversionedId": "trouble",
+              "id": "trouble",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
+              "source": "@site/docs/troubleshooting.md",
+              "sourceDirName": ".",
+              "slug": "/trouble",
+              "permalink": "/docs/trouble",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "trouble",
+                "title": "Troubleshooting"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Model Parameters",
+                "permalink": "/docs/parameters"
+              },
+              "next": {
+                "title": "Compiling for Python",
+                "permalink": "/docs/pythoncompiling"
+              }
+            },
+            {
+              "unversionedId": "uclpdr",
+              "id": "uclpdr",
+              "isDocsHomePage": false,
+              "title": "UCLPDR",
+              "description": "UCLPDR",
+              "source": "@site/docs/uclpdr.md",
+              "sourceDirName": ".",
+              "slug": "/uclpdr",
+              "permalink": "/docs/uclpdr",
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "10/14/2018",
+              "frontMatter": {
+                "id": "uclpdr",
+                "title": "UCLPDR"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogPosts": [
+        {
+          "id": "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
+          "metadata": {
+            "permalink": "/blog/2020/12/07/milena-nitrogen-solis",
+            "source": "@site/blog/2020-12-07-milena-nitrogen-solis.md",
+            "title": "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
+            "description": "As part of the SOLIS observational programme, various isotopologues of HCN were observed towards L1157 in order to study the nitrogen fractionation in a protostellar outflow. The modelling work for this study was done using UCLCHEM. You can find the paper here and the abstract below.",
+            "date": "2020-12-07T00:00:00.000Z",
+            "formattedDate": "December 7, 2020",
+            "tags": [],
+            "readingTime": 1.89,
+            "truncated": false,
+            "nextItem": {
+              "title": "New Website",
+              "permalink": "/blog/2020/02/14/New-Website"
+            }
+          }
+        },
+        {
+          "id": "New Website",
+          "metadata": {
+            "permalink": "/blog/2020/02/14/New-Website",
+            "source": "@site/blog/2020-02-14-New-Website.md",
+            "title": "New Website",
+            "description": "We're replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to date and are open to comments from users as we're keen to make UCLCHEM as easy to use as possible.",
+            "date": "2020-02-14T00:00:00.000Z",
+            "formattedDate": "February 14, 2020",
+            "tags": [],
+            "readingTime": 0.715,
+            "truncated": false,
+            "prevItem": {
+              "title": "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
+              "permalink": "/blog/2020/12/07/milena-nitrogen-solis"
+            },
+            "nextItem": {
+              "title": "Tracing shock type with chemical diagnostics - an application to L1157",
+              "permalink": "/blog/2019/12/10/tom-shock"
+            }
+          }
+        },
+        {
+          "id": "Tracing shock type with chemical diagnostics - an application to L1157",
+          "metadata": {
+            "permalink": "/blog/2019/12/10/tom-shock",
+            "source": "@site/blog/2019-12-10-tom-shock.md",
+            "title": "Tracing shock type with chemical diagnostics - an application to L1157",
+            "description": "The physical structure of a shock wave may take a form unique to its shock type, implying that the chemistry of each shock type is unique as well. In our recent paper, we investigate the different chemistries of J-type and C-type shocks using parameterised forms of their physical structures in order to identify unique molecular tracers of both shock types. We apply these diagnostics to the protostellar outflow L1157 to establish whether the B2 clump could host shocks exhibiting type-specific behaviour.",
+            "date": "2019-12-10T00:00:00.000Z",
+            "formattedDate": "December 10, 2019",
+            "tags": [],
+            "readingTime": 0.77,
+            "truncated": false,
+            "prevItem": {
+              "title": "New Website",
+              "permalink": "/blog/2020/02/14/New-Website"
+            },
+            "nextItem": {
+              "title": "A chemical study of carbon fractionation in external galaxies",
+              "permalink": "/blog/2019/08/13/serena-carbon-frac"
+            }
+          }
+        },
+        {
+          "id": "A chemical study of carbon fractionation in external galaxies",
+          "metadata": {
+            "permalink": "/blog/2019/08/13/serena-carbon-frac",
+            "source": "@site/blog/2019-08-13-serena-carbon-frac.md",
+            "title": "A chemical study of carbon fractionation in external galaxies",
+            "description": "UCLCHEM has recently been used to study carbon fractionation in external galaxies. You can find the paper here and the abstract below.",
+            "date": "2019-08-13T00:00:00.000Z",
+            "formattedDate": "August 13, 2019",
+            "tags": [],
+            "readingTime": 0.825,
+            "truncated": false,
+            "prevItem": {
+              "title": "Tracing shock type with chemical diagnostics - an application to L1157",
+              "permalink": "/blog/2019/12/10/tom-shock"
+            },
+            "nextItem": {
+              "title": "Ambipolar diffusion and the molecular abundances inprestellar cores",
+              "permalink": "/blog/2019/07/08/felix-ambipolar"
+            }
+          }
+        },
+        {
+          "id": "Ambipolar diffusion and the molecular abundances inprestellar cores",
+          "metadata": {
+            "permalink": "/blog/2019/07/08/felix-ambipolar",
+            "source": "@site/blog/2019-07-08-felix-ambipolar.md",
+            "title": "Ambipolar diffusion and the molecular abundances inprestellar cores",
+            "description": "Felix Priestley has used UCLCHEM in an investigation of the chemical differences caused by the magnetic fields in prestellar cores. You can find the paper here and the abstract below.",
+            "date": "2019-07-08T00:00:00.000Z",
+            "formattedDate": "July 8, 2019",
+            "tags": [],
+            "readingTime": 0.99,
+            "truncated": false,
+            "prevItem": {
+              "title": "A chemical study of carbon fractionation in external galaxies",
+              "permalink": "/blog/2019/08/13/serena-carbon-frac"
+            },
+            "nextItem": {
+              "title": "Nitrogen fractionation in external galaxies",
+              "permalink": "/blog/2019/04/19/serena-nitrogen-frac"
+            }
+          }
+        },
+        {
+          "id": "Nitrogen fractionation in external galaxies",
+          "metadata": {
+            "permalink": "/blog/2019/04/19/serena-nitrogen-frac",
+            "source": "@site/blog/2019-04-19-serena-nitrogen-frac.md",
+            "title": "Nitrogen fractionation in external galaxies",
+            "description": "UCLCHEM has recently been used to study nitrogen fractionation in external galaxies. You can find the paper here and the abstract below.",
+            "date": "2019-04-19T00:00:00.000Z",
+            "formattedDate": "April 19, 2019",
+            "tags": [],
+            "readingTime": 0.81,
+            "truncated": false,
+            "prevItem": {
+              "title": "Ambipolar diffusion and the molecular abundances inprestellar cores",
+              "permalink": "/blog/2019/07/08/felix-ambipolar"
+            },
+            "nextItem": {
+              "title": "Collapsing Prestellar Cores - a new physics module",
+              "permalink": "/blog/2018/07/12/felix-collapse"
+            }
+          }
+        },
+        {
+          "id": "Collapsing Prestellar Cores - a new physics module",
+          "metadata": {
+            "permalink": "/blog/2018/07/12/felix-collapse",
+            "source": "@site/blog/2018-07-12-felix-collapse.md",
+            "title": "Collapsing Prestellar Cores - a new physics module",
+            "description": "Felix Priestley has used UCLCHEM to study the collapse of prestellar cores. In the process, he's created a new physics module collapse.f90 which follows a sphere of gas collapsing in different ways. The paper can be found here and the abstract is below.",
+            "date": "2018-07-12T00:00:00.000Z",
+            "formattedDate": "July 12, 2018",
+            "tags": [],
+            "readingTime": 1.505,
+            "truncated": false,
+            "prevItem": {
+              "title": "Nitrogen fractionation in external galaxies",
+              "permalink": "/blog/2019/04/19/serena-nitrogen-frac"
+            },
+            "nextItem": {
+              "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+              "permalink": "/blog/2018/06/20/izaskun-phosphorus"
+            }
+          }
+        },
+        {
+          "id": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+          "metadata": {
+            "permalink": "/blog/2018/06/20/izaskun-phosphorus",
+            "source": "@site/blog/2018-06-20-izaskun-phosphorus.md",
+            "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+            "description": "Izaskun Jimenez-Serra has published a study of the chemistry of phosophorus bearing species using UCLCHEM. The paper can be found here and the abstract is below.",
+            "date": "2018-06-20T00:00:00.000Z",
+            "formattedDate": "June 20, 2018",
+            "tags": [],
+            "readingTime": 1.3,
+            "truncated": false,
+            "prevItem": {
+              "title": "Collapsing Prestellar Cores - a new physics module",
+              "permalink": "/blog/2018/07/12/felix-collapse"
+            },
+            "nextItem": {
+              "title": "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+              "permalink": "/blog/2018/03/27/audrey-coms"
+            }
+          }
+        },
+        {
+          "id": "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+          "metadata": {
+            "permalink": "/blog/2018/03/27/audrey-coms",
+            "source": "@site/blog/2018-03-27-audrey-coms.md",
+            "title": "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+            "description": "Audrey Coutens has published modelling work on glycoaldehyde and ethylene glycol using UCLCHEM. You can find the paper here and the abstract below.",
+            "date": "2018-03-27T00:00:00.000Z",
+            "formattedDate": "March 27, 2018",
+            "tags": [],
+            "readingTime": 1.405,
+            "truncated": false,
+            "prevItem": {
+              "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+              "permalink": "/blog/2018/06/20/izaskun-phosphorus"
+            },
+            "nextItem": {
+              "title": "Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions",
+              "permalink": "/blog/2018/02/05/david-grains"
+            }
+          }
+        },
+        {
+          "id": "Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions",
+          "metadata": {
+            "permalink": "/blog/2018/02/05/david-grains",
+            "source": "@site/blog/2018-02-05-david-grains.md",
+            "title": "Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions",
+            "description": "David Quenard just published an update to the UCLCHEM with an application to COMs in prestellar cores you can find the paper here and the abstract below.",
+            "date": "2018-02-05T00:00:00.000Z",
+            "formattedDate": "February 5, 2018",
+            "tags": [],
+            "readingTime": 1.425,
+            "truncated": false,
+            "prevItem": {
+              "title": "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+              "permalink": "/blog/2018/03/27/audrey-coms"
+            }
+          }
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "metadata": {
+            "permalink": "/blog",
+            "page": 1,
+            "postsPerPage": 10,
+            "totalPages": 1,
+            "totalCount": 10,
+            "previousPage": null,
+            "nextPage": null,
+            "blogDescription": "Blog",
+            "blogTitle": "Blog"
+          },
+          "items": [
+            "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
+            "New Website",
+            "Tracing shock type with chemical diagnostics - an application to L1157",
+            "A chemical study of carbon fractionation in external galaxies",
+            "Ambipolar diffusion and the molecular abundances inprestellar cores",
+            "Nitrogen fractionation in external galaxies",
+            "Collapsing Prestellar Cores - a new physics module",
+            "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+            "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+            "Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions"
+          ]
+        }
+      ],
+      "blogTags": {},
+      "blogTagsListPath": null
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/3dpdr",
+        "source": "@site/src/pages/3dpdr.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/help",
+        "source": "@site/src/pages/help.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/spectralradex",
+        "source": "@site/src/pages/spectralradex.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/ucl_pdr",
+        "source": "@site/src/pages/ucl_pdr.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/users",
+        "source": "@site/src/pages/users.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

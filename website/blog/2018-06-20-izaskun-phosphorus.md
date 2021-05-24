@@ -2,7 +2,7 @@
 title: The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena
 author: Jon Holdship
 authorURL: https://jonholdship.github.io
-authorImageURL:https://jonholdship.github.io/img/me-serious.png
+authorImageURL: https://jonholdship.github.io/img/me-serious.png
 ---
 Izaskun Jimenez-Serra has published a study of the chemistry of phosophorus bearing species using UCLCHEM. The [paper can be found here](https://arxiv.org/pdf/1806.07281.pdf) and the abstract is below.
 

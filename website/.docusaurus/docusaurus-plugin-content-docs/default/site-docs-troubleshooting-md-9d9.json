@@ -1,0 +1,28 @@
+{
+  "unversionedId": "trouble",
+  "id": "trouble",
+  "isDocsHomePage": false,
+  "title": "Troubleshooting",
+  "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
+  "source": "@site/docs/troubleshooting.md",
+  "sourceDirName": ".",
+  "slug": "/trouble",
+  "permalink": "/docs/trouble",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "trouble",
+    "title": "Troubleshooting"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
+  },
+  "next": {
+    "title": "Compiling for Python",
+    "permalink": "/docs/pythoncompiling"
+  }
+}

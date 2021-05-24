@@ -1,0 +1,102 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "basicuse",
+          "docs": [
+            {
+              "id": "basicuse",
+              "path": "/docs/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "bulk",
+              "path": "/docs/bulk",
+              "sidebar": "docs"
+            },
+            {
+              "id": "cloud",
+              "path": "/docs/cloud",
+              "sidebar": "docs"
+            },
+            {
+              "id": "collapse",
+              "path": "/docs/collapse",
+              "sidebar": "docs"
+            },
+            {
+              "id": "desorb",
+              "path": "/docs/desorb",
+              "sidebar": "docs"
+            },
+            {
+              "id": "gas",
+              "path": "/docs/gas",
+              "sidebar": "docs"
+            },
+            {
+              "id": "grain",
+              "path": "/docs/grain",
+              "sidebar": "docs"
+            },
+            {
+              "id": "hydro",
+              "path": "/docs/hydro",
+              "sidebar": "docs"
+            },
+            {
+              "id": "network",
+              "path": "/docs/network",
+              "sidebar": "docs"
+            },
+            {
+              "id": "parameters",
+              "path": "/docs/parameters",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics",
+              "path": "/docs/physics",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pythonapi",
+              "path": "/docs/pythonapi",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pythoncompiling",
+              "path": "/docs/pythoncompiling",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pythonstart",
+              "path": "/docs/pythonstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "shocks",
+              "path": "/docs/shocks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "trouble",
+              "path": "/docs/trouble",
+              "sidebar": "docs"
+            },
+            {
+              "id": "uclpdr",
+              "path": "/docs/uclpdr"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

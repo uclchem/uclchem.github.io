@@ -1,0 +1,19 @@
+{
+  "unversionedId": "tutorials",
+  "id": "tutorials",
+  "isDocsHomePage": false,
+  "title": "Tutorials",
+  "description": "Coming Soon Step by step guide to compiling, running and plotting your first UCLCHEM run.",
+  "source": "@site/docs/tutorials.md",
+  "sourceDirName": ".",
+  "slug": "/tutorials",
+  "permalink": "/docs/tutorials",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "tutorials",
+    "title": "Tutorials"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "basic_use",
+  "id": "basic_use",
+  "isDocsHomePage": false,
+  "title": "Basic Use",
+  "description": "Compiling",
+  "source": "@site/docs/basic_use.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "basic_use",
+    "title": "Basic Use",
+    "slug": "/"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Creating a Network",
+    "permalink": "/docs/network"
+  }
+}
