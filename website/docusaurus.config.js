@@ -68,6 +68,11 @@ module.exports={
           "label": "Docs",
           "position": "left"
         },
+                {
+          "to": "/blog",
+          "label": "Blog",
+          "position": "left"
+        },
         {
           "to": "/",
           "label": "UCLCHEM",
@@ -84,10 +89,11 @@ module.exports={
           "position": "left"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
+          "to":"/othersoftware",
+          "label":"Other",
+          "position":"left"
         }
+
       ]
     },
     "image": "img/undraw_online.svg",

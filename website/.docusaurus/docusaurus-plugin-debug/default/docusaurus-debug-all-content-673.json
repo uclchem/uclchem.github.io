@@ -858,8 +858,8 @@
       },
       {
         "type": "jsx",
-        "permalink": "/spectralradex",
-        "source": "@site/src/pages/spectralradex.js"
+        "permalink": "/othersoftware",
+        "source": "@site/src/pages/othersoftware.js"
       },
       {
         "type": "jsx",

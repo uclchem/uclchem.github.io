@@ -23,3 +23,32 @@
   margin-right: 4px;
 
 }
+
+.softwarecontainer{
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 10%;
+}
+
+.alt-softwarecontainer{
+  background-color: lightgrey;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 10%;
+}
+
+.softwarecontainer-div{
+
+}
+
+.softwarecontainer-div > img{
+  position: relative;
+  width:100%;
+  height:auto;
+}

@@ -70,12 +70,17 @@ export default {
           "position": "left"
         },
         {
+          "to": "/blog",
+          "label": "Blog",
+          "position": "left"
+        },
+        {
           "to": "/",
           "label": "UCLCHEM",
           "position": "left"
         },
         {
-          "href": "3dpdr",
+          "href": "/3dpdr",
           "label": "3D-PDR",
           "position": "left"
         },
@@ -85,8 +90,8 @@ export default {
           "position": "left"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
+          "to": "/othersoftware",
+          "label": "Other",
           "position": "left"
         }
       ],
