@@ -9,9 +9,9 @@
   "slug": "/pythonstart",
   "permalink": "/docs/pythonstart",
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1621867778,
+  "formattedLastUpdatedAt": "5/24/2021",
   "frontMatter": {
     "id": "pythonstart",
     "title": "Python Examples"
@@ -22,7 +22,7 @@
     "permalink": "/docs/pythoncompiling"
   },
   "next": {
-    "title": "Python API",
+    "title": "Table of Contents",
     "permalink": "/docs/pythonapi"
   }
 }

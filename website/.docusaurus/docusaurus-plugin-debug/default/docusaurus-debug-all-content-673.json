@@ -420,7 +420,7 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Python API",
+                "title": "Table of Contents",
                 "permalink": "/docs/pythonapi"
               },
               "next": {
@@ -432,8 +432,8 @@
               "unversionedId": "pythonapi",
               "id": "pythonapi",
               "isDocsHomePage": false,
-              "title": "Python API",
-              "description": "The .so or .dll object created by make python can be directly imported into a python script. However, for convenience, we suggest you import it through the uclchem module provided with the code. This provides convenient functions to call UCLCHEM, each of which are detailed below.",
+              "title": "Table of Contents",
+              "description": "* uclchem",
               "source": "@site/docs/pythonapi.md",
               "sourceDirName": ".",
               "slug": "/pythonapi",
@@ -442,10 +442,7 @@
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {
-                "id": "pythonapi",
-                "title": "Python API"
-              },
+              "frontMatter": {},
               "sidebar": "docs",
               "previous": {
                 "title": "Running Your First Models",
@@ -508,7 +505,7 @@
                 "permalink": "/docs/pythoncompiling"
               },
               "next": {
-                "title": "Python API",
+                "title": "Table of Contents",
                 "permalink": "/docs/pythonapi"
               }
             },
