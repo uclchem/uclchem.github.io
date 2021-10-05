@@ -31,7 +31,7 @@ All other parameters are listed in the header of the relevant Fortran module and
 |switch | Choose if model ends at finalTime (switch=0) of when gas reachees finalDens (1)|
 |collapse | Controls whether gas collapses in freefall (0/1). collapse.f90 uses 2/3/4 for different collapse modes|
 |bc| Scale factor 0-1.0 controlling speed of freefall.|
-|readAbunds| Choose whether to read initial abundances from startFile (=1) or write to startFile at end of run (=0)|
+|readAbunds| *Deprecated*. Older versions of UCLCHEM use this flag to determine whether to read abundances at the start (0) from abundFile or write to that file at the end (1). This has been replaced with `abundSaveFile` and `abundLoadFile` allowing you to do both or neither.|
 |desorb| Turns all non-thermal desorption processes off if set to 0 otherwise allows them|
 |h2desorb| Individually turn on and off non-thermal desorption due to H2 formation|
 |crdesorb| Individually turn on and off non-thermal desorption due to cosmic rays|
@@ -46,6 +46,7 @@ All other parameters are listed in the header of the relevant Fortran module and
 | ----- | ------ |
 | outputFile | A full output of abundances is written by default and is written to this file|
 | columnFile | If outSpecies is set a columnated output of time,density,temperature and abundances of those species is written to this file|
-|abundFile| File to either read initial abundances from or write final abundances to (see readAbunds)|
+|abundSaveFile| File to store final abundances at the end of the model so future models can use them as the initial abundances. If not provided, no file will be produced.|
+|abundLoadFile| File from which to load initial abundances for the model, created through `abundSaveFile`. If not provided, the model starts from elemental gas. |
 |outSpecies| Array of species names for writing to column file. Fortran will reject this array if species names are not padded with spaces to all be the same length.|
 |writeStep| Sets how often columns written out. Columns written every n steps for writeStep=n.|

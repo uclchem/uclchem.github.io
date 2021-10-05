@@ -36,34 +36,30 @@ outSpecies="SO CO"
 param_dict = {"phase": 1, "switch": 1, "collapse": 1, "readAbunds": 0, "writeStep": 1,
                "outSpecies": outSpecies, "initialDens": 1e2, "initialTemp":10.0,
                "finalDens":1e5, "finalTime":5.0e6,
-               "outputFile":"../output/phase1-full.dat",
-               "abundFile":"../output/startcollapse.dat"}
+               "outputFile":"../examples/test-output/phase1-full.dat",
+               "abundSaveFile":"../examples/test-output/startcollapse.dat"}
 uclchem.run_model(param_dict)
 
 ```
-
-
-
 
 We can look at the output for that model by using pandas to read the file (skipping 2 rows to miss the header) and matplotlib to view abundances.
 
 
 ```python
-phase1_df=uclchem.read_output_file("../output/phase1-full.dat")
-
+phase1_df=uclchem.read_output_file("../examples/test-output/phase1-full.dat")
 ```
 
 
 ```python
-species=["CO","H2O","NH3"]
+species=["CO","#CO","HCN","#HCN"]
 fig,ax=uclchem.create_abundance_plot(phase1_df,species)
 ax=ax.set(xscale="log")
 ```
 
 
-
-
-![png](/img/output_6_1.png)
+    
+![png](/img/first_models_6_0.png)
+    
 
 
 # Phase 2
@@ -81,8 +77,10 @@ param_dict["initialDens"]=1e5
 param_dict["tempindx"]=3 #selects mass of protostar (see cloud.f90)
 param_dict["finalTime"]=1e6
 param_dict["switch"]=0
-param_dict["abundFile"]="../output/startcollapse.dat"
-param_dict["outputFile"]="../output/phase2-full.dat"
+
+param_dict.pop("abundSaveFile") #this is still set to startcollapse.dat from phase 1 so remove it or change it.
+param_dict["abundLoadFile"]="../examples/test-output/startcollapse.dat"
+param_dict["outputFile"]="../examples/test-output/phase1-full.dat"
 
 
 uclchem.run_model(param_dict)
@@ -90,24 +88,31 @@ uclchem.run_model(param_dict)
 
 
 ```python
-phase2_df=uclchem.read_output_file("../output/phase2-full.dat")
+phase2_df=uclchem.read_output_file("../examples/test-output/phase2-full.dat")
 ```
 
 
+
+
 ```python
-species=["CO","H2O","NH3"]
+species=["CO","H2O","CH3OH","#CO","#H2O","#CH3OH"]
 
 fig,[ax,ax2]=plt.subplots(1,2,figsize=(16,9))
 ax=uclchem.plot_species(ax,phase2_df,species)
-settings=ax.set(yscale="log",xscale="log",xlabel="Time / years", ylabel="Fractional Abundance")
+settings=ax.set(yscale="log",xlim=(1,1e6),ylim=(1e-10,1e-2),
+            xlabel="Time / years", 
+            ylabel="Fractional Abundance",xscale="log")
 
 ax2.plot(phase2_df["Time"],phase2_df["Density"],color="black")
 ax3=ax2.twinx()
 ax3.plot(phase2_df["Time"],phase2_df["gasTemp"],color="red")
 ax2.set(xlabel="Time / year",ylabel="Density")
-ax3.set(ylabel="Temperature",facecolor="red")
+ax3.set(ylabel="Temperature",facecolor="red",xlim=(0,1e6))
 ax3.tick_params(axis='y', colors='red')
 ```
 
 
-![png](/img/output_10_1.png)
+    
+![png](/img/first_models_10_0.png)
+    
+

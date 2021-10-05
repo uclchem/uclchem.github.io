@@ -56,3 +56,5 @@ For every species, the user reaction file should contain at least one freeze out
 Whilst not strictly an input, there is a flag in ```MakeRates.py``` called ```three_phase```. If this is set to true, the chemical network will have gas, grain surface, and bulk ice chemistry. If it set to false, the ice mantles will be treated as a single phase. 
 
 When true, MakeRates will create the bulk ice chemistry by adding a bulk version of each species with a binding energy equal to the H2O binding energy. It will also duplicate all LH reactions so they take place in the bulk and it will add terms to the ODEs to allow transfer between the bulk and the surface. See the chemistry sections for more information.
+
+You can override the binding energy of material in the bulk by explicitly including the bulk species in your species file rather than allowing MakeRates to automatically add it. Bulk species are designated with an "@". For example, "H2O" is gas phase H$_2$O, "#H2O" is surface H$_2$O and "@H2O" is H$_2$O in the bulk. 
