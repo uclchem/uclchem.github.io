@@ -39,6 +39,18 @@ function Chemulator() {
     );
 }
 
+function HITS() {
+  return(
+    <div className="softwarecontainer">
+      <div className="softwarecontainer-div">
+      <h2><a href="https://uclchem.github.io/hits.html">HITs</a></h2>
+      <h4>History Independent Tracers</h4>
+      <p>Placeholder.</p>
+      </div>
+    </div>
+  );
+}
+
 
 
 export default function Home() {
@@ -49,6 +61,7 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <SpectralRadex />
       <Chemulator />
+      <HITS />
     </Layout>
   );
 }
