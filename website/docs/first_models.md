@@ -79,7 +79,7 @@ param_dict["switch"]=0
 
 param_dict.pop("abundSaveFile") #this is still set to startcollapse.dat from phase 1 so remove it or change it.
 param_dict["abundLoadFile"]="../examples/test-output/startcollapse.dat"
-param_dict["outputFile"]="../examples/test-output/phase1-full.dat"
+param_dict["outputFile"]="../examples/test-output/phase2-full.dat"
 
 
 uclchem.run_model(param_dict)
