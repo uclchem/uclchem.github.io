@@ -33,7 +33,7 @@ UCLCHEM is set up to do this through the ```phase``` parameter. All physics modu
 #set a parameter dictionary for phase 1 collapse model
 
 outSpecies="SO CO"
-param_dict = {"phase": 1, "switch": 1, "collapse": 1, "readAbunds": 0, "writeStep": 1,
+param_dict = {"phase": 1, "switch": 1, "collapse": 1, "writeStep": 1,
                "outSpecies": outSpecies, "initialDens": 1e2, "initialTemp":10.0,
                "finalDens":1e5, "finalTime":5.0e6,
                "outputFile":"../examples/test-output/phase1-full.dat",
@@ -69,7 +69,6 @@ Note the ```abundFile``` and ```readAbunds``` parameters in our phase 1 model. I
 
 ```python
 #read old abundances and do hot core behaviour
-param_dict["readAbunds"]=1
 param_dict["phase"]=2
 
 #change other bits of input to set up phase 2
