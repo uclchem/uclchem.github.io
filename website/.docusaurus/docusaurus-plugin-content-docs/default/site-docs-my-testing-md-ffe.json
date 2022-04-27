@@ -1,0 +1,16 @@
+{
+  "unversionedId": "my_testing",
+  "id": "my_testing",
+  "isDocsHomePage": false,
+  "title": "Advanced Physical Modelling",
+  "description": "It's unlikely that the cloud() model will be sufficient for all your modelling needs. In this notebook, we demonstrate the process the UCLCHEM team usually follow to model more complex systems such as hot cores or shocks.",
+  "source": "@site/docs/my_testing.md",
+  "sourceDirName": ".",
+  "slug": "/my_testing",
+  "permalink": "/docs/my_testing",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {}
+}

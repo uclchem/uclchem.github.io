@@ -8,31 +8,46 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "basicuse",
+          "mainDocId": "install",
           "docs": [
-            {
-              "id": "basicuse",
-              "path": "/docs/",
-              "sidebar": "docs"
-            },
             {
               "id": "bulk",
               "path": "/docs/bulk",
               "sidebar": "docs"
             },
             {
-              "id": "cloud",
-              "path": "/docs/cloud",
-              "sidebar": "docs"
-            },
-            {
-              "id": "collapse",
-              "path": "/docs/collapse",
+              "id": "chemical_analysis",
+              "path": "/docs/chemical_analysis",
               "sidebar": "docs"
             },
             {
               "id": "desorb",
               "path": "/docs/desorb",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-debugging",
+              "path": "/docs/dev-debugging",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-overview",
+              "path": "/docs/dev-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-python-wrap",
+              "path": "/docs/dev-python-wrap",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-web",
+              "path": "/docs/dev-web",
+              "sidebar": "docs"
+            },
+            {
+              "id": "first_model",
+              "path": "/docs/first_model",
               "sidebar": "docs"
             },
             {
@@ -47,7 +62,16 @@
             },
             {
               "id": "hydro",
-              "path": "/docs/hydro",
+              "path": "/docs/hydro"
+            },
+            {
+              "id": "install",
+              "path": "/docs/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "modelling_objects",
+              "path": "/docs/modelling_objects",
               "sidebar": "docs"
             },
             {
@@ -61,8 +85,28 @@
               "sidebar": "docs"
             },
             {
-              "id": "physics",
-              "path": "/docs/physics",
+              "id": "physics-cloud",
+              "path": "/docs/physics-cloud",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-collapse",
+              "path": "/docs/physics-collapse",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-core",
+              "path": "/docs/physics-core",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-hotcore",
+              "path": "/docs/physics-hotcore",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-shocks",
+              "path": "/docs/physics-shocks",
               "sidebar": "docs"
             },
             {
@@ -72,31 +116,55 @@
             },
             {
               "id": "pythoncompiling",
-              "path": "/docs/pythoncompiling",
+              "path": "/docs/pythoncompiling"
+            },
+            {
+              "id": "running_a_grid",
+              "path": "/docs/running_a_grid",
               "sidebar": "docs"
             },
             {
-              "id": "pythonstart",
-              "path": "/docs/pythonstart",
+              "id": "trouble-compile",
+              "path": "/docs/trouble-compile",
               "sidebar": "docs"
             },
             {
-              "id": "shocks",
-              "path": "/docs/shocks",
+              "id": "trouble-integration",
+              "path": "/docs/trouble-integration",
               "sidebar": "docs"
             },
             {
-              "id": "trouble",
-              "path": "/docs/trouble",
+              "id": "/category/getting-started",
+              "path": "/docs/category/getting-started",
               "sidebar": "docs"
             },
             {
-              "id": "uclpdr",
-              "path": "/docs/uclpdr"
+              "id": "/category/tutorials",
+              "path": "/docs/category/tutorials",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/chemistry",
+              "path": "/docs/category/chemistry",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/developer",
+              "path": "/docs/category/developer",
+              "sidebar": "docs"
             }
-          ]
+          ],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/category/getting-started",
+                "label": "Getting Started"
+              }
+            }
+          }
         }
-      ]
+      ],
+      "breadcrumbs": true
     }
   }
 }

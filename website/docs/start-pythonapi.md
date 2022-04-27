@@ -1,0 +1,291 @@
+---
+id: pythonapi
+title: Python Reference
+---
+# Python API
+
+* [uclchem](#uclchem)
+* [uclchem.model](#uclchem.model)
+  * [cloud](#uclchem.model.cloud)
+  * [collapse](#uclchem.model.collapse)
+  * [hot\_core](#uclchem.model.hot_core)
+  * [cshock](#uclchem.model.cshock)
+  * [jshock](#uclchem.model.jshock)
+* [uclchem.\_\_version\_\_](#uclchem.__version__)
+* [uclchem.analysis](#uclchem.analysis)
+  * [read\_output\_file](#uclchem.analysis.read_output_file)
+  * [create\_abundance\_plot](#uclchem.analysis.create_abundance_plot)
+  * [plot\_species](#uclchem.analysis.plot_species)
+  * [analysis](#uclchem.analysis.analysis)
+  * [total\_element\_abundance](#uclchem.analysis.total_element_abundance)
+  * [check\_element\_conservation](#uclchem.analysis.check_element_conservation)
+* [uclchem.tests](#uclchem.tests)
+  * [test\_ode\_conservation](#uclchem.tests.test_ode_conservation)
+
+<a id="uclchem"></a>
+
+# uclchem
+
+The UCLCHEM python module is divided into three parts.
+`model` contains the functions for running chemical models under different physics.
+`analysis` contains functions for reading and plotting output files as well as investigating the chemistry.
+`tests` contains functions for testing the code.
+
+<a id="uclchem.model"></a>
+
+# uclchem.model
+
+<a id="uclchem.model.cloud"></a>
+
+#### cloud
+
+```python
+def cloud(param_dict=None, out_species=None)
+```
+
+Run cloud model from UCLCHEM
+
+**Arguments**:
+
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+  
+
+**Returns**:
+
+- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+
+<a id="uclchem.model.collapse"></a>
+
+#### collapse
+
+```python
+def collapse(collapse, physics_output, param_dict=None, out_species=None)
+```
+
+Run collapse model from UCLCHEM based on Priestley et al 2018 AJ 156 51 (https://ui.adsabs.harvard.edu/abs/2018AJ....156...51P/abstract)
+
+**Arguments**:
+
+- `collapse` _str_ - A string containing the collapse type, options are 'BE1.1', 'BE4', 'filament', or 'ambipolar'
+- `physics_output(str)` - Filename to store physics output, only relevant for 'filament' and 'ambipolar' collapses. If None, no physics output will be saved.
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+  
+
+**Returns**:
+
+- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+
+<a id="uclchem.model.hot_core"></a>
+
+#### hot\_core
+
+```python
+def hot_core(temp_indx, max_temperature, param_dict=None, out_species=None)
+```
+
+Run hot core model from UCLCHEM, based on Viti et al. 2004 and Collings et al. 2004
+
+**Arguments**:
+
+- `temp_indx` _int_ - Used to select the mass of hot core. 1=1Msun,2=5, 3=10, 4=15, 5=25,6=60]
+- `max_temperature` _float_ - Value at which gas temperature will stop increasing.
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+  
+
+**Returns**:
+
+- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+
+<a id="uclchem.model.cshock"></a>
+
+#### cshock
+
+```python
+def cshock(shock_vel, timestep_factor=0.01, param_dict=None, out_species=None)
+```
+
+Run C-type shock model from UCLCHEM
+
+**Arguments**:
+
+- `shock_vel` _float_ - Velocity of the shock in km/s
+- `timestep_factor` _float, optional_ - Whilst the time is less than 2 times the dissipation time of shock, timestep is timestep_factor*dissipation time. Essentially controls
+  how well resolved the shock is in your model. Defaults to 0.01.
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+
+**Returns**:
+
+- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+- `float` - The dissipation time of the shock in years
+
+<a id="uclchem.model.jshock"></a>
+
+#### jshock
+
+```python
+def jshock(shock_vel, param_dict=None, out_species=None)
+```
+
+Run J-type shock model from UCLCHEM
+
+**Arguments**:
+
+- `shock_vel` _float_ - Velocity of the shock
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+
+**Returns**:
+
+- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+
+<a id="uclchem.__version__"></a>
+
+# uclchem.\_\_version\_\_
+
+<a id="uclchem.analysis"></a>
+
+# uclchem.analysis
+
+<a id="uclchem.analysis.read_output_file"></a>
+
+#### read\_output\_file
+
+```python
+def read_output_file(output_file)
+```
+
+Read the output of a UCLCHEM run created with the outputFile parameter into a pandas DataFrame
+
+**Arguments**:
+
+- `output_file` _str_ - path to file containing a full UCLCHEM output
+  
+
+**Returns**:
+
+- `pandas.DataFrame` - A dataframe containing the abundances and physical parameters of the model at every time step.
+
+<a id="uclchem.analysis.create_abundance_plot"></a>
+
+#### create\_abundance\_plot
+
+```python
+def create_abundance_plot(df, species, figsize=(16, 9), plot_file=None)
+```
+
+Create a plot of the abundance of a species through time.
+
+**Arguments**:
+
+- `df` _pd.DataFrame_ - Pandas dataframe containing the UCLCHEM output, see `read_output_file`
+- `species` _list_ - list of strings containing species names
+- `figsize` _tuple, optional_ - Size of figure, width by height in inches. Defaults to (16, 9).
+- `plot_file` _str, optional_ - Path to file where figure will be saved. If None, figure is not saved. Defaults to None.
+  
+
+**Returns**:
+
+- `fig,ax` - matplotlib figure and axis objects
+
+<a id="uclchem.analysis.plot_species"></a>
+
+#### plot\_species
+
+```python
+def plot_species(ax, df, species)
+```
+
+Plot the abundance of species through time directly onto an axis
+
+**Arguments**:
+
+- `ax` _pyplot.axis_ - An axis object to plot on
+- `df` _pd.DataFrame_ - A dataframe created by `read_output_file`
+- `species` _str_ - A list of species names to be plotted. If species name starts with "$", plots the sum of surface and bulk abundances
+  
+
+**Returns**:
+
+- `pyplot.axis` - Modified input axis is returned
+
+<a id="uclchem.analysis.analysis"></a>
+
+#### analysis
+
+```python
+def analysis(species_name, result_file, output_file)
+```
+
+A function which loops over every time step in an output file and finds the rate of change of a species at that time due to each of the reactions it is involved in.
+From this, the most important reactions are identified and printed to file. This can be used to understand the chemical reason behind a species' behaviour.
+
+**Arguments**:
+
+- `species_name` _str_ - Name of species to be analysed
+- `result_file` _str_ - The path to the file containing the UCLCHEM output
+- `output_file` _str_ - The path to the file where the analysis output will be written
+
+<a id="uclchem.analysis.total_element_abundance"></a>
+
+#### total\_element\_abundance
+
+```python
+def total_element_abundance(element, df)
+```
+
+Calculates that the total elemental abundance of a species as a function of time. Allows you to check conservation.
+
+**Arguments**:
+
+- `element` _str_ - Name of element
+- `df` _pandas.DataFrame_ - DataFrame from `read_output_file()`
+  
+
+**Returns**:
+
+- `pandas.Series` - Total abundance of element for all time steps in df.
+
+<a id="uclchem.analysis.check_element_conservation"></a>
+
+#### check\_element\_conservation
+
+```python
+def check_element_conservation(df, element_list=["H", "N", "C", "O"])
+```
+
+Check the conservation of major element by comparing total abundance at start and end of model
+
+**Arguments**:
+
+- `df` _pandas.DataFrame_ - UCLCHEM output in format from `read_output_file`
+- `element_list` _list, optional_ - List of elements to check. Defaults to ["H", "N", "C", "O"].
+  
+
+**Returns**:
+
+- `dict` - Dictionary containing the change in the total abundance of each element as a fraction of initial value
+
+<a id="uclchem.tests"></a>
+
+# uclchem.tests
+
+<a id="uclchem.tests.test_ode_conservation"></a>
+
+#### test\_ode\_conservation
+
+```python
+def test_ode_conservation(species_list, element_list=["H", "N", "C", "O"])
+```
+
+Test function which checks whether the ODEs conserve elementsry_
+
+:param species_list (list): list of each species in the network
+
+**Returns**:
+
+(dict) Dictionary containing total rate of change of important elements
+

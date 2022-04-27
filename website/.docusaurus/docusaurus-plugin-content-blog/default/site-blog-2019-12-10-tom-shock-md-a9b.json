@@ -8,6 +8,19 @@
   "tags": [],
   "readingTime": 0.77,
   "truncated": false,
+  "authors": [
+    {
+      "name": "Tomas James",
+      "url": "https://github.com/tomasjames",
+      "imageURL": "https://i.ibb.co/8KhFwwN/IMG-1783.jpg"
+    }
+  ],
+  "frontMatter": {
+    "title": "Tracing shock type with chemical diagnostics - an application to L1157",
+    "author": "Tomas James",
+    "authorURL": "https://github.com/tomasjames",
+    "authorImageURL": "https://i.ibb.co/8KhFwwN/IMG-1783.jpg"
+  },
   "prevItem": {
     "title": "New Website",
     "permalink": "/blog/2020/02/14/New-Website"

@@ -3,15 +3,15 @@
   "id": "parameters",
   "isDocsHomePage": false,
   "title": "Model Parameters",
-  "description": "Chemical models such as UCLCHEM depend on a huge number of parameters. Listed on this page are all parameters made to be easily modified by a user. They largely reflect the physical conditions of the gas in and control the behaviour of the model.",
+  "description": "UCLCHEM will default to these values unless they are overridden by user. Users can override these by adding the variable name as written here in the paramdict argument of any UCLCHEM model function. paramdict is not case sensitive.",
   "source": "@site/docs/parameters.md",
   "sourceDirName": ".",
   "slug": "/parameters",
   "permalink": "/docs/parameters",
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1633447119,
-  "formattedLastUpdatedAt": "10/5/2021",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {
     "id": "parameters",
     "title": "Model Parameters"
@@ -22,7 +22,7 @@
     "permalink": "/docs/network"
   },
   "next": {
-    "title": "Troubleshooting",
-    "permalink": "/docs/trouble"
+    "title": "Python API",
+    "permalink": "/docs/pythonapi"
   }
 }

@@ -8,6 +8,15 @@
   "tags": [],
   "readingTime": 1.505,
   "truncated": false,
+  "authors": [
+    {
+      "name": "jonholdship"
+    }
+  ],
+  "frontMatter": {
+    "title": "Collapsing Prestellar Cores - a new physics module",
+    "author": "jonholdship"
+  },
   "prevItem": {
     "title": "Nitrogen fractionation in external galaxies",
     "permalink": "/blog/2019/04/19/serena-nitrogen-frac"

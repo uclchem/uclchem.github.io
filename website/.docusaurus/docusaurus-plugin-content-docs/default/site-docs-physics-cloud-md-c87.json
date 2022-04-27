@@ -1,0 +1,26 @@
+{
+  "unversionedId": "physics-cloud",
+  "id": "physics-cloud",
+  "title": "Cloud Model",
+  "description": "Main Contributors: Serena Viti, Jon Holdship",
+  "source": "@site/docs/physics-cloud.md",
+  "sourceDirName": ".",
+  "slug": "/physics-cloud",
+  "permalink": "/docs/physics-cloud",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "physics-cloud",
+    "title": "Cloud Model",
+    "author": "Jon Holdship"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Core Physics",
+    "permalink": "/docs/physics-core"
+  },
+  "next": {
+    "title": "Hot Core",
+    "permalink": "/docs/physics-hotcore"
+  }
+}

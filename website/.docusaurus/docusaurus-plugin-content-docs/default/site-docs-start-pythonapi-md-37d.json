@@ -1,0 +1,25 @@
+{
+  "unversionedId": "pythonapi",
+  "id": "pythonapi",
+  "title": "Python Reference",
+  "description": "* uclchem",
+  "source": "@site/docs/start-pythonapi.md",
+  "sourceDirName": ".",
+  "slug": "/pythonapi",
+  "permalink": "/docs/pythonapi",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "pythonapi",
+    "title": "Python Reference"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
+  },
+  "next": {
+    "title": "Tutorials",
+    "permalink": "/docs/category/tutorials"
+  }
+}

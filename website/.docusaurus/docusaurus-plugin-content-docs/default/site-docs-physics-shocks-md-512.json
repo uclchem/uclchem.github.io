@@ -1,0 +1,25 @@
+{
+  "unversionedId": "physics-shocks",
+  "id": "physics-shocks",
+  "title": "Shock Models",
+  "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
+  "source": "@site/docs/physics-shocks.md",
+  "sourceDirName": ".",
+  "slug": "/physics-shocks",
+  "permalink": "/docs/physics-shocks",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "physics-shocks",
+    "title": "Shock Models"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Hot Core",
+    "permalink": "/docs/physics-hotcore"
+  },
+  "next": {
+    "title": "Collapse Models",
+    "permalink": "/docs/physics-collapse"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "running_a_grid",
+  "id": "running_a_grid",
+  "title": "Running a Grid",
+  "description": "A common task is to run UCLCHEM over a grid of parameter combinations. This notebook sets up a simple approach to doing so for regular grids.",
+  "source": "@site/docs/running_a_grid.md",
+  "sourceDirName": ".",
+  "slug": "/running_a_grid",
+  "permalink": "/docs/running_a_grid",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Advanced Physical Modelling",
+    "permalink": "/docs/modelling_objects"
+  },
+  "next": {
+    "title": "Chemical Analysis",
+    "permalink": "/docs/chemical_analysis"
+  }
+}

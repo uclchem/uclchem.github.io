@@ -8,6 +8,19 @@
   "tags": [],
   "readingTime": 0.99,
   "truncated": false,
+  "authors": [
+    {
+      "name": "Jonathan Holdship",
+      "title": "UCLCHEM developer",
+      "url": "https://jonholdship.github.io",
+      "imageURL": "/img/jon.png",
+      "key": "jonholdship"
+    }
+  ],
+  "frontMatter": {
+    "title": "Ambipolar diffusion and the molecular abundances inprestellar cores",
+    "authors": "jonholdship"
+  },
   "prevItem": {
     "title": "A chemical study of carbon fractionation in external galaxies",
     "permalink": "/blog/2019/08/13/serena-carbon-frac"

@@ -1,8 +1,6 @@
 ---
 title: Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions
-author: Jon Holdship
-authorURL: https://jonholdship.github.io
-authorImageURL: https://jonholdship.github.io/img/me-serious.png
+authors: jonholdship
 ---
 Audrey Coutens has published modelling work on glycoaldehyde and ethylene glycol using UCLCHEM. You can find [the paper here](https://arxiv.org/abs/1712.08778) and the abstract below.
 

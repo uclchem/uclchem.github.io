@@ -8,6 +8,15 @@
   "tags": [],
   "readingTime": 1.3,
   "truncated": false,
+  "authors": [
+    {
+      "name": "jonholdship"
+    }
+  ],
+  "frontMatter": {
+    "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
+    "author": "jonholdship"
+  },
   "prevItem": {
     "title": "Collapsing Prestellar Cores - a new physics module",
     "permalink": "/blog/2018/07/12/felix-collapse"

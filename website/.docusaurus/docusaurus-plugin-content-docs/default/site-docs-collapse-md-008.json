@@ -1,28 +1,28 @@
 {
-  "unversionedId": "collapse",
-  "id": "collapse",
+  "unversionedId": "physics-collapse",
+  "id": "physics-collapse",
   "isDocsHomePage": false,
   "title": "Collapse Models",
   "description": "Main Contributors: Felix Priestley",
   "source": "@site/docs/collapse.md",
   "sourceDirName": ".",
-  "slug": "/collapse",
-  "permalink": "/docs/collapse",
+  "slug": "/physics-collapse",
+  "permalink": "/docs/physics-collapse",
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1621867778,
-  "formattedLastUpdatedAt": "5/24/2021",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
   "frontMatter": {
-    "id": "collapse",
+    "id": "physics-collapse",
     "title": "Collapse Models"
   },
   "sidebar": "docs",
   "previous": {
     "title": "Shock Models",
-    "permalink": "/docs/shocks"
+    "permalink": "/docs/physics-shocks"
   },
   "next": {
-    "title": "Hydro Post Processing",
-    "permalink": "/docs/hydro"
+    "title": "Gas Phase Reactions",
+    "permalink": "/docs/gas"
   }
 }

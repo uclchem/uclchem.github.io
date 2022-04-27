@@ -38,25 +38,32 @@ module.exports={
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../website/docs",
-          "sidebarPath": "../website/sidebars.json",
+          sidebarPath: require.resolve('./sidebars.js'),
           "remarkPlugins": [math],
           "rehypePlugins": [katex],
         },
         "blog": {
-          "path": "blog"
+          "path": "blog",
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL'
         },
-        "theme": {
-          "customCss": "../src/css/customTheme.css"
-        }
+        theme: {
+          customCss: [require.resolve('./src/css/custom.css')],
+        },
+        googleAnalytics: {
+          trackingID: 'UA-186542401-1',
+          // Optional fields.
+          anonymizeIP: true, // Should IPs be anonymized?
+         },
       }
     ]
   ],
   themeConfig: {
-    googleAnalytics: {
-      trackingID: 'UA-186542401-1',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-     },
+   
+    prism: {
+        additionalLanguages: ['fortran'],
+        theme: require('prism-react-renderer/themes/dracula'),
+    },
     "navbar": {
       "title": "UCLCHEM",
       "logo": {

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "bulk",
+  "id": "bulk",
+  "isDocsHomePage": false,
+  "title": "Bulk Ice Processes",
+  "description": "For a three phase network, we must include reactions in the bulk and the process by which it is formed. To do this, MakeRates automatically duplicates all LH reactions so that a reaction on the surface and one in the bulk ice exists in the network. We then include two methods by which material can move between the bulk and the surface. First is the accumulation of the bulk as new surface layers are formed and second is the individual swapping of a particle from the bulk with one on the surface. Both of these processes are taken from Garrod & Pauly 2011",
+  "source": "@site/docs/chem0bulk.md",
+  "sourceDirName": ".",
+  "slug": "/bulk",
+  "permalink": "/docs/bulk",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "bulk",
+    "title": "Bulk Ice Processes"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Adsorption & Desorption Reactions",
+    "permalink": "/docs/desorb"
+  },
+  "next": {
+    "title": "Writing The Python Interface",
+    "permalink": "/docs/dev-python-wrap"
+  }
+}

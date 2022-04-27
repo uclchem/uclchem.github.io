@@ -1,8 +1,6 @@
 ---
 title: Ambipolar diffusion and the molecular abundances inprestellar cores
-author: Jon Holdship
-authorURL: https://jonholdship.github.io
-authorImageURL: https://jonholdship.github.io/img/me-serious.png
+authors: jonholdship
 ---
 [Felix Priestley](https://fpriestley.github.io/) has used UCLCHEM in an investigation of the chemical differences caused by the magnetic fields in prestellar cores. You can find [the paper here](https://arxiv.org/pdf/1907.02736.pdf) and the abstract below.
 

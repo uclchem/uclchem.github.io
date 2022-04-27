@@ -1,0 +1,28 @@
+{
+  "unversionedId": "cloud",
+  "id": "cloud",
+  "isDocsHomePage": false,
+  "title": "Cloud Model",
+  "description": "Main Contributors: Serena Viti, Jon Holdship",
+  "source": "@site/docs/core.md",
+  "sourceDirName": ".",
+  "slug": "/cloud",
+  "permalink": "/docs/cloud",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "cloud",
+    "title": "Cloud Model"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Integration",
+    "permalink": "/docs/trouble-integration"
+  },
+  "next": {
+    "title": "Shock Models",
+    "permalink": "/docs/shocks"
+  }
+}

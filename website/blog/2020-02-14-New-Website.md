@@ -1,8 +1,6 @@
 ---
 title: New Website
-author: Jon Holdship
-authorURL: https://jonholdship.github.io
-authorImageURL: https://jonholdship.github.io/img/me-serious.png
+authors: jonholdship
 ---
 We're replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to date and are open to comments from users as we're keen to make UCLCHEM as easy to use as possible.
 

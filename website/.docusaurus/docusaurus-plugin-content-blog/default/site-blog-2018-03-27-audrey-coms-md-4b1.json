@@ -8,6 +8,19 @@
   "tags": [],
   "readingTime": 1.405,
   "truncated": false,
+  "authors": [
+    {
+      "name": "Jonathan Holdship",
+      "title": "UCLCHEM developer",
+      "url": "https://jonholdship.github.io",
+      "imageURL": "/img/jon.png",
+      "key": "jonholdship"
+    }
+  ],
+  "frontMatter": {
+    "title": "Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions",
+    "authors": "jonholdship"
+  },
   "prevItem": {
     "title": "The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena",
     "permalink": "/blog/2018/06/20/izaskun-phosphorus"

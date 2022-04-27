@@ -1,0 +1,26 @@
+{
+  "unversionedId": "install",
+  "id": "install",
+  "title": "Installation",
+  "description": "Obtaining UCLCHEM",
+  "source": "@site/docs/start-basicuse.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "install",
+    "title": "Installation",
+    "slug": "/"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/category/getting-started"
+  },
+  "next": {
+    "title": "Creating a Network",
+    "permalink": "/docs/network"
+  }
+}

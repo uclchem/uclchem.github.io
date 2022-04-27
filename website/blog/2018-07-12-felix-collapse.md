@@ -1,8 +1,6 @@
 ---
 title: Collapsing Prestellar Cores - a new physics module
-author: Jon Holdship
-authorURL: https://jonholdship.github.io
-authorImageURL: https://jonholdship.github.io/img/me-serious.png
+author: jonholdship
 ---
 [Felix Priestley](https://fpriestley.github.io/) has used UCLCHEM to study the collapse of prestellar cores. In the process, he's created a new physics module `collapse.f90` which follows a sphere of gas collapsing in different ways. The [paper can be found here](https://arxiv.org/pdf/1806.01699.pdf) and the abstract is below.
 

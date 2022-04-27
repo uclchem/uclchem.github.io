@@ -45,7 +45,8 @@ function HITS() {
       <div className="softwarecontainer-div">
       <h2><a href="https://uclchem.github.io/hits.html">HITs</a></h2>
       <h4>History Independent Tracers</h4>
-      <p>Placeholder.</p>
+      <p>A lot of UCLCHEM work revolves around interpreting molecular observations to understand the underlying physical conditions of some gas. In <a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...658A.103H/abstract">our HITs paper</a>, we describe a method for determining which observations will most constrain parameter of interest.</p>
+      <p>As a result of this work, you can use <a href="https://uclchem.github.io/hits.html">our HITs website</a> to plan your own observations. Simply specify the parameter you'd like to measure and it will suggest the molecular transitions that will most constrain that parameter when you try to model it with RADEX and UCLCHEM.</p>
       </div>
     </div>
   );

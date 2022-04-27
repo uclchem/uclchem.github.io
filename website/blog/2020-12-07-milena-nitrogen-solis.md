@@ -1,8 +1,6 @@
 ---
 title: First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI
-author: Serena Viti
-authorURL: https://home.strw.leidenuniv.nl/~viti/
-authorImageURL: https://www.strw.leidenuniv.nl/org/fotos/viti.jpg
+authors: serena
 ---
 As part of the SOLIS observational programme, various isotopologues of HCN were observed towards L1157 in order to study the nitrogen fractionation in a protostellar outflow. The modelling work for this study was done using UCLCHEM. You can find [the paper here](https://arxiv.org/pdf/2011.14882.pdf) and the abstract below.
 

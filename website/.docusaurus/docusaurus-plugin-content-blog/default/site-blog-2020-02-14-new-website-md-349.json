@@ -8,6 +8,19 @@
   "tags": [],
   "readingTime": 0.715,
   "truncated": false,
+  "authors": [
+    {
+      "name": "Jonathan Holdship",
+      "title": "UCLCHEM developer",
+      "url": "https://jonholdship.github.io",
+      "imageURL": "/img/jon.png",
+      "key": "jonholdship"
+    }
+  ],
+  "frontMatter": {
+    "title": "New Website",
+    "authors": "jonholdship"
+  },
   "prevItem": {
     "title": "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
     "permalink": "/blog/2020/12/07/milena-nitrogen-solis"

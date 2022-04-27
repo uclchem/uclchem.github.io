@@ -8,6 +8,23 @@
   "tags": [],
   "readingTime": 1.89,
   "truncated": false,
+  "authors": [
+    {
+      "name": "Serena Viti",
+      "title": "UCLCHEM PI",
+      "url": "https://home.strw.leidenuniv.nl/~viti/",
+      "imageURL": "/img/viti.jpg",
+      "key": "serena"
+    }
+  ],
+  "frontMatter": {
+    "title": "First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI",
+    "authors": "serena"
+  },
+  "prevItem": {
+    "title": "HITs - History Independent Tracers",
+    "permalink": "/blog/2022/02/06/holdship-hits"
+  },
   "nextItem": {
     "title": "New Website",
     "permalink": "/blog/2020/02/14/New-Website"

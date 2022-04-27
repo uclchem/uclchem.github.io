@@ -2,24 +2,27 @@
   "unversionedId": "pythonapi",
   "id": "pythonapi",
   "isDocsHomePage": false,
-  "title": "Table of Contents",
+  "title": "Python API",
   "description": "* uclchem",
   "source": "@site/docs/pythonapi.md",
   "sourceDirName": ".",
   "slug": "/pythonapi",
   "permalink": "/docs/pythonapi",
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1632743955,
-  "formattedLastUpdatedAt": "9/27/2021",
-  "frontMatter": {},
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {
+    "id": "pythonapi",
+    "title": "Python Reference"
+  },
   "sidebar": "docs",
   "previous": {
-    "title": "Running Your First Models",
-    "permalink": "/docs/pythonstart"
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
   },
   "next": {
-    "title": "Physics Modules",
-    "permalink": "/docs/physics"
+    "title": "Running Your First Models",
+    "permalink": "/docs/first_model"
   }
 }

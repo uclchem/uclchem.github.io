@@ -6,8 +6,9 @@
   "currentLocale": "en",
   "localeConfigs": {
     "en": {
-      "label": "en",
-      "direction": "ltr"
+      "label": "English",
+      "direction": "ltr",
+      "htmlLang": "en"
     }
   }
 }

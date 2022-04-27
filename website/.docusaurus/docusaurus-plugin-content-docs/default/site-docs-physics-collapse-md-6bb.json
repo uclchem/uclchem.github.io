@@ -1,0 +1,25 @@
+{
+  "unversionedId": "physics-collapse",
+  "id": "physics-collapse",
+  "title": "Collapse Models",
+  "description": "Main Contributors: Felix Priestley",
+  "source": "@site/docs/physics-collapse.md",
+  "sourceDirName": ".",
+  "slug": "/physics-collapse",
+  "permalink": "/docs/physics-collapse",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "physics-collapse",
+    "title": "Collapse Models"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Shock Models",
+    "permalink": "/docs/physics-shocks"
+  },
+  "next": {
+    "title": "Chemistry",
+    "permalink": "/docs/category/chemistry"
+  }
+}

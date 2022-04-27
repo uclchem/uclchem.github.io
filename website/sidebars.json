@@ -1,9 +1,0 @@
-{
-  "docs": {
-    "Getting Started": ["basicuse","network","parameters","trouble"],
-    "Python" : ["pythoncompiling","pythonstart","pythonapi"],
-    "Physics": ["physics","cloud","shocks","collapse","hydro"],
-    "Chemistry": ["gas","grain","desorb","bulk"]
-  }
-
-}

@@ -1,28 +1,25 @@
 {
-  "unversionedId": "pythonstart",
-  "id": "pythonstart",
+  "unversionedId": "first_models",
+  "id": "first_models",
   "isDocsHomePage": false,
   "title": "Running Your First Models",
-  "description": "A Jupyter notebook in the Python/ demonstrates how to use the Python UCLCHEM module. This page was automatically generated from that notebook.",
+  "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output.",
   "source": "@site/docs/first_models.md",
   "sourceDirName": ".",
-  "slug": "/pythonstart",
-  "permalink": "/docs/pythonstart",
+  "slug": "/first_models",
+  "permalink": "/docs/first_models",
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1638267893,
-  "formattedLastUpdatedAt": "11/30/2021",
-  "frontMatter": {
-    "id": "pythonstart",
-    "title": "Python Examples"
-  },
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "10/14/2018",
+  "frontMatter": {},
   "sidebar": "docs",
   "previous": {
-    "title": "Compiling for Python",
-    "permalink": "/docs/pythoncompiling"
+    "title": "Troubleshooting",
+    "permalink": "/docs/trouble"
   },
   "next": {
-    "title": "Table of Contents",
-    "permalink": "/docs/pythonapi"
+    "title": "Advanced Physical Modelling",
+    "permalink": "/docs/modelling_objects"
   }
 }

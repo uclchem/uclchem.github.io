@@ -1,0 +1,19 @@
+{
+  "title": "Getting Started",
+  "description": "Learn to install UCLCHEM, set basic parameters and create your own network",
+  "slug": "/category/tutorials",
+  "permalink": "/docs/category/tutorials",
+  "keywords": [
+    "guides"
+  ],
+  "navigation": {
+    "previous": {
+      "title": "Python Reference",
+      "permalink": "/docs/pythonapi"
+    },
+    "next": {
+      "title": "Installation",
+      "permalink": "/docs/"
+    }
+  }
+}
