@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[3245],{6056:t=>{t.exports=JSON.parse('{"title":"Getting Started","description":"Learn to install UCLCHEM, set basic parameters and create your own network","slug":"/category/getting-started","permalink":"/docs/category/getting-started","navigation":{"next":{"title":"Installation","permalink":"/docs/"}}}')}}]);
