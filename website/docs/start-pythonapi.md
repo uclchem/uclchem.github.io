@@ -10,6 +10,7 @@ title: Python Reference
   * [collapse](#uclchem.model.collapse)
   * [hot\_core](#uclchem.model.hot_core)
   * [cshock](#uclchem.model.cshock)
+  * [cshock\_dissipation\_time](#uclchem.model.cshock_dissipation_time)
   * [jshock](#uclchem.model.jshock)
 * [uclchem.\_\_version\_\_](#uclchem.__version__)
 * [uclchem.analysis](#uclchem.analysis)
@@ -104,7 +105,7 @@ Run hot core model from UCLCHEM, based on Viti et al. 2004 and Collings et al. 2
 #### cshock
 
 ```python
-def cshock(shock_vel, timestep_factor=0.01, param_dict=None, out_species=None)
+def cshock(shock_vel, timestep_factor=0.01, minimum_temperature=0.0, param_dict=None, out_species=None)
 ```
 
 Run C-type shock model from UCLCHEM
@@ -114,12 +115,35 @@ Run C-type shock model from UCLCHEM
 - `shock_vel` _float_ - Velocity of the shock in km/s
 - `timestep_factor` _float, optional_ - Whilst the time is less than 2 times the dissipation time of shock, timestep is timestep_factor*dissipation time. Essentially controls
   how well resolved the shock is in your model. Defaults to 0.01.
+  minimum_temperature (float, optional) : Minimum post-shock temperature. Defaults to 0.0 (no minimum). The shocked gas typically cools to `initialTemp` if this is not set.
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
 
 **Returns**:
 
 - `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+- `float` - The dissipation time of the shock in years
+
+<a id="uclchem.model.cshock_dissipation_time"></a>
+
+#### cshock\_dissipation\_time
+
+```python
+def cshock_dissipation_time(shock_vel, initial_dens)
+```
+
+A simple function used to calculate the dissipation time of a C-type shock.
+Use to obtain a useful timescale for your C-shock model runs. Velocity of
+ions and neutrals equalizes at dissipation time and full cooling takes a few dissipation times.
+
+**Arguments**:
+
+- `shock_vel` _float_ - Velocity of the shock in km/s
+- `initial_dens` _float_ - Preshock density of the gas in cm$^{-3}$
+  
+
+**Returns**:
+
 - `float` - The dissipation time of the shock in years
 
 <a id="uclchem.model.jshock"></a>

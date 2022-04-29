@@ -16,11 +16,14 @@ A key value in this model is the dissipation length, which is the distance over 
 jshock is a similar parameterization for j-shocks from [James et al.](https://dx.doi.org/10.1051/0004-6361/201936536) validated against more recent results from MHDvode ([Flower et al. 2015](https://dx.doi.org/10.1051/0004-6361/201525740)). See the [j-shock function docs](/docs/pythonapi#uclchem.model.jshock) for details.
 
 ## Dimensions 
-Both shock models are intended to be run as single point models only. However, you can look at the 1D profile of a shock by converting between time and distance. If we assume the shock is stationary, that is that it's structure is unchanged as it moves through a cloud of gas, then the points that are far away in time are the same as those far away in space.
+Both shock models are intended to be run as single point models only and the code will return an error for `points > 1`. However, you can look at the 1D profile of a shock by converting between time and distance. If we assume the shock is stationary, that is that it's structure is unchanged as it moves through a cloud of gas, then the points that are far away in time are the same as those far away in space.
 
-As an illustration, as a shock front moves through a cloud and first hits a parcel of gas, this is t=0 in our shock models. 1000 years later, the shock front has moved on, thus the output of UCLCHEM at t=1000 years is the state of a parcel of gas that was first hit 1000 years ago and is now far behind the shock front.
+<img src="/img/shock.png" width="600" margin-left="40%"/>
 
-By using the shock velocity, you can translate 1000 years to the distance between the parcel that was shocked 1000 years ago and the parcel that is just being reached by the shock front,
+
+As an illustration, as a shock front moves through a cloud and first hits a parcel of gas, this is t=0 in our shock model output. 5000 years later, the shock front has moved on, thus the output of UCLCHEM at t=5000 years is the state of a parcel of gas that was first hit 5000 years ago and is now far behind the shock front.
+
+By using the shock velocity, you can translate 5000 years to the distance between the parcel that was shocked 5000 years ago and the parcel that is just being reached by the shock front,
 $$
  z= v_s t
 $$

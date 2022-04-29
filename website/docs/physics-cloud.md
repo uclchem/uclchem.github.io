@@ -15,4 +15,7 @@ However, we caution UCLCHEM's cloud is not a PDR model. It does not consider hea
 
 Cloud is more suitable for studing the UV shielded parts of molecular clouds. If we assume the only depth dependent effect on the chemistry in these clouds is the UV radiation, it becomes reasonable to assume the UV shielded parts of the cloud are homogeneous and can be modelled with a single point code. Thus, most users will use cloud with `points=1` and some combination of `rout`, `baseAv`, and density that produce a large Av.
 
+<img src="/img/dark_cloud.png" width="600" margin-left="40%"/>
+
+
 The other major use of cloud is to model a simple cloud of gas in order to calculate reasonable starting abundances for another model. We may wish to run a hot core or shock model for some investigation and require reasonable initial conditions for the gas. We do this by starting a cloud model with a low density gas of atoms and ions with no molecules or ices. We then allow it to collapse using the `freefall` parameter to reach the density of the gas in our science model. Whatever abundances are reached are then used as the starting abundances in the science model.

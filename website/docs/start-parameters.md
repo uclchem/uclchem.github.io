@@ -78,7 +78,7 @@ UCLCHEM will default to these values unless they are overridden by user. Users c
 ## Integration Controls
 |Parameter|Default Value |Description|
 | ----- | ------| ------ |
-|reltol|1d-8 |Relative tolerance for integration, see [integration docs](/docs/integration) for advice.|
+|reltol|1d-8 |Relative tolerance for integration, see [integration docs](/docs/trouble-integration) for advice.|
 |abstol_factor|1.0d-14 |Absolute tolerance for integration is calculated by multiplying species abundance by this factor.|
 |abstol_min|1.0d-25 |Minimum value absolute tolerances can take.|
 |MXSTEP|10000 |Maximum steps allowed in integration before warning is thrown.|

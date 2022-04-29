@@ -153,7 +153,7 @@ result,dissipation_time=result
      At current T(=R1), MXSTEP(=I1) steps                                            
      taken on this call before reaching TOUT.                                        
     In the above message, I1 =      10000
-    In the above message, R1 =   0.1931420520843D+12
+    In the above message, R1 =   0.1931519818467D+12
      ISTATE -1: Reducing time step
 
 
@@ -168,7 +168,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 
-    {'H': '0.007%', 'N': '0.042%', 'C': '0.151%', 'O': '0.039%'}
+    {'H': '0.005%', 'N': '1.151%', 'C': '1.380%', 'O': '1.305%'}
 
 
 
@@ -260,3 +260,4 @@ However, one should be aware of the limitations of this method. A freefall colla
 Bear in mind that you can use `abundSaveFile` and `abundLoadFile` in the same model run. This lets you chain model runs together. For example, you could run a c-shock from a cloud model as we did here and then a j-shock with the c-shock's abundances as the initial abundances.
 
 
+```python

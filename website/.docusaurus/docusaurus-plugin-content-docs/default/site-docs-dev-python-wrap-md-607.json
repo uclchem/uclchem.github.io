@@ -9,6 +9,9 @@
   "permalink": "/docs/dev-python-wrap",
   "tags": [],
   "version": "current",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "dev-python-wrap",
     "title": "Writing The Python Interface"
