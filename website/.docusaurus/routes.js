@@ -110,7 +110,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','8b8'),
+    component: ComponentCreator('/docs','b89'),
     routes: [
       {
         path: '/docs/',
@@ -260,11 +260,6 @@ export default [
         component: ComponentCreator('/docs/pythonapi','5c8'),
         exact: true,
         sidebar: "docs"
-      },
-      {
-        path: '/docs/pythoncompiling',
-        component: ComponentCreator('/docs/pythoncompiling','36c'),
-        exact: true
       },
       {
         path: '/docs/running_a_grid',

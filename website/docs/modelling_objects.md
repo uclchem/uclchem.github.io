@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 
 ## The Hot Core
 
-### Initial Conditions
-UCLCHEM typically starts with the gas in atomic/ionic form with no molecules. However, this clearly is not appropriate when modelling an object such as a hot core. In these objects, the gas is already evolved and there should be molecules in the gas phase as well as ice mantles on the dust. To allow for this, one must provide some initial abundances to the model. There are many ways to do this but we typically chose to run a preliminary model to produce our abundances.
+### Initial Conditions (Phase 1)
+UCLCHEM typically starts with the gas in atomic/ionic form with no molecules. However, this clearly is not appropriate when modelling an object such as a hot core. In these objects, the gas is already evolved and there should be molecules in the gas phase as well as ice mantles on the dust. To allow for this, one must provide some initial abundances to the model. There are many ways to do this but we typically chose to run a preliminary model to produce our abundances. In many UCLCHEM papers, we refer to the preliminary model as *phase 1* and the science model as *phase 2*. Phase 1 simply models a collapsing cloud and phase 2 models the object in question.
 
-For this case, we will use `uclchem.model.cloud()` to run a model where a cloud of gas collapses from a density of $10^2 cm^{-3}$ to our hot core density of $10^6 cm^{-3}$. During this collapse, chemistry will occur and we can assume the final abundances of this model will be reasonable starting abundances for the hot core. 
+To do this, we will use `uclchem.model.cloud()` to run a model where a cloud of gas collapses from a density of $10^2 cm^{-3}$ to our hot core density of $10^6 cm^{-3}$, keeping all other parameters constant. During this collapse, chemistry will occur and we can assume the final abundances of this model will be reasonable starting abundances for the hot core. 
 
 
 ```python
@@ -32,12 +32,15 @@ param_dict = {
 
 }
 result = uclchem.model.cloud(param_dict=param_dict)
-
+print(result)
 ```
+
+    1
+
 
 With that done, we now have a file containing the final abundances of a cloud of gas after this collapse: `param_dict["abundSaveFile"]` we can pass this to our hot core model to use those abundances as our initial abundances.
 
-### Running the Science Model
+### Running the Science Model (Phase 2)
 
 We need to change just a few things in `param_dict` to set up the hot core model. The key one is that UCLCHEM saves final abundances to `abundSaveFile` but loads them from `abundLoadFile` so we need to swap that key over to make the abundances we just produced our initial abundances. 
 
@@ -56,11 +59,29 @@ param_dict["freefall"]=False
 param_dict["freezeFactor"]=0 
 param_dict["abstol_factor"]=1e-18
 param_dict["reltol"]=1e-12
-param_dict["abundLoadFile"]=param_dict.pop("abundSaveFile") #this is still set to startcollapse.dat from phase 1 so remove it or change it.
+#pop is dangerous, it removes the original key so you can't rerun this cell.
+param_dict["abundLoadFile"]=param_dict.pop("abundSaveFile") 
 param_dict["outputFile"]="../examples/test-output/phase2-full.dat"
 
 result=uclchem.model.hot_core(temp_indx=3,max_temperature=300.0,param_dict=param_dict)
 ```
+
+     At T(=R1) and step size H(=R2), the                                             
+     corrector convergence failed repeatedly                                         
+     or with ABS(H) = HMIN.                                                          
+    In the above message, R1 =   0.7287285413740D+13   R2 =   0.5478219417669D-01
+     ISTATE -5 - shortening step at time   230610.29790317026      years
+     At T(=R1) and step size H(=R2), the                                             
+     corrector convergence failed repeatedly                                         
+     or with ABS(H) = HMIN.                                                          
+    In the above message, R1 =   0.7290413518906D+13   R2 =   0.5387230589814D+03
+     ISTATE -5 - shortening step at time   230709.28857297476      years
+     At T(=R1) and step size H(=R2), the                                             
+     corrector convergence failed repeatedly                                         
+     or with ABS(H) = HMIN.                                                          
+    In the above message, R1 =   0.7292726506262D+13   R2 =   0.1381305879716D+02
+     ISTATE -5 - shortening step at time   230782.48437539555      years
+
 
 Note that we've changed abstol and reltol here. They control the integrator accuracy and whilst making them smaller does slow down successful runs, it can make runs complete that stall completely otherwise. In this case, we found that when we didn't alter the defaults, the model completed but `uclchem.check_element_conservation()` showed C and O were not conserved. By reducing these tolerances, we were fix this as shown below.
 
@@ -131,7 +152,7 @@ result = uclchem.model.cloud(param_dict=param_dict)
 
 ### C-shock
 
-We'll first run a c-shock. We'll run a 40 km s $^{-1}$ shock through a gas of density $10^4$ cm $^{-3}$, using the abundances we just produced.
+We'll first run a c-shock. We'll run a 40 km s $^{-1}$ shock through a gas of density $10^4$ cm $^{-3}$, using the abundances we just produced. Note that c-shock is the only model which returns an additional output in its result list. Not only is the first element the success flag indicating whether UCLCHEM completed, the second element is the dissipation time of the shock. We'll use that time to make our plots look nicer, cutting to a reasonable time. You can also obtain it from `uclchem.utils.cshock_dissipation_time()`.
 
 
 ```python
@@ -174,7 +195,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 ```python
-species=["CO","H2O","CH3OH","#CO","#H2O","#CH3OH","@H2O","@CO","@CH3OH"]
+species=["CO","H2O","CH3OH","NH3","$CO","$H2O","$CH3OH","$NH3"]
 
 fig,[ax,ax2]=plt.subplots(1,2,figsize=(16,9))
 ax=uclchem.analysis.plot_species(ax,phase2_df,species)
@@ -232,7 +253,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 ```python
-species=["CO","H2O","CH3OH","#CO","#H2O","#CH3OH","@H2O","@CO","@CH3OH"]
+species=["CO","H2O","CH3OH","NH3","$CO","$H2O","$CH3OH","$NH3"]
 
 fig,[ax,ax2]=plt.subplots(1,2,figsize=(16,9))
 ax=uclchem.analysis.plot_species(ax,phase2_df,species)
@@ -258,6 +279,3 @@ That's everything! We've run various science models using reasonable starting ab
 However, one should be aware of the limitations of this method. A freefall collapse from low density to high is not really how a molecular cloud forms and so the abundances are only approximately similar to values they'd truly have in a real cloud. Testing whether your results are sensitive to things like the time you run the preliminary for or the exact density is a good way to make sure these approximations are not problematic.
 
 Bear in mind that you can use `abundSaveFile` and `abundLoadFile` in the same model run. This lets you chain model runs together. For example, you could run a c-shock from a cloud model as we did here and then a j-shock with the c-shock's abundances as the initial abundances.
-
-
-```python

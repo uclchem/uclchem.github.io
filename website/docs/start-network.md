@@ -42,7 +42,7 @@ A basic version of each of the required file is supplied in the repository. The 
 
 ## Outputs
 
-Outputs from MakeRates are automatically moved to the `src/` directory so the user can `pip install .` and update their installation of UCLCHEM to use their new network. However, by adding the parameter `output_directory` to the yaml file, you can have all the files moved to a directory instead. If you do, the following files will be produced:
+Outputs from MakeRates are automatically moved to the `src/` directory so the user can `pip install .` and update their installation of UCLCHEM to use their new network. However, by adding the parameter `output_directory` to the yaml file, you can have all the files moved to a directory instead without copying them to your UCLCHEM src folder. If you do, the following files will be produced:
 
 - network.f90 - Fortran arrays containing lists of species names and properties (mass, binding energy etc) as well as reaction reactants, products and rate coefficients.
 - odes.f90 - Code to calculate the rate of change of each species' abundance for the numerical solver

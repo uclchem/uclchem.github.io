@@ -327,11 +327,6 @@
       "description": "* uclchem",
       "sidebar": "docs"
     },
-    "pythoncompiling": {
-      "id": "pythoncompiling",
-      "title": "Compiling for Python",
-      "description": "Compiling"
-    },
     "running_a_grid": {
       "id": "running_a_grid",
       "title": "Running a Grid",

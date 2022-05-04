@@ -20,6 +20,11 @@ In order to compile UCLCHEM, you will simply need to do the folowing from the ma
 ```bash
 pip install .
 ```
-This will install the UCLCHEM library into your python environment, you can then import it and use it in your python scripts. If you get an error at this stage, it is very likely you do not have Cmake or gfortran installed.
+This will install the UCLCHEM library into your python environment, you can then import it and use it in your python scripts. If you get an error at this stage, it is very likely you do not have Cmake or gfortran installed. You must do this again every time you use [Makerates](/docs/network)
 
-If it completes without error then, that's it! UCLCHEM is installed. We have tutorials on how to [run your first model](/docs/first_model) as well as more complex use cases. The rest of the 'Getting Started' section focuses on creating a network and the various parameters the user can control. We also have comprehensive documentation on the [python API](/docs/pythonapi).
+If it completes without error then, that's it! UCLCHEM is installed. We have tutorials on how to [run your first model](/docs/first_model) as well as more complex use cases. The rest of the 'Getting Started' section focuses on creating a network and the various parameters the user can control. 
+
+## Checking Your Install
+We provide several ways to get acquainted with the code including a series of [tutorials](/docs/category/tutorials). Alternatively, there are python scripts in `scripts/` that can be used as templates for running your own models and comprehensive documentation on the [python API](/docs/pythonapi) and [parameters](/docs/parameters).
+
+However, if you simply want to check whether your new network is working, you can use the `scripts/run_uclchem_tests.py` and `scripts/plot_uclchem_tests.py` scripts. You can find outputs in the `examples/` directory along with an explanation of what this does.

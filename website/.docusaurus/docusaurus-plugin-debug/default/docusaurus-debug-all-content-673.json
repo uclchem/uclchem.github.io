@@ -586,25 +586,6 @@
               }
             },
             {
-              "unversionedId": "pythoncompiling",
-              "id": "pythoncompiling",
-              "title": "Compiling for Python",
-              "description": "Compiling",
-              "source": "@site/docs/pythoncompiling.md",
-              "sourceDirName": ".",
-              "slug": "/pythoncompiling",
-              "permalink": "/docs/pythoncompiling",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "10/14/2018",
-              "frontMatter": {
-                "id": "pythoncompiling",
-                "title": "Compiling for Python"
-              }
-            },
-            {
               "unversionedId": "running_a_grid",
               "id": "running_a_grid",
               "title": "Running a Grid",

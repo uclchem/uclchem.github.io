@@ -115,10 +115,6 @@
               "sidebar": "docs"
             },
             {
-              "id": "pythoncompiling",
-              "path": "/docs/pythoncompiling"
-            },
-            {
               "id": "running_a_grid",
               "path": "/docs/running_a_grid",
               "sidebar": "docs"

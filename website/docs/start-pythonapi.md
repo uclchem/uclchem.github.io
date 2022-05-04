@@ -10,9 +10,13 @@ title: Python Reference
   * [collapse](#uclchem.model.collapse)
   * [hot\_core](#uclchem.model.hot_core)
   * [cshock](#uclchem.model.cshock)
-  * [cshock\_dissipation\_time](#uclchem.model.cshock_dissipation_time)
   * [jshock](#uclchem.model.jshock)
 * [uclchem.\_\_version\_\_](#uclchem.__version__)
+* [uclchem.utils](#uclchem.utils)
+  * [cshock\_dissipation\_time](#uclchem.utils.cshock_dissipation_time)
+  * [check\_error](#uclchem.utils.check_error)
+  * [get\_species\_table](#uclchem.utils.get_species_table)
+  * [get\_reaction\_table](#uclchem.utils.get_reaction_table)
 * [uclchem.analysis](#uclchem.analysis)
   * [read\_output\_file](#uclchem.analysis.read_output_file)
   * [create\_abundance\_plot](#uclchem.analysis.create_abundance_plot)
@@ -54,7 +58,7 @@ Run cloud model from UCLCHEM
 
 **Returns**:
 
-- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
 
 <a id="uclchem.model.collapse"></a>
 
@@ -76,7 +80,7 @@ Run collapse model from UCLCHEM based on Priestley et al 2018 AJ 156 51 (https:/
 
 **Returns**:
 
-- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
 
 <a id="uclchem.model.hot_core"></a>
 
@@ -98,7 +102,7 @@ Run hot core model from UCLCHEM, based on Viti et al. 2004 and Collings et al. 2
 
 **Returns**:
 
-- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
 
 <a id="uclchem.model.cshock"></a>
 
@@ -115,16 +119,43 @@ Run C-type shock model from UCLCHEM
 - `shock_vel` _float_ - Velocity of the shock in km/s
 - `timestep_factor` _float, optional_ - Whilst the time is less than 2 times the dissipation time of shock, timestep is timestep_factor*dissipation time. Essentially controls
   how well resolved the shock is in your model. Defaults to 0.01.
-  minimum_temperature (float, optional) : Minimum post-shock temperature. Defaults to 0.0 (no minimum). The shocked gas typically cools to `initialTemp` if this is not set.
+- `minimum_temperature` _float, optional_ - Minimum post-shock temperature. Defaults to 0.0 (no minimum). The shocked gas typically cools to `initialTemp` if this is not set.
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
 
 **Returns**:
 
-- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
-- `float` - The dissipation time of the shock in years
+  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
 
-<a id="uclchem.model.cshock_dissipation_time"></a>
+<a id="uclchem.model.jshock"></a>
+
+#### jshock
+
+```python
+def jshock(shock_vel, param_dict=None, out_species=None)
+```
+
+Run J-type shock model from UCLCHEM
+
+**Arguments**:
+
+- `shock_vel` _float_ - Velocity of the shock
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+
+**Returns**:
+
+  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
+
+<a id="uclchem.__version__"></a>
+
+# uclchem.\_\_version\_\_
+
+<a id="uclchem.utils"></a>
+
+# uclchem.utils
+
+<a id="uclchem.utils.cshock_dissipation_time"></a>
 
 #### cshock\_dissipation\_time
 
@@ -146,29 +177,52 @@ ions and neutrals equalizes at dissipation time and full cooling takes a few dis
 
 - `float` - The dissipation time of the shock in years
 
-<a id="uclchem.model.jshock"></a>
+<a id="uclchem.utils.check_error"></a>
 
-#### jshock
+#### check\_error
 
 ```python
-def jshock(shock_vel, param_dict=None, out_species=None)
+def check_error(error_code)
 ```
 
-Run J-type shock model from UCLCHEM
+Converts the UCLCHEM integer result flag to a simple messaging explaining what went wrong"
 
 **Arguments**:
 
-- `shock_vel` _float_ - Velocity of the shock
-- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
-- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `error_code` _int_ - Error code returned by UCLCHEM models, the first element of the results list.
+  
 
 **Returns**:
 
-- `int,list` - A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+- `str` - Error message
 
-<a id="uclchem.__version__"></a>
+<a id="uclchem.utils.get_species_table"></a>
 
-# uclchem.\_\_version\_\_
+#### get\_species\_table
+
+```python
+def get_species_table()
+```
+
+A simple function to load the list of species in the UCLCHEM network into a pandas dataframe.
+
+**Returns**:
+
+- `pandas.DataFrame` - A dataframe containing the species names and their details
+
+<a id="uclchem.utils.get_reaction_table"></a>
+
+#### get\_reaction\_table
+
+```python
+def get_reaction_table()
+```
+
+A function to load the reaction table from the UCLCHEM network into a pandas dataframe.
+
+**Returns**:
+
+- `pandas.DataFrame` - A dataframe containing the reactions and their rates
 
 <a id="uclchem.analysis"></a>
 

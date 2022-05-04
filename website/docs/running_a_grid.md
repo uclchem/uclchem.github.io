@@ -53,7 +53,7 @@ def run_model(row):
                            "finalTime":1.0e6,
                            "baseAv":10}
     result = uclchem.model.cloud(param_dict=ParameterDictionary)
-    return result
+    return result[0]#just the integer error code
 ```
 
 ### Run Grid 
@@ -213,12 +213,11 @@ def run_model(row):
                            "finalTime":1.0e5,
                            "baseAv":1}
     result = uclchem.model.cshock(row.shock_velocity,param_dict=ParameterDictionary,out_species=out_species)
-    #UCLCHEM is going to return our 3 abundances on a success or an integer flag on a failure. 
-    #so we check if the result is a list of size len(out_species) and return NaNs if not
-    if len(list(result[0]))==len(out_species):
-        return result[0]
+    #First check UCLCHEM's result flag to seeif it's positive, if it is return the abundances
+    if result[0]>0:
+        return result[:]
+    #if not, return NaNs because model failed
     else:
-        print(result)
         return([np.nan]*len(out_species))
 ```
 
@@ -256,20 +255,8 @@ with Pool(processes=3) as pool:
 ```python
 with Pool(processes=3) as pool:
     results = pool.map(run_model, model_table.iterrows())
-model_table[out_species]=results
+model_table[["Dissipation Time"]+out_species]=results
 ```
-
-     At current T(=R1), MXSTEP(=I1) steps                                            
-     taken on this call before reaching TOUT.                                        
-    In the above message, I1 =      10000
-    In the above message, R1 =   0.2113241378513D+12
-     ISTATE -1: MAXSTEPS will be increased
-     At current T(=R1), MXSTEP(=I1) steps                                            
-     taken on this call before reaching TOUT.                                        
-    In the above message, I1 =      10000
-    In the above message, R1 =   0.1596634158767D+11
-     ISTATE -1: MAXSTEPS will be increased
-
 
 
 ```python
@@ -287,6 +274,7 @@ model_table
       <th>shock_velocity</th>
       <th>density</th>
       <th>outputFile</th>
+      <th>Dissipation Time</th>
       <th>CO</th>
       <th>H2O</th>
       <th>CH3OH</th>
@@ -298,81 +286,90 @@ model_table
       <td>10.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/10.0_10000.0.csv</td>
-      <td>5.350002e-05</td>
-      <td>3.478598e-06</td>
-      <td>1.531139e-10</td>
+      <td>1171.898734</td>
+      <td>6.165653e-05</td>
+      <td>2.956789e-06</td>
+      <td>1.926991e-07</td>
     </tr>
     <tr>
       <th>1</th>
       <td>30.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/30.0_10000.0.csv</td>
-      <td>3.114690e-05</td>
-      <td>2.197236e-05</td>
-      <td>6.430248e-10</td>
+      <td>1171.898734</td>
+      <td>2.354338e-05</td>
+      <td>2.806336e-05</td>
+      <td>1.885733e-08</td>
     </tr>
     <tr>
       <th>2</th>
       <td>50.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/50.0_10000.0.csv</td>
-      <td>1.894493e-05</td>
-      <td>6.431733e-06</td>
-      <td>1.704588e-09</td>
+      <td>1171.898734</td>
+      <td>1.629821e-05</td>
+      <td>8.577171e-06</td>
+      <td>1.808968e-08</td>
     </tr>
     <tr>
       <th>3</th>
       <td>10.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/10.0_100000.0.csv</td>
-      <td>6.688131e-08</td>
-      <td>9.581838e-10</td>
-      <td>4.158561e-10</td>
+      <td>117.189873</td>
+      <td>7.052087e-08</td>
+      <td>9.284287e-10</td>
+      <td>5.432348e-10</td>
     </tr>
     <tr>
       <th>4</th>
       <td>30.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/30.0_100000.0.csv</td>
-      <td>1.632991e-10</td>
-      <td>3.793513e-10</td>
-      <td>4.614506e-10</td>
+      <td>117.189873</td>
+      <td>5.367310e-11</td>
+      <td>3.222560e-10</td>
+      <td>3.419077e-10</td>
     </tr>
     <tr>
       <th>5</th>
       <td>50.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/50.0_100000.0.csv</td>
-      <td>2.712864e-10</td>
-      <td>3.173975e-10</td>
-      <td>5.334553e-10</td>
+      <td>117.189873</td>
+      <td>2.180494e-10</td>
+      <td>3.432564e-10</td>
+      <td>6.395643e-10</td>
     </tr>
     <tr>
       <th>6</th>
       <td>10.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/10.0_1000000.0.csv</td>
-      <td>1.785068e-10</td>
-      <td>1.320640e-10</td>
-      <td>1.156020e-11</td>
+      <td>11.718987</td>
+      <td>2.126896e-10</td>
+      <td>1.080413e-10</td>
+      <td>1.445622e-11</td>
     </tr>
     <tr>
       <th>7</th>
       <td>30.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/30.0_1000000.0.csv</td>
-      <td>2.468740e-10</td>
-      <td>6.324375e-11</td>
-      <td>1.476467e-12</td>
+      <td>11.718987</td>
+      <td>1.475333e-10</td>
+      <td>6.466679e-11</td>
+      <td>2.397719e-12</td>
     </tr>
     <tr>
       <th>8</th>
       <td>50.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/50.0_1000000.0.csv</td>
-      <td>1.713577e-10</td>
-      <td>1.076491e-11</td>
-      <td>2.124396e-13</td>
+      <td>11.718987</td>
+      <td>2.539663e-10</td>
+      <td>4.372364e-12</td>
+      <td>2.132736e-12</td>
     </tr>
   </tbody>
 </table>
