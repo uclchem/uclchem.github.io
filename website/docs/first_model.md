@@ -28,14 +28,14 @@ param_dict = {
     "rout":0.1, #radius of cloud in pc
     "baseAv":1.0, #visual extinction at cloud edge.
     "outputFile": "../examples/test-output/static-full.dat",#full UCLCHEM output
-    "abundSaveFile": "../examples/test-output/startcollapse.dat",#save final abundances to file
+    "abundSaveFile": "../examples/test-output/startstatic.dat",#save final abundances to file
 }
 result = uclchem.model.cloud(param_dict=param_dict,out_species=out_species)
 print(result)
 
 ```
 
-    [1, 3.331065665976256e-11, 3.5763056300678485e-05]
+    [1, 3.331065687401522e-11, 3.576305611194068e-05]
 
 
 ## Checking the output
@@ -95,19 +95,19 @@ result_df.head()
       <td>1.0</td>
       <td>1</td>
       <td>0.5</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
       <td>...</td>
-      <td>0.000000e+00</td>
-      <td>0.0</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
       <td>0.000182</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
       <td>1.0</td>
     </tr>
     <tr>
@@ -123,12 +123,12 @@ result_df.head()
       <td>1.789040e-17</td>
       <td>4.269620e-20</td>
       <td>...</td>
-      <td>8.640210e-38</td>
-      <td>0.0</td>
-      <td>0.000000e+00</td>
-      <td>0.000000e+00</td>
-      <td>3.513620e-49</td>
-      <td>0.000000e+00</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
       <td>0.000182</td>
       <td>5.629010e-20</td>
       <td>7.488850e-13</td>
@@ -147,12 +147,12 @@ result_df.head()
       <td>1.789080e-16</td>
       <td>4.219000e-18</td>
       <td>...</td>
-      <td>6.318040e-31</td>
-      <td>0.0</td>
-      <td>0.000000e+00</td>
-      <td>6.136930e-47</td>
-      <td>2.054770e-41</td>
-      <td>7.163090e-48</td>
+      <td>1.631720e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000020e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
       <td>0.000182</td>
       <td>5.562330e-18</td>
       <td>7.444370e-12</td>
@@ -171,12 +171,12 @@ result_df.head()
       <td>1.789520e-15</td>
       <td>4.212520e-16</td>
       <td>...</td>
-      <td>7.662820e-29</td>
-      <td>0.0</td>
-      <td>4.382180e-46</td>
-      <td>9.365450e-44</td>
-      <td>2.742020e-38</td>
-      <td>1.012940e-43</td>
+      <td>7.762720e-29</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000050e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000010e-30</td>
       <td>0.000182</td>
       <td>5.554260e-16</td>
       <td>7.438940e-11</td>
@@ -195,12 +195,12 @@ result_df.head()
       <td>1.793810e-14</td>
       <td>4.079690e-14</td>
       <td>...</td>
-      <td>7.863390e-27</td>
-      <td>0.0</td>
-      <td>4.323360e-41</td>
-      <td>9.871580e-41</td>
-      <td>2.835160e-35</td>
-      <td>1.031350e-39</td>
+      <td>7.864380e-27</td>
+      <td>1.000000e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000070e-30</td>
+      <td>1.000000e-30</td>
+      <td>1.000150e-30</td>
       <td>0.000182</td>
       <td>5.425070e-14</td>
       <td>7.351600e-10</td>

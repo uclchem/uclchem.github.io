@@ -295,7 +295,7 @@ Plot the abundance of species through time directly onto an axis
 #### analysis
 
 ```python
-def analysis(species_name, result_file, output_file)
+def analysis(species_name, result_file, output_file, rate_threshold=0.99)
 ```
 
 A function which loops over every time step in an output file and finds the rate of change of a species at that time due to each of the reactions it is involved in.
@@ -306,6 +306,7 @@ From this, the most important reactions are identified and printed to file. This
 - `species_name` _str_ - Name of species to be analysed
 - `result_file` _str_ - The path to the file containing the UCLCHEM output
 - `output_file` _str_ - The path to the file where the analysis output will be written
+- `rate_threshold` _float,optional_ - Analysis output will contain the only the most efficient reactions that are responsible for rate_threshold of the total production and destruction rate. Defaults to 0.99.
 
 <a id="uclchem.analysis.total_element_abundance"></a>
 
@@ -356,14 +357,19 @@ Check the conservation of major element by comparing total abundance at start an
 #### test\_ode\_conservation
 
 ```python
-def test_ode_conservation(species_list, element_list=["H", "N", "C", "O"])
+def test_ode_conservation(element_list=["H", "N", "C", "O"])
 ```
 
-Test function which checks whether the ODEs conserve elementsry_
+Test whether the ODEs conserve elements. Useful to run each time you change network.
+Integrator errors may still cause elements not to be conserved but they cannot be conserved
+if the ODEs are not correct.
 
-:param species_list (list): list of each species in the network
+**Arguments**:
+
+- `element_list` _list, optional_ - A list of elements for which to check the conservation. Defaults to ["H", "N", "C", "O"].
+  
 
 **Returns**:
 
-(dict) Dictionary containing total rate of change of important elements
+- `dict` - A dictionary of the elements in element list with values representing the total rate of change of each element.
 
