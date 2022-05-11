@@ -5,8 +5,8 @@ title: Grain Surface Reactions
 
 Whilst the basic treatment of gas phase chemistry is well established, grain surface chemistry is more complex. There are three possible ways to treat grain surface chemistry in UCLCHEM. In general we assume that:
 - All dust grains are well covered by the species in question so we can take a rate equation approach based on fractional abundance rather than tracking if molecule A is on the same dust grain as molecule B.
-- Ice mantles on dust grains can be treated as a single layer.
 - Grains are spherical objects of a uniform size.
+- All species are thermalized on the grains.
 
 This allows a fairly straight forward treatment of the grain chemistry. Below we list several processes that are important in UCLCHEM's treatment of the grain chemistry.
 
@@ -17,7 +17,7 @@ Reactions via diffusion of reactants across the grain surface was added to UCLCH
 ```
 #H,#CO,LH,#HCO,,,,alpha,0.0,gamma,,,
 ```
-where alpha is a branching ratio if you include multiple versions of the same reaction and gamma is the energy barrier to the reaction. Including this reaction in your MakeRates input will result in two reactions being created in the actual network: one with gas phase products and one with grain surface products. This is to account for the desorption of products of exothermic reactions and the branching ratio is determined within UCLCHEM using the binding energy of the products and energy released by the reaction following [Minissale et al. 2016](https://www.aanda.org/10.1051/0004-6361/201525981).
+where alpha is a branching ratio if you include multiple versions of the same reaction and gamma is the energy barrier to the reaction. Including this reaction in your MakeRates input will result in two reactions being created in the actual network: one with gas phase products and one with grain surface products. This is to account for the desorption of products of exothermic reactions and the branching ratio is determined within UCLCHEM using the binding energy of the products and energy released by the reaction following [Minissale et al. 2016](https://www.aanda.org/10.1051/0004-6361/201525981). The equivalent reactions will also be generated for the ice bulk if you are using a three phase network so you only need to list LH reactions with surface reactants and products.
 
 If we follow the rate of change of the absolute number of a species on the surface of a grain ($N_S$), we get
 

@@ -35,7 +35,7 @@ result = uclchem.model.cloud(param_dict=param_dict)
 print(result)
 ```
 
-    1
+    [1]
 
 
 With that done, we now have a file containing the final abundances of a cloud of gas after this collapse: `param_dict["abundSaveFile"]` we can pass this to our hot core model to use those abundances as our initial abundances.
@@ -65,23 +65,6 @@ param_dict["outputFile"]="../examples/test-output/phase2-full.dat"
 
 result=uclchem.model.hot_core(temp_indx=3,max_temperature=300.0,param_dict=param_dict)
 ```
-
-     At T(=R1) and step size H(=R2), the                                             
-     corrector convergence failed repeatedly                                         
-     or with ABS(H) = HMIN.                                                          
-    In the above message, R1 =   0.7287285413740D+13   R2 =   0.5478219417669D-01
-     ISTATE -5 - shortening step at time   230610.29790317026      years
-     At T(=R1) and step size H(=R2), the                                             
-     corrector convergence failed repeatedly                                         
-     or with ABS(H) = HMIN.                                                          
-    In the above message, R1 =   0.7290413518906D+13   R2 =   0.5387230589814D+03
-     ISTATE -5 - shortening step at time   230709.28857297476      years
-     At T(=R1) and step size H(=R2), the                                             
-     corrector convergence failed repeatedly                                         
-     or with ABS(H) = HMIN.                                                          
-    In the above message, R1 =   0.7292726506262D+13   R2 =   0.1381305879716D+02
-     ISTATE -5 - shortening step at time   230782.48437539555      years
-
 
 Note that we've changed abstol and reltol here. They control the integrator accuracy and whilst making them smaller does slow down successful runs, it can make runs complete that stall completely otherwise. In this case, we found that when we didn't alter the defaults, the model completed but `uclchem.check_element_conservation()` showed C and O were not conserved. By reducing these tolerances, we were fix this as shown below.
 
@@ -171,11 +154,6 @@ result,dissipation_time=result
 
      Cannot have freefall on during cshock
      setting freefall=0 and continuing
-     At current T(=R1), MXSTEP(=I1) steps                                            
-     taken on this call before reaching TOUT.                                        
-    In the above message, I1 =      10000
-    In the above message, R1 =   0.1931519818467D+12
-     ISTATE -1: Reducing time step
 
 
 The code completes fine. We do get a couple of warnings though. First, we're informed that `freefall` must be set to False for the C-shock model. Then we get a few integrator warnings. These are not important and can be ignored as long as the element conservation looks ok. However, it is an indication that the integrator did struggle with these ODEs under these conditions.
@@ -189,7 +167,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 
-    {'H': '0.005%', 'N': '1.151%', 'C': '1.380%', 'O': '1.305%'}
+    {'H': '0.005%', 'N': '1.167%', 'C': '1.394%', 'O': '1.326%'}
 
 
 
