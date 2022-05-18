@@ -209,8 +209,10 @@ def run_model(row):
                            "initialDens": row.density,
                            "initialTemp": 10.0,
                            "outputFile": row.outputFile,
-                            "abundSaveFile": f"../grid_folder/starts/{row.density:.0f}.csv",
+                            "abundLoadFile": f"../grid_folder/starts/{row.density:.0f}.csv",
                            "finalTime":1.0e5,
+                           "abstol_factor":1e-18,
+                           "reltol":1e-12,
                            "baseAv":1}
     result = uclchem.model.cshock(row.shock_velocity,param_dict=ParameterDictionary,out_species=out_species)
     #First check UCLCHEM's result flag to seeif it's positive, if it is return the abundances
@@ -253,9 +255,9 @@ with Pool(processes=3) as pool:
 
 
 ```python
-with Pool(processes=3) as pool:
+with Pool(processes=6) as pool:
     results = pool.map(run_model, model_table.iterrows())
-model_table[["Dissipation Time"]+out_species]=results
+model_table[["Result","Dissipation Time"]+out_species]=results
 ```
 
 
@@ -274,6 +276,7 @@ model_table
       <th>shock_velocity</th>
       <th>density</th>
       <th>outputFile</th>
+      <th>Result</th>
       <th>Dissipation Time</th>
       <th>CO</th>
       <th>H2O</th>
@@ -286,90 +289,99 @@ model_table
       <td>10.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/10.0_10000.0.csv</td>
+      <td>1.0</td>
       <td>1171.898734</td>
-      <td>6.165653e-05</td>
-      <td>2.956789e-06</td>
-      <td>1.926991e-07</td>
+      <td>7.316441e-05</td>
+      <td>4.355495e-06</td>
+      <td>4.624479e-07</td>
     </tr>
     <tr>
       <th>1</th>
       <td>30.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/30.0_10000.0.csv</td>
+      <td>1.0</td>
       <td>1171.898734</td>
-      <td>2.354338e-05</td>
-      <td>2.806336e-05</td>
-      <td>1.885733e-08</td>
+      <td>2.591790e-05</td>
+      <td>2.113885e-05</td>
+      <td>1.196330e-07</td>
     </tr>
     <tr>
       <th>2</th>
       <td>50.0</td>
       <td>10000.0</td>
       <td>../grid_folder/shocks/50.0_10000.0.csv</td>
+      <td>1.0</td>
       <td>1171.898734</td>
-      <td>1.629821e-05</td>
-      <td>8.577171e-06</td>
-      <td>1.808968e-08</td>
+      <td>1.320822e-05</td>
+      <td>8.126066e-06</td>
+      <td>1.989081e-08</td>
     </tr>
     <tr>
       <th>3</th>
       <td>10.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/10.0_100000.0.csv</td>
+      <td>1.0</td>
       <td>117.189873</td>
-      <td>7.052087e-08</td>
-      <td>9.284287e-10</td>
-      <td>5.432348e-10</td>
+      <td>1.082083e-07</td>
+      <td>1.158740e-09</td>
+      <td>3.697607e-10</td>
     </tr>
     <tr>
       <th>4</th>
       <td>30.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/30.0_100000.0.csv</td>
+      <td>1.0</td>
       <td>117.189873</td>
-      <td>5.367310e-11</td>
-      <td>3.222560e-10</td>
-      <td>3.419077e-10</td>
+      <td>1.121259e-10</td>
+      <td>3.789106e-10</td>
+      <td>4.907284e-10</td>
     </tr>
     <tr>
       <th>5</th>
       <td>50.0</td>
       <td>100000.0</td>
       <td>../grid_folder/shocks/50.0_100000.0.csv</td>
+      <td>1.0</td>
       <td>117.189873</td>
-      <td>2.180494e-10</td>
-      <td>3.432564e-10</td>
-      <td>6.395643e-10</td>
+      <td>2.454392e-10</td>
+      <td>3.443643e-10</td>
+      <td>6.454671e-10</td>
     </tr>
     <tr>
       <th>6</th>
       <td>10.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/10.0_1000000.0.csv</td>
+      <td>1.0</td>
       <td>11.718987</td>
-      <td>2.126896e-10</td>
-      <td>1.080413e-10</td>
-      <td>1.445622e-11</td>
+      <td>1.084005e-10</td>
+      <td>3.565914e-11</td>
+      <td>4.816630e-11</td>
     </tr>
     <tr>
       <th>7</th>
       <td>30.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/30.0_1000000.0.csv</td>
+      <td>1.0</td>
       <td>11.718987</td>
-      <td>1.475333e-10</td>
-      <td>6.466679e-11</td>
-      <td>2.397719e-12</td>
+      <td>1.897782e-10</td>
+      <td>6.498499e-11</td>
+      <td>7.847277e-12</td>
     </tr>
     <tr>
       <th>8</th>
       <td>50.0</td>
       <td>1000000.0</td>
       <td>../grid_folder/shocks/50.0_1000000.0.csv</td>
+      <td>1.0</td>
       <td>11.718987</td>
-      <td>2.539663e-10</td>
-      <td>4.372364e-12</td>
-      <td>2.132736e-12</td>
+      <td>2.167651e-10</td>
+      <td>6.600196e-12</td>
+      <td>3.412340e-12</td>
     </tr>
   </tbody>
 </table>
