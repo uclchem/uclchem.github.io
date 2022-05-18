@@ -255,12 +255,12 @@ Read the output of a UCLCHEM run created with the outputFile parameter into a pa
 def create_abundance_plot(df, species, figsize=(16, 9), plot_file=None)
 ```
 
-Create a plot of the abundance of a species through time.
+Create a plot of the abundance of a list of species through time.
 
 **Arguments**:
 
 - `df` _pd.DataFrame_ - Pandas dataframe containing the UCLCHEM output, see `read_output_file`
-- `species` _list_ - list of strings containing species names
+- `species` _list_ - list of strings containing species names. Using a $ instead of # or @ will plot the sum of surface and bulk abundances.
 - `figsize` _tuple, optional_ - Size of figure, width by height in inches. Defaults to (16, 9).
 - `plot_file` _str, optional_ - Path to file where figure will be saved. If None, figure is not saved. Defaults to None.
   
@@ -277,13 +277,13 @@ Create a plot of the abundance of a species through time.
 def plot_species(ax, df, species)
 ```
 
-Plot the abundance of species through time directly onto an axis
+Plot the abundance of a list of species through time directly onto an axis.
 
 **Arguments**:
 
 - `ax` _pyplot.axis_ - An axis object to plot on
 - `df` _pd.DataFrame_ - A dataframe created by `read_output_file`
-- `species` _str_ - A list of species names to be plotted. If species name starts with "$", plots the sum of surface and bulk abundances
+- `species` _str_ - A list of species names to be plotted. If species name starts with "$" instead of # or @, plots the sum of surface and bulk abundances
   
 
 **Returns**:

@@ -54,11 +54,13 @@ param_dict["initialDens"]=1e6
 param_dict["finalTime"]=1e6
 param_dict["freefall"]=False
 
-#phase 2 never cools so freeze out should be negligible
-#can really speed integrator by just turning it off
-param_dict["freezeFactor"]=0 
+#freeze out is completely overwhelmed by thermal desorption
+#so turning it off has no effect on abundances but speeds up integrator.
+param_dict["freezeFactor"]=0.0
+
 param_dict["abstol_factor"]=1e-18
 param_dict["reltol"]=1e-12
+
 #pop is dangerous, it removes the original key so you can't rerun this cell.
 param_dict["abundLoadFile"]=param_dict.pop("abundSaveFile") 
 param_dict["outputFile"]="../examples/test-output/phase2-full.dat"
@@ -66,9 +68,11 @@ param_dict["outputFile"]="../examples/test-output/phase2-full.dat"
 result=uclchem.model.hot_core(temp_indx=3,max_temperature=300.0,param_dict=param_dict)
 ```
 
-Note that we've changed abstol and reltol here. They control the integrator accuracy and whilst making them smaller does slow down successful runs, it can make runs complete that stall completely otherwise. In this case, we found that when we didn't alter the defaults, the model completed but `uclchem.check_element_conservation()` showed C and O were not conserved. By reducing these tolerances, we were fix this as shown below.
+Note that we've changed made two changes to the parameters here which aren't strictly necessary but can be helpful in certain situations.
 
-If your model run does not complete, try running it in a python script rather the notebook. In notebooks, the fortran output is only printed when the function returns which may be never on a stalled run. In python scripts, the output is printed as the code is executed and you will see warnings if the integrator gets stuck.
+Since the gas temperature increases throughout a hot core model, freeze out is much slower than thermal desorption for all but the first few time steps. Turning it off doesn't affect the abundances but will speed up the solution.
+
+We also change abstol and reltol here, largely to demonstrate their use. They control the integrator accuracy and whilst making them smaller does slow down successful runs, it can make runs complete that stall completely otherwise or give correct solutions where lower tolerances allow issues like element conservation failure to sneak in. If your code does not complete or element conservation fails, you can change them.
 
 ### Checking the Result
 With a successful run, we can check the output. We first load the file and check the abundance conservation, then we can plot it up.

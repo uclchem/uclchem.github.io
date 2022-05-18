@@ -19,3 +19,16 @@ Exception has occurred: ImportErrordlopen(/usr/local/lib/python3.9/site-packages
 ```
 then this is likely what has happened to you. You can fix it by following the instructions in this[this Stackoverflow post](https://stackoverflow.com/questions/57207357/dyld-library-not-loaded-usr-local-gfortran-lib-libgfortran-3-dylib-reason-im). 
 
+## Architectures
+F2PY defaults to x86_64 architecture. This is fine for most users, but if you are using a different architecture, you may need to specify this in the Makefile. To do so, edit `src/fortran_src/Makfile` so that the line that reads
+
+```
+python3 -m numpy.f2py -c --fcompiler=${f2pyFC}
+```
+is replaced with
+
+```
+python3 -m numpy.f2py -c --fcompiler=${f2pyFC} --arch=my_arch
+```
+
+where my_arch is the architecture you are using.

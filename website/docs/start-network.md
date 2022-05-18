@@ -6,7 +6,17 @@ title: Creating a Network
 ## MakeRates
 In order to make a chemical model flexible, the ability to solve a user supplied chemical network is a must. UCLCHEM uses a preprocessing python script to turn csv lists of species and reactions into fortran files for use in the main code. This script is called MakeRates and can be found in the Makerates subdirectory of the repository. It combines a gas phase reaction database with user supplied lists of species and additional reactions into the necessary Fortran code to run UCLCHEM. It also supplies a number of human readable outputs.
 
-**Any output from MakeRates requires that the code be recompiled, for python users that means re-running `pip install .` and for people working with the code directly, you need to `make` again.**
+In the sections below, we discuss how to build your network and set the inputs for MakeRates but once that is done, you can run MakeRates with the following commands:
+
+```bash
+cd MakeRates
+python MakeRates.py
+cd ..
+pip install .
+```
+
+**Note the pip install at the end of the process. Any output from MakeRates requires that the code be recompiled because MakeRates produces new source code for UCLCHEM!**
+
 
 ## Input
 Makerates is controlled using a yaml file `Makerates/user_settings.yaml`. By changing the values in this file, you can create different networks. The default values of this file are copied below.

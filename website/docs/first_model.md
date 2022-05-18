@@ -7,6 +7,18 @@ In this notebook, we demonstrate the basic use of UCLCHEM's python module by run
 import uclchem
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    ModuleNotFoundError                       Traceback (most recent call last)
+
+    <ipython-input-1-280c7f35460d> in <module>
+    ----> 1 import uclchem
+    
+
+    ModuleNotFoundError: No module named 'uclchem'
+
+
 ## A Simple Cloud
 
 UCLCHEM's `cloud()` model is a spherical cloud of isothermal gas. We can keep a constant density or have it increase over time following a freefall equation. This model is generally useful whenever you want to model a homogeneous cloud of gas under constant conditions. For example, in the inner parts of a molecular cloud where Av $\gtrsim$ 10 there are very few depth dependent processes. You may wish to model the whole of this UV shielded portion of the cloud with a single `cloud()` model.
@@ -35,7 +47,7 @@ print(result)
 
 ```
 
-    [1, 3.331065687401522e-11, 3.576305611194068e-05]
+    [1, 3.331065659699488e-11, 3.576305642378658e-05]
 
 
 ## Checking the output
