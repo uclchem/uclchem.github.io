@@ -11,7 +11,7 @@ title: Python Reference
   * [hot\_core](#uclchem.model.hot_core)
   * [cshock](#uclchem.model.cshock)
   * [jshock](#uclchem.model.jshock)
-* [uclchem.\_\_version\_\_](#uclchem.__version__)
+
 * [uclchem.utils](#uclchem.utils)
   * [cshock\_dissipation\_time](#uclchem.utils.cshock_dissipation_time)
   * [check\_error](#uclchem.utils.check_error)
@@ -147,9 +147,9 @@ Run J-type shock model from UCLCHEM
 
   A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
 
-<a id="uclchem.__version__"></a>
 
-# uclchem.\_\_version\_\_
+
+
 
 <a id="uclchem.utils"></a>
 
