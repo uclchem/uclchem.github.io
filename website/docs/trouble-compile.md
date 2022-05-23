@@ -33,7 +33,7 @@ Exception has occurred: ImportErrordlopen(/usr/local/lib/python3.9/site-packages
 ```
 then this is likely what has happened to you. You can fix it by following the instructions in this[this Stackoverflow post](https://stackoverflow.com/questions/57207357/dyld-library-not-loaded-usr-local-gfortran-lib-libgfortran-3-dylib-reason-im). 
 
-However, the underlying problem is that Apple would prefer you do not use GNU compilers. As Mac OS updates come in, the exact issue may change. You will usually find many stackoverflow posts about your problem if you search for people having similar errors with gfortran on Mac. Many members of the UCLCHEM group also use Mac so do get in touch if you cannot find a solution.
+However, the underlying problem is that Apple would prefer you do not use GNU compilers. As Mac OS updates come in, the exact issue may change. You will usually find many stackoverflow posts about your problem if you search for people having similar errors with gfortran on Mac. Many members of the UCLCHEM group also use Mac so do get in touch if you cannot find a solution.xit
 
 ## Architectures
 F2PY defaults to x86_64 architecture. This is fine for most users, but if you are using a different architecture, you may need to specify this in the Makefile. To do so, edit `src/fortran_src/Makfile` so that the line that reads

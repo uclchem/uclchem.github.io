@@ -270,7 +270,7 @@
     "install": {
       "id": "install",
       "title": "Installation",
-      "description": "Obtaining UCLCHEM",
+      "description": "Prerequistes",
       "sidebar": "docs"
     },
     "modelling_objects": {
