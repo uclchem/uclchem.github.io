@@ -270,7 +270,7 @@
     "install": {
       "id": "install",
       "title": "Installation",
-      "description": "Prerequistes",
+      "description": "Prerequisites",
       "sidebar": "docs"
     },
     "modelling_objects": {

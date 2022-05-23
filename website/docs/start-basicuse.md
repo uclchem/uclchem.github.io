@@ -4,7 +4,7 @@ title: Installation
 slug: /
 ---
 
-## Prerequistes
+## Prerequisites
 ### Obtaining UCLCHEM
 
 You can visit our [main page](https://github.com/uclchem/UCLCHEM) to get download links for the code, or [our github](https://github.com/uclchem/UCLCHEM). Alternatively, you can use git to clone the repo directly from terminal.
