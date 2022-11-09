@@ -41,7 +41,7 @@ export default {
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../website/docs",
-          "sidebarPath": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/sidebars.js",
+          "sidebarPath": "/home/marcus/Git/uclchem.github.io/website/sidebars.js",
           "remarkPlugins": [
             null
           ],
@@ -56,7 +56,7 @@ export default {
         },
         "theme": {
           "customCss": [
-            "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/src/css/custom.css"
+            "/home/marcus/Git/uclchem.github.io/website/src/css/custom.css"
           ]
         },
         "googleAnalytics": {

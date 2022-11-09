@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/sidebars.js",
-          "contentPath": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/docs",
-          "contentPathLocalized": "/home/jon/Documents/zupcx4/UCLCHEMS/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/home/marcus/Git/uclchem.github.io/website/sidebars.js",
+          "contentPath": "/home/marcus/Git/uclchem.github.io/website/docs",
+          "contentPathLocalized": "/home/marcus/Git/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "bulk",
@@ -309,7 +309,7 @@
               "unversionedId": "install",
               "id": "install",
               "title": "Installation",
-              "description": "Prerequistes",
+              "description": "Prerequisites",
               "source": "@site/docs/start-basicuse.md",
               "sourceDirName": ".",
               "slug": "/",

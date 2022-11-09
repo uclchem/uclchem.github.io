@@ -29,7 +29,7 @@ const FeatureList = [
     description: (
       <>
         Teams at UCL and Leiden Observatory are working with international collaborators to
-         extend and improve UCLCHEM. Check our [blog](/blog) for recent updates.
+         extend and improve UCLCHEM. Check our <a href="./blog/index.html">blog</a> for recent updates.
       </>
     ),
   },
