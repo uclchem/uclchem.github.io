@@ -5,112 +5,112 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/3dpdr',
-    component: ComponentCreator('/3dpdr','db4'),
+    component: ComponentCreator('/3dpdr','bac'),
     exact: true
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog','1c1'),
+    component: ComponentCreator('/blog','c1d'),
     exact: true
   },
   {
     path: '/blog/2018/02/05/david-grains',
-    component: ComponentCreator('/blog/2018/02/05/david-grains','c90'),
+    component: ComponentCreator('/blog/2018/02/05/david-grains','ffc'),
     exact: true
   },
   {
     path: '/blog/2018/03/27/audrey-coms',
-    component: ComponentCreator('/blog/2018/03/27/audrey-coms','936'),
+    component: ComponentCreator('/blog/2018/03/27/audrey-coms','0e8'),
     exact: true
   },
   {
     path: '/blog/2018/06/20/izaskun-phosphorus',
-    component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus','91d'),
+    component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus','686'),
     exact: true
   },
   {
     path: '/blog/2018/07/12/felix-collapse',
-    component: ComponentCreator('/blog/2018/07/12/felix-collapse','51e'),
+    component: ComponentCreator('/blog/2018/07/12/felix-collapse','925'),
     exact: true
   },
   {
     path: '/blog/2019/04/19/serena-nitrogen-frac',
-    component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac','4af'),
+    component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac','170'),
     exact: true
   },
   {
     path: '/blog/2019/07/08/felix-ambipolar',
-    component: ComponentCreator('/blog/2019/07/08/felix-ambipolar','ec6'),
+    component: ComponentCreator('/blog/2019/07/08/felix-ambipolar','36e'),
     exact: true
   },
   {
     path: '/blog/2019/08/13/serena-carbon-frac',
-    component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac','f69'),
+    component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac','2f6'),
     exact: true
   },
   {
     path: '/blog/2019/12/10/tom-shock',
-    component: ComponentCreator('/blog/2019/12/10/tom-shock','2ef'),
+    component: ComponentCreator('/blog/2019/12/10/tom-shock','326'),
     exact: true
   },
   {
     path: '/blog/2020/02/14/New-Website',
-    component: ComponentCreator('/blog/2020/02/14/New-Website','ebc'),
+    component: ComponentCreator('/blog/2020/02/14/New-Website','79d'),
     exact: true
   },
   {
     path: '/blog/2020/12/07/milena-nitrogen-solis',
-    component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis','79d'),
+    component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis','849'),
     exact: true
   },
   {
     path: '/blog/2022/02/06/holdship-hits',
-    component: ComponentCreator('/blog/2022/02/06/holdship-hits','dca'),
+    component: ComponentCreator('/blog/2022/02/06/holdship-hits','e72'),
     exact: true
   },
   {
     path: '/blog/2022/04/14/crir-ngc253',
-    component: ComponentCreator('/blog/2022/04/14/crir-ngc253','31b'),
+    component: ComponentCreator('/blog/2022/04/14/crir-ngc253','eff'),
     exact: true
   },
   {
     path: '/blog/2022/04/29/uclchem-v3',
-    component: ComponentCreator('/blog/2022/04/29/uclchem-v3','85f'),
+    component: ComponentCreator('/blog/2022/04/29/uclchem-v3','128'),
     exact: true
   },
   {
     path: '/blog/archive',
-    component: ComponentCreator('/blog/archive','e84'),
+    component: ComponentCreator('/blog/archive','be5'),
     exact: true
   },
   {
     path: '/blog/page/2',
-    component: ComponentCreator('/blog/page/2','23e'),
+    component: ComponentCreator('/blog/page/2','7a9'),
     exact: true
   },
   {
     path: '/help',
-    component: ComponentCreator('/help','297'),
+    component: ComponentCreator('/help','5eb'),
     exact: true
   },
   {
     path: '/othersoftware',
-    component: ComponentCreator('/othersoftware','4c2'),
+    component: ComponentCreator('/othersoftware','84c'),
     exact: true
   },
   {
     path: '/ucl_pdr',
-    component: ComponentCreator('/ucl_pdr','13d'),
+    component: ComponentCreator('/ucl_pdr','6c1'),
     exact: true
   },
   {
     path: '/users',
-    component: ComponentCreator('/users','9bf'),
+    component: ComponentCreator('/users','76f'),
     exact: true
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','e8f'),
+    component: ComponentCreator('/docs','94a'),
     routes: [
       {
         path: '/docs/',
@@ -283,7 +283,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/','6ef'),
+    component: ComponentCreator('/','ed9'),
     exact: true
   },
   {

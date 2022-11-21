@@ -27,6 +27,8 @@ sudo apt install gfortran
 and then you'll find your files in `/mnt`. For example, your C: drive can be accessed via `cd /mnt/c`. With the above tools installed, you'll be able to follow our basic install instructions and run UCLCHEM via your Ubuntu installation.
 
 ## Mac Trouble
+The troubleshooting for macbooks is divided into troubleshooting for macbooks using x86 architectures (Intel) and apple silicon ARM (M1/M2). You can see which type of chip you have via About This Mac.
+### x86 Macs
 A problem Mac users commonly come across is that fortran codes compile but do not run because the gfortran libraries are not in the expected location. If you get an error like:
 ```
 Exception has occurred: ImportErrordlopen(/usr/local/lib/python3.9/site-packages/uclchemwrap.cpython-39-darwin.so, 2): Library not loaded: /usr/local/opt/gcc/lib/gcc/10/libgfortran.5.dylib   Referenced from: /usr/local/lib/python3.9/site-packages/uclchemwrap.cpython-39-darwin.so   Reason: image not found
@@ -34,6 +36,13 @@ Exception has occurred: ImportErrordlopen(/usr/local/lib/python3.9/site-packages
 then this is likely what has happened to you. You can fix it by following the instructions in this[this Stackoverflow post](https://stackoverflow.com/questions/57207357/dyld-library-not-loaded-usr-local-gfortran-lib-libgfortran-3-dylib-reason-im). 
 
 However, the underlying problem is that Apple would prefer you do not use GNU compilers. As Mac OS updates come in, the exact issue may change. You will usually find many stackoverflow posts about your problem if you search for people having similar errors with gfortran on Mac. Many members of the UCLCHEM group also use Mac so do get in touch if you cannot find a solution.xit
+
+### Apple silicon Macs
+If you by accident install any package that was meant for x86 architectures (brew, pip, conda etc.) you will encounter problems as Rosetta 2 does not seem to work well with the gfortran.
+Currently we recommend uninstalling all packages/software that might cause interference with uclchcem, such as gfortran installed via brew and reinstalling everything using conda as listed in the [docs/start-basicuse] document.
+
+
+
 
 ## Architectures
 F2PY defaults to x86_64 architecture. This is fine for most users, but if you are using a different architecture, you may need to specify this in the Makefile. To do so, edit `src/fortran_src/Makfile` so that the line that reads
