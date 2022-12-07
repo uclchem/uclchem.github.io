@@ -28,14 +28,20 @@ and then you'll find your files in `/mnt`. For example, your C: drive can be acc
 
 ## Mac Trouble
 The troubleshooting for macbooks is divided into troubleshooting for macbooks using x86 architectures (Intel) and apple silicon ARM (M1/M2). You can see which type of chip you have via About This Mac.
-### x86 Macs
+### x86 Macs 
+#### gfortran
 A problem Mac users commonly come across is that fortran codes compile but do not run because the gfortran libraries are not in the expected location. If you get an error like:
 ```
 Exception has occurred: ImportErrordlopen(/usr/local/lib/python3.9/site-packages/uclchemwrap.cpython-39-darwin.so, 2): Library not loaded: /usr/local/opt/gcc/lib/gcc/10/libgfortran.5.dylib   Referenced from: /usr/local/lib/python3.9/site-packages/uclchemwrap.cpython-39-darwin.so   Reason: image not found
 ```
-then this is likely what has happened to you. You can fix it by following the instructions in this[this Stackoverflow post](https://stackoverflow.com/questions/57207357/dyld-library-not-loaded-usr-local-gfortran-lib-libgfortran-3-dylib-reason-im). 
+then this is likely what has happened to you. You can fix it by following the instructions in [this Stackoverflow post](https://stackoverflow.com/questions/57207357/dyld-library-not-loaded-usr-local-gfortran-lib-libgfortran-3-dylib-reason-im). 
 
 However, the underlying problem is that Apple would prefer you do not use GNU compilers. As Mac OS updates come in, the exact issue may change. You will usually find many stackoverflow posts about your problem if you search for people having similar errors with gfortran on Mac. Many members of the UCLCHEM group also use Mac so do get in touch if you cannot find a solution.xit
+
+#### conda-Xcode compatibility
+Sometimes the version of the Xcode SDK is not compatible with the conda packages that are generated with
+an older version. This means you will have to downgrade the SDK you are using as seen in [this Stackoverflow post](https://stackoverflow.com/questions/69236331/conda-macos-big-sur-ld-unsupported-tapi-file-type-tapi-tbd-in-yaml-file)
+
 
 ### Apple silicon Macs
 If you by accident install any package that was meant for x86 architectures (brew, pip, conda etc.) you will encounter problems as Rosetta 2 does not seem to work well with the gfortran.
