@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ff5fa191-5dc8-4076-9e9b-1b2b3a90605f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/client-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/client-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/client-modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/client-modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-bulk-md-ca0.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-bulk-md-ca0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-desorb-md-7f1.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-desorb-md-7f1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-gas-md-43c.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-gas-md-43c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-grain-md-82d.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chem-grain-md-82d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chemical-analysis-md-876.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chemical-analysis-md-876.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-debugging-md-236.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-debugging-md-236.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-overview-md-e39.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-overview-md-e39.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-python-wrap-md-607.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-python-wrap-md-607.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-web-md-fc1.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-dev-web-md-fc1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-first-model-md-197.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-first-model-md-197.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-hydro-md-27f.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-hydro-md-27f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-modelling-objects-md-6a4.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-modelling-objects-md-6a4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-cloud-md-c87.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-cloud-md-c87.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-collapse-md-6bb.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-collapse-md-6bb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-core-md-a30.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-core-md-a30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-hotcore-md-7c1.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-hotcore-md-7c1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-shocks-md-512.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-physics-shocks-md-512.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-running-a-grid-md-4c7.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-running-a-grid-md-4c7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-basicuse-md-3ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-basicuse-md-3ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-network-md-d26.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-network-md-d26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-parameters-md-7aa.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-parameters-md-7aa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-pythonapi-md-37d.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-start-pythonapi-md-37d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-trouble-compile-md-670.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-trouble-compile-md-670.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-trouble-integration-md-2db.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-trouble-integration-md-2db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/registry.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/registry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/routesChunkNames.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/routesChunkNames.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/.docusaurus/site-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/website/.docusaurus/site-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/docusaurus.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HIyQcj8us5YYlO8cEZ42zCU3cV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/marcus/Git/MarcusKeil_Exercise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff5fa191-5dc8-4076-9e9b-1b2b3a90605f" name="Changes" comment="" />
+      <created>1667986876889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667986876889</updated>
+      <workItem from="1667986878125" duration="2136000" />
+      <workItem from="1668430926426" duration="239000" />
+      <workItem from="1670316649732" duration="9071000" />
+      <workItem from="1670400051624" duration="1220000" />
+      <workItem from="1670492720542" duration="5483000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
