@@ -1,292 +1,321 @@
 {
-  "/3dpdr-db4": {
-    "component": "8eef9ab5",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/__docusaurus/debug-3f1": {
+    "component": "component---theme-debug-config-23-a-2ff",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
   },
-  "/blog-1c1": {
-    "component": "a6aa9e1f",
-    "sidebar": "814f3328",
+  "/__docusaurus/debug/config-1b8": {
+    "component": "component---theme-debug-config-23-a-2ff",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/__docusaurus/debug/content-20c": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docusaurus-debug-content-246-9aa",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/__docusaurus/debug/globalData-3a0": {
+    "component": "component---theme-debug-global-dataede-0fa",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/__docusaurus/debug/metadata-819": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/__docusaurus/debug/registry-b42": {
+    "component": "component---theme-debug-registry-679-501",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/__docusaurus/debug/routes-995": {
+    "component": "component---theme-debug-routes-946-699",
+    "__routeContextModule": "__routeContextModule---docusaurus-debugeb-8-d00"
+  },
+  "/3dpdr-bac": {
+    "component": "component---site-src-pages-3-dpdr-js-8-ee-44c",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
+  },
+  "/blog-c1d": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "87033a11"
+        "content": "content---blog-870-c93"
       },
       {
-        "content": "5bfb9a5a"
+        "content": "content---blog-5-bf-cb4"
       },
       {
-        "content": "812cb1a9"
+        "content": "content---blog-812-29e"
       },
       {
-        "content": "236fea48"
+        "content": "content---blog-236-095"
       },
       {
-        "content": "56e1034f"
+        "content": "content---blog-56-e-155"
       },
       {
-        "content": "25925e1d"
+        "content": "content---blog-259-080"
       },
       {
-        "content": "640703ca"
+        "content": "content---blog-640-869"
       },
       {
-        "content": "f4b3c076"
+        "content": "content---blogf-4-b-780"
       },
       {
-        "content": "e2bcb55a"
+        "content": "content---bloge-2-b-42a"
       },
       {
-        "content": "4c70ee09"
+        "content": "content---blog-4-c-7-213"
       }
     ],
-    "metadata": "b2b675dd",
-    "__routeContextModule": "bb157542"
+    "metadata": "metadata---blogb-2-b-df1",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2018/02/05/david-grains-c90": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "6a488aa2",
-    "__routeContextModule": "bb157542"
+  "/blog/2018/02/05/david-grains-ffc": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2018-02-05-david-grains-6-a-4-461",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2018/03/27/audrey-coms-936": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "4b111dda",
-    "__routeContextModule": "bb157542"
+  "/blog/2018/03/27/audrey-coms-0e8": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2018-03-27-audrey-coms-4-b-1-3ea",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2018/06/20/izaskun-phosphorus-91d": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "f85ff90a",
-    "__routeContextModule": "bb157542"
+  "/blog/2018/06/20/izaskun-phosphorus-686": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2018-06-20-izaskun-phosphorusf-85-a7a",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2018/07/12/felix-collapse-51e": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "71908c5e",
-    "__routeContextModule": "bb157542"
+  "/blog/2018/07/12/felix-collapse-925": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2018-07-12-felix-collapse-719-809",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2019/04/19/serena-nitrogen-frac-4af": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "7bc80f3c",
-    "__routeContextModule": "bb157542"
+  "/blog/2019/04/19/serena-nitrogen-frac-170": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2019-04-19-serena-nitrogen-frac-7-bc-30e",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2019/07/08/felix-ambipolar-ec6": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "95c680a9",
-    "__routeContextModule": "bb157542"
+  "/blog/2019/07/08/felix-ambipolar-36e": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2019-07-08-felix-ambipolar-95-c-2c6",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2019/08/13/serena-carbon-frac-f69": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "30669678",
-    "__routeContextModule": "bb157542"
+  "/blog/2019/08/13/serena-carbon-frac-2f6": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2019-08-13-serena-carbon-frac-306-024",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2019/12/10/tom-shock-2ef": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "a9bdb9a1",
-    "__routeContextModule": "bb157542"
+  "/blog/2019/12/10/tom-shock-326": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2019-12-10-tom-shocka-9-b-828",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2020/02/14/New-Website-ebc": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "3492d4cd",
-    "__routeContextModule": "bb157542"
+  "/blog/2020/02/14/New-Website-79d": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2020-02-14-new-website-349-530",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2020/12/07/milena-nitrogen-solis-79d": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "6101527a",
-    "__routeContextModule": "bb157542"
+  "/blog/2020/12/07/milena-nitrogen-solis-849": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2020-12-07-milena-nitrogen-solis-610-d33",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2022/02/06/holdship-hits-dca": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "19d37fc1",
-    "__routeContextModule": "bb157542"
+  "/blog/2022/02/06/holdship-hits-e72": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2022-02-06-holdship-hits-19-d-176",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2022/04/14/crir-ngc253-31b": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "4f352dd6",
-    "__routeContextModule": "bb157542"
+  "/blog/2022/04/14/crir-ngc253-eff": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2022-04-14-crir-ngc-2534-f-3-331",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/2022/04/29/uclchem-v3-85f": {
-    "component": "ccc49370",
-    "sidebar": "814f3328",
-    "content": "8e6ea0e6",
-    "__routeContextModule": "bb157542"
+  "/blog/2022/04/29/uclchem-v3-128": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2022-04-29-uclchem-v-38-e-6-85f",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/archive-e84": {
-    "component": "9e4087bc",
-    "archive": "b2f554cd",
-    "__routeContextModule": "bb157542"
+  "/blog/archive-be5": {
+    "component": "component---theme-blog-archive-page-9-e-4-1d8",
+    "archive": "archive---blog-archiveb-2-f-393",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/blog/page/2-23e": {
-    "component": "a6aa9e1f",
-    "sidebar": "814f3328",
+  "/blog/page/2-7a9": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "0e89b35c"
+        "content": "content---blog-page-20-e-8-b7a"
       },
       {
-        "content": "44815e26"
+        "content": "content---blog-page-2448-522"
       },
       {
-        "content": "957548e4"
+        "content": "content---blog-page-2957-cd4"
       }
     ],
-    "metadata": "8eb4e46b",
-    "__routeContextModule": "bb157542"
+    "metadata": "metadata---blog-page-28-eb-625",
+    "__routeContextModule": "__routeContextModule---blogbef-17c"
   },
-  "/emulators-d8c": {
-    "component": "1cd6d774",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/emulators-eb1": {
+    "component": "component---site-src-pages-emulators-js-1-cd-61e",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   },
-  "/help-297": {
-    "component": "7e37206e",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/help-5eb": {
+    "component": "component---site-src-pages-help-js-7-e-3-222",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   },
-  "/othersoftware-4c2": {
-    "component": "689d9eaa",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/othersoftware-84c": {
+    "component": "component---site-src-pages-othersoftware-js-689-b6c",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   },
-  "/ucl_pdr-13d": {
-    "component": "d81cd816",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/ucl_pdr-6c1": {
+    "component": "component---site-src-pages-ucl-pdr-jsd-81-73a",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   },
-  "/users-9bf": {
-    "component": "1dba9094",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/users-76f": {
+    "component": "component---site-src-pages-users-js-1-db-7ac",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   },
-  "/docs-e8f": {
-    "component": "1be78505",
-    "versionMetadata": "935f2afb",
-    "__routeContextModule": "c644db6a"
+  "/docs-94a": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-935-398",
+    "__routeContextModule": "__routeContextModule---docsa-6-d-fee"
   },
   "/docs/-90a": {
-    "component": "17896441",
-    "content": "3ca268a2"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-3-ca-a3d"
   },
   "/docs/bulk-2c5": {
-    "component": "17896441",
-    "content": "ca07b522"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-bulkca-0-941"
   },
   "/docs/category/chemistry-356": {
-    "component": "14eb3368",
-    "categoryGeneratedIndex": "0588cae0"
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-chemistry-058-015"
   },
   "/docs/category/developer-1c7": {
-    "component": "14eb3368",
-    "categoryGeneratedIndex": "54674114"
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-developer-546-39e"
   },
   "/docs/category/getting-started-066": {
-    "component": "14eb3368",
-    "categoryGeneratedIndex": "52addc0b"
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-getting-started-52-a-6e6"
   },
   "/docs/category/tutorials-ef4": {
-    "component": "14eb3368",
-    "categoryGeneratedIndex": "f2741056"
+    "component": "component---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-tutorialsf-27-158"
   },
   "/docs/chemical_analysis-b5d": {
-    "component": "17896441",
-    "content": "8762eb7f"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-chemical-analysis-876-cdb"
   },
   "/docs/desorb-bf3": {
-    "component": "17896441",
-    "content": "7f120b4d"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-desorb-7-f-1-659"
   },
   "/docs/dev-debugging-221": {
-    "component": "17896441",
-    "content": "236d4ea4"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-dev-debugging-236-863"
   },
   "/docs/dev-overview-e3a": {
-    "component": "17896441",
-    "content": "e39b6181"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-dev-overviewe-39-cb9"
   },
   "/docs/dev-python-wrap-df8": {
-    "component": "17896441",
-    "content": "607afc38"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-dev-python-wrap-607-459"
   },
   "/docs/dev-web-211": {
-    "component": "17896441",
-    "content": "fc1c51fa"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-dev-webfc-1-048"
   },
   "/docs/first_model-bae": {
-    "component": "17896441",
-    "content": "197ac2f1"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-first-model-197-8ae"
   },
   "/docs/gas-846": {
-    "component": "17896441",
-    "content": "43cd5493"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-gas-43-c-6d1"
   },
   "/docs/grain-cb2": {
-    "component": "17896441",
-    "content": "82de2e50"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-grain-82-d-637"
   },
   "/docs/hydro-a65": {
-    "component": "17896441",
-    "content": "27f461e9"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-hydro-27-f-df2"
   },
   "/docs/modelling_objects-f1a": {
-    "component": "17896441",
-    "content": "6a4b9492"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-modelling-objects-6-a-4-2c9"
   },
   "/docs/network-949": {
-    "component": "17896441",
-    "content": "d26b1119"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-networkd-26-094"
   },
   "/docs/parameters-0b4": {
-    "component": "17896441",
-    "content": "7aa4d0e1"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-parameters-7-aa-787"
   },
   "/docs/physics-cloud-f83": {
-    "component": "17896441",
-    "content": "c8755060"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-physics-cloudc-87-73b"
   },
   "/docs/physics-collapse-0c7": {
-    "component": "17896441",
-    "content": "6bb3e248"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-physics-collapse-6-bb-35b"
   },
   "/docs/physics-core-a05": {
-    "component": "17896441",
-    "content": "a30e1db8"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-physics-corea-30-0f4"
   },
   "/docs/physics-hotcore-c60": {
-    "component": "17896441",
-    "content": "7c193f36"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-physics-hotcore-7-c-1-150"
   },
   "/docs/physics-shocks-85a": {
-    "component": "17896441",
-    "content": "512466b5"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-physics-shocks-512-8ed"
   },
   "/docs/pythonapi-5c8": {
-    "component": "17896441",
-    "content": "37df37e5"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-pythonapi-37-d-a0e"
   },
   "/docs/running_a_grid-146": {
-    "component": "17896441",
-    "content": "4c7304f4"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-running-a-grid-4-c-7-83e"
   },
   "/docs/trouble-compile-6d8": {
-    "component": "17896441",
-    "content": "670f431a"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-trouble-compile-670-f60"
   },
   "/docs/trouble-integration-15d": {
-    "component": "17896441",
-    "content": "2dbc3c34"
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-trouble-integration-2-db-6cf"
   },
-  "/-6ef": {
-    "component": "c4f5d8e4",
-    "config": "5e9f5e1a",
-    "__routeContextModule": "96f7a4b7"
+  "/-ed9": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---3-dpdr-5-e-9-ccf",
+    "__routeContextModule": "__routeContextModule---3-dpdrc-49-bef"
   }
 }

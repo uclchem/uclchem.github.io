@@ -12,9 +12,9 @@
           "versionClassName": "docs-version-current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/home/marcus/Git/uclchem.github.io/website/sidebars.js",
-          "contentPath": "/home/marcus/Git/uclchem.github.io/website/docs",
-          "contentPathLocalized": "/home/marcus/Git/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/sidebars.js",
+          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/docs",
+          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "bulk",
