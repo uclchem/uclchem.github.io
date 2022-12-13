@@ -41,7 +41,7 @@ export default {
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../website/docs",
-          "sidebarPath": "/Users/gijsv/uclchem/uclchem.github.io/website/sidebars.js",
+          "sidebarPath": "/home/marcus/Git/uclchem.github.io/website/sidebars.js",
           "remarkPlugins": [
             null
           ],
@@ -56,7 +56,7 @@ export default {
         },
         "theme": {
           "customCss": [
-            "/Users/gijsv/uclchem/uclchem.github.io/website/src/css/custom.css"
+            "/home/marcus/Git/uclchem.github.io/website/src/css/custom.css"
           ]
         },
         "googleAnalytics": {
@@ -185,6 +185,11 @@ export default {
         {
           "href": "/3dpdr",
           "label": "3D-PDR",
+          "position": "left"
+        },
+        {
+          "href": "/emulators",
+          "label": "Emulators",
           "position": "left"
         },
         {

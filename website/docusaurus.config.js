@@ -91,6 +91,11 @@ module.exports={
           "position": "left"
         },
         {
+          "href": "/emulators",
+          "label": "Emulators",
+          "position": "left"
+        },
+        {
           "to": "/ucl_pdr",
           "label": "UCLPDR",
           "position": "left"

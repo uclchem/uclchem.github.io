@@ -1419,6 +1419,11 @@
       },
       {
         "type": "jsx",
+        "permalink": "/emulators",
+        "source": "@site/src/pages/emulators.js"
+      },
+      {
+        "type": "jsx",
         "permalink": "/help",
         "source": "@site/src/pages/help.js"
       },

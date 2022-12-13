@@ -25,20 +25,6 @@ function SpectralRadex() {
   );
 }
 
-
-function Chemulator() {
-  return(
-      <div className="softwarecontainer">
-      <div className="softwarecontainer-div">
-        <h2>  <a href="https://github.com/uclchem/Chemulator">Chemulator</a></h2>
-        <h4> Fast, accurate chemistry for hydrodynamical models</h4>
-        <p>Chemistry is important to hydrodynamical models as it effectively sets the gas temperature by determining the abundances of important coolants. However, full chemical networks such as those used in <i>UCLCHEM</i> are typically too computationally expensive to include in a hydrodynamical model. Similarly, solving the chemistry in a time dependent way can also be a huge computational burden and equilibrium is often assumed instead.</p>
-        <p>Chemulator is a neural network based emulator which can calculate the time dependent temperature and chemical abundances of a gas. This significantly faster than solving the chemical network directly and can be embedded in hydrodynamical models to obtain accurate temperatures without the computational cost of a full chemical and radiative trasfer solver.</p>
-        </div>
-    </div>
-    );
-}
-
 function HITS() {
   return(
     <div className="softwarecontainer">
@@ -61,7 +47,6 @@ export default function Home() {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <SpectralRadex />
-      <Chemulator />
       <HITS />
     </Layout>
   );
