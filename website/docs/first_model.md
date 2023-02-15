@@ -241,7 +241,9 @@ ax=ax.set(xscale="log",ylim=(1e-15,1),xlim=(1e3,1e6))
 ```
 
 
+    
 ![png](./assets/first_model_9_0.png)
+    
 
 
 and that's it! You've run your first UCLCHEM model, checked that the element conservation is correct, and plotted the abundances.

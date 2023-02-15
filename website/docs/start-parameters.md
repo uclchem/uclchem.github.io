@@ -61,7 +61,7 @@ UCLCHEM will default to these values unless they are overridden by user. Users c
 |fo  | 3.34d-04 |Total elemental abundance of O.|
 |fn  | 6.18d-05 |Total elemental abundance of N.|
 |fs  | 3.51d-6 |Total elemental abundance of S.|
-|fmg | 2.256d-07 |Total elemental abundance of Mg.|
+|fmg | 2.256d-06 |Total elemental abundance of Mg.|
 |fsi | 1.78d-06 |Total elemental abundance of Si.|
 |fcl | 3.39d-08 |Total elemental abundance of Cl.|
 |fp|7.78d-08 |Total elemental abundance of P.|

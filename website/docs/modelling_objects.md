@@ -110,7 +110,9 @@ ax3.tick_params(axis='y', colors='red')
 ```
 
 
+    
 ![png](./assets/modelling_objects_8_0.png)
+    
 
 
 Here, we see the value of running a collapse phase before the science run. Having run a collapse, we start this model with well developed ices and having material in the surface and bulk allows us to properly model the effect of warm up in a hot core. For example, the @CO abundance is $\sim10^{-4}$ and #CO is $\sim10^{-6}$. As the gas warms to around 30K, the #CO abundance drops drastically as CO's binding energy is such that it is efficiently desorbed from the surface at this temperature. However, the rest of the CO is trapped in the bulk, surrounded by more strongly bound H2O molecules. Thus, the @CO abundance stays high until the gas reaches around 130K, when the H2O molecules are released along with the entire bulk.
@@ -195,7 +197,9 @@ ax3.tick_params(axis='y', colors='red')
 ```
 
 
+    
 ![png](./assets/modelling_objects_16_0.png)
+    
 
 
 ### J-shock
@@ -253,7 +257,9 @@ ax3.tick_params(axis='y', colors='red')
 ```
 
 
+    
 ![png](./assets/modelling_objects_21_0.png)
+    
 
 
 That's everything! We've run various science models using reasonable starting abundances that we produced by running a simple UCLCHEM model beforehand. One benefit of this method is that the abundances are consistent with the network. If we start with arbitrary, perhaps observationally motivated, abundances, it would be possible to initiate the model in a state our network could never produce. 
