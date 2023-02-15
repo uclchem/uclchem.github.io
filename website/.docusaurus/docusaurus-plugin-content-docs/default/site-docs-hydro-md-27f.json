@@ -6,12 +6,12 @@
   "source": "@site/docs/hydro.md",
   "sourceDirName": ".",
   "slug": "/hydro",
-  "permalink": "/docs/hydro",
+  "permalink": "/docs/next/hydro",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1621867778,
+  "formattedLastUpdatedAt": "5/24/2021",
   "frontMatter": {
     "id": "hydro",
     "title": "Hydro Post Processing"

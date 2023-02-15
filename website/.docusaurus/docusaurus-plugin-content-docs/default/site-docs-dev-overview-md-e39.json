@@ -6,12 +6,12 @@
   "source": "@site/docs/dev-overview.md",
   "sourceDirName": ".",
   "slug": "/dev-overview",
-  "permalink": "/docs/dev-overview",
+  "permalink": "/docs/next/dev-overview",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "dev-overview",
     "title": "Overview of the Code"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Developer",
-    "permalink": "/docs/category/developer"
+    "permalink": "/docs/next/category/developer"
   },
   "next": {
     "title": "Writing The Python Interface",
-    "permalink": "/docs/dev-python-wrap"
+    "permalink": "/docs/next/dev-python-wrap"
   }
 }

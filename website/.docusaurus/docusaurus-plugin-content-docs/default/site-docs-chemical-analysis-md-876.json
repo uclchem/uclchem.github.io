@@ -6,20 +6,20 @@
   "source": "@site/docs/chemical_analysis.md",
   "sourceDirName": ".",
   "slug": "/chemical_analysis",
-  "permalink": "/docs/chemical_analysis",
+  "permalink": "/docs/next/chemical_analysis",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Running a Grid",
-    "permalink": "/docs/running_a_grid"
+    "permalink": "/docs/next/running_a_grid"
   },
   "next": {
     "title": "Compilation Issues",
-    "permalink": "/docs/trouble-compile"
+    "permalink": "/docs/next/trouble-compile"
   }
 }

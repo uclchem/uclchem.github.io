@@ -6,12 +6,12 @@
   "source": "@site/docs/dev-debugging.md",
   "sourceDirName": ".",
   "slug": "/dev-debugging",
-  "permalink": "/docs/dev-debugging",
+  "permalink": "/docs/next/dev-debugging",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "dev-debugging",
     "title": "Debugging"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Writing The Python Interface",
-    "permalink": "/docs/dev-python-wrap"
+    "permalink": "/docs/next/dev-python-wrap"
   },
   "next": {
     "title": "Maintaining the Website",
-    "permalink": "/docs/dev-web"
+    "permalink": "/docs/next/dev-web"
   }
 }

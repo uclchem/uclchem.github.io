@@ -6,12 +6,12 @@
   "source": "@site/docs/dev-python-wrap.md",
   "sourceDirName": ".",
   "slug": "/dev-python-wrap",
-  "permalink": "/docs/dev-python-wrap",
+  "permalink": "/docs/next/dev-python-wrap",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "dev-python-wrap",
     "title": "Writing The Python Interface"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Overview of the Code",
-    "permalink": "/docs/dev-overview"
+    "permalink": "/docs/next/dev-overview"
   },
   "next": {
     "title": "Debugging",
-    "permalink": "/docs/dev-debugging"
+    "permalink": "/docs/next/dev-debugging"
   }
 }

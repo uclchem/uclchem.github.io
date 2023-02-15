@@ -6,6 +6,162 @@
         {
           "name": "current",
           "label": "Next",
+          "isLast": false,
+          "path": "/docs/next",
+          "mainDocId": "install",
+          "docs": [
+            {
+              "id": "bulk",
+              "path": "/docs/next/bulk",
+              "sidebar": "docs"
+            },
+            {
+              "id": "chemical_analysis",
+              "path": "/docs/next/chemical_analysis",
+              "sidebar": "docs"
+            },
+            {
+              "id": "desorb",
+              "path": "/docs/next/desorb",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-debugging",
+              "path": "/docs/next/dev-debugging",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-overview",
+              "path": "/docs/next/dev-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-python-wrap",
+              "path": "/docs/next/dev-python-wrap",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-web",
+              "path": "/docs/next/dev-web",
+              "sidebar": "docs"
+            },
+            {
+              "id": "first_model",
+              "path": "/docs/next/first_model",
+              "sidebar": "docs"
+            },
+            {
+              "id": "gas",
+              "path": "/docs/next/gas",
+              "sidebar": "docs"
+            },
+            {
+              "id": "grain",
+              "path": "/docs/next/grain",
+              "sidebar": "docs"
+            },
+            {
+              "id": "hydro",
+              "path": "/docs/next/hydro"
+            },
+            {
+              "id": "install",
+              "path": "/docs/next/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "modelling_objects",
+              "path": "/docs/next/modelling_objects",
+              "sidebar": "docs"
+            },
+            {
+              "id": "network",
+              "path": "/docs/next/network",
+              "sidebar": "docs"
+            },
+            {
+              "id": "parameters",
+              "path": "/docs/next/parameters",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-cloud",
+              "path": "/docs/next/physics-cloud",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-collapse",
+              "path": "/docs/next/physics-collapse",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-core",
+              "path": "/docs/next/physics-core",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-hotcore",
+              "path": "/docs/next/physics-hotcore",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-shocks",
+              "path": "/docs/next/physics-shocks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pythonapi",
+              "path": "/docs/next/pythonapi",
+              "sidebar": "docs"
+            },
+            {
+              "id": "running_a_grid",
+              "path": "/docs/next/running_a_grid",
+              "sidebar": "docs"
+            },
+            {
+              "id": "trouble-compile",
+              "path": "/docs/next/trouble-compile",
+              "sidebar": "docs"
+            },
+            {
+              "id": "trouble-integration",
+              "path": "/docs/next/trouble-integration",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/getting-started",
+              "path": "/docs/next/category/getting-started",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/tutorials",
+              "path": "/docs/next/category/tutorials",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/chemistry",
+              "path": "/docs/next/category/chemistry",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/developer",
+              "path": "/docs/next/category/developer",
+              "sidebar": "docs"
+            }
+          ],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/next/category/getting-started",
+                "label": "Getting Started"
+              }
+            }
+          }
+        },
+        {
+          "name": "3.1.0",
+          "label": "3.1.0",
           "isLast": true,
           "path": "/docs",
           "mainDocId": "install",

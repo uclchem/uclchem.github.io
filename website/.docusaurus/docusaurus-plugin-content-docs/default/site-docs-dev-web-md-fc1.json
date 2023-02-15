@@ -6,12 +6,12 @@
   "source": "@site/docs/dev-web.md",
   "sourceDirName": ".",
   "slug": "/dev-web",
-  "permalink": "/docs/dev-web",
+  "permalink": "/docs/next/dev-web",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1652786813,
+  "formattedLastUpdatedAt": "5/17/2022",
   "frontMatter": {
     "id": "dev-web",
     "title": "Maintaining the Website"
@@ -19,6 +19,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "Debugging",
-    "permalink": "/docs/dev-debugging"
+    "permalink": "/docs/next/dev-debugging"
   }
 }

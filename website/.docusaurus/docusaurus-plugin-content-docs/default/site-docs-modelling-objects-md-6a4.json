@@ -6,20 +6,20 @@
   "source": "@site/docs/modelling_objects.md",
   "sourceDirName": ".",
   "slug": "/modelling_objects",
-  "permalink": "/docs/modelling_objects",
+  "permalink": "/docs/next/modelling_objects",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1652862908,
+  "formattedLastUpdatedAt": "5/18/2022",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Running Your First Models",
-    "permalink": "/docs/first_model"
+    "permalink": "/docs/next/first_model"
   },
   "next": {
     "title": "Running a Grid",
-    "permalink": "/docs/running_a_grid"
+    "permalink": "/docs/next/running_a_grid"
   }
 }

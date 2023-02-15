@@ -6,12 +6,12 @@
   "source": "@site/docs/start-basicuse.md",
   "sourceDirName": ".",
   "slug": "/",
-  "permalink": "/docs/",
+  "permalink": "/docs/next/",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1670417506,
+  "formattedLastUpdatedAt": "12/7/2022",
   "frontMatter": {
     "id": "install",
     "title": "Installation",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Getting Started",
-    "permalink": "/docs/category/getting-started"
+    "permalink": "/docs/next/category/getting-started"
   },
   "next": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/next/network"
   }
 }

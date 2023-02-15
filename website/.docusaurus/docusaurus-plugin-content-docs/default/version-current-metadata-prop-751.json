@@ -2,10 +2,10 @@
   "pluginId": "default",
   "version": "current",
   "label": "Next",
-  "banner": null,
-  "badge": false,
+  "banner": "unreleased",
+  "badge": true,
   "className": "docs-version-current",
-  "isLast": true,
+  "isLast": false,
   "docsSidebars": {
     "docs": [
       {
@@ -15,31 +15,31 @@
           {
             "type": "link",
             "label": "Installation",
-            "href": "/docs/",
+            "href": "/docs/next/",
             "docId": "install"
           },
           {
             "type": "link",
             "label": "Creating a Network",
-            "href": "/docs/network",
+            "href": "/docs/next/network",
             "docId": "network"
           },
           {
             "type": "link",
             "label": "Model Parameters",
-            "href": "/docs/parameters",
+            "href": "/docs/next/parameters",
             "docId": "parameters"
           },
           {
             "type": "link",
             "label": "Python Reference",
-            "href": "/docs/pythonapi",
+            "href": "/docs/next/pythonapi",
             "docId": "pythonapi"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/docs/category/getting-started"
+        "href": "/docs/next/category/getting-started"
       },
       {
         "type": "category",
@@ -48,31 +48,31 @@
           {
             "type": "link",
             "label": "Running Your First Models",
-            "href": "/docs/first_model",
+            "href": "/docs/next/first_model",
             "docId": "first_model"
           },
           {
             "type": "link",
             "label": "Advanced Physical Modelling",
-            "href": "/docs/modelling_objects",
+            "href": "/docs/next/modelling_objects",
             "docId": "modelling_objects"
           },
           {
             "type": "link",
             "label": "Running a Grid",
-            "href": "/docs/running_a_grid",
+            "href": "/docs/next/running_a_grid",
             "docId": "running_a_grid"
           },
           {
             "type": "link",
             "label": "Chemical Analysis",
-            "href": "/docs/chemical_analysis",
+            "href": "/docs/next/chemical_analysis",
             "docId": "chemical_analysis"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/docs/category/tutorials"
+        "href": "/docs/next/category/tutorials"
       },
       {
         "type": "category",
@@ -81,13 +81,13 @@
           {
             "type": "link",
             "label": "Compilation Issues",
-            "href": "/docs/trouble-compile",
+            "href": "/docs/next/trouble-compile",
             "docId": "trouble-compile"
           },
           {
             "type": "link",
             "label": "Integration",
-            "href": "/docs/trouble-integration",
+            "href": "/docs/next/trouble-integration",
             "docId": "trouble-integration"
           }
         ],
@@ -101,37 +101,37 @@
           {
             "type": "link",
             "label": "Core Physics",
-            "href": "/docs/physics-core",
+            "href": "/docs/next/physics-core",
             "docId": "physics-core"
           },
           {
             "type": "link",
             "label": "Cloud Model",
-            "href": "/docs/physics-cloud",
+            "href": "/docs/next/physics-cloud",
             "docId": "physics-cloud"
           },
           {
             "type": "link",
             "label": "Hot Core",
-            "href": "/docs/physics-hotcore",
+            "href": "/docs/next/physics-hotcore",
             "docId": "physics-hotcore"
           },
           {
             "type": "link",
             "label": "Shock Models",
-            "href": "/docs/physics-shocks",
+            "href": "/docs/next/physics-shocks",
             "docId": "physics-shocks"
           },
           {
             "type": "link",
             "label": "Collapse Models",
-            "href": "/docs/physics-collapse",
+            "href": "/docs/next/physics-collapse",
             "docId": "physics-collapse"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/docs/physics-core"
+        "href": "/docs/next/physics-core"
       },
       {
         "type": "category",
@@ -140,31 +140,31 @@
           {
             "type": "link",
             "label": "Gas Phase Reactions",
-            "href": "/docs/gas",
+            "href": "/docs/next/gas",
             "docId": "gas"
           },
           {
             "type": "link",
             "label": "Grain Surface Reactions",
-            "href": "/docs/grain",
+            "href": "/docs/next/grain",
             "docId": "grain"
           },
           {
             "type": "link",
             "label": "Adsorption & Desorption Reactions",
-            "href": "/docs/desorb",
+            "href": "/docs/next/desorb",
             "docId": "desorb"
           },
           {
             "type": "link",
             "label": "Bulk Ice Processes",
-            "href": "/docs/bulk",
+            "href": "/docs/next/bulk",
             "docId": "bulk"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/docs/category/chemistry"
+        "href": "/docs/next/category/chemistry"
       },
       {
         "type": "category",
@@ -173,31 +173,31 @@
           {
             "type": "link",
             "label": "Overview of the Code",
-            "href": "/docs/dev-overview",
+            "href": "/docs/next/dev-overview",
             "docId": "dev-overview"
           },
           {
             "type": "link",
             "label": "Writing The Python Interface",
-            "href": "/docs/dev-python-wrap",
+            "href": "/docs/next/dev-python-wrap",
             "docId": "dev-python-wrap"
           },
           {
             "type": "link",
             "label": "Debugging",
-            "href": "/docs/dev-debugging",
+            "href": "/docs/next/dev-debugging",
             "docId": "dev-debugging"
           },
           {
             "type": "link",
             "label": "Maintaining the Website",
-            "href": "/docs/dev-web",
+            "href": "/docs/next/dev-web",
             "docId": "dev-web"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/docs/category/developer"
+        "href": "/docs/next/category/developer"
       }
     ]
   },

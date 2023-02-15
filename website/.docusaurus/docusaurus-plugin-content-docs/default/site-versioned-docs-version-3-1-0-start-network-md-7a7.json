@@ -1,0 +1,25 @@
+{
+  "unversionedId": "network",
+  "id": "version-3.1.0/network",
+  "title": "Creating a Network",
+  "description": "MakeRates",
+  "source": "@site/versioned_docs/version-3.1.0/start-network.md",
+  "sourceDirName": ".",
+  "slug": "/network",
+  "permalink": "/docs/network",
+  "tags": [],
+  "version": "3.1.0",
+  "frontMatter": {
+    "id": "network",
+    "title": "Creating a Network"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/"
+  },
+  "next": {
+    "title": "Model Parameters",
+    "permalink": "/docs/parameters"
+  }
+}

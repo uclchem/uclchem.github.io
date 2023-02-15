@@ -6,12 +6,12 @@
   "source": "@site/docs/physics-collapse.md",
   "sourceDirName": ".",
   "slug": "/physics-collapse",
-  "permalink": "/docs/physics-collapse",
+  "permalink": "/docs/next/physics-collapse",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "physics-collapse",
     "title": "Collapse Models"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Shock Models",
-    "permalink": "/docs/physics-shocks"
+    "permalink": "/docs/next/physics-shocks"
   },
   "next": {
     "title": "Chemistry",
-    "permalink": "/docs/category/chemistry"
+    "permalink": "/docs/next/category/chemistry"
   }
 }

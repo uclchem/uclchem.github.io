@@ -6,12 +6,12 @@
   "source": "@site/docs/chem-gas.md",
   "sourceDirName": ".",
   "slug": "/gas",
-  "permalink": "/docs/gas",
+  "permalink": "/docs/next/gas",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651073142,
+  "formattedLastUpdatedAt": "4/27/2022",
   "frontMatter": {
     "id": "gas",
     "title": "Gas Phase Reactions"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Chemistry",
-    "permalink": "/docs/category/chemistry"
+    "permalink": "/docs/next/category/chemistry"
   },
   "next": {
     "title": "Grain Surface Reactions",
-    "permalink": "/docs/grain"
+    "permalink": "/docs/next/grain"
   }
 }

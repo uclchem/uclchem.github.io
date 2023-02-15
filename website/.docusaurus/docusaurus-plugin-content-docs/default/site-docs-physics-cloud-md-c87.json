@@ -6,12 +6,12 @@
   "source": "@site/docs/physics-cloud.md",
   "sourceDirName": ".",
   "slug": "/physics-cloud",
-  "permalink": "/docs/physics-cloud",
+  "permalink": "/docs/next/physics-cloud",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1651241879,
+  "formattedLastUpdatedAt": "4/29/2022",
   "frontMatter": {
     "id": "physics-cloud",
     "title": "Cloud Model",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Core Physics",
-    "permalink": "/docs/physics-core"
+    "permalink": "/docs/next/physics-core"
   },
   "next": {
     "title": "Hot Core",
-    "permalink": "/docs/physics-hotcore"
+    "permalink": "/docs/next/physics-hotcore"
   }
 }

@@ -6,20 +6,20 @@
   "source": "@site/docs/running_a_grid.md",
   "sourceDirName": ".",
   "slug": "/running_a_grid",
-  "permalink": "/docs/running_a_grid",
+  "permalink": "/docs/next/running_a_grid",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "10/14/2018",
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1652867284,
+  "formattedLastUpdatedAt": "5/18/2022",
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Advanced Physical Modelling",
-    "permalink": "/docs/modelling_objects"
+    "permalink": "/docs/next/modelling_objects"
   },
   "next": {
     "title": "Chemical Analysis",
-    "permalink": "/docs/chemical_analysis"
+    "permalink": "/docs/next/chemical_analysis"
   }
 }
