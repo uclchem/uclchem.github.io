@@ -47,7 +47,12 @@ export default {
           ],
           "rehypePlugins": [
             null
-          ]
+          ],
+          "versions": {
+            "current": {
+              "label": "Develop 🚧"
+            }
+          }
         },
         "blog": {
           "path": "blog",
@@ -201,6 +206,12 @@ export default {
           "to": "/othersoftware",
           "label": "Other",
           "position": "left"
+        },
+        {
+          "type": "docsVersionDropdown",
+          "position": "right",
+          "dropdownItemsBefore": [],
+          "dropdownItemsAfter": []
         }
       ],
       "hideOnScroll": false
@@ -208,7 +219,7 @@ export default {
     "image": "img/undraw_online.svg",
     "footer": {
       "links": [],
-      "copyright": "Copyright © 2021 Jon Holdship",
+      "copyright": "Copyright © 2023 Leiden University",
       "logo": {
         "src": "img/uclchem-logo.jpg"
       },

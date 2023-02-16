@@ -1,17 +1,14 @@
 {
   "unversionedId": "dev-overview",
-  "id": "version-3.1.0/dev-overview",
+  "id": "version-develop/dev-overview",
   "title": "Overview of the Code",
   "description": "The page is designed to give a brief overview of the code's structure. It's less about the scientific justification for the various treatments in the code and more about how the code is segmented and where to look for things.",
-  "source": "@site/versioned_docs/version-3.1.0/dev-overview.md",
+  "source": "@site/versioned_docs/version-develop/dev-overview.md",
   "sourceDirName": ".",
   "slug": "/dev-overview",
   "permalink": "/docs/dev-overview",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "dev-overview",
     "title": "Overview of the Code"

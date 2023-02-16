@@ -1,17 +1,14 @@
 {
   "unversionedId": "network",
-  "id": "version-3.1.0/network",
+  "id": "version-develop/network",
   "title": "Creating a Network",
   "description": "MakeRates",
-  "source": "@site/versioned_docs/version-3.1.0/start-network.md",
+  "source": "@site/versioned_docs/version-develop/start-network.md",
   "sourceDirName": ".",
   "slug": "/network",
   "permalink": "/docs/network",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "network",
     "title": "Creating a Network"

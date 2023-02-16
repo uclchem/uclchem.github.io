@@ -1,17 +1,14 @@
 {
   "unversionedId": "physics-shocks",
-  "id": "version-3.1.0/physics-shocks",
+  "id": "version-develop/physics-shocks",
   "title": "Shock Models",
   "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
-  "source": "@site/versioned_docs/version-3.1.0/physics-shocks.md",
+  "source": "@site/versioned_docs/version-develop/physics-shocks.md",
   "sourceDirName": ".",
   "slug": "/physics-shocks",
   "permalink": "/docs/physics-shocks",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "physics-shocks",
     "title": "Shock Models"

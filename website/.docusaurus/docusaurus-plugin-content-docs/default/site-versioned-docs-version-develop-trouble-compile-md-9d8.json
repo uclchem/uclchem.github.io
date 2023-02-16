@@ -1,17 +1,14 @@
 {
   "unversionedId": "trouble-compile",
-  "id": "version-3.1.0/trouble-compile",
+  "id": "version-develop/trouble-compile",
   "title": "Compilation Issues",
   "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
-  "source": "@site/versioned_docs/version-3.1.0/trouble-compile.md",
+  "source": "@site/versioned_docs/version-develop/trouble-compile.md",
   "sourceDirName": ".",
   "slug": "/trouble-compile",
   "permalink": "/docs/trouble-compile",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "trouble-compile",
     "title": "Compilation Issues"

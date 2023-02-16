@@ -41,6 +41,11 @@ module.exports={
           sidebarPath: require.resolve('./sidebars.js'),
           "remarkPlugins": [math],
           "rehypePlugins": [katex],
+          "versions":{
+            "current":{
+              label: "Develop 🚧"
+	    },
+	  },
         },
         "blog": {
           "path": "blog",
@@ -104,14 +109,15 @@ module.exports={
           "to":"/othersoftware",
           "label":"Other",
           "position":"left"
-        }
-
+        },
+	{"type":'docsVersionDropdown',
+	"position":"right"}
       ]
     },
     "image": "img/undraw_online.svg",
     "footer": {
       "links": [],
-      "copyright": "Copyright © 2021 Jon Holdship",
+      "copyright": "Copyright © 2023 Leiden University",
       "logo": {
         "src": "img/uclchem-logo.jpg"
       }

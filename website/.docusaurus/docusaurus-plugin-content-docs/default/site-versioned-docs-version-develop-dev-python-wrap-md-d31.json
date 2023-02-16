@@ -1,17 +1,14 @@
 {
   "unversionedId": "dev-python-wrap",
-  "id": "version-3.1.0/dev-python-wrap",
+  "id": "version-develop/dev-python-wrap",
   "title": "Writing The Python Interface",
   "description": "The python interface is a relatively complex bit of code, a lot of work is put on the development side to make the user side a smooth experience. Writing the core of UCLCHEM in Fortran gives great performance benefits but compiling it to python with F2PY has its peculiarities. Here, we discuss the steps needed to adjust the code.",
-  "source": "@site/versioned_docs/version-3.1.0/dev-python-wrap.md",
+  "source": "@site/versioned_docs/version-develop/dev-python-wrap.md",
   "sourceDirName": ".",
   "slug": "/dev-python-wrap",
   "permalink": "/docs/dev-python-wrap",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "dev-python-wrap",
     "title": "Writing The Python Interface"

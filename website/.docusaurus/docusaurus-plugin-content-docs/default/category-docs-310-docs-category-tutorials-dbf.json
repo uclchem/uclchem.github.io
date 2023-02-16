@@ -1,0 +1,16 @@
+{
+  "title": "Tutorials",
+  "description": "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `Tutorials` folder. They are also included here as docs pages.",
+  "slug": "/category/tutorials",
+  "permalink": "/docs/3.1.0/category/tutorials",
+  "navigation": {
+    "previous": {
+      "title": "Python Reference",
+      "permalink": "/docs/3.1.0/pythonapi"
+    },
+    "next": {
+      "title": "Running Your First Models",
+      "permalink": "/docs/3.1.0/first_model"
+    }
+  }
+}

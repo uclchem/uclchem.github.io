@@ -1,17 +1,14 @@
 {
   "unversionedId": "gas",
-  "id": "version-3.1.0/gas",
+  "id": "version-develop/gas",
   "title": "Gas Phase Reactions",
   "description": "Gas phase ODEs",
-  "source": "@site/versioned_docs/version-3.1.0/chem-gas.md",
+  "source": "@site/versioned_docs/version-develop/chem-gas.md",
   "sourceDirName": ".",
   "slug": "/gas",
   "permalink": "/docs/gas",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "gas",
     "title": "Gas Phase Reactions"

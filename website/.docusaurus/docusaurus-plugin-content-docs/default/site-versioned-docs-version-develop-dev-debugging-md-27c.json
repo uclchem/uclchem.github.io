@@ -1,17 +1,14 @@
 {
   "unversionedId": "dev-debugging",
-  "id": "version-3.1.0/dev-debugging",
+  "id": "version-develop/dev-debugging",
   "title": "Debugging",
   "description": "UCLCHEM is a complex code and many things can go wrong. Here, we'll list some of the things that often go wrong when you modify the code as well as a few helpful steps to trace down bugs.",
-  "source": "@site/versioned_docs/version-3.1.0/dev-debugging.md",
+  "source": "@site/versioned_docs/version-develop/dev-debugging.md",
   "sourceDirName": ".",
   "slug": "/dev-debugging",
   "permalink": "/docs/dev-debugging",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "dev-debugging",
     "title": "Debugging"

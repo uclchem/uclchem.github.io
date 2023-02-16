@@ -1,17 +1,14 @@
 {
   "unversionedId": "physics-core",
-  "id": "version-3.1.0/physics-core",
+  "id": "version-develop/physics-core",
   "title": "Core Physics",
   "description": "Each of the other physics doc pages details the specifics of a particular physics model. This one gives a general overview of the physics in UCLCHEM, including the core physics routines that are called for all models.",
-  "source": "@site/versioned_docs/version-3.1.0/physics-core.md",
+  "source": "@site/versioned_docs/version-develop/physics-core.md",
   "sourceDirName": ".",
   "slug": "/physics-core",
   "permalink": "/docs/physics-core",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "physics-core",
     "title": "Core Physics"

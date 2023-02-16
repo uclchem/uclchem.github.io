@@ -1,17 +1,14 @@
 {
   "unversionedId": "desorb",
-  "id": "version-3.1.0/desorb",
+  "id": "version-develop/desorb",
   "title": "Adsorption & Desorption Reactions",
   "description": "Coupling between the gas and the grain chemistry primarily comes from the freeze out of material from the gas phase onto the dust grains (adsorption) and the sublimation of material from the grains into the gas phase (desorption). The major processes considered by UCLCHEM are listed below. Note that we assume desorption and freeze out occur between the gas and the surface only, bulk material in three phase models does not directly desorb into the gas phase.",
-  "source": "@site/versioned_docs/version-3.1.0/chem-desorb.md",
+  "source": "@site/versioned_docs/version-develop/chem-desorb.md",
   "sourceDirName": ".",
   "slug": "/desorb",
   "permalink": "/docs/desorb",
   "tags": [],
-  "version": "3.1.0",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676464648,
-  "formattedLastUpdatedAt": "2/15/2023",
+  "version": "develop",
   "frontMatter": {
     "id": "desorb",
     "title": "Adsorption & Desorption Reactions"
