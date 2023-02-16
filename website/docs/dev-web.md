@@ -50,7 +50,7 @@ Once you've made your edits, you do the following steps:
 
 ```bash
 # Let docusaurus update the website
-USE_SSH=true GIT_USER=you_username yarn deploy
+USE_SSH=true GIT_USER=gijsvermarien DEPLOYMENT_BRANCH=master yarn deploy
 
 # Push your changes to the docusaurus branch as normal
 git add . -A
@@ -58,5 +58,10 @@ git commit -m "useful update message"
 git push
 
 ```
-
 If your github is set up with to use private key authentication and ssh (highly recommended), docusaurus will build the website and push it to master for you when you use yarn deploy. You then push to docusaurus branch as normal to make sure others work from your changes.
+
+If there is a major release, one should make a new version, which can be done using:
+```
+yarn docusaurus docs:version 3.X
+```
+Between the patch numbers, the documentation should only change little, so either you can leave the documentation identical, or if changes were made, just supersede the lower patch number and upload the newer documentation. Depending on how many version we support, one can delete older documentation versions or deprecate them.
