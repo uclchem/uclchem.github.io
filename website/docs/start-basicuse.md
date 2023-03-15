@@ -28,12 +28,15 @@ Mac users are encourage to use Xcode to get the GNU compilers and Windows users 
 For this use case we recommend the usage of the package manager conda (the installer for the minimal version can be found [here](https://docs.conda.io/en/latest/miniconda.html)). 
 Ensure that you install the apple silicon/M1 version, together with Xcode.
 
+:::caution
+If you are on MacOS Ventura (13.X), you need to use `conda install -c conda-forge gfortran=12.2`. Since at least fortran version 12 is needed for Ventura.
+:::
+
 ```bash
 conda create -n uclchem_osx
 conda activate uclchem_osx
 conda config --env --set subdir osx-arm64
-conda install python=3.9
-conda install clang
+conda install python=3.10
 conda install gfortran
 ```
 After this, one can continue with the installation instructions above and install. In order to use 
