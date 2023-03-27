@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/dev-web.md",
   "sourceDirName": ".",
   "slug": "/dev-web",
-  "permalink": "/docs/dev-web",
+  "permalink": "/docs/3.1.0/dev-web",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -19,6 +19,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "Debugging",
-    "permalink": "/docs/dev-debugging"
+    "permalink": "/docs/3.1.0/dev-debugging"
   }
 }

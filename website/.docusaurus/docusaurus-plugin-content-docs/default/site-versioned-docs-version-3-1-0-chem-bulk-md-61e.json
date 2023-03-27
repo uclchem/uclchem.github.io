@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/chem-bulk.md",
   "sourceDirName": ".",
   "slug": "/bulk",
-  "permalink": "/docs/bulk",
+  "permalink": "/docs/3.1.0/bulk",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Adsorption & Desorption Reactions",
-    "permalink": "/docs/desorb"
+    "permalink": "/docs/3.1.0/desorb"
   },
   "next": {
     "title": "Developer",
-    "permalink": "/docs/category/developer"
+    "permalink": "/docs/3.1.0/category/developer"
   }
 }

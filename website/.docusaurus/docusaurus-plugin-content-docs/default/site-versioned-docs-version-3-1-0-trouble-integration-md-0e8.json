@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/trouble-integration.md",
   "sourceDirName": ".",
   "slug": "/trouble-integration",
-  "permalink": "/docs/trouble-integration",
+  "permalink": "/docs/3.1.0/trouble-integration",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Compilation Issues",
-    "permalink": "/docs/trouble-compile"
+    "permalink": "/docs/3.1.0/trouble-compile"
   },
   "next": {
     "title": "Core Physics",
-    "permalink": "/docs/physics-core"
+    "permalink": "/docs/3.1.0/physics-core"
   }
 }

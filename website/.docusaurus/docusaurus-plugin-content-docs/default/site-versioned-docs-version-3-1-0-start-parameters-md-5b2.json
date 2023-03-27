@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/start-parameters.md",
   "sourceDirName": ".",
   "slug": "/parameters",
-  "permalink": "/docs/parameters",
+  "permalink": "/docs/3.1.0/parameters",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/3.1.0/network"
   },
   "next": {
     "title": "Python Reference",
-    "permalink": "/docs/pythonapi"
+    "permalink": "/docs/3.1.0/pythonapi"
   }
 }

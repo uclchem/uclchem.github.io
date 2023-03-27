@@ -1,0 +1,25 @@
+{
+  "unversionedId": "physics-core",
+  "id": "version-v3.1.0/physics-core",
+  "title": "Core Physics",
+  "description": "Each of the other physics doc pages details the specifics of a particular physics model. This one gives a general overview of the physics in UCLCHEM, including the core physics routines that are called for all models.",
+  "source": "@site/versioned_docs/version-v3.1.0/physics-core.md",
+  "sourceDirName": ".",
+  "slug": "/physics-core",
+  "permalink": "/docs/v3.1.0/physics-core",
+  "tags": [],
+  "version": "v3.1.0",
+  "frontMatter": {
+    "id": "physics-core",
+    "title": "Core Physics"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Integration",
+    "permalink": "/docs/v3.1.0/trouble-integration"
+  },
+  "next": {
+    "title": "Core Physics",
+    "permalink": "/docs/v3.1.0/physics-core"
+  }
+}

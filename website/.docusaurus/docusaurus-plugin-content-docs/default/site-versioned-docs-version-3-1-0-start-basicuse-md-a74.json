@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/start-basicuse.md",
   "sourceDirName": ".",
   "slug": "/",
-  "permalink": "/docs/",
+  "permalink": "/docs/3.1.0/",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Getting Started",
-    "permalink": "/docs/category/getting-started"
+    "permalink": "/docs/3.1.0/category/getting-started"
   },
   "next": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/3.1.0/network"
   }
 }

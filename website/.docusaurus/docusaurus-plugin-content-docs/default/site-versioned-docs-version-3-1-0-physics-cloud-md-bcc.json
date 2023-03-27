@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/physics-cloud.md",
   "sourceDirName": ".",
   "slug": "/physics-cloud",
-  "permalink": "/docs/physics-cloud",
+  "permalink": "/docs/3.1.0/physics-cloud",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Core Physics",
-    "permalink": "/docs/physics-core"
+    "permalink": "/docs/3.1.0/physics-core"
   },
   "next": {
     "title": "Hot Core",
-    "permalink": "/docs/physics-hotcore"
+    "permalink": "/docs/3.1.0/physics-hotcore"
   }
 }

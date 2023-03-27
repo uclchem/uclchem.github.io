@@ -1,0 +1,26 @@
+{
+  "unversionedId": "install",
+  "id": "version-v3.2.0/install",
+  "title": "Installation",
+  "description": "Prerequisites",
+  "source": "@site/versioned_docs/version-v3.2.0/start-basicuse.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "tags": [],
+  "version": "v3.2.0",
+  "frontMatter": {
+    "id": "install",
+    "title": "Installation",
+    "slug": "/"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/category/getting-started"
+  },
+  "next": {
+    "title": "Creating a Network",
+    "permalink": "/docs/network"
+  }
+}

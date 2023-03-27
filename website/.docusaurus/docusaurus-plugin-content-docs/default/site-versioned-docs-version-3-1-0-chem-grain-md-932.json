@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/chem-grain.md",
   "sourceDirName": ".",
   "slug": "/grain",
-  "permalink": "/docs/grain",
+  "permalink": "/docs/3.1.0/grain",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Gas Phase Reactions",
-    "permalink": "/docs/gas"
+    "permalink": "/docs/3.1.0/gas"
   },
   "next": {
     "title": "Adsorption & Desorption Reactions",
-    "permalink": "/docs/desorb"
+    "permalink": "/docs/3.1.0/desorb"
   }
 }

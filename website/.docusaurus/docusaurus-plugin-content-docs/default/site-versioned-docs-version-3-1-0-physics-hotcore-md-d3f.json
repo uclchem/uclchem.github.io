@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-3.1.0/physics-hotcore.md",
   "sourceDirName": ".",
   "slug": "/physics-hotcore",
-  "permalink": "/docs/physics-hotcore",
+  "permalink": "/docs/3.1.0/physics-hotcore",
   "tags": [],
   "version": "3.1.0",
   "lastUpdatedBy": "Gijs Vermariën",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Cloud Model",
-    "permalink": "/docs/physics-cloud"
+    "permalink": "/docs/3.1.0/physics-cloud"
   },
   "next": {
     "title": "Shock Models",
-    "permalink": "/docs/physics-shocks"
+    "permalink": "/docs/3.1.0/physics-shocks"
   }
 }
