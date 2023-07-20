@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 
 ## The Hot Core
 
-### Initial Conditions (Phase 1)
-UCLCHEM typically starts with the gas in atomic/ionic form with no molecules. However, this clearly is not appropriate when modelling an object such as a hot core. In these objects, the gas is already evolved and there should be molecules in the gas phase as well as ice mantles on the dust. To allow for this, one must provide some initial abundances to the model. There are many ways to do this but we typically chose to run a preliminary model to produce our abundances. In many UCLCHEM papers, we refer to the preliminary model as *phase 1* and the science model as *phase 2*. Phase 1 simply models a collapsing cloud and phase 2 models the object in question.
+### Initial Conditions (Stage 1)
+UCLCHEM typically starts with the gas in atomic/ionic form with no molecules. However, this clearly is not appropriate when modelling an object such as a hot core. In these objects, the gas is already evolved and there should be molecules in the gas phase as well as ice mantles on the dust. To allow for this, one must provide some initial abundances to the model. There are many ways to do this but we typically chose to run a preliminary model to produce our abundances. In many UCLCHEM papers, we refer to the preliminary model as *Stage 1* and the science model as *Stage 2*. Stage 1 simply models a collapsing cloud and Stage 2 models the object in question.
 
 To do this, we will use `uclchem.model.cloud()` to run a model where a cloud of gas collapses from a density of $10^2 cm^{-3}$ to our hot core density of $10^6 cm^{-3}$, keeping all other parameters constant. During this collapse, chemistry will occur and we can assume the final abundances of this model will be reasonable starting abundances for the hot core. 
 
@@ -40,7 +40,7 @@ print(result)
 
 With that done, we now have a file containing the final abundances of a cloud of gas after this collapse: `param_dict["abundSaveFile"]` we can pass this to our hot core model to use those abundances as our initial abundances.
 
-### Running the Science Model (Phase 2)
+### Running the Science Model (Stage 2)
 
 We need to change just a few things in `param_dict` to set up the hot core model. The key one is that UCLCHEM saves final abundances to `abundSaveFile` but loads them from `abundLoadFile` so we need to swap that key over to make the abundances we just produced our initial abundances. 
 
@@ -49,7 +49,7 @@ We also want to turn off freefall and change how long the model runs for.
 
 
 ```python
-#change other bits of input to set up phase 2
+#change other bits of input to set up Stage 2
 param_dict["initialDens"]=1e6
 param_dict["finalTime"]=1e6
 param_dict["freefall"]=False
@@ -123,7 +123,7 @@ Essentially the same process should be followed for shocks. Let's run a C-type a
 
 
 ```python
-# set a parameter dictionary for phase 1 collapse model
+# set a parameter dictionary for Stage 1 collapse model
 
 param_dict = {
     "endAtFinalDensity": False,#stop at finalTime
@@ -145,7 +145,7 @@ We'll first run a c-shock. We'll run a 40 km s $^{-1}$ shock through a gas of de
 
 
 ```python
-#change other bits of input to set up phase 2
+#change other bits of input to set up Stage 2
 param_dict["initialDens"]=1e4
 param_dict["finalTime"]=1e6
 if "abundSaveFile" in param_dict:

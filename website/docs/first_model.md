@@ -16,7 +16,7 @@ Due to the large number of parameters in a chemical model and the way fortran an
 
 
 ```python
-# set a parameter dictionary for phase 1 collapse model
+# set a parameter dictionary for Stage 1 collapse model
 
 out_species = ["SO","CO"]
 param_dict = {

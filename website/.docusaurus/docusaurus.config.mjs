@@ -41,7 +41,7 @@ export default {
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../website/docs",
-          "sidebarPath": "/Users/kasia/Postdoc/uclchem.github.io/website/sidebars.js",
+          "sidebarPath": "/Users/gijsv/uclchem/uclchem.github.io/website/sidebars.js",
           "remarkPlugins": [
             null
           ],
@@ -61,7 +61,7 @@ export default {
         },
         "theme": {
           "customCss": [
-            "/Users/kasia/Postdoc/uclchem.github.io/website/src/css/custom.css"
+            "/Users/gijsv/uclchem/uclchem.github.io/website/src/css/custom.css"
           ]
         },
         "googleAnalytics": {
