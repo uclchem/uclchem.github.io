@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/parameters",
   "permalink": "/docs/v3.1.0/parameters",
+  "draft": false,
   "tags": [],
   "version": "v3.1.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "parameters",
     "title": "Model Parameters"

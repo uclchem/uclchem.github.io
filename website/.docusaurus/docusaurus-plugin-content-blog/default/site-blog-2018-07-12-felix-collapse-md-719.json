@@ -7,7 +7,7 @@
   "formattedDate": "July 12, 2018",
   "tags": [],
   "readingTime": 1.505,
-  "truncated": false,
+  "hasTruncateMarker": false,
   "authors": [
     {
       "name": "jonholdship"

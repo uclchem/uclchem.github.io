@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/network",
   "permalink": "/docs/network",
+  "draft": false,
   "tags": [],
   "version": "v3.2.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "network",
     "title": "Creating a Network"

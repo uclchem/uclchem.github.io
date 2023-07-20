@@ -7,7 +7,7 @@
   "formattedDate": "February 5, 2018",
   "tags": [],
   "readingTime": 1.425,
-  "truncated": false,
+  "hasTruncateMarker": false,
   "authors": [
     {
       "name": "Jonathan Holdship",

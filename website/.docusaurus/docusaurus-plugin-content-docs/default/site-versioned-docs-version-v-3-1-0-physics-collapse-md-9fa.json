@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/physics-collapse",
   "permalink": "/docs/v3.1.0/physics-collapse",
+  "draft": false,
   "tags": [],
   "version": "v3.1.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "physics-collapse",
     "title": "Collapse Models"

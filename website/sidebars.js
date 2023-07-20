@@ -39,7 +39,7 @@ module.exports = {
         title: 'Chemistry',
         description: "In these pages, discuss aspects of the chemistry including how different reactions are treated, how the grain surface treatment works and so on.",
       },
-      items: ["gas","grain","desorb","bulk"],
+      items: ["notation","gas","grain","desorb","bulk"],
     },
     {
       type: 'category',

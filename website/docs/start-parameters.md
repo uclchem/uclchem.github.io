@@ -8,7 +8,7 @@ UCLCHEM will default to these values unless they are overridden by user. Users c
 |Parameter|Default Value |Description|
 | ----- | ------| ------ |
 |initialTemp|10.0 |Initial gas temperature in Kelvin for all gas parcels in model.|
-|initialDens|1.00d2 |Initial gas density in H nuclei per cm$^{-3}$ for all gas parcels in model.|
+|initialDens|1.00d2 |Initial gas density in H nuclei per cm$^{-3}$ $\left(n_H=n(H) + 2n(H_2) + n(H^+)\right)$ for all gas parcels in model.|
 |finalDens|1.00d5 |Final gas density achieved via freefall.|
 |currentTime|0.0 |Time at start of model in years.|
 |finalTime|5.0d6 |Time to stop model in years, if not using `endAtFinalDensity` below.|

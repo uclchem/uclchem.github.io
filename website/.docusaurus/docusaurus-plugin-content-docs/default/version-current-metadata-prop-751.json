@@ -4,6 +4,7 @@
   "label": "Develop 🚧",
   "banner": "unreleased",
   "badge": true,
+  "noIndex": false,
   "className": "docs-version-current",
   "isLast": false,
   "docsSidebars": {
@@ -137,6 +138,12 @@
         "type": "category",
         "label": "Chemistry",
         "items": [
+          {
+            "type": "link",
+            "label": "Notation",
+            "href": "/docs/next/notation",
+            "docId": "notation"
+          },
           {
             "type": "link",
             "label": "Gas Phase Reactions",
@@ -283,6 +290,12 @@
       "id": "network",
       "title": "Creating a Network",
       "description": "MakeRates",
+      "sidebar": "docs"
+    },
+    "notation": {
+      "id": "notation",
+      "title": "Notation",
+      "description": "UCLCHEM uses notation, which differentiates between species types. Here, we'll give an overview of this notation and associated processes.",
       "sidebar": "docs"
     },
     "parameters": {

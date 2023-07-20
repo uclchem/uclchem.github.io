@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/trouble-compile",
   "permalink": "/docs/trouble-compile",
+  "draft": false,
   "tags": [],
   "version": "v3.2.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "trouble-compile",
     "title": "Compilation Issues"

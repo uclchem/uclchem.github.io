@@ -67,7 +67,7 @@ module.exports={
    
     prism: {
         additionalLanguages: ['fortran'],
-        theme: require('prism-react-renderer/themes/dracula'),
+        theme: require('prism-react-renderer').themes.dracula,
     },
     "navbar": {
       "title": "UCLCHEM",

@@ -7,11 +7,12 @@
   "sourceDirName": ".",
   "slug": "/dev-web",
   "permalink": "/docs/next/dev-web",
+  "draft": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676552141,
-  "formattedLastUpdatedAt": "2/16/2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "dev-web",
     "title": "Maintaining the Website"

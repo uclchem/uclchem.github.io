@@ -7,7 +7,7 @@
   "formattedDate": "December 7, 2020",
   "tags": [],
   "readingTime": 1.89,
-  "truncated": false,
+  "hasTruncateMarker": false,
   "authors": [
     {
       "name": "Serena Viti",
