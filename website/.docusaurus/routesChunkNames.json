@@ -1,4 +1,60 @@
 {
+<<<<<<< HEAD
+  "/__docusaurus/debug-d64": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/__docusaurus/debug/config-77a": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/__docusaurus/debug/content-207": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-45a": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/__docusaurus/debug/metadata-e4b": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/__docusaurus/debug/registry-4f5": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/__docusaurus/debug/routes-9fb": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-4-f-5-c9b"
+    }
+  },
+  "/3dpdr-f8f": {
+    "__comp": "__comp---site-src-pages-3-dpdr-js-8-ee-44c",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/blog-7dd": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/__docusaurus/debug-f57": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
@@ -53,6 +109,7 @@
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "items": [
@@ -89,110 +146,214 @@
     ],
     "metadata": "metadata---blogb-2-b-df1"
   },
+<<<<<<< HEAD
+  "/blog/2018/02/05/david-grains-750": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2018/02/05/david-grains-70c": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2018-02-05-david-grains-6-a-4-461"
   },
+<<<<<<< HEAD
+  "/blog/2018/03/27/audrey-coms-20c": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2018/03/27/audrey-coms-e4f": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2018-03-27-audrey-coms-4-b-1-3ea"
   },
+<<<<<<< HEAD
+  "/blog/2018/06/20/izaskun-phosphorus-6ab": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2018/06/20/izaskun-phosphorus-3c8": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2018-06-20-izaskun-phosphorusf-85-a7a"
   },
+<<<<<<< HEAD
+  "/blog/2018/07/12/felix-collapse-4e1": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2018/07/12/felix-collapse-038": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2018-07-12-felix-collapse-719-809"
   },
+<<<<<<< HEAD
+  "/blog/2019/04/19/serena-nitrogen-frac-c1a": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2019/04/19/serena-nitrogen-frac-4ee": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-04-19-serena-nitrogen-frac-7-bc-30e"
   },
+<<<<<<< HEAD
+  "/blog/2019/07/08/felix-ambipolar-5b7": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2019/07/08/felix-ambipolar-790": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-07-08-felix-ambipolar-95-c-2c6"
   },
+<<<<<<< HEAD
+  "/blog/2019/08/13/serena-carbon-frac-e73": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2019/08/13/serena-carbon-frac-aad": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-08-13-serena-carbon-frac-306-024"
   },
+<<<<<<< HEAD
+  "/blog/2019/12/10/tom-shock-591": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2019/12/10/tom-shock-804": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2019-12-10-tom-shocka-9-b-828"
   },
+<<<<<<< HEAD
+  "/blog/2020/02/14/New-Website-609": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2020/02/14/New-Website-6e6": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2020-02-14-new-website-349-530"
   },
+<<<<<<< HEAD
+  "/blog/2020/12/07/milena-nitrogen-solis-ecf": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2020/12/07/milena-nitrogen-solis-e7b": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2020-12-07-milena-nitrogen-solis-610-d33"
   },
+<<<<<<< HEAD
+  "/blog/2022/02/06/holdship-hits-3fd": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2022/02/06/holdship-hits-828": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2022-02-06-holdship-hits-19-d-176"
   },
+<<<<<<< HEAD
+  "/blog/2022/04/14/crir-ngc253-411": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2022/04/14/crir-ngc253-4c3": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2022-04-14-crir-ngc-2534-f-3-331"
   },
+<<<<<<< HEAD
+  "/blog/2022/04/29/uclchem-v3-3c3": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/2022/04/29/uclchem-v3-5ef": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-2022-04-29-uclchem-v-38-e-6-85f"
   },
+<<<<<<< HEAD
+  "/blog/archive-b74": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+    },
+    "archive": "archive---blog-archiveb-2-f-393"
+  },
+  "/blog/page/2-43d": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---blog-22-b-b18"
+=======
   "/blog/archive-9ae": {
     "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
@@ -204,6 +365,7 @@
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---blogbef-17c"
+>>>>>>> docusaurus
     },
     "sidebar": "sidebar---blog-814-8ac",
     "items": [
@@ -219,6 +381,47 @@
     ],
     "metadata": "metadata---blog-page-28-eb-625"
   },
+<<<<<<< HEAD
+  "/emulators-ba6": {
+    "__comp": "__comp---site-src-pages-emulators-js-1-cd-61e",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/help-16c": {
+    "__comp": "__comp---site-src-pages-help-js-7-e-3-222",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/othersoftware-5eb": {
+    "__comp": "__comp---site-src-pages-othersoftware-js-689-b6c",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/ucl_pdr-e23": {
+    "__comp": "__comp---site-src-pages-ucl-pdr-jsd-81-73a",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/users-872": {
+    "__comp": "__comp---site-src-pages-users-js-1-db-7ac",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+    },
+    "config": "config---3-dpdr-5-e-9-ccf"
+  },
+  "/docs/next-ce2": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-next-59-a-2d6"
+=======
   "/emulators-c95": {
     "__comp": "__comp---site-src-pages-emulators-js-1-cd-61e",
     "__context": {
@@ -258,6 +461,7 @@
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-nexta-6-d-4a8"
+>>>>>>> docusaurus
     },
     "versionMetadata": "versionMetadata---docs-next-935-7db"
   },
@@ -332,6 +536,13 @@
   "/docs/next/network-956": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-networkd-26-11a"
+<<<<<<< HEAD
+  },
+  "/docs/next/notation-19f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-next-notation-8-b-9-686"
+=======
+>>>>>>> docusaurus
   },
   "/docs/next/parameters-70c": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -373,10 +584,17 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-trouble-integration-2-db-bdd"
   },
+<<<<<<< HEAD
+  "/docs/v3.1.0-645": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-next-59-a-2d6"
+=======
   "/docs/v3.1.0-a46": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-nexta-6-d-4a8"
+>>>>>>> docusaurus
     },
     "versionMetadata": "versionMetadata---docs-v-3-1-09-b-0-b66"
   },
@@ -492,10 +710,17 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-v-3-1-0-trouble-integration-6-c-2-61f"
   },
+<<<<<<< HEAD
+  "/docs-d07": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-next-59-a-2d6"
+=======
   "/docs-16b": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---docs-nexta-6-d-4a8"
+>>>>>>> docusaurus
     },
     "versionMetadata": "versionMetadata---docsb-2-e-848"
   },
@@ -611,10 +836,17 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-trouble-integration-5-a-3-e5d"
   },
+<<<<<<< HEAD
+  "/-e9a": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---3-dpdr-3-b-0-887"
+=======
   "/-e1e": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
       "plugin": "plugin---3-dpdrc-49-bef"
+>>>>>>> docusaurus
     },
     "config": "config---3-dpdr-5-e-9-ccf"
   }

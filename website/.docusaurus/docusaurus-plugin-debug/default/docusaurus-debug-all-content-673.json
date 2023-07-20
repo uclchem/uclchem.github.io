@@ -12,9 +12,15 @@
           "path": "/docs/next",
           "tagsPath": "/docs/next/tags",
           "isLast": false,
+<<<<<<< HEAD
+          "sidebarFilePath": "/Users/kasia/Postdoc/uclchem.github.io/website/sidebars.js",
+          "contentPath": "/Users/kasia/Postdoc/uclchem.github.io/website/docs",
+          "contentPathLocalized": "/Users/kasia/Postdoc/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+=======
           "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/sidebars.js",
           "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/docs",
           "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+>>>>>>> docusaurus
           "docs": [
             {
               "unversionedId": "bulk",
@@ -259,8 +265,13 @@
               },
               "sidebar": "docs",
               "previous": {
+<<<<<<< HEAD
+                "title": "Notation",
+                "permalink": "/docs/next/notation"
+=======
                 "title": "Chemistry",
                 "permalink": "/docs/next/category/chemistry"
+>>>>>>> docusaurus
               },
               "next": {
                 "title": "Grain Surface Reactions",
@@ -399,6 +410,38 @@
               "next": {
                 "title": "Model Parameters",
                 "permalink": "/docs/next/parameters"
+<<<<<<< HEAD
+              }
+            },
+            {
+              "unversionedId": "notation",
+              "id": "notation",
+              "title": "Notation",
+              "description": "UCLCHEM uses notation, which differentiates between species types. Here, we'll give an overview of this notation and associated processes.",
+              "source": "@site/docs/chem-notation.md",
+              "sourceDirName": ".",
+              "slug": "/notation",
+              "permalink": "/docs/next/notation",
+              "draft": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "notation",
+                "title": "Notation"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Chemistry",
+                "permalink": "/docs/next/category/chemistry"
+              },
+              "next": {
+                "title": "Gas Phase Reactions",
+                "permalink": "/docs/next/gas"
+=======
+>>>>>>> docusaurus
               }
             },
             {
@@ -817,6 +860,10 @@
                 "items": [
                   {
                     "type": "doc",
+                    "id": "notation"
+                  },
+                  {
+                    "type": "doc",
                     "id": "gas"
                   },
                   {
@@ -880,9 +927,15 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
+<<<<<<< HEAD
+          "sidebarFilePath": "/Users/kasia/Postdoc/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
+          "contentPath": "/Users/kasia/Postdoc/uclchem.github.io/website/versioned_docs/version-v3.2.0",
+          "contentPathLocalized": "/Users/kasia/Postdoc/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
+=======
           "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
           "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.2.0",
           "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
+>>>>>>> docusaurus
           "docs": [
             {
               "unversionedId": "bulk",
@@ -911,6 +964,7 @@
               "next": {
                 "title": "Developer",
                 "permalink": "/docs/category/developer"
+<<<<<<< HEAD
               }
             },
             {
@@ -948,6 +1002,57 @@
               "sourceDirName": ".",
               "slug": "/desorb",
               "permalink": "/docs/desorb",
+=======
+              }
+            },
+            {
+              "unversionedId": "chemical_analysis",
+              "id": "version-v3.2.0/chemical_analysis",
+              "title": "Chemical Analysis",
+              "description": "Chemical networks are complex systems where the interplay between many elements often means that small changes in one aspect of the network can greatly effect the outcome in unexpected ways. Nevertheless, there are cases where a simple chemical explanation can be found for some observed behaviour in the model outputs. This tutorial demonstrates how to use some of the functionality of the UCLCHEM library to analyse model outputs and discover these explanations.",
+              "source": "@site/versioned_docs/version-v3.2.0/chemical_analysis.md",
+              "sourceDirName": ".",
+              "slug": "/chemical_analysis",
+              "permalink": "/docs/chemical_analysis",
+>>>>>>> docusaurus
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+<<<<<<< HEAD
+              "frontMatter": {
+                "id": "desorb",
+                "title": "Adsorption & Desorption Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Grain Surface Reactions",
+                "permalink": "/docs/grain"
+              },
+              "next": {
+=======
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Running a Grid",
+                "permalink": "/docs/running_a_grid"
+              },
+              "next": {
+                "title": "Compilation Issues",
+                "permalink": "/docs/trouble-compile"
+              }
+            },
+            {
+              "unversionedId": "desorb",
+              "id": "version-v3.2.0/desorb",
+              "title": "Adsorption & Desorption Reactions",
+              "description": "Coupling between the gas and the grain chemistry primarily comes from the freeze out of material from the gas phase onto the dust grains (adsorption) and the sublimation of material from the grains into the gas phase (desorption). The major processes considered by UCLCHEM are listed below. Note that we assume desorption and freeze out occur between the gas and the surface only, bulk material in three phase models does not directly desorb into the gas phase.",
+              "source": "@site/versioned_docs/version-v3.2.0/chem-desorb.md",
+              "sourceDirName": ".",
+              "slug": "/desorb",
+              "permalink": "/docs/desorb",
               "draft": false,
               "tags": [],
               "version": "v3.2.0",
@@ -964,6 +1069,7 @@
                 "permalink": "/docs/grain"
               },
               "next": {
+>>>>>>> docusaurus
                 "title": "Bulk Ice Processes",
                 "permalink": "/docs/bulk"
               }
@@ -1747,9 +1853,15 @@
           "path": "/docs/v3.1.0",
           "tagsPath": "/docs/v3.1.0/tags",
           "isLast": false,
+<<<<<<< HEAD
+          "sidebarFilePath": "/Users/kasia/Postdoc/uclchem.github.io/website/versioned_sidebars/version-v3.1.0-sidebars.json",
+          "contentPath": "/Users/kasia/Postdoc/uclchem.github.io/website/versioned_docs/version-v3.1.0",
+          "contentPathLocalized": "/Users/kasia/Postdoc/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.1.0",
+=======
           "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.1.0-sidebars.json",
           "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.1.0",
           "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.1.0",
+>>>>>>> docusaurus
           "docs": [
             {
               "unversionedId": "bulk",

@@ -140,6 +140,12 @@
         "items": [
           {
             "type": "link",
+            "label": "Notation",
+            "href": "/docs/next/notation",
+            "docId": "notation"
+          },
+          {
+            "type": "link",
             "label": "Gas Phase Reactions",
             "href": "/docs/next/gas",
             "docId": "gas"
@@ -284,6 +290,12 @@
       "id": "network",
       "title": "Creating a Network",
       "description": "MakeRates",
+      "sidebar": "docs"
+    },
+    "notation": {
+      "id": "notation",
+      "title": "Notation",
+      "description": "UCLCHEM uses notation, which differentiates between species types. Here, we'll give an overview of this notation and associated processes.",
       "sidebar": "docs"
     },
     "parameters": {
