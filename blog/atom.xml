@@ -9,7 +9,7 @@
     <icon>https://uclchem.github.io/img/uclchem-logo.jpg</icon>
     <entry>
         <title type="html"><![CDATA[UCLCHEM v3.0]]></title>
-        <id>/2022/04/29/uclchem-v3</id>
+        <id>https://uclchem.github.io/blog/2022/04/29/uclchem-v3</id>
         <link href="https://uclchem.github.io/blog/2022/04/29/uclchem-v3"/>
         <updated>2022-04-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[UCLCHEM has had a major update! The new version is v3.0 and has many changes. Here are some of the key updates:]]></summary>
@@ -21,7 +21,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Cosmic-ray Ionization Rate in NGC 253]]></title>
-        <id>/2022/04/14/crir-ngc253</id>
+        <id>https://uclchem.github.io/blog/2022/04/14/crir-ngc253</id>
         <link href="https://uclchem.github.io/blog/2022/04/14/crir-ngc253"/>
         <updated>2022-04-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[NGC 253 is a nearby starburst galaxy which hosts several large clouds of gas in its central molecular zone. These clouds are similar to GMCs but orders of magnitude more massive and much hotter, where the star formation rate is very high. The temperature of this gas is important because the star formation efficiency will be determined by how much internal energy that gas has.]]></summary>
@@ -33,7 +33,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[HITs - History Independent Tracers]]></title>
-        <id>/2022/02/06/holdship-hits</id>
+        <id>https://uclchem.github.io/blog/2022/02/06/holdship-hits</id>
         <link href="https://uclchem.github.io/blog/2022/02/06/holdship-hits"/>
         <updated>2022-02-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Interpreting molecular observations through chemical and radiative transfer models is a common but complex practice. Whilst many uncertainties affect chemical models, one in particular is addressed in this work: the issue of time dependence. When modelling a molecular cloud or protostellar disk, how do we initialize the abundances? When is an appropriate time to compare our model to the observed object? Our paper on History Independent Tracers (HITs) side steps this issue by producing a list of molecules which are insensitive to the chemical history of the gas, essentially reaching steady state very quickly across a very wide range of gas conditions.]]></summary>
@@ -45,7 +45,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[First measurement of nitrogen fractionation in shocked clumps of the L1157 protostellar outflow. SOLIS XI]]></title>
-        <id>/2020/12/07/milena-nitrogen-solis</id>
+        <id>https://uclchem.github.io/blog/2020/12/07/milena-nitrogen-solis</id>
         <link href="https://uclchem.github.io/blog/2020/12/07/milena-nitrogen-solis"/>
         <updated>2020-12-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[As part of the SOLIS observational programme, various isotopologues of HCN were observed towards L1157 in order to study the nitrogen fractionation in a protostellar outflow. The modelling work for this study was done using UCLCHEM. You can find the paper here and the abstract below.]]></summary>
@@ -57,7 +57,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[New Website]]></title>
-        <id>/2020/02/14/New-Website</id>
+        <id>https://uclchem.github.io/blog/2020/02/14/New-Website</id>
         <link href="https://uclchem.github.io/blog/2020/02/14/New-Website"/>
         <updated>2020-02-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We're replacing our old website! The old site was essentially just a poster for UCLCHEM with some github links. The new website has a similar landing page but importantly, we've moved all the documentation for UCLCHEM online. We'll keep that up to date and are open to comments from users as we're keen to make UCLCHEM as easy to use as possible.]]></summary>
@@ -69,7 +69,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Tracing shock type with chemical diagnostics - an application to L1157]]></title>
-        <id>/2019/12/10/tom-shock</id>
+        <id>https://uclchem.github.io/blog/2019/12/10/tom-shock</id>
         <link href="https://uclchem.github.io/blog/2019/12/10/tom-shock"/>
         <updated>2019-12-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The physical structure of a shock wave may take a form unique to its shock type, implying that the chemistry of each shock type is unique as well. In our recent paper, we investigate the different chemistries of J-type and C-type shocks using parameterised forms of their physical structures in order to identify unique molecular tracers of both shock types. We apply these diagnostics to the protostellar outflow L1157 to establish whether the B2 clump could host shocks exhibiting type-specific behaviour.]]></summary>
@@ -81,7 +81,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[A chemical study of carbon fractionation in external galaxies]]></title>
-        <id>/2019/08/13/serena-carbon-frac</id>
+        <id>https://uclchem.github.io/blog/2019/08/13/serena-carbon-frac</id>
         <link href="https://uclchem.github.io/blog/2019/08/13/serena-carbon-frac"/>
         <updated>2019-08-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[UCLCHEM has recently been used to study carbon fractionation in external galaxies. You can find the paper here and the abstract below.]]></summary>
@@ -93,7 +93,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Ambipolar diffusion and the molecular abundances inprestellar cores]]></title>
-        <id>/2019/07/08/felix-ambipolar</id>
+        <id>https://uclchem.github.io/blog/2019/07/08/felix-ambipolar</id>
         <link href="https://uclchem.github.io/blog/2019/07/08/felix-ambipolar"/>
         <updated>2019-07-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Felix Priestley has used UCLCHEM in an investigation of the chemical differences caused by the magnetic fields in prestellar cores. You can find the paper here and the abstract below.]]></summary>
@@ -105,7 +105,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Nitrogen fractionation in external galaxies]]></title>
-        <id>/2019/04/19/serena-nitrogen-frac</id>
+        <id>https://uclchem.github.io/blog/2019/04/19/serena-nitrogen-frac</id>
         <link href="https://uclchem.github.io/blog/2019/04/19/serena-nitrogen-frac"/>
         <updated>2019-04-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[UCLCHEM has recently been used to study nitrogen fractionation in external galaxies. You can find the paper here and the abstract below.]]></summary>
@@ -117,7 +117,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Collapsing Prestellar Cores - a new physics module]]></title>
-        <id>/2018/07/12/felix-collapse</id>
+        <id>https://uclchem.github.io/blog/2018/07/12/felix-collapse</id>
         <link href="https://uclchem.github.io/blog/2018/07/12/felix-collapse"/>
         <updated>2018-07-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Felix Priestley has used UCLCHEM to study the collapse of prestellar cores. In the process, he's created a new physics module collapse.f90 which follows a sphere of gas collapsing in different ways. The paper can be found here and the abstract is below.]]></summary>
@@ -128,7 +128,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Chemistry of Phosphorus-bearing Molecules under Energetic Phenomena]]></title>
-        <id>/2018/06/20/izaskun-phosphorus</id>
+        <id>https://uclchem.github.io/blog/2018/06/20/izaskun-phosphorus</id>
         <link href="https://uclchem.github.io/blog/2018/06/20/izaskun-phosphorus"/>
         <updated>2018-06-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Izaskun Jimenez-Serra has published a study of the chemistry of phosophorus bearing species using UCLCHEM. The paper can be found here and the abstract is below.]]></summary>
@@ -139,7 +139,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Chemical modelling of glycolaldehyde and ethylene glycol in star-forming regions]]></title>
-        <id>/2018/03/27/audrey-coms</id>
+        <id>https://uclchem.github.io/blog/2018/03/27/audrey-coms</id>
         <link href="https://uclchem.github.io/blog/2018/03/27/audrey-coms"/>
         <updated>2018-03-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Audrey Coutens has published modelling work on glycoaldehyde and ethylene glycol using UCLCHEM. You can find the paper here and the abstract below.]]></summary>
@@ -151,7 +151,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Chemical modelling of complex organic molecules with peptide-like bonds in star-forming regions]]></title>
-        <id>/2018/02/05/david-grains</id>
+        <id>https://uclchem.github.io/blog/2018/02/05/david-grains</id>
         <link href="https://uclchem.github.io/blog/2018/02/05/david-grains"/>
         <updated>2018-02-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[David Quenard just published an update to the UCLCHEM with an application to COMs in prestellar cores you can find the paper here and the abstract below.]]></summary>
