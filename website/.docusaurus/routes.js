@@ -4,152 +4,272 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/__docusaurus/debug',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug', 'd64'),
+=======
+    component: ComponentCreator('/__docusaurus/debug', 'f57'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/config',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/config', '77a'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/config', 'ddb'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/content',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/content', '207'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/content', '845'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/globalData',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/globalData', '45a'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/globalData', '66b'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/metadata',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/metadata', 'e4b'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/metadata', '929'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/registry',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/registry', '4f5'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/registry', 'd8b'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/__docusaurus/debug/routes',
+<<<<<<< HEAD
     component: ComponentCreator('/__docusaurus/debug/routes', '9fb'),
+=======
+    component: ComponentCreator('/__docusaurus/debug/routes', 'b3d'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/3dpdr',
+<<<<<<< HEAD
     component: ComponentCreator('/3dpdr', 'f8f'),
+=======
+    component: ComponentCreator('/3dpdr', 'fbd'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog',
+<<<<<<< HEAD
     component: ComponentCreator('/blog', '7dd'),
+=======
+    component: ComponentCreator('/blog', 'a75'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2018/02/05/david-grains',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2018/02/05/david-grains', '750'),
+=======
+    component: ComponentCreator('/blog/2018/02/05/david-grains', '70c'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2018/03/27/audrey-coms',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2018/03/27/audrey-coms', '20c'),
+=======
+    component: ComponentCreator('/blog/2018/03/27/audrey-coms', 'e4f'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2018/06/20/izaskun-phosphorus',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus', '6ab'),
+=======
+    component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus', '3c8'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2018/07/12/felix-collapse',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2018/07/12/felix-collapse', '4e1'),
+=======
+    component: ComponentCreator('/blog/2018/07/12/felix-collapse', '038'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2019/04/19/serena-nitrogen-frac',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac', 'c1a'),
+=======
+    component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac', '4ee'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2019/07/08/felix-ambipolar',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2019/07/08/felix-ambipolar', '5b7'),
+=======
+    component: ComponentCreator('/blog/2019/07/08/felix-ambipolar', '790'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2019/08/13/serena-carbon-frac',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac', 'e73'),
+=======
+    component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac', 'aad'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2019/12/10/tom-shock',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2019/12/10/tom-shock', '591'),
+=======
+    component: ComponentCreator('/blog/2019/12/10/tom-shock', '804'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2020/02/14/New-Website',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2020/02/14/New-Website', '609'),
+=======
+    component: ComponentCreator('/blog/2020/02/14/New-Website', '6e6'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2020/12/07/milena-nitrogen-solis',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis', 'ecf'),
+=======
+    component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis', 'e7b'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2022/02/06/holdship-hits',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2022/02/06/holdship-hits', '3fd'),
+=======
+    component: ComponentCreator('/blog/2022/02/06/holdship-hits', '828'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2022/04/14/crir-ngc253',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2022/04/14/crir-ngc253', '411'),
+=======
+    component: ComponentCreator('/blog/2022/04/14/crir-ngc253', '4c3'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/2022/04/29/uclchem-v3',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/2022/04/29/uclchem-v3', '3c3'),
+=======
+    component: ComponentCreator('/blog/2022/04/29/uclchem-v3', '5ef'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/archive',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/archive', 'b74'),
+=======
+    component: ComponentCreator('/blog/archive', '9ae'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/blog/page/2',
+<<<<<<< HEAD
     component: ComponentCreator('/blog/page/2', '43d'),
+=======
+    component: ComponentCreator('/blog/page/2', 'a6a'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/emulators',
+<<<<<<< HEAD
     component: ComponentCreator('/emulators', 'ba6'),
+=======
+    component: ComponentCreator('/emulators', 'c95'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/help',
+<<<<<<< HEAD
     component: ComponentCreator('/help', '16c'),
+=======
+    component: ComponentCreator('/help', 'cb7'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/othersoftware',
+<<<<<<< HEAD
     component: ComponentCreator('/othersoftware', '5eb'),
+=======
+    component: ComponentCreator('/othersoftware', '3f0'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/ucl_pdr',
+<<<<<<< HEAD
     component: ComponentCreator('/ucl_pdr', 'e23'),
+=======
+    component: ComponentCreator('/ucl_pdr', 'aa8'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/users',
+<<<<<<< HEAD
     component: ComponentCreator('/users', '872'),
+=======
+    component: ComponentCreator('/users', '06f'),
+>>>>>>> docusaurus
     exact: true
   },
   {
     path: '/docs/next',
+<<<<<<< HEAD
     component: ComponentCreator('/docs/next', 'ce2'),
+=======
+    component: ComponentCreator('/docs/next', '4b5'),
+>>>>>>> docusaurus
     routes: [
       {
         path: '/docs/next/',
@@ -255,12 +375,15 @@ export default [
       {
         path: '/docs/next/network',
         component: ComponentCreator('/docs/next/network', '956'),
+<<<<<<< HEAD
         exact: true,
         sidebar: "docs"
       },
       {
         path: '/docs/next/notation',
         component: ComponentCreator('/docs/next/notation', '19f'),
+=======
+>>>>>>> docusaurus
         exact: true,
         sidebar: "docs"
       },
@@ -328,7 +451,11 @@ export default [
   },
   {
     path: '/docs/v3.1.0',
+<<<<<<< HEAD
     component: ComponentCreator('/docs/v3.1.0', '645'),
+=======
+    component: ComponentCreator('/docs/v3.1.0', 'a46'),
+>>>>>>> docusaurus
     routes: [
       {
         path: '/docs/v3.1.0/',
@@ -501,7 +628,11 @@ export default [
   },
   {
     path: '/docs',
+<<<<<<< HEAD
     component: ComponentCreator('/docs', 'd07'),
+=======
+    component: ComponentCreator('/docs', '16b'),
+>>>>>>> docusaurus
     routes: [
       {
         path: '/docs/',
@@ -674,7 +805,11 @@ export default [
   },
   {
     path: '/',
+<<<<<<< HEAD
     component: ComponentCreator('/', 'e9a'),
+=======
+    component: ComponentCreator('/', 'e1e'),
+>>>>>>> docusaurus
     exact: true
   },
   {
