@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/desorb",
   "permalink": "/docs/v3.1.0/desorb",
+  "draft": false,
   "tags": [],
   "version": "v3.1.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "desorb",
     "title": "Adsorption & Desorption Reactions"

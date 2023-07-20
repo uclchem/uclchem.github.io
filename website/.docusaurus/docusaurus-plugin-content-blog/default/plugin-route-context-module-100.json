@@ -1,6 +1,4 @@
 {
-  "plugin": {
-    "name": "docusaurus-plugin-content-blog",
-    "id": "default"
-  }
+  "name": "docusaurus-plugin-content-blog",
+  "id": "default"
 }

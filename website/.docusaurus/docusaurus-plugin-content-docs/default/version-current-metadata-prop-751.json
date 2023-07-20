@@ -4,6 +4,7 @@
   "label": "Develop 🚧",
   "banner": "unreleased",
   "badge": true,
+  "noIndex": false,
   "className": "docs-version-current",
   "isLast": false,
   "docsSidebars": {

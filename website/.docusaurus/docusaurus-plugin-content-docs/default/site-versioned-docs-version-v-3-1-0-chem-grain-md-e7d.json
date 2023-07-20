@@ -7,8 +7,12 @@
   "sourceDirName": ".",
   "slug": "/grain",
   "permalink": "/docs/v3.1.0/grain",
+  "draft": false,
   "tags": [],
   "version": "v3.1.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "grain",
     "title": "Grain Surface Reactions"

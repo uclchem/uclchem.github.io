@@ -7,7 +7,7 @@
   "formattedDate": "December 10, 2019",
   "tags": [],
   "readingTime": 0.77,
-  "truncated": false,
+  "hasTruncateMarker": false,
   "authors": [
     {
       "name": "Tomas James",

@@ -4,6 +4,7 @@
   "label": "v3.2.0",
   "banner": null,
   "badge": true,
+  "noIndex": false,
   "className": "docs-version-v3.2.0",
   "isLast": true,
   "docsSidebars": {

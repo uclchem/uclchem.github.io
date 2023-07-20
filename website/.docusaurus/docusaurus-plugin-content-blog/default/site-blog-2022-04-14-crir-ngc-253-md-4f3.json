@@ -7,7 +7,7 @@
   "formattedDate": "April 14, 2022",
   "tags": [],
   "readingTime": 0.895,
-  "truncated": false,
+  "hasTruncateMarker": false,
   "authors": [
     {
       "name": "Jonathan Holdship",

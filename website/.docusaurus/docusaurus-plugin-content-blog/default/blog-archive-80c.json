@@ -11,7 +11,7 @@
         "formattedDate": "April 29, 2022",
         "tags": [],
         "readingTime": 0.465,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -43,7 +43,7 @@
         "formattedDate": "April 14, 2022",
         "tags": [],
         "readingTime": 0.895,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -79,7 +79,7 @@
         "formattedDate": "February 6, 2022",
         "tags": [],
         "readingTime": 1.285,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -115,7 +115,7 @@
         "formattedDate": "December 7, 2020",
         "tags": [],
         "readingTime": 1.89,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Serena Viti",
@@ -151,7 +151,7 @@
         "formattedDate": "February 14, 2020",
         "tags": [],
         "readingTime": 0.715,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -187,7 +187,7 @@
         "formattedDate": "December 10, 2019",
         "tags": [],
         "readingTime": 0.77,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Tomas James",
@@ -223,7 +223,7 @@
         "formattedDate": "August 13, 2019",
         "tags": [],
         "readingTime": 0.825,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Serena Viti",
@@ -259,7 +259,7 @@
         "formattedDate": "July 8, 2019",
         "tags": [],
         "readingTime": 0.99,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -295,7 +295,7 @@
         "formattedDate": "April 19, 2019",
         "tags": [],
         "readingTime": 0.81,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Serena Viti",
@@ -331,7 +331,7 @@
         "formattedDate": "July 12, 2018",
         "tags": [],
         "readingTime": 1.505,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "jonholdship"
@@ -363,7 +363,7 @@
         "formattedDate": "June 20, 2018",
         "tags": [],
         "readingTime": 1.3,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "jonholdship"
@@ -395,7 +395,7 @@
         "formattedDate": "March 27, 2018",
         "tags": [],
         "readingTime": 1.405,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",
@@ -431,7 +431,7 @@
         "formattedDate": "February 5, 2018",
         "tags": [],
         "readingTime": 1.425,
-        "truncated": false,
+        "hasTruncateMarker": false,
         "authors": [
           {
             "name": "Jonathan Holdship",

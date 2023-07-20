@@ -7,11 +7,12 @@
   "sourceDirName": ".",
   "slug": "/trouble-integration",
   "permalink": "/docs/next/trouble-integration",
+  "draft": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1651073142,
-  "formattedLastUpdatedAt": "4/27/2022",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "id": "trouble-integration",
     "title": "Integration"

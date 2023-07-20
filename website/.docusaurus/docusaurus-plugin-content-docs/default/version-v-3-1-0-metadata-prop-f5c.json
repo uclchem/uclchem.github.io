@@ -4,6 +4,7 @@
   "label": "v3.1.0",
   "banner": "unmaintained",
   "badge": true,
+  "noIndex": false,
   "className": "docs-version-v3.1.0",
   "isLast": false,
   "docsSidebars": {
