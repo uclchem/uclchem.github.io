@@ -106,6 +106,11 @@ module.exports={
           "position": "left"
         },
         {
+          "to":"/uclchemcmc",
+          "label":"UCLCHEMCMC",
+          "position":"left"
+        },
+        {
           "to":"/othersoftware",
           "label":"Other",
           "position":"left"

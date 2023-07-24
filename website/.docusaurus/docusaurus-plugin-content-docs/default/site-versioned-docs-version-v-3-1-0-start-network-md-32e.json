@@ -10,9 +10,9 @@
   "draft": false,
   "tags": [],
   "version": "v3.1.0",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1679910175,
+  "formattedLastUpdatedAt": "Mar 27, 2023",
   "frontMatter": {
     "id": "network",
     "title": "Creating a Network"

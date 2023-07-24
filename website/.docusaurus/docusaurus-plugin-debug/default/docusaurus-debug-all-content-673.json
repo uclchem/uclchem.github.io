@@ -12,9 +12,9 @@
           "path": "/docs/next",
           "tagsPath": "/docs/next/tags",
           "isLast": false,
-          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/sidebars.js",
-          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/docs",
-          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/home/marcus/Git/uclchem.github.io/website/sidebars.js",
+          "contentPath": "/home/marcus/Git/uclchem.github.io/website/docs",
+          "contentPathLocalized": "/home/marcus/Git/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "unversionedId": "bulk",
@@ -913,9 +913,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
-          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.2.0",
-          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
+          "sidebarFilePath": "/home/marcus/Git/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
+          "contentPath": "/home/marcus/Git/uclchem.github.io/website/versioned_docs/version-v3.2.0",
+          "contentPathLocalized": "/home/marcus/Git/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
           "docs": [
             {
               "unversionedId": "bulk",
@@ -1780,9 +1780,9 @@
           "path": "/docs/v3.1.0",
           "tagsPath": "/docs/v3.1.0/tags",
           "isLast": false,
-          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.1.0-sidebars.json",
-          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.1.0",
-          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.1.0",
+          "sidebarFilePath": "/home/marcus/Git/uclchem.github.io/website/versioned_sidebars/version-v3.1.0-sidebars.json",
+          "contentPath": "/home/marcus/Git/uclchem.github.io/website/versioned_docs/version-v3.1.0",
+          "contentPathLocalized": "/home/marcus/Git/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.1.0",
           "docs": [
             {
               "unversionedId": "bulk",
@@ -3175,6 +3175,11 @@
         "type": "jsx",
         "permalink": "/ucl_pdr",
         "source": "@site/src/pages/ucl_pdr.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/uclchemcmc",
+        "source": "@site/src/pages/uclchemcmc.js"
       },
       {
         "type": "jsx",

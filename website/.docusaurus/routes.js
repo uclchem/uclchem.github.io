@@ -3,153 +3,123 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', 'f57'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', 'ddb'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', '845'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', '66b'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '929'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', 'd8b'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', 'b3d'),
-    exact: true
-  },
-  {
     path: '/3dpdr',
-    component: ComponentCreator('/3dpdr', 'fbd'),
+    component: ComponentCreator('/3dpdr', '434'),
     exact: true
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', 'a75'),
+    component: ComponentCreator('/blog', '698'),
     exact: true
   },
   {
     path: '/blog/2018/02/05/david-grains',
-    component: ComponentCreator('/blog/2018/02/05/david-grains', '70c'),
+    component: ComponentCreator('/blog/2018/02/05/david-grains', '5fc'),
     exact: true
   },
   {
     path: '/blog/2018/03/27/audrey-coms',
-    component: ComponentCreator('/blog/2018/03/27/audrey-coms', 'e4f'),
+    component: ComponentCreator('/blog/2018/03/27/audrey-coms', '22b'),
     exact: true
   },
   {
     path: '/blog/2018/06/20/izaskun-phosphorus',
-    component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus', '3c8'),
+    component: ComponentCreator('/blog/2018/06/20/izaskun-phosphorus', 'dc2'),
     exact: true
   },
   {
     path: '/blog/2018/07/12/felix-collapse',
-    component: ComponentCreator('/blog/2018/07/12/felix-collapse', '038'),
+    component: ComponentCreator('/blog/2018/07/12/felix-collapse', 'f67'),
     exact: true
   },
   {
     path: '/blog/2019/04/19/serena-nitrogen-frac',
-    component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac', '4ee'),
+    component: ComponentCreator('/blog/2019/04/19/serena-nitrogen-frac', 'e30'),
     exact: true
   },
   {
     path: '/blog/2019/07/08/felix-ambipolar',
-    component: ComponentCreator('/blog/2019/07/08/felix-ambipolar', '790'),
+    component: ComponentCreator('/blog/2019/07/08/felix-ambipolar', '55d'),
     exact: true
   },
   {
     path: '/blog/2019/08/13/serena-carbon-frac',
-    component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac', 'aad'),
+    component: ComponentCreator('/blog/2019/08/13/serena-carbon-frac', '614'),
     exact: true
   },
   {
     path: '/blog/2019/12/10/tom-shock',
-    component: ComponentCreator('/blog/2019/12/10/tom-shock', '804'),
+    component: ComponentCreator('/blog/2019/12/10/tom-shock', '470'),
     exact: true
   },
   {
     path: '/blog/2020/02/14/New-Website',
-    component: ComponentCreator('/blog/2020/02/14/New-Website', '6e6'),
+    component: ComponentCreator('/blog/2020/02/14/New-Website', '541'),
     exact: true
   },
   {
     path: '/blog/2020/12/07/milena-nitrogen-solis',
-    component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis', 'e7b'),
+    component: ComponentCreator('/blog/2020/12/07/milena-nitrogen-solis', 'f41'),
     exact: true
   },
   {
     path: '/blog/2022/02/06/holdship-hits',
-    component: ComponentCreator('/blog/2022/02/06/holdship-hits', '828'),
+    component: ComponentCreator('/blog/2022/02/06/holdship-hits', '6fe'),
     exact: true
   },
   {
     path: '/blog/2022/04/14/crir-ngc253',
-    component: ComponentCreator('/blog/2022/04/14/crir-ngc253', '4c3'),
+    component: ComponentCreator('/blog/2022/04/14/crir-ngc253', '587'),
     exact: true
   },
   {
     path: '/blog/2022/04/29/uclchem-v3',
-    component: ComponentCreator('/blog/2022/04/29/uclchem-v3', '5ef'),
+    component: ComponentCreator('/blog/2022/04/29/uclchem-v3', 'bd8'),
     exact: true
   },
   {
     path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '9ae'),
+    component: ComponentCreator('/blog/archive', '6c4'),
     exact: true
   },
   {
     path: '/blog/page/2',
-    component: ComponentCreator('/blog/page/2', 'a6a'),
+    component: ComponentCreator('/blog/page/2', '9f4'),
     exact: true
   },
   {
     path: '/emulators',
-    component: ComponentCreator('/emulators', 'c95'),
+    component: ComponentCreator('/emulators', '1bc'),
     exact: true
   },
   {
     path: '/help',
-    component: ComponentCreator('/help', 'cb7'),
+    component: ComponentCreator('/help', 'b98'),
     exact: true
   },
   {
     path: '/othersoftware',
-    component: ComponentCreator('/othersoftware', '3f0'),
+    component: ComponentCreator('/othersoftware', '0b0'),
     exact: true
   },
   {
     path: '/ucl_pdr',
-    component: ComponentCreator('/ucl_pdr', 'aa8'),
+    component: ComponentCreator('/ucl_pdr', 'bfb'),
+    exact: true
+  },
+  {
+    path: '/uclchemcmc',
+    component: ComponentCreator('/uclchemcmc', '787'),
     exact: true
   },
   {
     path: '/users',
-    component: ComponentCreator('/users', '06f'),
+    component: ComponentCreator('/users', '7cb'),
     exact: true
   },
   {
     path: '/docs/next',
-    component: ComponentCreator('/docs/next', '4f0'),
+    component: ComponentCreator('/docs/next', 'a86'),
     routes: [
       {
         path: '/docs/next/',
@@ -328,7 +298,7 @@ export default [
   },
   {
     path: '/docs/v3.1.0',
-    component: ComponentCreator('/docs/v3.1.0', 'a46'),
+    component: ComponentCreator('/docs/v3.1.0', 'ac4'),
     routes: [
       {
         path: '/docs/v3.1.0/',
@@ -501,7 +471,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '16b'),
+    component: ComponentCreator('/docs', 'fdd'),
     routes: [
       {
         path: '/docs/',
@@ -674,7 +644,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'e1e'),
+    component: ComponentCreator('/', '19e'),
     exact: true
   },
   {
