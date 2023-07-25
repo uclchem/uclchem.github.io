@@ -11,7 +11,7 @@ function UCLCHEMCMCHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">Chemulator</h1>
+        <h1 className="hero__title">UCLCHEMCMC</h1>
         <div className="mybuttons">
           <Link
             className="mybuttons button button--secondary button--lg"
