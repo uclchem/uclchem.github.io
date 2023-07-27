@@ -21,7 +21,7 @@ When we need to consider the total ice abundance of a given species, we would ha
 In the case of a simpler two-phase model, it will simply correspond to the abundance on the surface. 
 
 ## Surface
-The surface species starts with #, and the abundance of water on the surface of the grain would **#H2O**. The grain surface is the outermost part of the grain, from which species get released to the gas phase but are also frozen onto. Hence, the [adsorption & desorption reactions](/docs/chem-desorb.md) only consider the surface Details of the reactions happening on the dust grain surface are described [here](/docs/chem-grain.md). 
+The surface species starts with #, and the abundance of water on the surface of the grain would be **#H2O**. The grain surface is the outermost part of the grain, from which species get released to the gas phase but are also frozen onto. Hence, the [adsorption & desorption reactions](/docs/chem-desorb.md) only consider the surface. Details of the reactions happening on the dust grain surface are described [here](/docs/chem-grain.md). 
 
 ## Bulk
 In three-phase models, we also account for the bulk of the dust grain, which corresponds to everything below the surface. The bulk is marked with @, so we can access it through **@H2O**. The species from the bulk can diffuse into the surface but also get released into the gas phase (or destroyed) in fast shocks. Bulk ice processes are described in greater detail in a separate [page](/docs/chem-bulk.md).
