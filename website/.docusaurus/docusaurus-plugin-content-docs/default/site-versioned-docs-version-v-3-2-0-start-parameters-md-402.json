@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/start-parameters.md",
   "sourceDirName": ".",
   "slug": "/parameters",
-  "permalink": "/docs/parameters",
+  "permalink": "/docs/v3.2.0/parameters",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/v3.2.0/network"
   },
   "next": {
     "title": "Python Reference",
-    "permalink": "/docs/pythonapi"
+    "permalink": "/docs/v3.2.0/pythonapi"
   }
 }

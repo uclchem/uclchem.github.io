@@ -1,0 +1,27 @@
+{
+  "unversionedId": "physics-hotcore",
+  "id": "version-v.3.3.0/physics-hotcore",
+  "title": "Hot Core",
+  "description": "Main Contributors: Serena Viti, Jon Holdship",
+  "source": "@site/versioned_docs/version-v.3.3.0/physics-hotcore.md",
+  "sourceDirName": ".",
+  "slug": "/physics-hotcore",
+  "permalink": "/docs/physics-hotcore",
+  "draft": false,
+  "tags": [],
+  "version": "v.3.3.0",
+  "frontMatter": {
+    "id": "physics-hotcore",
+    "title": "Hot Core",
+    "author": "Jon Holdship"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Cloud Model",
+    "permalink": "/docs/physics-cloud"
+  },
+  "next": {
+    "title": "Shock Models",
+    "permalink": "/docs/physics-shocks"
+  }
+}

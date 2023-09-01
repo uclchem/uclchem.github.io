@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/start-network.md",
   "sourceDirName": ".",
   "slug": "/network",
-  "permalink": "/docs/network",
+  "permalink": "/docs/v3.2.0/network",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Installation",
-    "permalink": "/docs/"
+    "permalink": "/docs/v3.2.0/"
   },
   "next": {
     "title": "Model Parameters",
-    "permalink": "/docs/parameters"
+    "permalink": "/docs/v3.2.0/parameters"
   }
 }

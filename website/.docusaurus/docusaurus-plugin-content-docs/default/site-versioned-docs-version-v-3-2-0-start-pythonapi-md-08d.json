@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/start-pythonapi.md",
   "sourceDirName": ".",
   "slug": "/pythonapi",
-  "permalink": "/docs/pythonapi",
+  "permalink": "/docs/v3.2.0/pythonapi",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Model Parameters",
-    "permalink": "/docs/parameters"
+    "permalink": "/docs/v3.2.0/parameters"
   },
   "next": {
     "title": "Tutorials",
-    "permalink": "/docs/category/tutorials"
+    "permalink": "/docs/v3.2.0/category/tutorials"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/trouble-compile.md",
   "sourceDirName": ".",
   "slug": "/trouble-compile",
-  "permalink": "/docs/trouble-compile",
+  "permalink": "/docs/v3.2.0/trouble-compile",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Chemical Analysis",
-    "permalink": "/docs/chemical_analysis"
+    "permalink": "/docs/v3.2.0/chemical_analysis"
   },
   "next": {
     "title": "Integration",
-    "permalink": "/docs/trouble-integration"
+    "permalink": "/docs/v3.2.0/trouble-integration"
   }
 }

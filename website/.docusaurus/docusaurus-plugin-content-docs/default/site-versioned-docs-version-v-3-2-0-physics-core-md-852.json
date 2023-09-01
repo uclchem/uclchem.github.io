@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/physics-core.md",
   "sourceDirName": ".",
   "slug": "/physics-core",
-  "permalink": "/docs/physics-core",
+  "permalink": "/docs/v3.2.0/physics-core",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Integration",
-    "permalink": "/docs/trouble-integration"
+    "permalink": "/docs/v3.2.0/trouble-integration"
   },
   "next": {
     "title": "Core Physics",
-    "permalink": "/docs/physics-core"
+    "permalink": "/docs/v3.2.0/physics-core"
   }
 }

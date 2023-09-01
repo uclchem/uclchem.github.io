@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/chem-desorb.md",
   "sourceDirName": ".",
   "slug": "/desorb",
-  "permalink": "/docs/desorb",
+  "permalink": "/docs/v3.2.0/desorb",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Grain Surface Reactions",
-    "permalink": "/docs/grain"
+    "permalink": "/docs/v3.2.0/grain"
   },
   "next": {
     "title": "Bulk Ice Processes",
-    "permalink": "/docs/bulk"
+    "permalink": "/docs/v3.2.0/bulk"
   }
 }

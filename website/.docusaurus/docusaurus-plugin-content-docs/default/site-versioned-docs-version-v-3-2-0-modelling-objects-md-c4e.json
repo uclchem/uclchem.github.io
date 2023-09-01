@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/modelling_objects.md",
   "sourceDirName": ".",
   "slug": "/modelling_objects",
-  "permalink": "/docs/modelling_objects",
+  "permalink": "/docs/v3.2.0/modelling_objects",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Running Your First Models",
-    "permalink": "/docs/first_model"
+    "permalink": "/docs/v3.2.0/first_model"
   },
   "next": {
     "title": "Running a Grid",
-    "permalink": "/docs/running_a_grid"
+    "permalink": "/docs/v3.2.0/running_a_grid"
   }
 }

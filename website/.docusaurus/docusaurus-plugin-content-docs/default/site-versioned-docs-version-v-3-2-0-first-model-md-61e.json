@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/first_model.md",
   "sourceDirName": ".",
   "slug": "/first_model",
-  "permalink": "/docs/first_model",
+  "permalink": "/docs/v3.2.0/first_model",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Tutorials",
-    "permalink": "/docs/category/tutorials"
+    "permalink": "/docs/v3.2.0/category/tutorials"
   },
   "next": {
     "title": "Advanced Physical Modelling",
-    "permalink": "/docs/modelling_objects"
+    "permalink": "/docs/v3.2.0/modelling_objects"
   }
 }

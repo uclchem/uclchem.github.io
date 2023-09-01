@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/running_a_grid.md",
   "sourceDirName": ".",
   "slug": "/running_a_grid",
-  "permalink": "/docs/running_a_grid",
+  "permalink": "/docs/v3.2.0/running_a_grid",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Advanced Physical Modelling",
-    "permalink": "/docs/modelling_objects"
+    "permalink": "/docs/v3.2.0/modelling_objects"
   },
   "next": {
     "title": "Chemical Analysis",
-    "permalink": "/docs/chemical_analysis"
+    "permalink": "/docs/v3.2.0/chemical_analysis"
   }
 }

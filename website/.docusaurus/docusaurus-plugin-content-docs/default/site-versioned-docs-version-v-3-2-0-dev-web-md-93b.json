@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/dev-web.md",
   "sourceDirName": ".",
   "slug": "/dev-web",
-  "permalink": "/docs/dev-web",
+  "permalink": "/docs/v3.2.0/dev-web",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,6 +20,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "Debugging",
-    "permalink": "/docs/dev-debugging"
+    "permalink": "/docs/v3.2.0/dev-debugging"
   }
 }

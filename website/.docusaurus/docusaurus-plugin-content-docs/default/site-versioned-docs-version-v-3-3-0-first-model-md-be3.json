@@ -1,0 +1,23 @@
+{
+  "unversionedId": "first_model",
+  "id": "version-v.3.3.0/first_model",
+  "title": "Running Your First Models",
+  "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output.",
+  "source": "@site/versioned_docs/version-v.3.3.0/first_model.md",
+  "sourceDirName": ".",
+  "slug": "/first_model",
+  "permalink": "/docs/first_model",
+  "draft": false,
+  "tags": [],
+  "version": "v.3.3.0",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Tutorials",
+    "permalink": "/docs/category/tutorials"
+  },
+  "next": {
+    "title": "Advanced Physical Modelling",
+    "permalink": "/docs/modelling_objects"
+  }
+}

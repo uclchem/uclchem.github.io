@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/dev-debugging.md",
   "sourceDirName": ".",
   "slug": "/dev-debugging",
-  "permalink": "/docs/dev-debugging",
+  "permalink": "/docs/v3.2.0/dev-debugging",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Writing The Python Interface",
-    "permalink": "/docs/dev-python-wrap"
+    "permalink": "/docs/v3.2.0/dev-python-wrap"
   },
   "next": {
     "title": "Maintaining the Website",
-    "permalink": "/docs/dev-web"
+    "permalink": "/docs/v3.2.0/dev-web"
   }
 }

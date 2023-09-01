@@ -6,7 +6,7 @@
   "source": "@site/versioned_docs/version-v3.2.0/chem-gas.md",
   "sourceDirName": ".",
   "slug": "/gas",
-  "permalink": "/docs/gas",
+  "permalink": "/docs/v3.2.0/gas",
   "draft": false,
   "tags": [],
   "version": "v3.2.0",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Chemistry",
-    "permalink": "/docs/category/chemistry"
+    "permalink": "/docs/v3.2.0/category/chemistry"
   },
   "next": {
     "title": "Grain Surface Reactions",
-    "permalink": "/docs/grain"
+    "permalink": "/docs/v3.2.0/grain"
   }
 }
