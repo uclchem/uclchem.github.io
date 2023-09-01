@@ -65,8 +65,7 @@ In order to compile UCLCHEM, you will simply need to do the folowing from the ma
 
 ```bash
 cd UCLCHEM
-pip install -r requirements.txt
-pip install .
+pip install -e .
 ```
 This will install the UCLCHEM library into your python environment, you can then import it and use it in your python scripts. If you get an error at this stage, it is very likely you do not have Cmake or gfortran installed. You must do this again every time you use [Makerates](/docs/network).
 
