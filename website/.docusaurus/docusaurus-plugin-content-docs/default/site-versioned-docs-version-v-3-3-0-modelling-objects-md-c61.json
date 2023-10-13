@@ -1,0 +1,26 @@
+{
+  "unversionedId": "modelling_objects",
+  "id": "version-v3.3.0/modelling_objects",
+  "title": "Advanced Physical Modelling",
+  "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
+  "source": "@site/versioned_docs/version-v3.3.0/modelling_objects.md",
+  "sourceDirName": ".",
+  "slug": "/modelling_objects",
+  "permalink": "/docs/modelling_objects",
+  "draft": false,
+  "tags": [],
+  "version": "v3.3.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Running Your First Models",
+    "permalink": "/docs/first_model"
+  },
+  "next": {
+    "title": "Running a Grid",
+    "permalink": "/docs/running_a_grid"
+  }
+}

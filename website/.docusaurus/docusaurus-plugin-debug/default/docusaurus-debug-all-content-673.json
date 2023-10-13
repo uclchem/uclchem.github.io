@@ -903,32 +903,32 @@
           }
         },
         {
-          "versionName": "v3.2.0",
-          "label": "v3.2.0",
+          "versionName": "v3.3.0",
+          "label": "v3.3.0",
           "banner": null,
           "badge": true,
           "noIndex": false,
-          "className": "docs-version-v3.2.0",
+          "className": "docs-version-v3.3.0",
           "path": "/docs",
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
-          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.2.0",
-          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
+          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.3.0-sidebars.json",
+          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.3.0",
+          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.3.0",
           "docs": [
             {
               "unversionedId": "bulk",
-              "id": "version-v3.2.0/bulk",
+              "id": "version-v3.3.0/bulk",
               "title": "Bulk Ice Processes",
               "description": "For a three phase network, we must include reactions in the bulk and the process by which it is formed. To do this, MakeRates automatically duplicates all LH reactions so that a reaction on the surface and one in the bulk ice exists in the network. We then include two methods by which material can move between the bulk and the surface. First is the accumulation of the bulk as new surface layers are formed and second is the individual swapping of a particle from the bulk with one on the surface. Both of these processes are taken from Garrod & Pauly 2011",
-              "source": "@site/versioned_docs/version-v3.2.0/chem-bulk.md",
+              "source": "@site/versioned_docs/version-v3.3.0/chem-bulk.md",
               "sourceDirName": ".",
               "slug": "/bulk",
               "permalink": "/docs/bulk",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -948,16 +948,16 @@
             },
             {
               "unversionedId": "chemical_analysis",
-              "id": "version-v3.2.0/chemical_analysis",
+              "id": "version-v3.3.0/chemical_analysis",
               "title": "Chemical Analysis",
               "description": "Chemical networks are complex systems where the interplay between many elements often means that small changes in one aspect of the network can greatly effect the outcome in unexpected ways. Nevertheless, there are cases where a simple chemical explanation can be found for some observed behaviour in the model outputs. This tutorial demonstrates how to use some of the functionality of the UCLCHEM library to analyse model outputs and discover these explanations.",
-              "source": "@site/versioned_docs/version-v3.2.0/chemical_analysis.md",
+              "source": "@site/versioned_docs/version-v3.3.0/chemical_analysis.md",
               "sourceDirName": ".",
               "slug": "/chemical_analysis",
               "permalink": "/docs/chemical_analysis",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -974,16 +974,16 @@
             },
             {
               "unversionedId": "desorb",
-              "id": "version-v3.2.0/desorb",
+              "id": "version-v3.3.0/desorb",
               "title": "Adsorption & Desorption Reactions",
               "description": "Coupling between the gas and the grain chemistry primarily comes from the freeze out of material from the gas phase onto the dust grains (adsorption) and the sublimation of material from the grains into the gas phase (desorption). The major processes considered by UCLCHEM are listed below. Note that we assume desorption and freeze out occur between the gas and the surface only, bulk material in three phase models does not directly desorb into the gas phase.",
-              "source": "@site/versioned_docs/version-v3.2.0/chem-desorb.md",
+              "source": "@site/versioned_docs/version-v3.3.0/chem-desorb.md",
               "sourceDirName": ".",
               "slug": "/desorb",
               "permalink": "/docs/desorb",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1003,16 +1003,16 @@
             },
             {
               "unversionedId": "dev-debugging",
-              "id": "version-v3.2.0/dev-debugging",
+              "id": "version-v3.3.0/dev-debugging",
               "title": "Debugging",
               "description": "UCLCHEM is a complex code and many things can go wrong. Here, we'll list some of the things that often go wrong when you modify the code as well as a few helpful steps to trace down bugs.",
-              "source": "@site/versioned_docs/version-v3.2.0/dev-debugging.md",
+              "source": "@site/versioned_docs/version-v3.3.0/dev-debugging.md",
               "sourceDirName": ".",
               "slug": "/dev-debugging",
               "permalink": "/docs/dev-debugging",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1032,16 +1032,16 @@
             },
             {
               "unversionedId": "dev-overview",
-              "id": "version-v3.2.0/dev-overview",
+              "id": "version-v3.3.0/dev-overview",
               "title": "Overview of the Code",
               "description": "The page is designed to give a brief overview of the code's structure. It's less about the scientific justification for the various treatments in the code and more about how the code is segmented and where to look for things.",
-              "source": "@site/versioned_docs/version-v3.2.0/dev-overview.md",
+              "source": "@site/versioned_docs/version-v3.3.0/dev-overview.md",
               "sourceDirName": ".",
               "slug": "/dev-overview",
               "permalink": "/docs/dev-overview",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1061,16 +1061,16 @@
             },
             {
               "unversionedId": "dev-python-wrap",
-              "id": "version-v3.2.0/dev-python-wrap",
+              "id": "version-v3.3.0/dev-python-wrap",
               "title": "Writing The Python Interface",
               "description": "The python interface is a relatively complex bit of code, a lot of work is put on the development side to make the user side a smooth experience. Writing the core of UCLCHEM in Fortran gives great performance benefits but compiling it to python with F2PY has its peculiarities. Here, we discuss the steps needed to adjust the code.",
-              "source": "@site/versioned_docs/version-v3.2.0/dev-python-wrap.md",
+              "source": "@site/versioned_docs/version-v3.3.0/dev-python-wrap.md",
               "sourceDirName": ".",
               "slug": "/dev-python-wrap",
               "permalink": "/docs/dev-python-wrap",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1090,16 +1090,16 @@
             },
             {
               "unversionedId": "dev-web",
-              "id": "version-v3.2.0/dev-web",
+              "id": "version-v3.3.0/dev-web",
               "title": "Maintaining the Website",
               "description": "We use Docusaurus to maintain our website. The upside is that documentation and blog posts can all be created as simple markdown files. The downside is a slightly convoluted workflow which we explain here.",
-              "source": "@site/versioned_docs/version-v3.2.0/dev-web.md",
+              "source": "@site/versioned_docs/version-v3.3.0/dev-web.md",
               "sourceDirName": ".",
               "slug": "/dev-web",
               "permalink": "/docs/dev-web",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1115,16 +1115,16 @@
             },
             {
               "unversionedId": "first_model",
-              "id": "version-v3.2.0/first_model",
+              "id": "version-v3.3.0/first_model",
               "title": "Running Your First Models",
               "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output.",
-              "source": "@site/versioned_docs/version-v3.2.0/first_model.md",
+              "source": "@site/versioned_docs/version-v3.3.0/first_model.md",
               "sourceDirName": ".",
               "slug": "/first_model",
               "permalink": "/docs/first_model",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1141,16 +1141,16 @@
             },
             {
               "unversionedId": "gas",
-              "id": "version-v3.2.0/gas",
+              "id": "version-v3.3.0/gas",
               "title": "Gas Phase Reactions",
               "description": "Gas phase ODEs",
-              "source": "@site/versioned_docs/version-v3.2.0/chem-gas.md",
+              "source": "@site/versioned_docs/version-v3.3.0/chem-gas.md",
               "sourceDirName": ".",
               "slug": "/gas",
               "permalink": "/docs/gas",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1160,8 +1160,8 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Chemistry",
-                "permalink": "/docs/category/chemistry"
+                "title": "Notation",
+                "permalink": "/docs/notation"
               },
               "next": {
                 "title": "Grain Surface Reactions",
@@ -1170,16 +1170,16 @@
             },
             {
               "unversionedId": "grain",
-              "id": "version-v3.2.0/grain",
+              "id": "version-v3.3.0/grain",
               "title": "Grain Surface Reactions",
               "description": "Whilst the basic treatment of gas phase chemistry is well established, grain surface chemistry is more complex. There are three possible ways to treat grain surface chemistry in UCLCHEM. In general we assume that:",
-              "source": "@site/versioned_docs/version-v3.2.0/chem-grain.md",
+              "source": "@site/versioned_docs/version-v3.3.0/chem-grain.md",
               "sourceDirName": ".",
               "slug": "/grain",
               "permalink": "/docs/grain",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1199,16 +1199,16 @@
             },
             {
               "unversionedId": "hydro",
-              "id": "version-v3.2.0/hydro",
+              "id": "version-v3.3.0/hydro",
               "title": "Hydro Post Processing",
               "description": "Main Contributors: Jon Holdship",
-              "source": "@site/versioned_docs/version-v3.2.0/hydro.md",
+              "source": "@site/versioned_docs/version-v3.3.0/hydro.md",
               "sourceDirName": ".",
               "slug": "/hydro",
               "permalink": "/docs/hydro",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1219,16 +1219,16 @@
             },
             {
               "unversionedId": "install",
-              "id": "version-v3.2.0/install",
+              "id": "version-v3.3.0/install",
               "title": "Installation",
               "description": "Prerequisites",
-              "source": "@site/versioned_docs/version-v3.2.0/start-basicuse.md",
+              "source": "@site/versioned_docs/version-v3.3.0/start-basicuse.md",
               "sourceDirName": ".",
               "slug": "/",
               "permalink": "/docs/",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1249,16 +1249,16 @@
             },
             {
               "unversionedId": "modelling_objects",
-              "id": "version-v3.2.0/modelling_objects",
+              "id": "version-v3.3.0/modelling_objects",
               "title": "Advanced Physical Modelling",
               "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
-              "source": "@site/versioned_docs/version-v3.2.0/modelling_objects.md",
+              "source": "@site/versioned_docs/version-v3.3.0/modelling_objects.md",
               "sourceDirName": ".",
               "slug": "/modelling_objects",
               "permalink": "/docs/modelling_objects",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1275,16 +1275,16 @@
             },
             {
               "unversionedId": "network",
-              "id": "version-v3.2.0/network",
+              "id": "version-v3.3.0/network",
               "title": "Creating a Network",
               "description": "MakeRates",
-              "source": "@site/versioned_docs/version-v3.2.0/start-network.md",
+              "source": "@site/versioned_docs/version-v3.3.0/start-network.md",
               "sourceDirName": ".",
               "slug": "/network",
               "permalink": "/docs/network",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1303,17 +1303,46 @@
               }
             },
             {
+              "unversionedId": "notation",
+              "id": "version-v3.3.0/notation",
+              "title": "Notation",
+              "description": "UCLCHEM uses notation, which differentiates between species types. Here, we'll give an overview of this notation and associated processes.",
+              "source": "@site/versioned_docs/version-v3.3.0/chem-notation.md",
+              "sourceDirName": ".",
+              "slug": "/notation",
+              "permalink": "/docs/notation",
+              "draft": false,
+              "tags": [],
+              "version": "v3.3.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "notation",
+                "title": "Notation"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Chemistry",
+                "permalink": "/docs/category/chemistry"
+              },
+              "next": {
+                "title": "Gas Phase Reactions",
+                "permalink": "/docs/gas"
+              }
+            },
+            {
               "unversionedId": "parameters",
-              "id": "version-v3.2.0/parameters",
+              "id": "version-v3.3.0/parameters",
               "title": "Model Parameters",
               "description": "UCLCHEM will default to these values unless they are overridden by user. Users can override these by adding the variable name as written here in the paramdict argument of any UCLCHEM model function. paramdict is not case sensitive.",
-              "source": "@site/versioned_docs/version-v3.2.0/start-parameters.md",
+              "source": "@site/versioned_docs/version-v3.3.0/start-parameters.md",
               "sourceDirName": ".",
               "slug": "/parameters",
               "permalink": "/docs/parameters",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1333,16 +1362,16 @@
             },
             {
               "unversionedId": "physics-cloud",
-              "id": "version-v3.2.0/physics-cloud",
+              "id": "version-v3.3.0/physics-cloud",
               "title": "Cloud Model",
               "description": "Main Contributors: Serena Viti, Jon Holdship",
-              "source": "@site/versioned_docs/version-v3.2.0/physics-cloud.md",
+              "source": "@site/versioned_docs/version-v3.3.0/physics-cloud.md",
               "sourceDirName": ".",
               "slug": "/physics-cloud",
               "permalink": "/docs/physics-cloud",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1363,16 +1392,16 @@
             },
             {
               "unversionedId": "physics-collapse",
-              "id": "version-v3.2.0/physics-collapse",
+              "id": "version-v3.3.0/physics-collapse",
               "title": "Collapse Models",
               "description": "Main Contributors: Felix Priestley",
-              "source": "@site/versioned_docs/version-v3.2.0/physics-collapse.md",
+              "source": "@site/versioned_docs/version-v3.3.0/physics-collapse.md",
               "sourceDirName": ".",
               "slug": "/physics-collapse",
               "permalink": "/docs/physics-collapse",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1392,16 +1421,16 @@
             },
             {
               "unversionedId": "physics-core",
-              "id": "version-v3.2.0/physics-core",
+              "id": "version-v3.3.0/physics-core",
               "title": "Core Physics",
               "description": "Each of the other physics doc pages details the specifics of a particular physics model. This one gives a general overview of the physics in UCLCHEM, including the core physics routines that are called for all models.",
-              "source": "@site/versioned_docs/version-v3.2.0/physics-core.md",
+              "source": "@site/versioned_docs/version-v3.3.0/physics-core.md",
               "sourceDirName": ".",
               "slug": "/physics-core",
               "permalink": "/docs/physics-core",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1421,16 +1450,16 @@
             },
             {
               "unversionedId": "physics-hotcore",
-              "id": "version-v3.2.0/physics-hotcore",
+              "id": "version-v3.3.0/physics-hotcore",
               "title": "Hot Core",
               "description": "Main Contributors: Serena Viti, Jon Holdship",
-              "source": "@site/versioned_docs/version-v3.2.0/physics-hotcore.md",
+              "source": "@site/versioned_docs/version-v3.3.0/physics-hotcore.md",
               "sourceDirName": ".",
               "slug": "/physics-hotcore",
               "permalink": "/docs/physics-hotcore",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1451,16 +1480,16 @@
             },
             {
               "unversionedId": "physics-shocks",
-              "id": "version-v3.2.0/physics-shocks",
+              "id": "version-v3.3.0/physics-shocks",
               "title": "Shock Models",
               "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
-              "source": "@site/versioned_docs/version-v3.2.0/physics-shocks.md",
+              "source": "@site/versioned_docs/version-v3.3.0/physics-shocks.md",
               "sourceDirName": ".",
               "slug": "/physics-shocks",
               "permalink": "/docs/physics-shocks",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1480,16 +1509,16 @@
             },
             {
               "unversionedId": "pythonapi",
-              "id": "version-v3.2.0/pythonapi",
+              "id": "version-v3.3.0/pythonapi",
               "title": "Python Reference",
               "description": "* uclchem",
-              "source": "@site/versioned_docs/version-v3.2.0/start-pythonapi.md",
+              "source": "@site/versioned_docs/version-v3.3.0/start-pythonapi.md",
               "sourceDirName": ".",
               "slug": "/pythonapi",
               "permalink": "/docs/pythonapi",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1509,16 +1538,16 @@
             },
             {
               "unversionedId": "running_a_grid",
-              "id": "version-v3.2.0/running_a_grid",
+              "id": "version-v3.3.0/running_a_grid",
               "title": "Running a Grid",
               "description": "A common task is to run UCLCHEM over a grid of parameter combinations. This notebook sets up a simple approach to doing so for regular grids.",
-              "source": "@site/versioned_docs/version-v3.2.0/running_a_grid.md",
+              "source": "@site/versioned_docs/version-v3.3.0/running_a_grid.md",
               "sourceDirName": ".",
               "slug": "/running_a_grid",
               "permalink": "/docs/running_a_grid",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1535,16 +1564,16 @@
             },
             {
               "unversionedId": "trouble-compile",
-              "id": "version-v3.2.0/trouble-compile",
+              "id": "version-v3.3.0/trouble-compile",
               "title": "Compilation Issues",
               "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
-              "source": "@site/versioned_docs/version-v3.2.0/trouble-compile.md",
+              "source": "@site/versioned_docs/version-v3.3.0/trouble-compile.md",
               "sourceDirName": ".",
               "slug": "/trouble-compile",
               "permalink": "/docs/trouble-compile",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1564,16 +1593,16 @@
             },
             {
               "unversionedId": "trouble-integration",
-              "id": "version-v3.2.0/trouble-integration",
+              "id": "version-v3.3.0/trouble-integration",
               "title": "Integration",
               "description": "My code just keeps running",
-              "source": "@site/versioned_docs/version-v3.2.0/trouble-integration.md",
+              "source": "@site/versioned_docs/version-v3.3.0/trouble-integration.md",
               "sourceDirName": ".",
               "slug": "/trouble-integration",
               "permalink": "/docs/trouble-integration",
               "draft": false,
               "tags": [],
-              "version": "v3.2.0",
+              "version": "v3.3.0",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
@@ -1718,6 +1747,10 @@
                 "items": [
                   {
                     "type": "doc",
+                    "id": "notation"
+                  },
+                  {
+                    "type": "doc",
                     "id": "gas"
                   },
                   {
@@ -1745,6 +1778,873 @@
                   "description": "These docs are intended for the UCLCHEM team to give knowledge on developing, debugging, and documenting the code. They won't be of interest to many users but if you intend to make modifications to the code, you may find some of it helpful.",
                   "slug": "/category/developer",
                   "permalink": "/docs/category/developer"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "dev-overview"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dev-python-wrap"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dev-debugging"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "dev-web"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        },
+        {
+          "versionName": "v3.2.0",
+          "label": "v3.2.0",
+          "banner": "unmaintained",
+          "badge": true,
+          "noIndex": false,
+          "className": "docs-version-v3.2.0",
+          "path": "/docs/v3.2.0",
+          "tagsPath": "/docs/v3.2.0/tags",
+          "isLast": false,
+          "sidebarFilePath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_sidebars/version-v3.2.0-sidebars.json",
+          "contentPath": "/Users/gijsv/uclchem/uclchem.github.io/website/versioned_docs/version-v3.2.0",
+          "contentPathLocalized": "/Users/gijsv/uclchem/uclchem.github.io/website/i18n/en/docusaurus-plugin-content-docs/version-v3.2.0",
+          "docs": [
+            {
+              "unversionedId": "bulk",
+              "id": "version-v3.2.0/bulk",
+              "title": "Bulk Ice Processes",
+              "description": "For a three phase network, we must include reactions in the bulk and the process by which it is formed. To do this, MakeRates automatically duplicates all LH reactions so that a reaction on the surface and one in the bulk ice exists in the network. We then include two methods by which material can move between the bulk and the surface. First is the accumulation of the bulk as new surface layers are formed and second is the individual swapping of a particle from the bulk with one on the surface. Both of these processes are taken from Garrod & Pauly 2011",
+              "source": "@site/versioned_docs/version-v3.2.0/chem-bulk.md",
+              "sourceDirName": ".",
+              "slug": "/bulk",
+              "permalink": "/docs/v3.2.0/bulk",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "bulk",
+                "title": "Bulk Ice Processes"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Adsorption & Desorption Reactions",
+                "permalink": "/docs/v3.2.0/desorb"
+              },
+              "next": {
+                "title": "Developer",
+                "permalink": "/docs/v3.2.0/category/developer"
+              }
+            },
+            {
+              "unversionedId": "chemical_analysis",
+              "id": "version-v3.2.0/chemical_analysis",
+              "title": "Chemical Analysis",
+              "description": "Chemical networks are complex systems where the interplay between many elements often means that small changes in one aspect of the network can greatly effect the outcome in unexpected ways. Nevertheless, there are cases where a simple chemical explanation can be found for some observed behaviour in the model outputs. This tutorial demonstrates how to use some of the functionality of the UCLCHEM library to analyse model outputs and discover these explanations.",
+              "source": "@site/versioned_docs/version-v3.2.0/chemical_analysis.md",
+              "sourceDirName": ".",
+              "slug": "/chemical_analysis",
+              "permalink": "/docs/v3.2.0/chemical_analysis",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Running a Grid",
+                "permalink": "/docs/v3.2.0/running_a_grid"
+              },
+              "next": {
+                "title": "Compilation Issues",
+                "permalink": "/docs/v3.2.0/trouble-compile"
+              }
+            },
+            {
+              "unversionedId": "desorb",
+              "id": "version-v3.2.0/desorb",
+              "title": "Adsorption & Desorption Reactions",
+              "description": "Coupling between the gas and the grain chemistry primarily comes from the freeze out of material from the gas phase onto the dust grains (adsorption) and the sublimation of material from the grains into the gas phase (desorption). The major processes considered by UCLCHEM are listed below. Note that we assume desorption and freeze out occur between the gas and the surface only, bulk material in three phase models does not directly desorb into the gas phase.",
+              "source": "@site/versioned_docs/version-v3.2.0/chem-desorb.md",
+              "sourceDirName": ".",
+              "slug": "/desorb",
+              "permalink": "/docs/v3.2.0/desorb",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "desorb",
+                "title": "Adsorption & Desorption Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Grain Surface Reactions",
+                "permalink": "/docs/v3.2.0/grain"
+              },
+              "next": {
+                "title": "Bulk Ice Processes",
+                "permalink": "/docs/v3.2.0/bulk"
+              }
+            },
+            {
+              "unversionedId": "dev-debugging",
+              "id": "version-v3.2.0/dev-debugging",
+              "title": "Debugging",
+              "description": "UCLCHEM is a complex code and many things can go wrong. Here, we'll list some of the things that often go wrong when you modify the code as well as a few helpful steps to trace down bugs.",
+              "source": "@site/versioned_docs/version-v3.2.0/dev-debugging.md",
+              "sourceDirName": ".",
+              "slug": "/dev-debugging",
+              "permalink": "/docs/v3.2.0/dev-debugging",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "dev-debugging",
+                "title": "Debugging"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Writing The Python Interface",
+                "permalink": "/docs/v3.2.0/dev-python-wrap"
+              },
+              "next": {
+                "title": "Maintaining the Website",
+                "permalink": "/docs/v3.2.0/dev-web"
+              }
+            },
+            {
+              "unversionedId": "dev-overview",
+              "id": "version-v3.2.0/dev-overview",
+              "title": "Overview of the Code",
+              "description": "The page is designed to give a brief overview of the code's structure. It's less about the scientific justification for the various treatments in the code and more about how the code is segmented and where to look for things.",
+              "source": "@site/versioned_docs/version-v3.2.0/dev-overview.md",
+              "sourceDirName": ".",
+              "slug": "/dev-overview",
+              "permalink": "/docs/v3.2.0/dev-overview",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "dev-overview",
+                "title": "Overview of the Code"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Developer",
+                "permalink": "/docs/v3.2.0/category/developer"
+              },
+              "next": {
+                "title": "Writing The Python Interface",
+                "permalink": "/docs/v3.2.0/dev-python-wrap"
+              }
+            },
+            {
+              "unversionedId": "dev-python-wrap",
+              "id": "version-v3.2.0/dev-python-wrap",
+              "title": "Writing The Python Interface",
+              "description": "The python interface is a relatively complex bit of code, a lot of work is put on the development side to make the user side a smooth experience. Writing the core of UCLCHEM in Fortran gives great performance benefits but compiling it to python with F2PY has its peculiarities. Here, we discuss the steps needed to adjust the code.",
+              "source": "@site/versioned_docs/version-v3.2.0/dev-python-wrap.md",
+              "sourceDirName": ".",
+              "slug": "/dev-python-wrap",
+              "permalink": "/docs/v3.2.0/dev-python-wrap",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "dev-python-wrap",
+                "title": "Writing The Python Interface"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Overview of the Code",
+                "permalink": "/docs/v3.2.0/dev-overview"
+              },
+              "next": {
+                "title": "Debugging",
+                "permalink": "/docs/v3.2.0/dev-debugging"
+              }
+            },
+            {
+              "unversionedId": "dev-web",
+              "id": "version-v3.2.0/dev-web",
+              "title": "Maintaining the Website",
+              "description": "We use Docusaurus to maintain our website. The upside is that documentation and blog posts can all be created as simple markdown files. The downside is a slightly convoluted workflow which we explain here.",
+              "source": "@site/versioned_docs/version-v3.2.0/dev-web.md",
+              "sourceDirName": ".",
+              "slug": "/dev-web",
+              "permalink": "/docs/v3.2.0/dev-web",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "dev-web",
+                "title": "Maintaining the Website"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Debugging",
+                "permalink": "/docs/v3.2.0/dev-debugging"
+              }
+            },
+            {
+              "unversionedId": "first_model",
+              "id": "version-v3.2.0/first_model",
+              "title": "Running Your First Models",
+              "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output.",
+              "source": "@site/versioned_docs/version-v3.2.0/first_model.md",
+              "sourceDirName": ".",
+              "slug": "/first_model",
+              "permalink": "/docs/v3.2.0/first_model",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Tutorials",
+                "permalink": "/docs/v3.2.0/category/tutorials"
+              },
+              "next": {
+                "title": "Advanced Physical Modelling",
+                "permalink": "/docs/v3.2.0/modelling_objects"
+              }
+            },
+            {
+              "unversionedId": "gas",
+              "id": "version-v3.2.0/gas",
+              "title": "Gas Phase Reactions",
+              "description": "Gas phase ODEs",
+              "source": "@site/versioned_docs/version-v3.2.0/chem-gas.md",
+              "sourceDirName": ".",
+              "slug": "/gas",
+              "permalink": "/docs/v3.2.0/gas",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "gas",
+                "title": "Gas Phase Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Chemistry",
+                "permalink": "/docs/v3.2.0/category/chemistry"
+              },
+              "next": {
+                "title": "Grain Surface Reactions",
+                "permalink": "/docs/v3.2.0/grain"
+              }
+            },
+            {
+              "unversionedId": "grain",
+              "id": "version-v3.2.0/grain",
+              "title": "Grain Surface Reactions",
+              "description": "Whilst the basic treatment of gas phase chemistry is well established, grain surface chemistry is more complex. There are three possible ways to treat grain surface chemistry in UCLCHEM. In general we assume that:",
+              "source": "@site/versioned_docs/version-v3.2.0/chem-grain.md",
+              "sourceDirName": ".",
+              "slug": "/grain",
+              "permalink": "/docs/v3.2.0/grain",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "grain",
+                "title": "Grain Surface Reactions"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Gas Phase Reactions",
+                "permalink": "/docs/v3.2.0/gas"
+              },
+              "next": {
+                "title": "Adsorption & Desorption Reactions",
+                "permalink": "/docs/v3.2.0/desorb"
+              }
+            },
+            {
+              "unversionedId": "hydro",
+              "id": "version-v3.2.0/hydro",
+              "title": "Hydro Post Processing",
+              "description": "Main Contributors: Jon Holdship",
+              "source": "@site/versioned_docs/version-v3.2.0/hydro.md",
+              "sourceDirName": ".",
+              "slug": "/hydro",
+              "permalink": "/docs/v3.2.0/hydro",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "hydro",
+                "title": "Hydro Post Processing"
+              }
+            },
+            {
+              "unversionedId": "install",
+              "id": "version-v3.2.0/install",
+              "title": "Installation",
+              "description": "Prerequisites",
+              "source": "@site/versioned_docs/version-v3.2.0/start-basicuse.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/docs/v3.2.0/",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "install",
+                "title": "Installation",
+                "slug": "/"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Getting Started",
+                "permalink": "/docs/v3.2.0/category/getting-started"
+              },
+              "next": {
+                "title": "Creating a Network",
+                "permalink": "/docs/v3.2.0/network"
+              }
+            },
+            {
+              "unversionedId": "modelling_objects",
+              "id": "version-v3.2.0/modelling_objects",
+              "title": "Advanced Physical Modelling",
+              "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
+              "source": "@site/versioned_docs/version-v3.2.0/modelling_objects.md",
+              "sourceDirName": ".",
+              "slug": "/modelling_objects",
+              "permalink": "/docs/v3.2.0/modelling_objects",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Running Your First Models",
+                "permalink": "/docs/v3.2.0/first_model"
+              },
+              "next": {
+                "title": "Running a Grid",
+                "permalink": "/docs/v3.2.0/running_a_grid"
+              }
+            },
+            {
+              "unversionedId": "network",
+              "id": "version-v3.2.0/network",
+              "title": "Creating a Network",
+              "description": "MakeRates",
+              "source": "@site/versioned_docs/version-v3.2.0/start-network.md",
+              "sourceDirName": ".",
+              "slug": "/network",
+              "permalink": "/docs/v3.2.0/network",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "network",
+                "title": "Creating a Network"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Installation",
+                "permalink": "/docs/v3.2.0/"
+              },
+              "next": {
+                "title": "Model Parameters",
+                "permalink": "/docs/v3.2.0/parameters"
+              }
+            },
+            {
+              "unversionedId": "parameters",
+              "id": "version-v3.2.0/parameters",
+              "title": "Model Parameters",
+              "description": "UCLCHEM will default to these values unless they are overridden by user. Users can override these by adding the variable name as written here in the paramdict argument of any UCLCHEM model function. paramdict is not case sensitive.",
+              "source": "@site/versioned_docs/version-v3.2.0/start-parameters.md",
+              "sourceDirName": ".",
+              "slug": "/parameters",
+              "permalink": "/docs/v3.2.0/parameters",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "parameters",
+                "title": "Model Parameters"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Creating a Network",
+                "permalink": "/docs/v3.2.0/network"
+              },
+              "next": {
+                "title": "Python Reference",
+                "permalink": "/docs/v3.2.0/pythonapi"
+              }
+            },
+            {
+              "unversionedId": "physics-cloud",
+              "id": "version-v3.2.0/physics-cloud",
+              "title": "Cloud Model",
+              "description": "Main Contributors: Serena Viti, Jon Holdship",
+              "source": "@site/versioned_docs/version-v3.2.0/physics-cloud.md",
+              "sourceDirName": ".",
+              "slug": "/physics-cloud",
+              "permalink": "/docs/v3.2.0/physics-cloud",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "physics-cloud",
+                "title": "Cloud Model",
+                "author": "Jon Holdship"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Core Physics",
+                "permalink": "/docs/v3.2.0/physics-core"
+              },
+              "next": {
+                "title": "Hot Core",
+                "permalink": "/docs/v3.2.0/physics-hotcore"
+              }
+            },
+            {
+              "unversionedId": "physics-collapse",
+              "id": "version-v3.2.0/physics-collapse",
+              "title": "Collapse Models",
+              "description": "Main Contributors: Felix Priestley",
+              "source": "@site/versioned_docs/version-v3.2.0/physics-collapse.md",
+              "sourceDirName": ".",
+              "slug": "/physics-collapse",
+              "permalink": "/docs/v3.2.0/physics-collapse",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "physics-collapse",
+                "title": "Collapse Models"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Shock Models",
+                "permalink": "/docs/v3.2.0/physics-shocks"
+              },
+              "next": {
+                "title": "Chemistry",
+                "permalink": "/docs/v3.2.0/category/chemistry"
+              }
+            },
+            {
+              "unversionedId": "physics-core",
+              "id": "version-v3.2.0/physics-core",
+              "title": "Core Physics",
+              "description": "Each of the other physics doc pages details the specifics of a particular physics model. This one gives a general overview of the physics in UCLCHEM, including the core physics routines that are called for all models.",
+              "source": "@site/versioned_docs/version-v3.2.0/physics-core.md",
+              "sourceDirName": ".",
+              "slug": "/physics-core",
+              "permalink": "/docs/v3.2.0/physics-core",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "physics-core",
+                "title": "Core Physics"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Integration",
+                "permalink": "/docs/v3.2.0/trouble-integration"
+              },
+              "next": {
+                "title": "Core Physics",
+                "permalink": "/docs/v3.2.0/physics-core"
+              }
+            },
+            {
+              "unversionedId": "physics-hotcore",
+              "id": "version-v3.2.0/physics-hotcore",
+              "title": "Hot Core",
+              "description": "Main Contributors: Serena Viti, Jon Holdship",
+              "source": "@site/versioned_docs/version-v3.2.0/physics-hotcore.md",
+              "sourceDirName": ".",
+              "slug": "/physics-hotcore",
+              "permalink": "/docs/v3.2.0/physics-hotcore",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "physics-hotcore",
+                "title": "Hot Core",
+                "author": "Jon Holdship"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Cloud Model",
+                "permalink": "/docs/v3.2.0/physics-cloud"
+              },
+              "next": {
+                "title": "Shock Models",
+                "permalink": "/docs/v3.2.0/physics-shocks"
+              }
+            },
+            {
+              "unversionedId": "physics-shocks",
+              "id": "version-v3.2.0/physics-shocks",
+              "title": "Shock Models",
+              "description": "Main Contributors: Izaskun Jimenez-Serra, Tom James, Jon Holdship",
+              "source": "@site/versioned_docs/version-v3.2.0/physics-shocks.md",
+              "sourceDirName": ".",
+              "slug": "/physics-shocks",
+              "permalink": "/docs/v3.2.0/physics-shocks",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "physics-shocks",
+                "title": "Shock Models"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Hot Core",
+                "permalink": "/docs/v3.2.0/physics-hotcore"
+              },
+              "next": {
+                "title": "Collapse Models",
+                "permalink": "/docs/v3.2.0/physics-collapse"
+              }
+            },
+            {
+              "unversionedId": "pythonapi",
+              "id": "version-v3.2.0/pythonapi",
+              "title": "Python Reference",
+              "description": "* uclchem",
+              "source": "@site/versioned_docs/version-v3.2.0/start-pythonapi.md",
+              "sourceDirName": ".",
+              "slug": "/pythonapi",
+              "permalink": "/docs/v3.2.0/pythonapi",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "pythonapi",
+                "title": "Python Reference"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Model Parameters",
+                "permalink": "/docs/v3.2.0/parameters"
+              },
+              "next": {
+                "title": "Tutorials",
+                "permalink": "/docs/v3.2.0/category/tutorials"
+              }
+            },
+            {
+              "unversionedId": "running_a_grid",
+              "id": "version-v3.2.0/running_a_grid",
+              "title": "Running a Grid",
+              "description": "A common task is to run UCLCHEM over a grid of parameter combinations. This notebook sets up a simple approach to doing so for regular grids.",
+              "source": "@site/versioned_docs/version-v3.2.0/running_a_grid.md",
+              "sourceDirName": ".",
+              "slug": "/running_a_grid",
+              "permalink": "/docs/v3.2.0/running_a_grid",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "docs",
+              "previous": {
+                "title": "Advanced Physical Modelling",
+                "permalink": "/docs/v3.2.0/modelling_objects"
+              },
+              "next": {
+                "title": "Chemical Analysis",
+                "permalink": "/docs/v3.2.0/chemical_analysis"
+              }
+            },
+            {
+              "unversionedId": "trouble-compile",
+              "id": "version-v3.2.0/trouble-compile",
+              "title": "Compilation Issues",
+              "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
+              "source": "@site/versioned_docs/version-v3.2.0/trouble-compile.md",
+              "sourceDirName": ".",
+              "slug": "/trouble-compile",
+              "permalink": "/docs/v3.2.0/trouble-compile",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "trouble-compile",
+                "title": "Compilation Issues"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Chemical Analysis",
+                "permalink": "/docs/v3.2.0/chemical_analysis"
+              },
+              "next": {
+                "title": "Integration",
+                "permalink": "/docs/v3.2.0/trouble-integration"
+              }
+            },
+            {
+              "unversionedId": "trouble-integration",
+              "id": "version-v3.2.0/trouble-integration",
+              "title": "Integration",
+              "description": "My code just keeps running",
+              "source": "@site/versioned_docs/version-v3.2.0/trouble-integration.md",
+              "sourceDirName": ".",
+              "slug": "/trouble-integration",
+              "permalink": "/docs/v3.2.0/trouble-integration",
+              "draft": false,
+              "tags": [],
+              "version": "v3.2.0",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "trouble-integration",
+                "title": "Integration"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Compilation Issues",
+                "permalink": "/docs/v3.2.0/trouble-compile"
+              },
+              "next": {
+                "title": "Core Physics",
+                "permalink": "/docs/v3.2.0/physics-core"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "docs": [
+              {
+                "type": "category",
+                "label": "Getting Started",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Getting Started",
+                  "description": "Learn to install UCLCHEM, set basic parameters and create your own network",
+                  "slug": "/category/getting-started",
+                  "permalink": "/docs/v3.2.0/category/getting-started"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "install"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "network"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "parameters"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "pythonapi"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Tutorials",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Tutorials",
+                  "description": "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `Tutorials` folder. They are also included here as docs pages.",
+                  "slug": "/category/tutorials",
+                  "permalink": "/docs/v3.2.0/category/tutorials"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "first_model"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "modelling_objects"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "running_a_grid"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "chemical_analysis"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Troubleshooting",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "trouble-compile"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "trouble-integration"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Physics",
+                "link": {
+                  "type": "doc",
+                  "id": "physics-core"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "physics-core"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physics-cloud"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physics-hotcore"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physics-shocks"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physics-collapse"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Chemistry",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Chemistry",
+                  "description": "In these pages, discuss aspects of the chemistry including how different reactions are treated, how the grain surface treatment works and so on.",
+                  "slug": "/category/chemistry",
+                  "permalink": "/docs/v3.2.0/category/chemistry"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "gas"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "grain"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "desorb"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "bulk"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Developer",
+                "link": {
+                  "type": "generated-index",
+                  "title": "Developer Notes",
+                  "description": "These docs are intended for the UCLCHEM team to give knowledge on developing, debugging, and documenting the code. They won't be of interest to many users but if you intend to make modifications to the code, you may find some of it helpful.",
+                  "slug": "/category/developer",
+                  "permalink": "/docs/v3.2.0/category/developer"
                 },
                 "items": [
                   {

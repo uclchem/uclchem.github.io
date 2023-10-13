@@ -166,8 +166,8 @@
           }
         },
         {
-          "name": "v.3.3.0",
-          "label": "v.3.3.0",
+          "name": "v3.3.0",
+          "label": "v3.3.0",
           "isLast": true,
           "path": "/docs",
           "mainDocId": "install",

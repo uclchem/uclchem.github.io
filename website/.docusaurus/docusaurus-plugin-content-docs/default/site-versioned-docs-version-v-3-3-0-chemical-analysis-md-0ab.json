@@ -1,0 +1,26 @@
+{
+  "unversionedId": "chemical_analysis",
+  "id": "version-v3.3.0/chemical_analysis",
+  "title": "Chemical Analysis",
+  "description": "Chemical networks are complex systems where the interplay between many elements often means that small changes in one aspect of the network can greatly effect the outcome in unexpected ways. Nevertheless, there are cases where a simple chemical explanation can be found for some observed behaviour in the model outputs. This tutorial demonstrates how to use some of the functionality of the UCLCHEM library to analyse model outputs and discover these explanations.",
+  "source": "@site/versioned_docs/version-v3.3.0/chemical_analysis.md",
+  "sourceDirName": ".",
+  "slug": "/chemical_analysis",
+  "permalink": "/docs/chemical_analysis",
+  "draft": false,
+  "tags": [],
+  "version": "v3.3.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Running a Grid",
+    "permalink": "/docs/running_a_grid"
+  },
+  "next": {
+    "title": "Compilation Issues",
+    "permalink": "/docs/trouble-compile"
+  }
+}

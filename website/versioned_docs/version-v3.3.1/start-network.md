@@ -12,7 +12,7 @@ In the sections below, we discuss how to build your network and set the inputs f
 cd MakeRates
 python MakeRates.py
 cd ..
-pip install .
+pip install -e . 
 ```
 
 **Note the pip install at the end of the process. Any output from MakeRates requires that the code be recompiled because MakeRates produces new source code for UCLCHEM!**

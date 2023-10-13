@@ -1,0 +1,29 @@
+{
+  "unversionedId": "notation",
+  "id": "version-v3.3.0/notation",
+  "title": "Notation",
+  "description": "UCLCHEM uses notation, which differentiates between species types. Here, we'll give an overview of this notation and associated processes.",
+  "source": "@site/versioned_docs/version-v3.3.0/chem-notation.md",
+  "sourceDirName": ".",
+  "slug": "/notation",
+  "permalink": "/docs/notation",
+  "draft": false,
+  "tags": [],
+  "version": "v3.3.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "notation",
+    "title": "Notation"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Chemistry",
+    "permalink": "/docs/category/chemistry"
+  },
+  "next": {
+    "title": "Gas Phase Reactions",
+    "permalink": "/docs/gas"
+  }
+}

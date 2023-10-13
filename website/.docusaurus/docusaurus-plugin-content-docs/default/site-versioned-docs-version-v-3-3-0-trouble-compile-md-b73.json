@@ -1,0 +1,29 @@
+{
+  "unversionedId": "trouble-compile",
+  "id": "version-v3.3.0/trouble-compile",
+  "title": "Compilation Issues",
+  "description": "Given that UCLCHEM is supplied as source code, used across many machine types, and is a fairly complex model, things will occasionally go wrong. We've collected here some of the most common problems and hope they resolve most issues.",
+  "source": "@site/versioned_docs/version-v3.3.0/trouble-compile.md",
+  "sourceDirName": ".",
+  "slug": "/trouble-compile",
+  "permalink": "/docs/trouble-compile",
+  "draft": false,
+  "tags": [],
+  "version": "v3.3.0",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "trouble-compile",
+    "title": "Compilation Issues"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Chemical Analysis",
+    "permalink": "/docs/chemical_analysis"
+  },
+  "next": {
+    "title": "Integration",
+    "permalink": "/docs/trouble-integration"
+  }
+}
