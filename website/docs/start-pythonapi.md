@@ -12,18 +12,24 @@ title: Python Reference
   * [analysis](#uclchem.analysis.analysis)
   * [total\_element\_abundance](#uclchem.analysis.total_element_abundance)
   * [check\_element\_conservation](#uclchem.analysis.check_element_conservation)
+* [uclchem.constants](#uclchem.constants)
 
 * [uclchem.model](#uclchem.model)
+  * [outputArrays\_to\_DataFrame](#uclchem.model.outputArrays_to_DataFrame)
   * [cloud](#uclchem.model.cloud)
   * [collapse](#uclchem.model.collapse)
   * [hot\_core](#uclchem.model.hot_core)
   * [cshock](#uclchem.model.cshock)
   * [jshock](#uclchem.model.jshock)
+  * [postprocess](#uclchem.model.postprocess)
 * [uclchem.utils](#uclchem.utils)
   * [cshock\_dissipation\_time](#uclchem.utils.cshock_dissipation_time)
   * [check\_error](#uclchem.utils.check_error)
   * [get\_species\_table](#uclchem.utils.get_species_table)
+  * [get\_species](#uclchem.utils.get_species)
   * [get\_reaction\_table](#uclchem.utils.get_reaction_table)
+* [uclchem.debug](#uclchem.debug)
+  * [get\_f2py\_signature](#uclchem.debug.get_f2py_signature)
 * [uclchem.tests](#uclchem.tests)
   * [test\_ode\_conservation](#uclchem.tests.test_ode_conservation)
 * [uclchem.makerates.species](#uclchem.makerates.species)
@@ -56,6 +62,7 @@ title: Python Reference
 * [uclchem.makerates.network](#uclchem.makerates.network)
   * [Network](#uclchem.makerates.network.Network)
     * [\_\_init\_\_](#uclchem.makerates.network.Network.__init__)
+    * [add\_reactions](#uclchem.makerates.network.Network.add_reactions)
     * [find\_similar\_reactions](#uclchem.makerates.network.Network.find_similar_reactions)
     * [remove\_reaction\_by\_index](#uclchem.makerates.network.Network.remove_reaction_by_index)
     * [remove\_reaction](#uclchem.makerates.network.Network.remove_reaction)
@@ -87,6 +94,7 @@ title: Python Reference
     * [duplicate\_checks](#uclchem.makerates.network.Network.duplicate_checks)
     * [index\_important\_reactions](#uclchem.makerates.network.Network.index_important_reactions)
     * [index\_important\_species](#uclchem.makerates.network.Network.index_important_species)
+    * [branching\_ratios\_checks](#uclchem.makerates.network.Network.branching_ratios_checks)
   * [LoadedNetwork](#uclchem.makerates.network.LoadedNetwork)
     * [\_\_init\_\_](#uclchem.makerates.network.LoadedNetwork.__init__)
 * [uclchem.makerates.io\_functions](#uclchem.makerates.io_functions)
@@ -96,6 +104,8 @@ title: Python Reference
   * [kida\_parser](#uclchem.makerates.io_functions.kida_parser)
   * [output\_drops](#uclchem.makerates.io_functions.output_drops)
   * [write\_outputs](#uclchem.makerates.io_functions.write_outputs)
+  * [write\_f90\_constants](#uclchem.makerates.io_functions.write_f90_constants)
+  * [write\_python\_constants](#uclchem.makerates.io_functions.write_python_constants)
   * [write\_species](#uclchem.makerates.io_functions.write_species)
   * [write\_reactions](#uclchem.makerates.io_functions.write_reactions)
   * [write\_odes\_f90](#uclchem.makerates.io_functions.write_odes_f90)
@@ -128,6 +138,8 @@ title: Python Reference
     * [get\_temphigh](#uclchem.makerates.reaction.Reaction.get_temphigh)
     * [NANCheck](#uclchem.makerates.reaction.Reaction.NANCheck)
     * [get\_reaction\_type](#uclchem.makerates.reaction.Reaction.get_reaction_type)
+    * [get\_source](#uclchem.makerates.reaction.Reaction.get_source)
+    * [set\_source](#uclchem.makerates.reaction.Reaction.set_source)
     * [convert\_to\_bulk](#uclchem.makerates.reaction.Reaction.convert_to_bulk)
     * [\_\_eq\_\_](#uclchem.makerates.reaction.Reaction.__eq__)
     * [check\_temperature\_collision](#uclchem.makerates.reaction.Reaction.check_temperature_collision)
@@ -194,7 +206,7 @@ Create a plot of the abundance of a list of species through time.
 #### plot\_species
 
 ```python
-def plot_species(ax, df, species, **plot_kwargs)
+def plot_species(ax, df, species, legend=True, **plot_kwargs)
 ```
 
 Plot the abundance of a list of species through time directly onto an axis.
@@ -270,6 +282,10 @@ Check the conservation of major element by comparing total abundance at start an
 
 - `dict` - Dictionary containing the change in the total abundance of each element as a fraction of initial value
 
+<a id="uclchem.constants"></a>
+
+# uclchem.constants
+
 
 
 
@@ -278,12 +294,40 @@ Check the conservation of major element by comparing total abundance at start an
 
 # uclchem.model
 
+<a id="uclchem.model.outputArrays_to_DataFrame"></a>
+
+#### outputArrays\_to\_DataFrame
+
+```python
+def outputArrays_to_DataFrame(physicalParameterArray, chemicalAbundanceArray,
+                              specname, physParameter)
+```
+
+Convert the output arrays to a pandas dataframe
+
+**Arguments**:
+
+- `physicalParameterArray` _np.array_ - Array with the output physical parameters
+- `chemicalAbundanceArray` _np.array_ - Array with the output chemical abundances
+- `specname` _list_ - List with the names of all the species
+- `physParameter` _list_ - Array with all the physical parameter names
+  
+
+**Returns**:
+
+- `_type_` - _description_
+
 <a id="uclchem.model.cloud"></a>
 
 #### cloud
 
 ```python
-def cloud(param_dict=None, out_species=None)
+def cloud(param_dict=None,
+          out_species=None,
+          return_array=False,
+          return_dataframe=False,
+          starting_chemistry=None,
+          timepoints=TIMEPOINTS)
 ```
 
 Run cloud model from UCLCHEM
@@ -292,18 +336,38 @@ Run cloud model from UCLCHEM
 
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
-  
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
 
 **Returns**:
 
-  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
 
 <a id="uclchem.model.collapse"></a>
 
 #### collapse
 
 ```python
-def collapse(collapse, physics_output, param_dict=None, out_species=None)
+def collapse(collapse,
+             physics_output,
+             param_dict=None,
+             out_species=None,
+             return_array=False,
+             return_dataframe=False,
+             starting_chemistry=None,
+             timepoints=TIMEPOINTS)
 ```
 
 Run collapse model from UCLCHEM based on Priestley et al 2018 AJ 156 51 (https://ui.adsabs.harvard.edu/abs/2018AJ....156...51P/abstract)
@@ -314,18 +378,39 @@ Run collapse model from UCLCHEM based on Priestley et al 2018 AJ 156 51 (https:/
 - `physics_output(str)` - Filename to store physics output, only relevant for 'filament' and 'ambipolar' collapses. If None, no physics output will be saved.
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
   
 
 **Returns**:
 
-  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
 
 <a id="uclchem.model.hot_core"></a>
 
 #### hot\_core
 
 ```python
-def hot_core(temp_indx, max_temperature, param_dict=None, out_species=None)
+def hot_core(temp_indx,
+             max_temperature,
+             param_dict=None,
+             out_species=None,
+             return_array=False,
+             return_dataframe=False,
+             starting_chemistry=None,
+             timepoints=TIMEPOINTS)
 ```
 
 Run hot core model from UCLCHEM, based on Viti et al. 2004 and Collings et al. 2004
@@ -336,11 +421,25 @@ Run hot core model from UCLCHEM, based on Viti et al. 2004 and Collings et al. 2
 - `max_temperature` _float_ - Value at which gas temperature will stop increasing.
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
   
 
 **Returns**:
 
-  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
 
 <a id="uclchem.model.cshock"></a>
 
@@ -351,7 +450,11 @@ def cshock(shock_vel,
            timestep_factor=0.01,
            minimum_temperature=0.0,
            param_dict=None,
-           out_species=None)
+           out_species=None,
+           return_array=False,
+           return_dataframe=False,
+           starting_chemistry=None,
+           timepoints=TIMEPOINTS)
 ```
 
 Run C-type shock model from UCLCHEM
@@ -364,17 +467,40 @@ Run C-type shock model from UCLCHEM
 - `minimum_temperature` _float, optional_ - Minimum post-shock temperature. Defaults to 0.0 (no minimum). The shocked gas typically cools to `initialTemp` if this is not set.
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
+  
 
 **Returns**:
 
-  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
+  if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - disspation_time (float): dissipation time in years
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - disspation_time (float): dissipation time in years
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
 
 <a id="uclchem.model.jshock"></a>
 
 #### jshock
 
 ```python
-def jshock(shock_vel, param_dict=None, out_species=None)
+def jshock(shock_vel,
+           param_dict=None,
+           out_species=None,
+           return_array=False,
+           return_dataframe=False,
+           starting_chemistry=None,
+           timepoints=TIMEPOINTS)
 ```
 
 Run J-type shock model from UCLCHEM
@@ -384,10 +510,69 @@ Run J-type shock model from UCLCHEM
 - `shock_vel` _float_ - Velocity of the shock
 - `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 - `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
+  
+  Returns:if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+
+<a id="uclchem.model.postprocess"></a>
+
+#### postprocess
+
+```python
+def postprocess(param_dict=None,
+                out_species=None,
+                return_array=False,
+                return_dataframe=False,
+                starting_chemistry=None,
+                time_array=None,
+                density_array=None,
+                gas_temperature_array=None,
+                dust_temperature_array=None,
+                zeta_array=None,
+                radfield_array=None,
+                coldens_H_array=None,
+                coldens_H2_array=None,
+                coldens_CO_array=None,
+                coldens_C_array=None)
+```
+
+Run cloud model from UCLCHEM
+
+**Arguments**:
+
+- `param_dict` _dict,optional_ - A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
+- `out_species` _list, optional_ - A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+- `return_array` _bool, optional_ - A boolean on whether a np.array should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `return_dataframe` _bool, optional_ - A boolean on whether a pandas.DataFrame should be returned to a user, if both return_array and return_dataframe are false, this function will default to writing outputs to a file
+- `starting_chemistry` _array, optional_ - np.array containing the starting chemical abundances needed by uclchem
 
 **Returns**:
 
-  A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the model succeeded, the second element is the dissipation time and further elements are the abundances of all species in `out_species`.
+  if return_array and return_dataframe are False:
+  - A list where the first element is always an integer which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details. If the `out_species` parametere is provided, the remaining elements of this list will be the final abundances of the species in out_species.
+  if return_array is True:
+  - physicsArray (array): array containing the physical outputs for each written timestep
+  - chemicalAbunArray (array): array containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
+  if return_dataframe is True:
+  - physicsDF (pandas.DataFrame): DataFrame containing the physical outputs for each written timestep
+  - chemicalDF (pandas.DataFrame): DataFrame containing the chemical abundances for each written timestep
+  - abundanceStart (array): array containing the chemical abundances of the last timestep in the format uclchem needs in order to perform an additional run after the initial model
+  - success_flag (integer): which is negative if the model failed to run and can be sent to `uclchem.utils.check_error()` to see more details.
 
 <a id="uclchem.utils"></a>
 
@@ -448,6 +633,20 @@ A simple function to load the list of species in the UCLCHEM network into a pand
 
 - `pandas.DataFrame` - A dataframe containing the species names and their details
 
+<a id="uclchem.utils.get_species"></a>
+
+#### get\_species
+
+```python
+def get_species() -> list[str]
+```
+
+A simple function to load the list of species present in the UCLCHEM network
+
+**Returns**:
+
+  list[str] : A list of species names
+
 <a id="uclchem.utils.get_reaction_table"></a>
 
 #### get\_reaction\_table
@@ -461,6 +660,31 @@ A function to load the reaction table from the UCLCHEM network into a pandas dat
 **Returns**:
 
 - `pandas.DataFrame` - A dataframe containing the reactions and their rates
+
+<a id="uclchem.debug"></a>
+
+# uclchem.debug
+
+Functions to help debugging UCLCHEM
+
+<a id="uclchem.debug.get_f2py_signature"></a>
+
+#### get\_f2py\_signature
+
+```python
+def get_f2py_signature(write=False) -> str
+```
+
+Get the signature of the UCLCHEM fortran code
+
+**Arguments**:
+
+- `write` _bool, optional_ - Write to disk. Defaults to False.
+  
+
+**Returns**:
+
+- `str` - Signature of the UCLCHEM fortran code from the f2py wrapper
 
 <a id="uclchem.tests"></a>
 
@@ -949,6 +1173,21 @@ problems.
 - `three_phase` _bool, optional_ - Whether to use a three phase model (gas, surface, bulk). Defaults to False.
 - `user_defined_bulk` _list, optional_ - List of user defined bulk. Defaults to [].
 
+<a id="uclchem.makerates.network.Network.add_reactions"></a>
+
+#### add\_reactions
+
+```python
+def add_reactions(reactions: Union[Union[Reaction, str], list[Union[Reaction,
+                                                                    str]]])
+```
+
+Add a reaction, list of inputs to the Reaction class or list of reactions to the network.
+
+**Arguments**:
+
+- `reactions` _Union[Union[Reaction, str], list[Union[Reaction, str]]]_ - Reaction or list or reactions
+
 <a id="uclchem.makerates.network.Network.find_similar_reactions"></a>
 
 #### find\_similar\_reactions
@@ -1370,6 +1609,17 @@ def index_important_species() -> None
 
 Obtain the indices for all the important reactions.
 
+<a id="uclchem.makerates.network.Network.branching_ratios_checks"></a>
+
+#### branching\_ratios\_checks
+
+```python
+def branching_ratios_checks() -> None
+```
+
+Check that the branching ratios for the ice reactions sum to 1.0. If they do not, correct them.
+This needs to be done for LH and LHDES separately since we already added the desorption to the network.
+
 <a id="uclchem.makerates.network.LoadedNetwork"></a>
 
 ## LoadedNetwork Objects
@@ -1490,8 +1740,8 @@ and coefficients. We fix that by converting them here.
 
 ```python
 def output_drops(dropped_reactions: list[Reaction],
-                 output_dir: str,
-                 write_files=True)
+                 output_dir: str = None,
+                 write_files: bool = True)
 ```
 
 Writes the reactions that are dropped to disk/logs
@@ -1516,6 +1766,43 @@ Write the ODE and Network fortran source files to the fortran source.
 
 - `network` _network_ - The makerates Network class
 - `output_dir` _bool_ - The directory to write to.
+
+<a id="uclchem.makerates.io_functions.write_f90_constants"></a>
+
+#### write\_f90\_constants
+
+```python
+def write_f90_constants(
+        replace_dict: Dict[str, int],
+        output_file_name: Path,
+        template_file_path: Path = "fortran_templates") -> None
+```
+
+Write the physical reactions to the f2py_constants.f90 file after every run of
+makerates, this ensures the Fortran and Python bits are compatible with one another.
+
+**Arguments**:
+
+- `replace_dict` _Dict[str, int]_ - The dictionary with keys to replace and their values
+- `output_file_name` _Path_ - The path to the target f2py_constants.f90 file
+- `template_file_path` _Path, optional_ - The file to use as the template. Defaults to "fortran_templates".
+
+<a id="uclchem.makerates.io_functions.write_python_constants"></a>
+
+#### write\_python\_constants
+
+```python
+def write_python_constants(replace_dict: Dict[str, int],
+                           python_constants_file: Path) -> None
+```
+
+Function to write the python constants to the constants.py file after every run,
+this ensure the Python and Fortran bits are compatible with one another.
+
+**Arguments**:
+
+- `replace_dict` _Dict[str, int]]_ - Dict with keys to replace and their values
+- `python_constants_file` _Path_ - Path to the target constant files.
 
 <a id="uclchem.makerates.io_functions.write_species"></a>
 
@@ -2026,6 +2313,34 @@ in there, it will be regarded as a two body reaction.
 **Returns**:
 
   str:
+
+<a id="uclchem.makerates.reaction.Reaction.get_source"></a>
+
+#### get\_source
+
+```python
+def get_source() -> str
+```
+
+Get the source of the reaction
+
+**Returns**:
+
+- `str` - The source of the reaction
+
+<a id="uclchem.makerates.reaction.Reaction.set_source"></a>
+
+#### set\_source
+
+```python
+def set_source(source: str) -> None
+```
+
+Set the source of the reaction
+
+**Arguments**:
+
+- `source` _str_ - The source of the reaction
 
 <a id="uclchem.makerates.reaction.Reaction.convert_to_bulk"></a>
 

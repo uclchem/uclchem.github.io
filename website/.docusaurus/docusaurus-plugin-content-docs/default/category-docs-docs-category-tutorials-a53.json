@@ -1,6 +1,6 @@
 {
   "title": "Tutorials",
-  "description": "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `Tutorials` folder. They are also included here as docs pages.",
+  "description": "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `notebooks` folder. They are also included here as docs pages.",
   "slug": "/category/tutorials",
   "permalink": "/docs/category/tutorials",
   "navigation": {

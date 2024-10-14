@@ -55,8 +55,14 @@
           {
             "type": "link",
             "label": "Advanced Physical Modelling",
-            "href": "/docs/next/modelling_objects",
-            "docId": "modelling_objects"
+            "href": "/docs/next/2a_modelling_objects_on_disk",
+            "docId": "2a_modelling_objects_on_disk"
+          },
+          {
+            "type": "link",
+            "label": "Advanced Modelling in Memory",
+            "href": "/docs/next/2b_modelling_objects_in_memory",
+            "docId": "2b_modelling_objects_in_memory"
           },
           {
             "type": "link",
@@ -209,6 +215,18 @@
     ]
   },
   "docs": {
+    "2a_modelling_objects_on_disk": {
+      "id": "2a_modelling_objects_on_disk",
+      "title": "Advanced Physical Modelling",
+      "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
+      "sidebar": "docs"
+    },
+    "2b_modelling_objects_in_memory": {
+      "id": "2b_modelling_objects_in_memory",
+      "title": "Advanced Modelling in Memory",
+      "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
+      "sidebar": "docs"
+    },
     "bulk": {
       "id": "bulk",
       "title": "Bulk Ice Processes",
@@ -254,7 +272,7 @@
     "first_model": {
       "id": "first_model",
       "title": "Running Your First Models",
-      "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output.",
+      "description": "In this notebook, we demonstrate the basic use of UCLCHEM's python module by running a simple model and then using the analysis functions to examine the output. Otherwise, it is identical to notebook 3.",
       "sidebar": "docs"
     },
     "gas": {
@@ -278,12 +296,6 @@
       "id": "install",
       "title": "Installation",
       "description": "Prerequisites",
-      "sidebar": "docs"
-    },
-    "modelling_objects": {
-      "id": "modelling_objects",
-      "title": "Advanced Physical Modelling",
-      "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
       "sidebar": "docs"
     },
     "network": {

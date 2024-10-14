@@ -18,9 +18,9 @@ module.exports = {
       link: {
         type: 'generated-index',
         title: 'Tutorials',
-        description: "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `Tutorials` folder. They are also included here as docs pages.",
+        description: "A series of jupyter notebooks demonstrating how to use UCLCHEM are included in the `notebooks` folder. They are also included here as docs pages.",
       },
-      items: ["first_model","modelling_objects","running_a_grid","chemical_analysis"],
+      items: ["first_model","2a_modelling_objects_on_disk", "2b_modelling_objects_in_memory", "running_a_grid","chemical_analysis"],
     },
     //Simple category declaration with no landing page, you have to pick a subpage
     {"Troubleshooting": ["trouble-compile","trouble-integration"]},

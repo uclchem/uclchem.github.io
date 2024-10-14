@@ -6,7 +6,7 @@
   "source": "@site/docs/chemical_analysis.md",
   "sourceDirName": ".",
   "slug": "/chemical_analysis",
-  "permalink": "/docs/next/chemical_analysis",
+  "permalink": "/docs/chemical_analysis",
   "draft": false,
   "tags": [],
   "version": "current",
@@ -17,10 +17,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Running a Grid",
-    "permalink": "/docs/next/running_a_grid"
+    "permalink": "/docs/running_a_grid"
   },
   "next": {
     "title": "Compilation Issues",
-    "permalink": "/docs/next/trouble-compile"
+    "permalink": "/docs/trouble-compile"
   }
 }
