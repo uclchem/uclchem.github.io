@@ -1,18 +1,17 @@
 {
-  "unversionedId": "grain",
   "id": "grain",
   "title": "Grain Surface Reactions",
   "description": "Whilst the basic treatment of gas phase chemistry is well established, grain surface chemistry is more complex. There are three possible ways to treat grain surface chemistry in UCLCHEM. In general we assume that:",
   "source": "@site/docs/chem-grain.md",
   "sourceDirName": ".",
   "slug": "/grain",
-  "permalink": "/docs/next/grain",
+  "permalink": "/docs/grain",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1652282273,
-  "formattedLastUpdatedAt": "May 11, 2022",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
   "frontMatter": {
     "id": "grain",
     "title": "Grain Surface Reactions"
@@ -20,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Gas Phase Reactions",
-    "permalink": "/docs/next/gas"
+    "permalink": "/docs/gas"
   },
   "next": {
     "title": "Adsorption & Desorption Reactions",
-    "permalink": "/docs/next/desorb"
+    "permalink": "/docs/desorb"
   }
 }

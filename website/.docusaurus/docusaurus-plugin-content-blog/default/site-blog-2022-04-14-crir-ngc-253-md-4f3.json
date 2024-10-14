@@ -4,7 +4,6 @@
   "title": "The Cosmic-ray Ionization Rate in NGC 253",
   "description": "NGC 253 is a nearby starburst galaxy which hosts several large clouds of gas in its central molecular zone. These clouds are similar to GMCs but orders of magnitude more massive and much hotter, where the star formation rate is very high. The temperature of this gas is important because the star formation efficiency will be determined by how much internal energy that gas has.",
   "date": "2022-04-14T00:00:00.000Z",
-  "formattedDate": "April 14, 2022",
   "tags": [],
   "readingTime": 0.895,
   "hasTruncateMarker": false,
@@ -14,13 +13,15 @@
       "title": "UCLCHEM developer",
       "url": "https://jonholdship.github.io",
       "imageURL": "/img/jon.png",
-      "key": "jonholdship"
+      "key": "jonholdship",
+      "page": null
     }
   ],
   "frontMatter": {
     "title": "The Cosmic-ray Ionization Rate in NGC 253",
     "authors": "jonholdship"
   },
+  "unlisted": false,
   "prevItem": {
     "title": "UCLCHEM v3.0",
     "permalink": "/blog/2022/04/29/uclchem-v3"

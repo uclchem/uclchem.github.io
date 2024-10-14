@@ -233,7 +233,7 @@ print(conservation)
 ```
 
     Percentage change in total abundances:
-    {'H': '0.000%', 'N': '0.000%', 'C': '0.000%', 'O': '0.000%', 'S': '0.000%'}
+    \{'H': '0.000%', 'N': '0.000%', 'C': '0.000%', 'O': '0.000%', 'S': '0.000%'\}
 
 
 ## Plotting Results

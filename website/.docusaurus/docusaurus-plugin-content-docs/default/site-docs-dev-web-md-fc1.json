@@ -1,18 +1,17 @@
 {
-  "unversionedId": "dev-web",
   "id": "dev-web",
   "title": "Maintaining the Website",
   "description": "We use Docusaurus to maintain our website. The upside is that documentation and blog posts can all be created as simple markdown files. The downside is a slightly convoluted workflow which we explain here.",
   "source": "@site/docs/dev-web.md",
   "sourceDirName": ".",
   "slug": "/dev-web",
-  "permalink": "/docs/next/dev-web",
+  "permalink": "/docs/dev-web",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1676552141,
-  "formattedLastUpdatedAt": "Feb 16, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
   "frontMatter": {
     "id": "dev-web",
     "title": "Maintaining the Website"
@@ -20,6 +19,6 @@
   "sidebar": "docs",
   "previous": {
     "title": "Debugging",
-    "permalink": "/docs/next/dev-debugging"
+    "permalink": "/docs/dev-debugging"
   }
 }

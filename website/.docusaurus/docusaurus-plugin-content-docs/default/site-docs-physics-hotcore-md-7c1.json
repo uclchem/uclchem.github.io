@@ -1,18 +1,17 @@
 {
-  "unversionedId": "physics-hotcore",
   "id": "physics-hotcore",
   "title": "Hot Core",
   "description": "Main Contributors: Serena Viti, Jon Holdship",
   "source": "@site/docs/physics-hotcore.md",
   "sourceDirName": ".",
   "slug": "/physics-hotcore",
-  "permalink": "/docs/next/physics-hotcore",
+  "permalink": "/docs/physics-hotcore",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "jonholdship",
-  "lastUpdatedAt": 1651073142,
-  "formattedLastUpdatedAt": "Apr 27, 2022",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
   "frontMatter": {
     "id": "physics-hotcore",
     "title": "Hot Core",
@@ -21,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Cloud Model",
-    "permalink": "/docs/next/physics-cloud"
+    "permalink": "/docs/physics-cloud"
   },
   "next": {
     "title": "Shock Models",
-    "permalink": "/docs/next/physics-shocks"
+    "permalink": "/docs/physics-shocks"
   }
 }

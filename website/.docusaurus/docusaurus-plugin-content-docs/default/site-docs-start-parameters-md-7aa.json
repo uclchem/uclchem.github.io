@@ -1,18 +1,17 @@
 {
-  "unversionedId": "parameters",
   "id": "parameters",
   "title": "Model Parameters",
   "description": "UCLCHEM will default to these values unless they are overridden by user. Users can override these by adding the variable name as written here in the paramdict argument of any UCLCHEM model function. paramdict is not case sensitive.",
   "source": "@site/docs/start-parameters.md",
   "sourceDirName": ".",
   "slug": "/parameters",
-  "permalink": "/docs/next/parameters",
+  "permalink": "/docs/parameters",
   "draft": false,
+  "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Gijs Vermariën",
-  "lastUpdatedAt": 1693569187,
-  "formattedLastUpdatedAt": "Sep 1, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
   "frontMatter": {
     "id": "parameters",
     "title": "Model Parameters"
@@ -20,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Creating a Network",
-    "permalink": "/docs/next/network"
+    "permalink": "/docs/network"
   },
   "next": {
     "title": "Python Reference",
-    "permalink": "/docs/next/pythonapi"
+    "permalink": "/docs/pythonapi"
   }
 }

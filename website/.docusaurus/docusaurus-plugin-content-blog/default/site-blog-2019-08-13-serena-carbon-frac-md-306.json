@@ -4,7 +4,6 @@
   "title": "A chemical study of carbon fractionation in external galaxies",
   "description": "UCLCHEM has recently been used to study carbon fractionation in external galaxies. You can find the paper here and the abstract below.",
   "date": "2019-08-13T00:00:00.000Z",
-  "formattedDate": "August 13, 2019",
   "tags": [],
   "readingTime": 0.825,
   "hasTruncateMarker": false,
@@ -14,13 +13,15 @@
       "title": "UCLCHEM PI",
       "url": "https://home.strw.leidenuniv.nl/~viti/",
       "imageURL": "/img/viti.jpg",
-      "key": "serena"
+      "key": "serena",
+      "page": null
     }
   ],
   "frontMatter": {
     "title": "A chemical study of carbon fractionation in external galaxies",
     "authors": "serena"
   },
+  "unlisted": false,
   "prevItem": {
     "title": "Tracing shock type with chemical diagnostics - an application to L1157",
     "permalink": "/blog/2019/12/10/tom-shock"

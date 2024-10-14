@@ -1,36 +1,31 @@
 {
-  "docusaurusVersion": "2.4.1",
+  "docusaurusVersion": "3.5.2",
   "siteVersion": "0.0.0",
   "pluginVersions": {
     "docusaurus-plugin-content-docs": {
       "type": "package",
       "name": "@docusaurus/plugin-content-docs",
-      "version": "2.4.1"
+      "version": "3.5.2"
     },
     "docusaurus-plugin-content-blog": {
       "type": "package",
       "name": "@docusaurus/plugin-content-blog",
-      "version": "2.4.1"
+      "version": "3.5.2"
     },
     "docusaurus-plugin-content-pages": {
       "type": "package",
       "name": "@docusaurus/plugin-content-pages",
-      "version": "2.4.1"
+      "version": "3.5.2"
     },
-    "docusaurus-plugin-google-analytics": {
+    "docusaurus-plugin-debug": {
       "type": "package",
-      "name": "@docusaurus/plugin-google-analytics",
-      "version": "2.4.1"
-    },
-    "docusaurus-plugin-sitemap": {
-      "type": "package",
-      "name": "@docusaurus/plugin-sitemap",
-      "version": "2.4.1"
+      "name": "@docusaurus/plugin-debug",
+      "version": "3.5.2"
     },
     "docusaurus-theme-classic": {
       "type": "package",
       "name": "@docusaurus/theme-classic",
-      "version": "2.4.1"
+      "version": "3.5.2"
     }
   }
 }

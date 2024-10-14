@@ -99,7 +99,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 
-    {'H': '0.002%', 'N': '0.000%', 'C': '0.000%', 'O': '0.000%'}
+    \{'H': '0.002%', 'N': '0.000%', 'C': '0.000%', 'O': '0.000%'\}
 
 
 
@@ -509,7 +509,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 
-    {'H': '0.005%', 'N': '1.257%', 'C': '1.458%', 'O': '1.302%'}
+    \{'H': '0.005%', 'N': '1.257%', 'C': '1.458%', 'O': '1.302%'\}
 
 
 
@@ -591,7 +591,7 @@ uclchem.analysis.check_element_conservation(phase2_df)
 
 
 
-    {'H': '0.103%', 'N': '1.581%', 'C': '1.322%', 'O': '1.578%'}
+    \{'H': '0.103%', 'N': '1.581%', 'C': '1.322%', 'O': '1.578%'\}
 
 
 

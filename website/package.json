@@ -12,17 +12,15 @@
     "docusaurus": "docusaurus"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.4.1",
-    "@docusaurus/plugin-content-docs": "^2.4.1",
-    "@docusaurus/preset-classic": "^2.4.1",
+    "@docusaurus/core": "^3.5.2",
+    "@docusaurus/plugin-content-docs": "^3.5.2",
+    "@docusaurus/preset-classic": "^3.5.2",
     "@theme-ui/prism": "^0.16.0",
     "clsx": "^1.1.1",
     "n": "^7.2.2",
     "prism-react-renderer": "^2.0.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "rehype-katex": "^4.0.0",
-    "remark-math": "^3.0.1",
+    "rehype-katex": "7",
+    "remark-math": "6",
     "stable": "^0.1.8"
   },
   "version": "0.0.0"
