@@ -19,6 +19,8 @@
     "clsx": "^1.1.1",
     "n": "^7.2.2",
     "prism-react-renderer": "^2.0.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "rehype-katex": "7",
     "remark-math": "6",
     "stable": "^0.1.8"

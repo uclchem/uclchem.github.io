@@ -1,0 +1,28 @@
+{
+  "id": "dev-overview",
+  "title": "Overview of the Code",
+  "description": "The page is designed to give a brief overview of the code's structure. It's less about the scientific justification for the various treatments in the code and more about how the code is segmented and where to look for things.",
+  "source": "@site/versioned_docs/version-v3.4.0/dev-overview.md",
+  "sourceDirName": ".",
+  "slug": "/dev-overview",
+  "permalink": "/docs/v3.4.0/dev-overview",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.4.0",
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1728914606000,
+  "frontMatter": {
+    "id": "dev-overview",
+    "title": "Overview of the Code"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Developer",
+    "permalink": "/docs/v3.4.0/category/developer"
+  },
+  "next": {
+    "title": "Writing The Python Interface",
+    "permalink": "/docs/v3.4.0/dev-python-wrap"
+  }
+}

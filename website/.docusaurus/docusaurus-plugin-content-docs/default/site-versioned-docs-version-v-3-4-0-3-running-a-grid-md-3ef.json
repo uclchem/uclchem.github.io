@@ -1,0 +1,26 @@
+{
+  "id": "running_a_grid",
+  "title": "Running a Grid",
+  "description": "A common task is to run UCLCHEM over a grid of parameter combinations. This notebook sets up a simple approach to doing so for regular grids.",
+  "source": "@site/versioned_docs/version-v3.4.0/3_running_a_grid.md",
+  "sourceDirName": ".",
+  "slug": "/running_a_grid",
+  "permalink": "/docs/v3.4.0/running_a_grid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.4.0",
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1728914606000,
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Advanced Modelling in Memory",
+    "permalink": "/docs/v3.4.0/2b_modelling_objects_in_memory"
+  },
+  "next": {
+    "title": "Chemical Analysis",
+    "permalink": "/docs/v3.4.0/chemical_analysis"
+  }
+}

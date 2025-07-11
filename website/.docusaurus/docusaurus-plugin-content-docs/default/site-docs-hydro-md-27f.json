@@ -5,13 +5,13 @@
   "source": "@site/docs/hydro.md",
   "sourceDirName": ".",
   "slug": "/hydro",
-  "permalink": "/docs/hydro",
+  "permalink": "/docs/next/hydro",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "jonholdship",
+  "lastUpdatedAt": 1621867778000,
   "frontMatter": {
     "id": "hydro",
     "title": "Hydro Post Processing"

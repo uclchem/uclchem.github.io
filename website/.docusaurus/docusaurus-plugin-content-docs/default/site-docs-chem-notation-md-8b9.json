@@ -5,13 +5,13 @@
   "source": "@site/docs/chem-notation.md",
   "sourceDirName": ".",
   "slug": "/notation",
-  "permalink": "/docs/notation",
+  "permalink": "/docs/next/notation",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "katarzynadutkowska",
+  "lastUpdatedAt": 1690469455000,
   "frontMatter": {
     "id": "notation",
     "title": "Notation"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Chemistry",
-    "permalink": "/docs/category/chemistry"
+    "permalink": "/docs/next/category/chemistry"
   },
   "next": {
     "title": "Gas Phase Reactions",
-    "permalink": "/docs/gas"
+    "permalink": "/docs/next/gas"
   }
 }

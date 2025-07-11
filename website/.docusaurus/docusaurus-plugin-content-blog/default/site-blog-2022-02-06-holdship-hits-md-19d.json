@@ -5,7 +5,7 @@
   "description": "Interpreting molecular observations through chemical and radiative transfer models is a common but complex practice. Whilst many uncertainties affect chemical models, one in particular is addressed in this work: the issue of time dependence. When modelling a molecular cloud or protostellar disk, how do we initialize the abundances? When is an appropriate time to compare our model to the observed object? Our paper on History Independent Tracers (HITs) side steps this issue by producing a list of molecules which are insensitive to the chemical history of the gas, essentially reaching steady state very quickly across a very wide range of gas conditions.",
   "date": "2022-02-06T00:00:00.000Z",
   "tags": [],
-  "readingTime": 1.285,
+  "readingTime": 1.36,
   "hasTruncateMarker": false,
   "authors": [
     {

@@ -5,13 +5,13 @@
   "source": "@site/docs/trouble-compile.md",
   "sourceDirName": ".",
   "slug": "/trouble-compile",
-  "permalink": "/docs/trouble-compile",
+  "permalink": "/docs/next/trouble-compile",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1670417506000,
   "frontMatter": {
     "id": "trouble-compile",
     "title": "Compilation Issues"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Chemical Analysis",
-    "permalink": "/docs/chemical_analysis"
+    "permalink": "/docs/next/chemical_analysis"
   },
   "next": {
     "title": "Integration",
-    "permalink": "/docs/trouble-integration"
+    "permalink": "/docs/next/trouble-integration"
   }
 }

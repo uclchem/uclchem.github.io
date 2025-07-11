@@ -1,25 +1,25 @@
 {
   "id": "2a_modelling_objects_on_disk",
-  "title": "Advanced Physical Modelling",
+  "title": "Advanced Physical Modelling on Disk",
   "description": "In the previous tutorial, we simply modelled the chemistry of a static cloud for 1 Myr. This is unlikely to meet everybody's modelling needs and UCLCHEM is capable of modelling much more complex environments such as hot cores and shocks. In this tutorial, we model both a hot core and a shock to explore how these models work and to demonstrate the workflow that the UCLCHEM team normally follow.",
   "source": "@site/docs/2a_modelling_objects_on_disk.md",
   "sourceDirName": ".",
   "slug": "/2a_modelling_objects_on_disk",
-  "permalink": "/docs/2a_modelling_objects_on_disk",
+  "permalink": "/docs/next/2a_modelling_objects_on_disk",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1728914488000,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Running Your First Models",
-    "permalink": "/docs/first_model"
+    "permalink": "/docs/next/first_model"
   },
   "next": {
-    "title": "Advanced Modelling in Memory",
-    "permalink": "/docs/2b_modelling_objects_in_memory"
+    "title": "Advanced Physical Modelling in Memory",
+    "permalink": "/docs/next/2b_modelling_objects_in_memory"
   }
 }

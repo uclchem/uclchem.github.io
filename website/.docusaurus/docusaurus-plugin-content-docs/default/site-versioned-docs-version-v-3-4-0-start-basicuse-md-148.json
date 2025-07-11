@@ -1,0 +1,29 @@
+{
+  "id": "install",
+  "title": "Installation",
+  "description": "Prerequisites",
+  "source": "@site/versioned_docs/version-v3.4.0/start-basicuse.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/v3.4.0/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.4.0",
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1728914606000,
+  "frontMatter": {
+    "id": "install",
+    "title": "Installation",
+    "slug": "/"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/v3.4.0/category/getting-started"
+  },
+  "next": {
+    "title": "Creating a Network",
+    "permalink": "/docs/v3.4.0/network"
+  }
+}

@@ -1,17 +1,17 @@
 {
   "id": "install",
   "title": "Installation",
-  "description": "Prerequisites",
+  "description": "Obtaining UCLCHEM",
   "source": "@site/docs/start-basicuse.md",
   "sourceDirName": ".",
   "slug": "/",
-  "permalink": "/docs/",
+  "permalink": "/docs/next/",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1693569720000,
   "frontMatter": {
     "id": "install",
     "title": "Installation",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Getting Started",
-    "permalink": "/docs/category/getting-started"
+    "permalink": "/docs/next/category/getting-started"
   },
   "next": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/next/network"
   }
 }

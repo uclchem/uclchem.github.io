@@ -5,13 +5,13 @@
   "source": "@site/docs/start-parameters.md",
   "sourceDirName": ".",
   "slug": "/parameters",
-  "permalink": "/docs/parameters",
+  "permalink": "/docs/next/parameters",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055000,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1728914488000,
   "frontMatter": {
     "id": "parameters",
     "title": "Model Parameters"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Creating a Network",
-    "permalink": "/docs/network"
+    "permalink": "/docs/next/network"
   },
   "next": {
     "title": "Python Reference",
-    "permalink": "/docs/pythonapi"
+    "permalink": "/docs/next/pythonapi"
   }
 }
