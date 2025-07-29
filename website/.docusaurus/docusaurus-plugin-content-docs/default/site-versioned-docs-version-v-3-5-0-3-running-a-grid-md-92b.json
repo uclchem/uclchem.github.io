@@ -5,22 +5,22 @@
   "source": "@site/versioned_docs/version-v3.5.0/3_running_a_grid.md",
   "sourceDirName": ".",
   "slug": "/running_a_grid",
-  "permalink": "/docs/running_a_grid",
+  "permalink": "/docs/v3.5.0/running_a_grid",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.0",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1752245408000,
   "sidebarPosition": 3,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Advanced Physical Modelling in Memory",
-    "permalink": "/docs/2b_modelling_objects_in_memory"
+    "permalink": "/docs/v3.5.0/2b_modelling_objects_in_memory"
   },
   "next": {
     "title": "Chemical Analysis",
-    "permalink": "/docs/chemical_analysis"
+    "permalink": "/docs/v3.5.0/chemical_analysis"
   }
 }

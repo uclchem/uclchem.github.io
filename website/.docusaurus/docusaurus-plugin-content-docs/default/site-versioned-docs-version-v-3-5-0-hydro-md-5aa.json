@@ -5,13 +5,13 @@
   "source": "@site/versioned_docs/version-v3.5.0/hydro.md",
   "sourceDirName": ".",
   "slug": "/hydro",
-  "permalink": "/docs/hydro",
+  "permalink": "/docs/v3.5.0/hydro",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.0",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1752245408000,
   "frontMatter": {
     "id": "hydro",
     "title": "Hydro Post Processing"

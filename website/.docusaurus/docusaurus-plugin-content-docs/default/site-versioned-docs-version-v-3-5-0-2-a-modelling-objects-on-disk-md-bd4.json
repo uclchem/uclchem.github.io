@@ -5,21 +5,21 @@
   "source": "@site/versioned_docs/version-v3.5.0/2a_modelling_objects_on_disk.md",
   "sourceDirName": ".",
   "slug": "/2a_modelling_objects_on_disk",
-  "permalink": "/docs/2a_modelling_objects_on_disk",
+  "permalink": "/docs/v3.5.0/2a_modelling_objects_on_disk",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.0",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1752245408000,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Running Your First Models",
-    "permalink": "/docs/first_model"
+    "permalink": "/docs/v3.5.0/first_model"
   },
   "next": {
     "title": "Advanced Physical Modelling in Memory",
-    "permalink": "/docs/2b_modelling_objects_in_memory"
+    "permalink": "/docs/v3.5.0/2b_modelling_objects_in_memory"
   }
 }

@@ -2,6 +2,12 @@
   "title": "All posts",
   "items": [
     {
+      "title": "UCLCHEM anno 2025",
+      "permalink": "/blog/2025/07/29/uclchem-anno-2025",
+      "unlisted": false,
+      "date": "2025-07-29T00:00:00.000Z"
+    },
+    {
       "title": "UCLCHEM v3.0",
       "permalink": "/blog/2022/04/29/uclchem-v3",
       "unlisted": false,

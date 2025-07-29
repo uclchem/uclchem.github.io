@@ -5,22 +5,22 @@
   "source": "@site/versioned_docs/version-v3.5.0/4_chemical_analysis.md",
   "sourceDirName": ".",
   "slug": "/chemical_analysis",
-  "permalink": "/docs/chemical_analysis",
+  "permalink": "/docs/v3.5.0/chemical_analysis",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.0",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1752245408000,
   "sidebarPosition": 4,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Running a Grid",
-    "permalink": "/docs/running_a_grid"
+    "permalink": "/docs/v3.5.0/running_a_grid"
   },
   "next": {
     "title": "Compilation Issues",
-    "permalink": "/docs/trouble-compile"
+    "permalink": "/docs/v3.5.0/trouble-compile"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "permalink": "/blog/2025/07/29/uclchem-anno-2025",
+  "source": "@site/blog/2025-07-29-uclchem-anno-2025.md",
+  "title": "UCLCHEM anno 2025",
+  "description": "Want to receive updates on UCLCHEM and our modeling efforts? Sign up to our mailing list here and",
+  "date": "2025-07-29T00:00:00.000Z",
+  "tags": [],
+  "readingTime": 6.69,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Gijs Vermariën",
+      "title": "UCLCHEM developer",
+      "url": "https://vermarien.com",
+      "imageURL": "/img/gijs.jpeg",
+      "key": "gijsvermarien",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "title": "UCLCHEM anno 2025",
+    "authors": "gijsvermarien"
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "UCLCHEM v3.0",
+    "permalink": "/blog/2022/04/29/uclchem-v3"
+  }
+}
