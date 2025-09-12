@@ -1,0 +1,29 @@
+{
+  "id": "install",
+  "title": "Installation",
+  "description": "Obtaining UCLCHEM",
+  "source": "@site/versioned_docs/version-v3.5.2/start-basicuse.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/docs/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.5.2",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "install",
+    "title": "Installation",
+    "slug": "/"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/category/getting-started"
+  },
+  "next": {
+    "title": "Creating a Network",
+    "permalink": "/docs/network"
+  }
+}

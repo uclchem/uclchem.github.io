@@ -1,0 +1,28 @@
+{
+  "id": "dev-debugging",
+  "title": "Debugging",
+  "description": "UCLCHEM is a complex code and many things can go wrong. Here, we'll list some of the things that often go wrong when you modify the code as well as a few helpful steps to trace down bugs.",
+  "source": "@site/versioned_docs/version-v3.5.2/dev-debugging.md",
+  "sourceDirName": ".",
+  "slug": "/dev-debugging",
+  "permalink": "/docs/dev-debugging",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.5.2",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "dev-debugging",
+    "title": "Debugging"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Writing The Python Interface",
+    "permalink": "/docs/dev-python-wrap"
+  },
+  "next": {
+    "title": "Maintaining the Website",
+    "permalink": "/docs/dev-web"
+  }
+}

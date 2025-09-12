@@ -5,13 +5,13 @@
   "source": "@site/versioned_docs/version-v3.5.1/physics-collapse.md",
   "sourceDirName": ".",
   "slug": "/physics-collapse",
-  "permalink": "/docs/physics-collapse",
+  "permalink": "/docs/v3.5.1/physics-collapse",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.1",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1753781112000,
   "frontMatter": {
     "id": "physics-collapse",
     "title": "Collapse Models"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Shock Models",
-    "permalink": "/docs/physics-shocks"
+    "permalink": "/docs/v3.5.1/physics-shocks"
   },
   "next": {
     "title": "Chemistry",
-    "permalink": "/docs/category/chemistry"
+    "permalink": "/docs/v3.5.1/category/chemistry"
   }
 }

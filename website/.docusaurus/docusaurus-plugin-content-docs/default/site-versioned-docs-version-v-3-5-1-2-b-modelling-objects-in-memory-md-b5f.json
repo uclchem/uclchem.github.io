@@ -5,21 +5,21 @@
   "source": "@site/versioned_docs/version-v3.5.1/2b_modelling_objects_in_memory.md",
   "sourceDirName": ".",
   "slug": "/2b_modelling_objects_in_memory",
-  "permalink": "/docs/2b_modelling_objects_in_memory",
+  "permalink": "/docs/v3.5.1/2b_modelling_objects_in_memory",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.1",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1753781112000,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Advanced Physical Modelling on Disk",
-    "permalink": "/docs/2a_modelling_objects_on_disk"
+    "permalink": "/docs/v3.5.1/2a_modelling_objects_on_disk"
   },
   "next": {
     "title": "Running a Grid",
-    "permalink": "/docs/running_a_grid"
+    "permalink": "/docs/v3.5.1/running_a_grid"
   }
 }

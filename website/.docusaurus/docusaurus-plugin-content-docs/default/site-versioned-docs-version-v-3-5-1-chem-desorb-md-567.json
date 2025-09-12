@@ -5,13 +5,13 @@
   "source": "@site/versioned_docs/version-v3.5.1/chem-desorb.md",
   "sourceDirName": ".",
   "slug": "/desorb",
-  "permalink": "/docs/desorb",
+  "permalink": "/docs/v3.5.1/desorb",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.1",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1753781112000,
   "frontMatter": {
     "id": "desorb",
     "title": "Adsorption & Desorption Reactions"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Grain Surface Reactions",
-    "permalink": "/docs/grain"
+    "permalink": "/docs/v3.5.1/grain"
   },
   "next": {
     "title": "Bulk Ice Processes",
-    "permalink": "/docs/bulk"
+    "permalink": "/docs/v3.5.1/bulk"
   }
 }
