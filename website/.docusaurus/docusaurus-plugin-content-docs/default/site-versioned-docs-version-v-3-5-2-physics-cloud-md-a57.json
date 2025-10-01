@@ -5,13 +5,13 @@
   "source": "@site/versioned_docs/version-v3.5.2/physics-cloud.md",
   "sourceDirName": ".",
   "slug": "/physics-cloud",
-  "permalink": "/docs/physics-cloud",
+  "permalink": "/docs/v3.5.2/physics-cloud",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.2",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1757665977000,
   "frontMatter": {
     "id": "physics-cloud",
     "title": "Cloud Model",
@@ -20,10 +20,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Core Physics",
-    "permalink": "/docs/physics-core"
+    "permalink": "/docs/v3.5.2/physics-core"
   },
   "next": {
     "title": "Hot Core",
-    "permalink": "/docs/physics-hotcore"
+    "permalink": "/docs/v3.5.2/physics-hotcore"
   }
 }

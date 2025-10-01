@@ -5,13 +5,13 @@
   "source": "@site/versioned_docs/version-v3.5.2/start-network.md",
   "sourceDirName": ".",
   "slug": "/network",
-  "permalink": "/docs/network",
+  "permalink": "/docs/v3.5.2/network",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.2",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1757665977000,
   "frontMatter": {
     "id": "network",
     "title": "Creating a Network"
@@ -19,10 +19,10 @@
   "sidebar": "docs",
   "previous": {
     "title": "Installation",
-    "permalink": "/docs/"
+    "permalink": "/docs/v3.5.2/"
   },
   "next": {
     "title": "Model Parameters",
-    "permalink": "/docs/parameters"
+    "permalink": "/docs/v3.5.2/parameters"
   }
 }

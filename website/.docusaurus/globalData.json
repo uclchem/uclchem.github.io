@@ -171,8 +171,8 @@
           }
         },
         {
-          "name": "v3.5.2",
-          "label": "v3.5.2",
+          "name": "v3.5.3",
+          "label": "v3.5.3",
           "isLast": true,
           "path": "/docs",
           "mainDocId": "install",
@@ -332,6 +332,173 @@
             "docs": {
               "link": {
                 "path": "/docs/category/getting-started",
+                "label": "Getting Started"
+              }
+            }
+          }
+        },
+        {
+          "name": "v3.5.2",
+          "label": "v3.5.2",
+          "isLast": false,
+          "path": "/docs/v3.5.2",
+          "mainDocId": "install",
+          "docs": [
+            {
+              "id": "2a_modelling_objects_on_disk",
+              "path": "/docs/v3.5.2/2a_modelling_objects_on_disk",
+              "sidebar": "docs"
+            },
+            {
+              "id": "2b_modelling_objects_in_memory",
+              "path": "/docs/v3.5.2/2b_modelling_objects_in_memory",
+              "sidebar": "docs"
+            },
+            {
+              "id": "bulk",
+              "path": "/docs/v3.5.2/bulk",
+              "sidebar": "docs"
+            },
+            {
+              "id": "chemical_analysis",
+              "path": "/docs/v3.5.2/chemical_analysis",
+              "sidebar": "docs"
+            },
+            {
+              "id": "desorb",
+              "path": "/docs/v3.5.2/desorb",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-debugging",
+              "path": "/docs/v3.5.2/dev-debugging",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-overview",
+              "path": "/docs/v3.5.2/dev-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-python-wrap",
+              "path": "/docs/v3.5.2/dev-python-wrap",
+              "sidebar": "docs"
+            },
+            {
+              "id": "dev-web",
+              "path": "/docs/v3.5.2/dev-web",
+              "sidebar": "docs"
+            },
+            {
+              "id": "first_model",
+              "path": "/docs/v3.5.2/first_model",
+              "sidebar": "docs"
+            },
+            {
+              "id": "gas",
+              "path": "/docs/v3.5.2/gas",
+              "sidebar": "docs"
+            },
+            {
+              "id": "grain",
+              "path": "/docs/v3.5.2/grain",
+              "sidebar": "docs"
+            },
+            {
+              "id": "hydro",
+              "path": "/docs/v3.5.2/hydro"
+            },
+            {
+              "id": "install",
+              "path": "/docs/v3.5.2/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "network",
+              "path": "/docs/v3.5.2/network",
+              "sidebar": "docs"
+            },
+            {
+              "id": "notation",
+              "path": "/docs/v3.5.2/notation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "parameters",
+              "path": "/docs/v3.5.2/parameters",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-cloud",
+              "path": "/docs/v3.5.2/physics-cloud",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-collapse",
+              "path": "/docs/v3.5.2/physics-collapse",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-core",
+              "path": "/docs/v3.5.2/physics-core",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-hotcore",
+              "path": "/docs/v3.5.2/physics-hotcore",
+              "sidebar": "docs"
+            },
+            {
+              "id": "physics-shocks",
+              "path": "/docs/v3.5.2/physics-shocks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "pythonapi",
+              "path": "/docs/v3.5.2/pythonapi",
+              "sidebar": "docs"
+            },
+            {
+              "id": "running_a_grid",
+              "path": "/docs/v3.5.2/running_a_grid",
+              "sidebar": "docs"
+            },
+            {
+              "id": "trouble-compile",
+              "path": "/docs/v3.5.2/trouble-compile",
+              "sidebar": "docs"
+            },
+            {
+              "id": "trouble-integration",
+              "path": "/docs/v3.5.2/trouble-integration",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/getting-started",
+              "path": "/docs/v3.5.2/category/getting-started",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/tutorials",
+              "path": "/docs/v3.5.2/category/tutorials",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/chemistry",
+              "path": "/docs/v3.5.2/category/chemistry",
+              "sidebar": "docs"
+            },
+            {
+              "id": "/category/developer",
+              "path": "/docs/v3.5.2/category/developer",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/v3.5.2/category/getting-started",
                 "label": "Getting Started"
               }
             }
