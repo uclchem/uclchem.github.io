@@ -129,15 +129,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '1f4'),
+    component: ComponentCreator('/docs', '527'),
     routes: [
       {
         path: '/docs/next',
-        component: ComponentCreator('/docs/next', '5b8'),
+        component: ComponentCreator('/docs/next', 'd78'),
         routes: [
           {
             path: '/docs/next',
-            component: ComponentCreator('/docs/next', '490'),
+            component: ComponentCreator('/docs/next', 'd55'),
             routes: [
               {
                 path: '/docs/next/',
@@ -147,13 +147,13 @@ export default [
               },
               {
                 path: '/docs/next/2a_modelling_objects_on_disk',
-                component: ComponentCreator('/docs/next/2a_modelling_objects_on_disk', 'ddf'),
+                component: ComponentCreator('/docs/next/2a_modelling_objects_on_disk', '9db'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/next/2b_modelling_objects_in_memory',
-                component: ComponentCreator('/docs/next/2b_modelling_objects_in_memory', '948'),
+                component: ComponentCreator('/docs/next/2b_modelling_objects_in_memory', 'f33'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -189,7 +189,7 @@ export default [
               },
               {
                 path: '/docs/next/chemical_analysis',
-                component: ComponentCreator('/docs/next/chemical_analysis', '5f3'),
+                component: ComponentCreator('/docs/next/chemical_analysis', '57c'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -296,13 +296,13 @@ export default [
               },
               {
                 path: '/docs/next/pythonapi',
-                component: ComponentCreator('/docs/next/pythonapi', 'd4b'),
+                component: ComponentCreator('/docs/next/pythonapi', '29f'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/next/running_a_grid',
-                component: ComponentCreator('/docs/next/running_a_grid', '099'),
+                component: ComponentCreator('/docs/next/running_a_grid', '339'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -1087,34 +1087,225 @@ export default [
         ]
       },
       {
+        path: '/docs/v3.5.3',
+        component: ComponentCreator('/docs/v3.5.3', 'dec'),
+        routes: [
+          {
+            path: '/docs/v3.5.3',
+            component: ComponentCreator('/docs/v3.5.3', '423'),
+            routes: [
+              {
+                path: '/docs/v3.5.3/',
+                component: ComponentCreator('/docs/v3.5.3/', '9ce'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/2a_modelling_objects_on_disk',
+                component: ComponentCreator('/docs/v3.5.3/2a_modelling_objects_on_disk', '2ba'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/2b_modelling_objects_in_memory',
+                component: ComponentCreator('/docs/v3.5.3/2b_modelling_objects_in_memory', '4e2'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/bulk',
+                component: ComponentCreator('/docs/v3.5.3/bulk', 'fe2'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/category/chemistry',
+                component: ComponentCreator('/docs/v3.5.3/category/chemistry', '40d'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/category/developer',
+                component: ComponentCreator('/docs/v3.5.3/category/developer', '8cf'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/category/getting-started',
+                component: ComponentCreator('/docs/v3.5.3/category/getting-started', '687'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/category/tutorials',
+                component: ComponentCreator('/docs/v3.5.3/category/tutorials', 'abc'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/chemical_analysis',
+                component: ComponentCreator('/docs/v3.5.3/chemical_analysis', 'd40'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/desorb',
+                component: ComponentCreator('/docs/v3.5.3/desorb', '8cb'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/dev-debugging',
+                component: ComponentCreator('/docs/v3.5.3/dev-debugging', 'dbf'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/dev-overview',
+                component: ComponentCreator('/docs/v3.5.3/dev-overview', '67f'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/dev-python-wrap',
+                component: ComponentCreator('/docs/v3.5.3/dev-python-wrap', '4ba'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/dev-web',
+                component: ComponentCreator('/docs/v3.5.3/dev-web', '7e6'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/first_model',
+                component: ComponentCreator('/docs/v3.5.3/first_model', 'df6'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/gas',
+                component: ComponentCreator('/docs/v3.5.3/gas', '9dc'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/grain',
+                component: ComponentCreator('/docs/v3.5.3/grain', 'f4b'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/hydro',
+                component: ComponentCreator('/docs/v3.5.3/hydro', '28f'),
+                exact: true
+              },
+              {
+                path: '/docs/v3.5.3/network',
+                component: ComponentCreator('/docs/v3.5.3/network', 'c52'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/notation',
+                component: ComponentCreator('/docs/v3.5.3/notation', '9f4'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/parameters',
+                component: ComponentCreator('/docs/v3.5.3/parameters', 'c07'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/physics-cloud',
+                component: ComponentCreator('/docs/v3.5.3/physics-cloud', 'd6f'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/physics-collapse',
+                component: ComponentCreator('/docs/v3.5.3/physics-collapse', '498'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/physics-core',
+                component: ComponentCreator('/docs/v3.5.3/physics-core', '271'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/physics-hotcore',
+                component: ComponentCreator('/docs/v3.5.3/physics-hotcore', 'b42'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/physics-shocks',
+                component: ComponentCreator('/docs/v3.5.3/physics-shocks', 'e83'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/pythonapi',
+                component: ComponentCreator('/docs/v3.5.3/pythonapi', 'ce8'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/running_a_grid',
+                component: ComponentCreator('/docs/v3.5.3/running_a_grid', '6e1'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/trouble-compile',
+                component: ComponentCreator('/docs/v3.5.3/trouble-compile', '1bd'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/v3.5.3/trouble-integration',
+                component: ComponentCreator('/docs/v3.5.3/trouble-integration', '627'),
+                exact: true,
+                sidebar: "docs"
+              }
+            ]
+          }
+        ]
+      },
+      {
         path: '/docs',
-        component: ComponentCreator('/docs', 'a99'),
+        component: ComponentCreator('/docs', 'a91'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'e92'),
+            component: ComponentCreator('/docs', '5c8'),
             routes: [
               {
                 path: '/docs/',
-                component: ComponentCreator('/docs/', 'f2b'),
+                component: ComponentCreator('/docs/', '4f8'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/2a_modelling_objects_on_disk',
-                component: ComponentCreator('/docs/2a_modelling_objects_on_disk', '142'),
+                component: ComponentCreator('/docs/2a_modelling_objects_on_disk', 'dfe'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/2b_modelling_objects_in_memory',
-                component: ComponentCreator('/docs/2b_modelling_objects_in_memory', 'c05'),
+                component: ComponentCreator('/docs/2b_modelling_objects_in_memory', '21c'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/bulk',
-                component: ComponentCreator('/docs/bulk', 'a0c'),
+                component: ComponentCreator('/docs/bulk', '1aa'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -1144,132 +1335,132 @@ export default [
               },
               {
                 path: '/docs/chemical_analysis',
-                component: ComponentCreator('/docs/chemical_analysis', '75f'),
+                component: ComponentCreator('/docs/chemical_analysis', 'e20'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/desorb',
-                component: ComponentCreator('/docs/desorb', '96f'),
+                component: ComponentCreator('/docs/desorb', 'f36'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/dev-debugging',
-                component: ComponentCreator('/docs/dev-debugging', '776'),
+                component: ComponentCreator('/docs/dev-debugging', '1cd'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/dev-overview',
-                component: ComponentCreator('/docs/dev-overview', '300'),
+                component: ComponentCreator('/docs/dev-overview', 'd8e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/dev-python-wrap',
-                component: ComponentCreator('/docs/dev-python-wrap', '2ab'),
+                component: ComponentCreator('/docs/dev-python-wrap', 'fd4'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/dev-web',
-                component: ComponentCreator('/docs/dev-web', 'c6b'),
+                component: ComponentCreator('/docs/dev-web', 'e58'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/first_model',
-                component: ComponentCreator('/docs/first_model', '9f1'),
+                component: ComponentCreator('/docs/first_model', '7ac'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/gas',
-                component: ComponentCreator('/docs/gas', '7f2'),
+                component: ComponentCreator('/docs/gas', 'dd9'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/grain',
-                component: ComponentCreator('/docs/grain', '698'),
+                component: ComponentCreator('/docs/grain', '174'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/hydro',
-                component: ComponentCreator('/docs/hydro', '35c'),
+                component: ComponentCreator('/docs/hydro', '47b'),
                 exact: true
               },
               {
                 path: '/docs/network',
-                component: ComponentCreator('/docs/network', 'f28'),
+                component: ComponentCreator('/docs/network', 'b1d'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/notation',
-                component: ComponentCreator('/docs/notation', 'f2d'),
+                component: ComponentCreator('/docs/notation', 'e43'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/parameters',
-                component: ComponentCreator('/docs/parameters', '76e'),
+                component: ComponentCreator('/docs/parameters', '4a3'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/physics-cloud',
-                component: ComponentCreator('/docs/physics-cloud', 'c11'),
+                component: ComponentCreator('/docs/physics-cloud', 'b99'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/physics-collapse',
-                component: ComponentCreator('/docs/physics-collapse', '32e'),
+                component: ComponentCreator('/docs/physics-collapse', 'a1a'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/physics-core',
-                component: ComponentCreator('/docs/physics-core', '90c'),
+                component: ComponentCreator('/docs/physics-core', 'b37'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/physics-hotcore',
-                component: ComponentCreator('/docs/physics-hotcore', '029'),
+                component: ComponentCreator('/docs/physics-hotcore', 'c78'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/physics-shocks',
-                component: ComponentCreator('/docs/physics-shocks', '396'),
+                component: ComponentCreator('/docs/physics-shocks', '431'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/pythonapi',
-                component: ComponentCreator('/docs/pythonapi', '7d0'),
+                component: ComponentCreator('/docs/pythonapi', '09e'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/running_a_grid',
-                component: ComponentCreator('/docs/running_a_grid', '993'),
+                component: ComponentCreator('/docs/running_a_grid', '7a8'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/trouble-compile',
-                component: ComponentCreator('/docs/trouble-compile', 'ad9'),
+                component: ComponentCreator('/docs/trouble-compile', '9d9'),
                 exact: true,
                 sidebar: "docs"
               },
               {
                 path: '/docs/trouble-integration',
-                component: ComponentCreator('/docs/trouble-integration', 'e4c'),
+                component: ComponentCreator('/docs/trouble-integration', '578'),
                 exact: true,
                 sidebar: "docs"
               }

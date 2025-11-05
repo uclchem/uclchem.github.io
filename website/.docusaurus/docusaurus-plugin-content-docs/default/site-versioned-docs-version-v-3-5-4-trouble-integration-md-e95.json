@@ -1,0 +1,28 @@
+{
+  "id": "trouble-integration",
+  "title": "Integration",
+  "description": "My code just keeps running",
+  "source": "@site/versioned_docs/version-v3.5.4/trouble-integration.md",
+  "sourceDirName": ".",
+  "slug": "/trouble-integration",
+  "permalink": "/docs/trouble-integration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.5.4",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "trouble-integration",
+    "title": "Integration"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Compilation Issues",
+    "permalink": "/docs/trouble-compile"
+  },
+  "next": {
+    "title": "Core Physics",
+    "permalink": "/docs/physics-core"
+  }
+}

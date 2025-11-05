@@ -1,0 +1,28 @@
+{
+  "id": "gas",
+  "title": "Gas Phase Reactions",
+  "description": "Gas phase ODEs",
+  "source": "@site/versioned_docs/version-v3.5.4/chem-gas.md",
+  "sourceDirName": ".",
+  "slug": "/gas",
+  "permalink": "/docs/gas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "v3.5.4",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "gas",
+    "title": "Gas Phase Reactions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Notation",
+    "permalink": "/docs/notation"
+  },
+  "next": {
+    "title": "Grain Surface Reactions",
+    "permalink": "/docs/grain"
+  }
+}

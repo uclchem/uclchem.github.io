@@ -5,22 +5,22 @@
   "source": "@site/versioned_docs/version-v3.5.3/1_first_model.md",
   "sourceDirName": ".",
   "slug": "/first_model",
-  "permalink": "/docs/first_model",
+  "permalink": "/docs/v3.5.3/first_model",
   "draft": false,
   "unlisted": false,
   "tags": [],
   "version": "v3.5.3",
-  "lastUpdatedBy": null,
-  "lastUpdatedAt": null,
+  "lastUpdatedBy": "Gijs Vermariën",
+  "lastUpdatedAt": 1759326448000,
   "sidebarPosition": 1,
   "frontMatter": {},
   "sidebar": "docs",
   "previous": {
     "title": "Tutorials",
-    "permalink": "/docs/category/tutorials"
+    "permalink": "/docs/v3.5.3/category/tutorials"
   },
   "next": {
     "title": "Advanced Physical Modelling on Disk",
-    "permalink": "/docs/2a_modelling_objects_on_disk"
+    "permalink": "/docs/v3.5.3/2a_modelling_objects_on_disk"
   }
 }
