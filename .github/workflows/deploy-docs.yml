@@ -27,9 +27,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Enable notebook execution on CI by default for push and schedule events.
-      # Also allow manual override via workflow_dispatch input `run_notebooks`.
-      UCLCHEM_EXECUTE_NOTEBOOKS: ${{ (github.event_name == 'push') || (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true') }}
+      # Temporarily DISABLE notebook execution by default to shorten build time.
+      # Notebooks can still be executed manually via workflow_dispatch + input `run_notebooks: true`.
+      # To re-enable automatic execution on push/schedule, revert this change.
+      UCLCHEM_EXECUTE_NOTEBOOKS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true' }}
     
     steps:
     - name: Checkout documentation repository

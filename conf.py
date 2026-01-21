@@ -225,3 +225,27 @@ post_date_format_short = "%d %b %Y"
 blog_authors = {
     "UCLCHEM Team": ("UCLCHEM Team", "https://uclchem.github.io"),
 }
+
+# ---------------------------------------------------------------------------
+# Compatibility shim: ensure Sphinx builder provides a docwriter attribute
+# This addresses incompatibilities where extensions (e.g. ablog) expect the
+# builder to have a `docwriter` writer object. We attach an HTMLWriter on
+# `builder-inited` if it is missing to avoid AttributeError during rendering.
+# ---------------------------------------------------------------------------
+def _ensure_docwriter(app):
+    try:
+        from sphinx.writers.html import HTMLWriter
+        if not hasattr(app.builder, "docwriter"):
+            app.builder.docwriter = HTMLWriter(app.builder)
+            app.logger.debug("Attached HTMLWriter to app.builder for ablog compatibility")
+    except Exception as exc:
+        # Use logger to surface the issue in build logs without failing the build
+        try:
+            app.logger.warning(f"Could not attach HTMLWriter to builder: {exc}")
+        except Exception:
+            pass
+
+
+def setup(app):
+    app.connect("builder-inited", _ensure_docwriter)
+    return {"version": "0.1"}
