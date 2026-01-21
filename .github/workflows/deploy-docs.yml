@@ -1,0 +1,155 @@
+name: Build and Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Rebuild weekly to catch UCLCHEM updates
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  workflow_dispatch:  # Allow manual triggers
+    inputs:
+      run_notebooks:
+        description: 'Run notebooks during build (true/false)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Enable notebook execution on CI by default for push and schedule events.
+      # Also allow manual override via workflow_dispatch input `run_notebooks`.
+      UCLCHEM_EXECUTE_NOTEBOOKS: ${{ (github.event_name == 'push') || (github.event_name == 'schedule') || (github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true') }}
+    
+    steps:
+    - name: Checkout documentation repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gfortran
+    
+    - name: Sync notebooks (copy .py sources from UCLCHEM and convert)
+      run: |
+        echo "Cloning UCLCHEM repository..."
+        git clone --depth 1 https://github.com/uclchem/UCLCHEM.git /tmp/uclchem
+
+        echo "Copying python notebook sources..."
+        mkdir -p notebooks
+        if ls /tmp/uclchem/notebooks/*.py 1> /dev/null 2>&1; then
+          cp /tmp/uclchem/notebooks/*.py notebooks/
+        fi
+
+        echo "Copying notebook assets..."
+        if [ -d "/tmp/uclchem/notebooks/assets" ]; then
+          cp -r /tmp/uclchem/notebooks/assets notebooks/
+        fi
+
+        echo "Copying logo..."
+        mkdir -p _static
+        if [ -f "/tmp/uclchem/answer/uclchem.png" ]; then
+          cp /tmp/uclchem/answer/uclchem.png _static/logo.png
+        fi
+
+        echo "Convert .py to .ipynb using jupytext (installing jupytext)..."
+        pip install --upgrade jupytext nbformat || true
+        if ls notebooks/*.py 1> /dev/null 2>&1; then
+          jupytext --to ipynb notebooks/*.py || true
+        fi
+
+        echo "Strip outputs from generated notebooks (clean state)..."
+        python .github/scripts/strip_outputs.py
+
+
+        echo "✓ Notebook sources copied and converted"
+        ls -1 notebooks/*.ipynb | wc -l
+    
+    - name: Install UCLCHEM from GitHub
+      run: |
+        echo "Installing UCLCHEM..."
+        pip install git+https://github.com/uclchem/UCLCHEM.git
+
+        echo "✓ UCLCHEM installed!"
+        python -c "import uclchem; print('Package imported successfully')" || echo "Import check failed"
+
+    - name: Execute notebooks (on CI or when explicitly requested)
+      if: ${{ env.UCLCHEM_EXECUTE_NOTEBOOKS == 'True' || env.UCLCHEM_EXECUTE_NOTEBOOKS == 'true' || (github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true') }}
+      run: |
+        echo "Executing notebooks (this may take some time)..."
+        pip install --upgrade nbconvert nbclient jupyter
+        for nb in notebooks/[0-9]*.ipynb; do
+          echo "Running $nb"
+          jupyter nbconvert --to notebook --inplace --ExecutePreprocessor.timeout=3600 --execute "$nb" || echo "Notebook $nb failed (continuing)"
+        done
+        echo "Notebook execution step complete"
+    
+    - name: Install documentation dependencies
+      run: |
+        echo "Installing documentation tools..."
+        pip install -r requirements.txt
+        echo "✓ Documentation dependencies installed!"
+    
+    - name: Clear notebook cache
+      run: |
+        echo "Clearing notebook execution cache..."
+        rm -rf _build/.jupyter_cache
+        echo "✓ Cache cleared!"
+    
+    - name: Build Sphinx documentation
+      run: |
+        echo "Building documentation..."
+        make html
+        
+        echo "✓ Build complete!"
+        
+        echo "Build verification:"
+        if [ -d "_build/html/api" ]; then
+          echo "  ✓ API documentation: $(find _build/html/api -name '*.html' | wc -l) pages"
+        fi
+        
+        if [ -d "_build/html/notebooks" ]; then
+          echo "  ✓ Notebooks: $(ls -1 _build/html/notebooks/*.html 2>/dev/null | wc -l) rendered"
+        fi
+        
+        echo "  Total HTML pages: $(find _build/html -name '*.html' | wc -l)"
+    
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./_build/html
+  
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

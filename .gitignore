@@ -1,0 +1,52 @@
+# Sphinx build outputs
+_build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Jupyter cache (regenerated on each CI build)
+.jupyter_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local development
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+notebooks/

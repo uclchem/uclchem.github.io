@@ -1,0 +1,11 @@
+---
+blogpost: true
+date: 2019-07-08
+author: jonholdship
+---
+
+# Ambipolar diffusion and the molecular abundances inprestellar cores
+
+[Felix Priestley](https://fpriestley.github.io/) has used UCLCHEM in an investigation of the chemical differences caused by the magnetic fields in prestellar cores. You can find [the paper here](https://arxiv.org/pdf/1907.02736.pdf) and the abstract below.
+
+We investigate differences in the molecular abundances between magnetically super- and subcritical pre-stellar cores, performing three-dimensional non-ideal magnetohydrodynamical (MHD) simulations with varying densities and magnetic field strengths, and post-processing the results with a time-dependent gas-grain chemical code. Most molecular species show significantly more central depletion in subcritical models, due to the longer duration of collapse. However, the directly observable quantities - the molecule to hydrogen column density ratios - are generally too similar for observational data to discriminate between models. The profiles of N2H+ and HCO+ show qualitative differences between supercritical and subcritical models on scales of 0.01 pc, which may allow the two cases to be distinguished. However, this requires knowledge of the hydrogen column density, which is not directly measureable, and predicted line intensity profiles from radiative transfer modelling are similar for these molecules. Other commonly observed species, such as HCN and CH3OH, have line intensity profiles that differ more strongly between models, and so are more promising as tracers of the mechanism of cloud collapse.
