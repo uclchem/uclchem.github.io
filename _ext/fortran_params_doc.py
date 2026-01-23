@@ -43,6 +43,21 @@ def generate_parameter_docs(app: Sphinx) -> None:
         f.write("This section documents all Fortran modules and their parameters ")
         f.write("as they exist in the compiled code.\n\n")
         
+        # Runtime Access - top-level example
+        f.write("## Accessing Fortran Parameters at Runtime\n\n")
+        f.write("The Fortran parameters and functions are accessed through the `uclchem.advanced.GeneralSettings()` interface:\n\n")
+        f.write("```python\n")
+        f.write("import uclchem\n\n")
+        f.write("settings = uclchem.advanced.GeneralSettings()\n\n")
+        f.write("# Read parameter value\n")
+        f.write("value = settings.defaultparameters.abstol_factor.get()\n\n")
+        f.write("# Modify parameter (non-PARAMETER only)\n")
+        f.write("settings.defaultparameters.abstol_factor.set(new_value)\n")
+        f.write("```\n\n")
+        f.write("For more detailed examples of interacting with Fortran parameters, see:\n")
+        f.write("- [Advanced Settings](../../tutorials/6_advanced_settings.html): Parameter modification examples\n")
+        f.write("- [Heating & Cooling Settings](../../tutorials/7_heating_cooling_settings.html): Physical parameter tuning\n\n")
+        
         # List all modules
         f.write("## Available Modules\n\n")
         for module_name in module_names:
@@ -50,13 +65,35 @@ def generate_parameter_docs(app: Sphinx) -> None:
             n_settings = len(module._settings)
             f.write(f"- **[{module_name}]({module_name}.md)**: {n_settings} parameters/variables\n")
         
-        f.write("\n## Runtime Access\n\n")
-        f.write("Access these parameters at runtime:\n\n")
-        f.write("```python\n")
-        f.write("import uclchem\n\n")
-        f.write("settings = uclchem.advanced.GeneralSettings()\n")
-        f.write("print(settings.defaultparameters.initialdens.get())  # 100.0\n")
-        f.write("```\n\n")
+        f.write("\n## Fortran Functions\n\n")
+        f.write("Key Fortran functions available through the wrapper:\n\n")
+        
+        # Extract available functions from uclchem module
+        try:
+            import uclchem
+            import inspect
+            
+            # Get function signatures
+            funcs = []
+            for name, obj in inspect.getmembers(uclchem):
+                if inspect.isbuiltin(obj) or (hasattr(obj, '__module__') and 'uclchem' in str(obj.__module__)):
+                    try:
+                        sig = inspect.signature(obj)
+                        funcs.append((name, sig))
+                    except (ValueError, TypeError):
+                        pass
+            
+            if funcs:
+                f.write("| Function | Signature |\n")
+                f.write("|----------|----------|\n")
+                for fname, sig in sorted(funcs)[:15]:  # Limit to first 15
+                    f.write(f"| `{fname}` | `{sig}` |\n")
+            else:
+                f.write("*Function signatures available in module documentation*\n")
+        except Exception as e:
+            logger.warning(f"Could not extract function signatures: {e}")
+        
+        f.write("\n")
         
         # Add toctree for navigation
         f.write("```{toctree}\n")
@@ -145,21 +182,11 @@ def generate_parameter_docs(app: Sphinx) -> None:
                 
                 f.write("```\n\n")
             
-            # Add runtime access example
+            # Add runtime access note (pointing to overview page)
             f.write("## Runtime Access\n\n")
-            f.write("```python\n")
-            f.write("import uclchem\n\n")
-            f.write("settings = uclchem.advanced.GeneralSettings()\n")
-            if user_params:
-                first_param = next(iter(user_params.keys()))
-                f.write(f"# Read parameter value\n")
-                f.write(f"value = settings.{module_name}.{first_param}.get()\n\n")
-                f.write(f"# Modify parameter (non-PARAMETER only)\n")
-                f.write(f"settings.{module_name}.{first_param}.set(new_value)\n")
-            else:
-                f.write(f"# List all settings in this module\n")
-                f.write(f"settings.{module_name}.print_settings()\n")
-            f.write("```\n\n")
+            f.write(f"Access `{module_name}` parameters at runtime using `uclchem.advanced.GeneralSettings()`.\n")
+            f.write("See [Accessing Fortran Parameters](index.html#accessing-fortran-parameters-at-runtime) ")
+            f.write("on the main Fortran API page for examples.\n\n")
     
     logger.info(f"Generated Fortran parameter docs in {output_dir}")
 
