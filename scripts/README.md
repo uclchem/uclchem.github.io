@@ -1,20 +1,27 @@
 # Multi-Version Documentation Build System
 
-A Python-based system for building documentation for multiple UCLCHEM versions with version-specific APIs, notebooks, and content.
+A Python-based system for building documentation for multiple UCLCHEM versions with version-specific APIs, notebooks, and content. Features intelligent notebook artifact handling and GitHub Actions integration.
 
 ## Quick Start
 
 ### Local Development
 
 ```bash
-# From uclchem.github.io directory
+# Simple build (uses notebooks without outputs)
 bash scripts/build_multiversion_local.sh
+
+# With GitHub token (downloads pre-executed notebooks)
+GITHUB_TOKEN=your_token bash scripts/build_multiversion_local.sh
+
+# Direct Python usage with artifacts
+python3 scripts/build_docs.py --github-token your_token
 ```
 
-Or directly with Python:
+### CI/CD Build
 
 ```bash
-python3 scripts/build_docs.py --config scripts/versions.yaml
+# In GitHub Actions (token available automatically)
+python3 scripts/build_docs.py --ci
 ```
 
 ### View Built Documentation
@@ -24,6 +31,31 @@ cd _build/html
 python3 -m http.server 8000
 # Open http://localhost:8000
 ```
+
+## Key Features
+
+### 🚀 Pre-Executed Notebooks
+- Automatically downloads pre-executed notebooks from GitHub Actions artifacts
+- Falls back to notebooks without outputs if artifacts unavailable  
+- Can trigger notebook execution remotely and wait for completion
+
+### 📋 Multi-Version Support
+- Build documentation for multiple UCLCHEM versions simultaneously
+- Version-specific APIs, notebooks, and content
+- Automatic version switching in built documentation
+
+### 🔧 Intelligent Workflow
+The build system follows this workflow:
+1. **Check for artifacts**: Look for pre-executed notebooks in GitHub Actions artifacts
+2. **Download if available**: Use existing notebooks with outputs
+3. **Trigger if missing**: Start GitHub Actions to execute notebooks remotely
+4. **Wait for completion**: Monitor action progress and download fresh artifacts
+5. **Fallback gracefully**: Use notebooks without outputs if all else fails
+
+### 🏗️ Robust Architecture
+- Modular Python design replacing legacy bash scripts
+- Comprehensive error handling and logging
+- Cross-platform compatibility
 
 ## Architecture
 
@@ -37,6 +69,26 @@ scripts/
 ├── build_multiversion_local.sh      # Bash wrapper for local use
 └── build_multiversion_local.sh.old  # Legacy bash script (for reference)
 ```
+
+### GitHub Token Configuration
+
+For artifact access, set up a GitHub token:
+
+```bash
+# Option 1: Environment variable
+export GITHUB_TOKEN=your_personal_access_token
+
+# Option 2: Command line argument  
+python3 scripts/build_docs.py --github-token your_token
+
+# Option 3: In GitHub Actions (automatic)
+# Token is available as ${{ secrets.GITHUB_TOKEN }}
+```
+
+**Token Requirements:**
+- `repo` scope for private repositories
+- `actions:read` for downloading artifacts
+- `actions:write` for triggering workflows
 
 ### Configuration: versions.yaml
 
@@ -60,12 +112,22 @@ build:
 
 ## How It Works
 
+### Notebook Workflow
+
+For each version, the system:
+
+1. **Check GitHub Actions artifacts** for pre-executed notebooks
+2. **Download artifacts** if available (includes outputs)
+3. **Trigger notebook execution** if artifacts missing
+4. **Wait for completion** (up to 20 minutes)
+5. **Fallback to git extraction** if GitHub Actions fails
+
 ### Build Process
 
 For each version in `versions.yaml`:
 
-1. **Extract notebooks** from git ref using `git archive`
-2. **Extract full repo** for UCLCHEM installation
+1. **Acquire notebooks** (artifacts or git extraction)
+2. **Extract full repo** for UCLCHEM installation  
 3. **Install UCLCHEM** in conda environment
 4. **Create notebooks symlink** to version-specific notebooks
 5. **Run Sphinx** with version-specific environment variables
@@ -77,13 +139,13 @@ The build sets these for each Sphinx build:
 
 - `DOCS_VERSION`: Version identifier (e.g., "develop")
 - `DOCS_DISPLAY_NAME`: Human-readable name
-- `NOTEBOOKS_PATH`: Path to extracted notebooks
+- `NOTEBOOKS_PATH`: Path to notebooks (with or without outputs)
 - `UCLCHEM_SOURCE_PATH`: Path to source code for AutoAPI
 
 ### Version-Specific Content
 
 Each version gets:
-- ✅ Version-specific notebooks from that git ref
+- ✅ Version-specific notebooks from that git ref (with outputs if available)
 - ✅ Version-specific Python API (different modules per version)
 - ✅ Version-specific Fortran API (if `uclchem.advanced` available)
 - ✅ Independent Sphinx build with its own dependencies

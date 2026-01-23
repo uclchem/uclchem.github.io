@@ -2,24 +2,26 @@
 # This file defines which versions to build and their properties
 
 versions:
+  - git_ref: v3.5.5
+    version_name: v3.5.5
+    display_name: v3.5.5 (stable)
+    url_path: /v3.5.5/
+    preferred: true
+    execute: false
+    description: Latest stable release
+
   - git_ref: develop
     version_name: develop
     display_name: Development
     url_path: /develop/
     preferred: false
+    execute: false
     description: Latest development version with cutting-edge features
-
-  - git_ref: main
-    version_name: v3.5.4
-    display_name: v3.5.4 (stable)
-    url_path: /v3.5.4/
-    preferred: true
-    description: Stable release version
 
 # Build configuration
 build:
   # Default redirect target (usually the preferred/stable version)
-  default_version: v3.5.4
+  default_version: v3.5.5
   
   # Sphinx build options
   sphinx:
@@ -29,7 +31,7 @@ build:
   # Notebook handling
   notebooks:
     execute: false  # Set to true to execute notebooks during build
-    timeout: 3600
+    timeout: 7200
     
   # Logging
   logs:

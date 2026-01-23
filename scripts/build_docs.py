@@ -6,32 +6,46 @@ Builds documentation for multiple UCLCHEM versions from different git refs.
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional
-import yaml
 
+import yaml
 from build_utils import (
-    log, LogLevel, BuildError,
-    git_extract, install_package, check_fortran_available,
-    run_sphinx_build, create_symlink, clean_directory,
-    detect_environment, get_python_paths, validate_prerequisites
+    BuildError,
+    LogLevel,
+    check_fortran_available,
+    check_notebook_artifacts,
+    clean_directory,
+    create_symlink,
+    detect_environment,
+    download_notebook_artifacts,
+    get_python_paths,
+    git_extract,
+    install_package,
+    log,
+    run_sphinx_build,
+    trigger_notebook_action,
+    validate_prerequisites,
 )
 
 
 class MultiVersionBuilder:
     """Orchestrates multi-version documentation builds."""
     
-    def __init__(self, config_path: Path, uclchem_repo: Optional[Path] = None):
+    def __init__(self, config_path: Path, uclchem_repo: Optional[Path] = None, github_token: Optional[str] = None):
         """
         Initialize builder.
         
         Args:
             config_path: Path to versions.yaml configuration file
             uclchem_repo: Optional path to UCLCHEM repository (auto-detect if not provided)
+            github_token: Optional GitHub token for artifact access
         """
         self.config_path = config_path.resolve()
         self.config = self._load_config()
+        self.github_token = github_token or os.getenv('GITHUB_TOKEN')
         
         # Determine paths
         self.docs_root = self.config_path.parent.parent  # scripts/versions.yaml -> repo root
@@ -53,6 +67,11 @@ class MultiVersionBuilder:
         log(f"Documentation root: {self.docs_root}")
         log(f"UCLCHEM repository: {self.uclchem_repo}")
         log(f"Build output: {self.build_root}")
+        
+        if self.github_token:
+            log("GitHub token available for artifact access", LogLevel.SUCCESS)
+        else:
+            log("No GitHub token - artifacts will not be available", LogLevel.WARNING)
     
     def _load_config(self) -> Dict:
         """Load and validate configuration from YAML file."""
@@ -89,6 +108,73 @@ class MultiVersionBuilder:
         self.temp_dir.mkdir(parents=True, exist_ok=True)
         log("Cleanup complete", LogLevel.SUCCESS)
     
+    def _handle_notebooks(self, git_ref: str, version_name: str, notebooks_temp: Path) -> bool:
+        """
+        Handle notebook acquisition - try artifacts first, fallback to git extraction.
+        
+        Args:
+            git_ref: Git reference
+            version_name: Version identifier
+            notebooks_temp: Directory to place notebooks
+            
+        Returns:
+            True if notebooks acquired successfully
+        """
+        log(f"Acquiring notebooks for {git_ref}...")
+        
+        if self.github_token:
+            # Try to get pre-executed notebooks from artifacts
+            artifact_info = check_notebook_artifacts(git_ref, self.github_token)
+            
+            if artifact_info:
+                # Show which artifact was selected
+                best_artifact = artifact_info['artifacts'][0]
+                parsed = best_artifact.get('parsed_info', {})
+                artifact_version = parsed.get('version', 'unknown')
+                artifact_commit = parsed.get('commit', 'unknown')
+                
+                if artifact_version == git_ref:
+                    log(f"Found exact match artifact for {git_ref} (commit: {artifact_commit})", LogLevel.SUCCESS)
+                elif git_ref in artifact_version or artifact_version in git_ref:
+                    log(f"Found partial match artifact: {artifact_version} for {git_ref} (commit: {artifact_commit})", LogLevel.INFO)
+                else:
+                    log(f"Using closest available artifact: {artifact_version} for {git_ref} (commit: {artifact_commit})", LogLevel.WARNING)
+                
+                # Download existing artifacts
+                if download_notebook_artifacts(artifact_info, notebooks_temp, self.github_token):
+                    log("Using pre-executed notebooks from artifacts", LogLevel.SUCCESS)
+                    return True
+                else:
+                    log("Failed to download artifacts, trying to trigger action...", LogLevel.WARNING)
+            else:
+                log("No matching artifacts found, attempting to trigger notebook execution...", LogLevel.WARNING)
+            
+            # Try to trigger notebook execution action
+            if trigger_notebook_action(git_ref, self.github_token, wait_for_completion=True):
+                # Try downloading again after trigger
+                artifact_info = check_notebook_artifacts(git_ref, self.github_token)
+                if artifact_info and download_notebook_artifacts(artifact_info, notebooks_temp, self.github_token):
+                    log("Successfully obtained fresh notebook artifacts", LogLevel.SUCCESS)
+                    return True
+        
+        # Fallback: extract notebooks without outputs from git
+        log("Falling back to notebooks without outputs", LogLevel.WARNING)
+        notebooks_temp.mkdir(parents=True, exist_ok=True)
+        
+        file_count = git_extract(
+            self.uclchem_repo,
+            git_ref,
+            notebooks_temp,
+            subpath="notebooks"
+        )
+        
+        if file_count > 0 and (notebooks_temp / "notebooks").exists():
+            log(f"Extracted {file_count} notebook files (no outputs)", LogLevel.SUCCESS)
+            return True
+        else:
+            log("Failed to extract notebooks", LogLevel.ERROR)
+            return False
+    
     def build_version(self, version_config: Dict) -> bool:
         """
         Build documentation for a single version.
@@ -114,22 +200,17 @@ class MultiVersionBuilder:
         output_dir = self.build_root / version_name
         
         try:
-            # Step 1: Extract notebooks
-            log(f"Extracting notebooks from {git_ref}...")
-            notebooks_temp.mkdir(parents=True, exist_ok=True)
-            
-            file_count = git_extract(
-                self.uclchem_repo,
-                git_ref,
-                notebooks_temp,
-                subpath="notebooks"
-            )
+            # Step 1: Handle notebooks (artifacts or git extraction)
+            if not self._handle_notebooks(git_ref, version_name, notebooks_temp):
+                raise BuildError(f"Failed to acquire notebooks for {git_ref}")
             
             # Verify notebooks directory exists
             if not (notebooks_temp / "notebooks").exists():
-                raise BuildError(f"No notebooks directory found in {git_ref}")
+                raise BuildError(f"No notebooks directory found after acquisition")
             
-            log(f"Extracted {file_count} files", LogLevel.SUCCESS)
+            # Count notebooks
+            notebook_files = list((notebooks_temp / "notebooks").glob("*.ipynb"))
+            log(f"Found {len(notebook_files)} notebook files", LogLevel.SUCCESS)
             
             # Step 2: Extract full repository for installation
             log(f"Extracting repository from {git_ref}...")
@@ -398,6 +479,10 @@ def main():
         help="Path to UCLCHEM repository (auto-detected if not provided)"
     )
     parser.add_argument(
+        "--github-token",
+        help="GitHub API token for accessing artifacts (or set GITHUB_TOKEN env var)"
+    )
+    parser.add_argument(
         "--ci",
         action="store_true",
         help="Run in CI mode (non-interactive)"
@@ -408,7 +493,8 @@ def main():
     try:
         builder = MultiVersionBuilder(
             config_path=args.config,
-            uclchem_repo=args.uclchem_repo
+            uclchem_repo=args.uclchem_repo,
+            github_token=args.github_token
         )
         exit_code = builder.build_all()
         sys.exit(exit_code)

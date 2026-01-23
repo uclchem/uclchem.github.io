@@ -1,0 +1,62 @@
+name: Test Build System
+
+on:
+  workflow_dispatch:
+    inputs:
+      git_ref:
+        description: 'Git reference to build'
+        required: true
+        default: 'v3.5.5'
+      github_token:
+        description: 'GitHub token for API access'
+        required: false
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Test artifact detection
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 -c "
+          import os
+          from scripts.build_utils import check_notebook_artifacts
+          
+          git_ref = '${{ github.event.inputs.git_ref }}'
+          token = os.environ.get('GITHUB_TOKEN')
+          
+          print(f'Testing artifact detection for: {git_ref}')
+          print(f'Using token: {\"Yes\" if token else \"No\"}')
+          
+          artifact_info = check_notebook_artifacts(git_ref, token)
+          if artifact_info:
+              print('✓ Found artifacts:')
+              for i, artifact in enumerate(artifact_info['artifacts'][:3]):
+                  parsed = artifact.get('parsed_info', {})
+                  score = getattr(artifact, 'score', 'unknown')
+                  print(f'  {i+1}. {artifact[\"name\"]} (score: {score})')
+                  print(f'     → version: {parsed.get(\"version\", \"unknown\")}, commit: {parsed.get(\"commit\", \"unknown\")}')
+          else:
+              print('No artifacts found')
+          "
+
+      - name: Test build with artifacts
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          echo "Testing build system..."
+          python3 scripts/build_docs.py --help

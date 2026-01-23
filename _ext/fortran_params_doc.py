@@ -6,6 +6,7 @@ comprehensive parameter documentation from the compiled Fortran modules.
 
 import os
 from typing import Any, Dict
+
 from sphinx.application import Sphinx
 from sphinx.util import logging
 
@@ -70,8 +71,9 @@ def generate_parameter_docs(app: Sphinx) -> None:
         
         # Extract available functions from uclchem module
         try:
-            import uclchem
             import inspect
+
+            import uclchem
             
             # Get function signatures
             funcs = []

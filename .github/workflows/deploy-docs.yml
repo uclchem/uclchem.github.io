@@ -8,10 +8,9 @@ on:
     - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
   workflow_dispatch:  # Allow manual triggers
     inputs:
-      run_notebooks:
-        description: 'Run notebooks during build (true/false)'
+      github_token:
+        description: 'GitHub token for artifact access'
         required: false
-        default: 'false'
 
 permissions:
   contents: read
@@ -24,34 +23,31 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  collect_versions:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
-    steps:
-      - name: Checkout helper scripts
-        uses: actions/checkout@v4
-
-      - name: Collect recent UCLCHEM tags
-        id: set-matrix
-        run: |
-          # Default latest branch is 'main' (adjust with --latest-branch if needed)
-          MATRIX_JSON=$(python scripts/collect_uclchem_versions.py --count 6 --latest-branch main)
-          # Use $GITHUB_OUTPUT to set step output safely (no deprecated set-output usage)
-          echo "matrix=$MATRIX_JSON" >> $GITHUB_OUTPUT
-
-  build:
-    needs: collect_versions
-    runs-on: ubuntu-latest
-    strategy:
-      matrix: ${{ fromJson(needs.collect_versions.outputs.matrix) }}
-    env:
-      # Notebook execution is disabled by default unless explicitly requested
-      UCLCHEM_EXECUTE_NOTEBOOKS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true' }}
-
+    
     steps:
     - name: Checkout documentation repository
       uses: actions/checkout@v4
+      with:
+        path: 'uclchem.github.io'
+    
+    - name: Checkout UCLCHEM repository
+      uses: actions/checkout@v4
+      with:
+        repository: 'uclchem/uclchem'
+        path: 'uclchem'
+        fetch-depth: 0  # Fetch all history for all branches and tags
+
+    - name: Prepare UCLCHEM repository refs
+      working-directory: ./uclchem
+      run: |
+        # Create local branches for specific refs we need
+        # This makes act behave like GitHub Actions
+        git fetch origin develop:develop 2>/dev/null || echo "develop already exists"
+        echo "Available refs:"
+        git branch
+        git tag | grep -E "^v3\." | tail -5
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -59,280 +55,39 @@ jobs:
         python-version: '3.12'
         cache: 'pip'
 
-    - name: Prepare working directory
-      run: |
-        echo "Building for matrix item: ref=${{ matrix.ref }} name=${{ matrix.name }}"
-        BUILD_OUTPUT="_build/html/versions/${{ matrix.name }}"
-        mkdir -p "$BUILD_OUTPUT"
-        echo "BUILD_OUTPUT=$BUILD_OUTPUT" >> $GITHUB_ENV
-
     - name: Install system dependencies
       run: |
         sudo apt-get update
         sudo apt-get install -y gfortran
 
-    - name: Install UCLCHEM (for this version)
-      run: |
-        if [ "${{ matrix.ref }}" = "develop" ]; then
-          echo "Installing develop version..."
-          pip install --upgrade git+https://github.com/uclchem/UCLCHEM.git
-        else
-          echo "Installing tag ${{ matrix.ref }}..."
-          pip install --upgrade git+https://github.com/uclchem/UCLCHEM.git@${{ matrix.ref }}
-        fi
-        python - <<'PY'
-          import importlib.metadata
-          try:
-              print(importlib.metadata.version('uclchem'))
-          except Exception:
-              print('0.0.0')
-        PY
-        echo "✓ UCLCHEM installed for matrix item"
-
-    - name: Sync notebooks (convert .py sources if present)
-      run: |
-        echo "Cloning UCLCHEM repository for assets..."
-        git clone --depth 1 https://github.com/uclchem/UCLCHEM.git /tmp/uclchem
-        mkdir -p notebooks
-        if ls /tmp/uclchem/notebooks/*.py 1> /dev/null 2>&1; then
-          cp /tmp/uclchem/notebooks/*.py notebooks/ || true
-          pip install --upgrade jupytext nbformat || true
-          jupytext --to ipynb notebooks/*.py || true
-        fi
-        if [ -d "/tmp/uclchem/notebooks/assets" ]; then
-          cp -r /tmp/uclchem/notebooks/assets notebooks/ || true
-        fi
-        if [ -f "/tmp/uclchem/answer/uclchem.png" ]; then
-          cp /tmp/uclchem/answer/uclchem.png _static/logo.png || true
-        fi
-
-    - name: Try download executed notebooks from UCLCHEM releases
-      id: try-download-release
-      run: |
-        set -e
-        REF=${{ matrix.ref }}
-        mkdir -p notebooks
-        echo "Searching for release artifact for ref=$REF in uclchem/UCLCHEM"
-        # Fetch latest release whose tag contains the ref (docs-<ref>-*)
-        RELEASE_TAG=$(gh api repos/uclchem/UCLCHEM/releases --jq '.[] | select(.tag_name | test("^docs-" + env.REF)) | .tag_name' -F REF="$REF" | head -n1 || true)
-        if [ -n "$RELEASE_TAG" ]; then
-          echo "Found release: $RELEASE_TAG"
-          # Download the first asset named executed-notebooks
-          ASSET_URL=$(gh api repos/uclchem/UCLCHEM/releases/tags/$RELEASE_TAG --jq '.assets[] | select(.name=="executed-notebooks") | .browser_download_url' || true)
-          if [ -n "$ASSET_URL" ]; then
-            echo "Downloading asset: $ASSET_URL"
-            curl -L -o executed_notebooks.zip "$ASSET_URL"
-            unzip executed_notebooks.zip -d notebooks/ || true
-            echo "NOTEBOOKS_PRECOMPUTED=true" >> $GITHUB_ENV
-          else
-            echo "No executed-notebooks asset in release"
-            echo "NOTEBOOKS_PRECOMPUTED=false" >> $GITHUB_ENV
-          fi
-        else
-          echo "No docs release found for ref=$REF"
-          echo "NOTEBOOKS_PRECOMPUTED=false" >> $GITHUB_ENV
-        fi
-      continue-on-error: true
-
-    - name: Check for precomputed notebooks (fallback to artifact in same run)
-      if: env.NOTEBOOKS_PRECOMPUTED != 'true'
-      run: |
-        if ls notebooks/*.ipynb 1> /dev/null 2>&1; then
-          echo "NOTEBOOKS_PRECOMPUTED=true" >> $GITHUB_ENV
-          echo "Found precomputed notebooks. Will skip execution."
-        else
-          echo "NOTEBOOKS_PRECOMPUTED=false" >> $GITHUB_ENV
-        fi
-
-    - name: Strip outputs
-      run: python .github/scripts/strip_outputs.py
-
-    - name: Compute SITE_VERSION
-      id: compute_version
-      run: |
-        python - <<'PY'
-          import importlib.metadata, json, os
-          try:
-              ver = importlib.metadata.version('uclchem')
-          except Exception:
-              ver = '0.0.0'
-          print('SITE_VERSION='+ver)
-          print(json.dumps({'site_version': ver}))
-        PY
-
-    - name: Build Sphinx documentation
-      run: |
-        echo "Building Sphinx for matrix item: ${ { matrix.name } }"
-        # Build into default _build/html then move into versioned output
-        SITE_VERSION="$(python - <<'PY'
-import importlib.metadata
-try:
-    print(importlib.metadata.version('uclchem'))
-except Exception:
-    print('0.0.0')
-PY)"
-        echo "SITE_VERSION=$SITE_VERSION" >> $GITHUB_ENV
-        echo "Exporting SITE_VERSION: $SITE_VERSION"
-        export SITE_VERSION="$SITE_VERSION"
-        pip install -r requirements.txt
-        rm -rf _build
-        make html
-        mkdir -p "$BUILD_OUTPUT"
-        mv _build/html/* "$BUILD_OUTPUT/" || true
-
-    - name: Report build artifact size
-      run: |
-        du -sh "$BUILD_OUTPUT" || true
-
-    - name: Upload version artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: "docs-${{ matrix.name }}"
-        path: "$BUILD_OUTPUT"
-
-  assemble_versions:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download built version artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: docs-*  # grabs all versioned artifacts
-          path: assembled_versions
-
-      - name: Merge versions into site root
-        run: |
-          mkdir -p _build/html/versions
-          for d in assembled_versions/*; do
-            name=$(basename "$d")
-            # artifact was uploaded as docs-<name>
-            version=${name#docs-}
-            mkdir -p "_build/html/versions/$version"
-            cp -r "$d"/* "_build/html/versions/$version/" || true
-          done
-
-      - name: Generate versions.json
-        run: |
-          python scripts/generate_versions_json.py _build/html/versions > _build/html/versions.json
-
-      - name: Upload Pages artifact (all versions)
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_build/html
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-        cache: 'pip'
-    
-    - name: Install system dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y gfortran
-    
-    - name: Sync notebooks (copy .py sources from UCLCHEM and convert)
-      run: |
-        echo "Cloning UCLCHEM repository..."
-        git clone --depth 1 https://github.com/uclchem/UCLCHEM.git /tmp/uclchem
-
-        echo "Copying python notebook sources..."
-        mkdir -p notebooks
-        if ls /tmp/uclchem/notebooks/*.py 1> /dev/null 2>&1; then
-          cp /tmp/uclchem/notebooks/*.py notebooks/
-        fi
-
-        echo "Copying notebook assets..."
-        if [ -d "/tmp/uclchem/notebooks/assets" ]; then
-          cp -r /tmp/uclchem/notebooks/assets notebooks/
-        fi
-
-        echo "Copying logo..."
-        mkdir -p _static
-        if [ -f "/tmp/uclchem/answer/uclchem.png" ]; then
-          cp /tmp/uclchem/answer/uclchem.png _static/logo.png
-        fi
-
-        echo "Convert .py to .ipynb using jupytext (installing jupytext)..."
-        pip install --upgrade jupytext nbformat || true
-        if ls notebooks/*.py 1> /dev/null 2>&1; then
-          jupytext --to ipynb notebooks/*.py || true
-        fi
-
-        echo "Strip outputs from generated notebooks (clean state)..."
-        python .github/scripts/strip_outputs.py
-
-
-        echo "✓ Notebook sources copied and converted"
-        ls -1 notebooks/*.ipynb | wc -l
-    
-    - name: Install UCLCHEM from GitHub
-      run: |
-        echo "Installing UCLCHEM..."
-        pip install git+https://github.com/uclchem/UCLCHEM.git
-
-        echo "✓ UCLCHEM installed!"
-        python -c "import uclchem; print('Package imported successfully')" || echo "Import check failed"
-
-    - name: Execute notebooks (on CI or when explicitly requested)
-      if: ${{ env.NOTEBOOKS_PRECOMPUTED != 'true' && ( env.UCLCHEM_EXECUTE_NOTEBOOKS == 'True' || env.UCLCHEM_EXECUTE_NOTEBOOKS == 'true' || (github.event_name == 'workflow_dispatch' && github.event.inputs.run_notebooks == 'true') ) }}
-      run: |
-        echo "Executing notebooks (this may take some time)..."
-        pip install --upgrade nbconvert nbclient jupyter
-        for nb in notebooks/[0-9]*.ipynb; do
-          echo "Running $nb"
-          jupyter nbconvert --to notebook --inplace --ExecutePreprocessor.timeout=3600 --execute "$nb" || echo "Notebook $nb failed (continuing)"
-        done
-        echo "Notebook execution step complete"
-
-    - name: Upload executed notebooks artifact (if executed)
-      if: ${{ env.NOTEBOOKS_PRECOMPUTED != 'true' && success() }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: notebooks-${{ matrix.ref }}
-        path: notebooks/
-        retention-days: 365
-    
     - name: Install documentation dependencies
+      working-directory: ./uclchem.github.io
       run: |
-        echo "Installing documentation tools..."
         pip install -r requirements.txt
-        echo "✓ Documentation dependencies installed!"
-    
-    - name: Clear notebook cache
+
+    - name: Build multi-version documentation with artifacts
+      working-directory: ./uclchem.github.io
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       run: |
-        echo "Clearing notebook execution cache..."
-        rm -rf _build/.jupyter_cache
-        echo "✓ Cache cleared!"
-    
-    - name: Build Sphinx documentation
-      run: |
-        echo "Building documentation..."
-        make html
+        echo "Building multi-version documentation..."
+        echo "Using enhanced artifact system for pre-executed notebooks"
+        echo "Artifact sources: GitHub Releases + GitHub Actions"
+        echo "Fallback: Git extraction (notebooks without outputs)"
         
-        echo "✓ Build complete!"
-        
-        echo "Build verification:"
-        if [ -d "_build/html/api" ]; then
-          echo "  ✓ API documentation: $(find _build/html/api -name '*.html' | wc -l) pages"
-        fi
-        
-        if [ -d "_build/html/notebooks" ]; then
-          echo "  ✓ Notebooks: $(ls -1 _build/html/notebooks/*.html 2>/dev/null | wc -l) rendered"
-        fi
-        
-        echo "  Total HTML pages: $(find _build/html -name '*.html' | wc -l)"
-    
+        python3 scripts/build_docs.py \
+          --config scripts/versions.yaml \
+          --github-token "$GITHUB_TOKEN" \
+          --uclchem-repo ../uclchem \
+          --ci
+
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./_build/html
-  
+        path: ./uclchem.github.io/_build/html
+
   deploy:
-    needs: build
+    needs: build-and-deploy
     if: github.ref == 'refs/heads/main'
     
     permissions:
