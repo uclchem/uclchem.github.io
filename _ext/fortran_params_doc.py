@@ -35,6 +35,8 @@ def generate_parameter_docs(app: Sphinx) -> None:
     
     # Generate overview page
     overview_path = os.path.join(output_dir, 'index.md')
+    module_names = sorted(settings._modules.keys())
+    
     with open(overview_path, 'w') as f:
         f.write("# Fortran API\n\n")
         f.write("*Auto-generated from compiled uclchemwrap modules*\n\n")
@@ -43,7 +45,7 @@ def generate_parameter_docs(app: Sphinx) -> None:
         
         # List all modules
         f.write("## Available Modules\n\n")
-        for module_name in sorted(settings._modules.keys()):
+        for module_name in module_names:
             module = settings._modules[module_name]
             n_settings = len(module._settings)
             f.write(f"- **[{module_name}]({module_name}.md)**: {n_settings} parameters/variables\n")
@@ -55,6 +57,14 @@ def generate_parameter_docs(app: Sphinx) -> None:
         f.write("settings = uclchem.advanced.GeneralSettings()\n")
         f.write("print(settings.defaultparameters.initialdens.get())  # 100.0\n")
         f.write("```\n\n")
+        
+        # Add toctree for navigation
+        f.write("```{toctree}\n")
+        f.write(":maxdepth: 2\n")
+        f.write(":hidden:\n\n")
+        for module_name in module_names:
+            f.write(f"{module_name}\n")
+        f.write("```\n")
     
     # Generate page for each module
     for module_name in sorted(settings._modules.keys()):
