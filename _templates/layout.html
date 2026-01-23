@@ -1,0 +1,115 @@
+{% extends "!layout.html" %}
+
+{# Inject version switcher into page body #}
+{% block body %}
+<div id="version-banner" style="background: #001158; color: white; padding: 8px 20px; text-align: center; font-size: 14px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; align-items: center; gap: 15px;">
+    <span>📚 Documentation Version:</span>
+    <select id="version-select" style="padding: 5px 10px; font-size: 14px; border-radius: 4px; border: none; cursor: pointer;" onchange="window.versionSwitcher.switchVersion(this.value)">
+        <option value="">Loading...</option>
+    </select>
+</div>
+
+<script>
+// Version Switcher - Loads and manages documentation versions
+window.versionSwitcher = {
+    versionsData: null,
+    currentVersion: null,
+    
+    // Initialize version switcher
+    init: function() {
+        this.detectCurrentVersion();
+        this.loadVersions();
+    },
+    
+    // Detect which version we're currently viewing
+    detectCurrentVersion: function() {
+        const path = window.location.pathname;
+        const match = path.match(/\/(develop|v[\d.]+)\//);
+        this.currentVersion = match ? match[1] : null;
+        console.log('Current version detected:', this.currentVersion);
+    },
+    
+    // Load versions.json and populate dropdown
+    loadVersions: function() {
+        // Calculate path to versions.json (always at root)
+        let versionsPath = '/versions.json';
+        
+        fetch(versionsPath)
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load versions.json');
+                return response.json();
+            })
+            .then(data => {
+                this.versionsData = data;
+                this.populateDropdown();
+            })
+            .catch(error => {
+                console.error('Failed to load versions:', error);
+                const select = document.getElementById('version-select');
+                if (select) {
+                    select.innerHTML = '<option>Version info unavailable</option>';
+                }
+            });
+    },
+    
+    // Populate version dropdown
+    populateDropdown: function() {
+        const select = document.getElementById('version-select');
+        if (!select) return;
+        
+        select.innerHTML = '';
+        
+        this.versionsData.versions.forEach(version => {
+            const option = document.createElement('option');
+            option.value = version.version;
+            option.text = version.display;
+            
+            // Add badge for preferred/stable version
+            if (version.preferred) {
+                option.text += ' ⭐';
+            }
+            
+            if (version.version === this.currentVersion) {
+                option.selected = true;
+            }
+            
+            select.appendChild(option);
+        });
+    },
+    
+    // Switch to a different version
+    switchVersion: function(newVersion) {
+        if (!newVersion || newVersion === this.currentVersion) {
+            return;
+        }
+        
+        // Get current page path without version prefix
+        let currentPath = window.location.pathname;
+        
+        // Remove current version from path
+        if (this.currentVersion) {
+            currentPath = currentPath.replace(new RegExp('/' + this.currentVersion + '(/|$)'), '/');
+        }
+        
+        // Ensure path starts with /
+        if (!currentPath.startsWith('/')) {
+            currentPath = '/' + currentPath;
+        }
+        
+        // Build new URL
+        const newUrl = window.location.origin + '/' + newVersion + currentPath;
+        console.log('Switching to:', newUrl);
+        window.location.href = newUrl;
+    }
+};
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => window.versionSwitcher.init());
+} else {
+    window.versionSwitcher.init();
+}
+</script>
+
+{{ super() }}
+{% endblock %}

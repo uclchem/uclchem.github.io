@@ -18,24 +18,34 @@ project = 'UCLCHEM'
 copyright = '2026, UCLCHEM Team'
 author = 'UCLCHEM Team'
 
-# Dynamic version detection from installed package
-try:
-    import importlib.metadata
+# Multi-version build support
+# Check for environment variables set by build script
+docs_version = os.environ.get('DOCS_VERSION', None)
+docs_display_name = os.environ.get('DOCS_DISPLAY_NAME', None)
 
-    import uclchem
-    release = importlib.metadata.version('uclchem')
-except (ImportError, importlib.metadata.PackageNotFoundError):
-    # Fallback: try git tag
-    import subprocess
+if docs_version:
+    # Building as part of multi-version build
+    release = docs_version
+    version = '.'.join(release.split('.')[:2]) if '.' in release else release
+else:
+    # Single build: Dynamic version detection from installed package
     try:
-        release = subprocess.check_output(
-            ['git', 'describe', '--tags', '--abbrev=0'],
-            stderr=subprocess.DEVNULL
-        ).decode().strip()
-    except Exception:
-        release = 'development'
+        import importlib.metadata
 
-version = '.'.join(release.split('.')[:2]) if '.' in release else release
+        import uclchem
+        release = importlib.metadata.version('uclchem')
+    except (ImportError, importlib.metadata.PackageNotFoundError):
+        # Fallback: try git tag
+        import subprocess
+        try:
+            release = subprocess.check_output(
+                ['git', 'describe', '--tags', '--abbrev=0'],
+                stderr=subprocess.DEVNULL
+            ).decode().strip()
+        except Exception:
+            release = 'development'
+
+    version = '.'.join(release.split('.')[:2]) if '.' in release else release
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -96,7 +106,7 @@ html_theme_options = {
     ],
     "navbar_start": ["navbar-logo"],
     "navbar_center": ["navbar-nav"],
-    "navbar_end": ["navbar-icon-links", "theme-switcher"],
+    "navbar_end": ["version-switcher", "navbar-icon-links", "theme-switcher"],
     "navbar_persistent": ["search-button"],
     "primary_sidebar_end": ["indices.html"],
     "footer_start": ["copyright"],
@@ -108,6 +118,11 @@ html_theme_options = {
     # Clean, less busy appearance
     "collapse_navigation": False,
     "navigation_with_keys": True,
+    # Version switcher configuration
+    "switcher": {
+        "json_url": "/versions.json",
+        "version_match": docs_version if docs_version else version,
+    },
 }
 
 # Custom colors - Leiden University Blue
@@ -146,14 +161,21 @@ myst_enable_extensions = [
 ]
 
 # AutoAPI configuration for Python API documentation
-# Standalone setup: Use installed UCLCHEM package location
+# For multiversion builds, look for source in extracted directory first
 autoapi_type = 'python'
-try:
-    import uclchem
-    autoapi_dirs = [uclchem.__path__[0]]  # Use installed package
-except ImportError:
-    # Fallback for local development (if UCLCHEM not installed)
-    autoapi_dirs = ['../src/uclchem'] if os.path.exists('../src/uclchem') else []
+
+# Check for extracted source from git ref (set during multiversion builds)
+source_path = os.environ.get('UCLCHEM_SOURCE_PATH')
+
+if source_path and os.path.exists(os.path.join(source_path, 'uclchem')):
+    # Use extracted source from specific git ref
+    autoapi_dirs = [os.path.join(source_path, 'uclchem')]
+elif os.path.exists('../src/uclchem'):
+    # Use local source for single-version builds
+    autoapi_dirs = ['../src/uclchem']
+else:
+    # Fallback: empty (will skip autoapi if no source found)
+    autoapi_dirs = []
     
 autoapi_root = 'api'
 autoapi_add_toctree_entry = True
@@ -249,3 +271,26 @@ def _ensure_docwriter(app):
 def setup(app):
     app.connect("builder-inited", _ensure_docwriter)
     return {"version": "0.1"}
+
+# ---------------------------------------------------------------------------
+# Site versioning - allow CI to set SITE_VERSION (preferred). If unset,
+# fall back to the previously-detected `release` value.
+# ---------------------------------------------------------------------------
+SITE_VERSION = os.environ.get("SITE_VERSION")
+if SITE_VERSION:
+    release = SITE_VERSION
+
+# Make site version available to templates
+html_context.setdefault("site_version", release)
+
+# Include the version footer template
+if "_templates" not in templates_path:
+    templates_path.insert(0, "_templates")
+
+# Sphinx: add the footer template to be included in the theme (pydata supports adding extra templates)
+html_sidebars = {
+    "**": [
+        "sidebar-nav-bs.html",
+    ]
+}
+html_context.setdefault("extra_footer", "footer_versions.html")

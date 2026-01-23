@@ -36,7 +36,7 @@ def generate_parameter_docs(app: Sphinx) -> None:
     # Generate overview page
     overview_path = os.path.join(output_dir, 'index.md')
     with open(overview_path, 'w') as f:
-        f.write("# Fortran Modules Reference\n\n")
+        f.write("# Fortran API\n\n")
         f.write("*Auto-generated from compiled uclchemwrap modules*\n\n")
         f.write("This section documents all Fortran modules and their parameters ")
         f.write("as they exist in the compiled code.\n\n")

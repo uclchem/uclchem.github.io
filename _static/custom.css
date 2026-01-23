@@ -9,8 +9,50 @@
     --pst-color-link-hover: #1a3a9f;
     
     /* Clean, less busy appearance */
-    --pst-sidebar-width: 280px;
+    --pst-sidebar-width: 220px;
     --pst-font-size-base: 16px;
+}
+
+/* Version switcher improvements */
+.version-switcher__button {
+    padding: 0.2rem 0.4rem !important;
+    margin: 0 !important;
+    font-size: 0.85rem !important;
+    border: 1px solid var(--pst-color-border) !important;
+    border-radius: 4px !important;
+}
+
+.version-switcher__menu {
+    min-width: 130px !important;
+}
+
+/* Navbar spacing and responsiveness adjustments */
+.bd-navbar .navbar-nav {
+    align-items: center;
+    gap: 0.25rem;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+}
+
+.bd-navbar .navbar-nav.bd-navbar-elements {
+    justify-content: flex-start !important;
+    margin-left: auto !important;
+}
+
+/* Reduce font and spacing in navbar items to prevent wrapping */
+.bd-navbar .nav-link {
+    padding: 0.35rem 0.5rem !important;
+    font-size: 0.9rem !important;
+}
+
+.bd-navbar .dropdown-toggle::after {
+    margin-left: 0.2rem !important;
+}
+
+/* Compact version switcher button */
+.version-switcher__button {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.85rem !important;
 }
 
 /* Dark mode adjustments for Leiden Blue */
@@ -28,6 +70,10 @@ html[data-theme="dark"] {
 
 .bd-sidebar-secondary {
     border-left: 1px solid var(--pst-color-border);
+}
+
+.bd-sidebar-secondary .nav-link {
+    text-align: left;
 }
 
 /* Reduce clutter in navigation items */

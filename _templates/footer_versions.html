@@ -1,0 +1,4 @@
+<div class="site-version">Version: {{ site_version or release }}{% if site_version and '+' in site_version %} ({{ site_version.split('+')[1] }}){% endif %}</div>
+<style>
+.site-version { font-size: 0.9rem; color: var(--muted-foreground); }
+</style>

@@ -1,7 +1,7 @@
-API Reference
-=============
+Python API
+==========
 
-Complete API documentation for UCLCHEM's Python and Fortran interfaces.
+Complete API documentation for UCLCHEM's Python interface.
 
 Essential Python API
 --------------------

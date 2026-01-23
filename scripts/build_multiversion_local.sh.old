@@ -1,0 +1,319 @@
+#!/usr/bin/env bash
+# Multi-version documentation builder for local testing
+# Builds docs for multiple git refs (branches/tags) of UCLCHEM
+
+set -e  # Exit on error
+
+# Configuration
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DOCS_ROOT="$(dirname "$SCRIPT_DIR")"
+UCLCHEM_REPO="$DOCS_ROOT/../uclchem"
+BUILD_ROOT="$DOCS_ROOT/_build/html"
+TEMP_DIR="$DOCS_ROOT/_build/multiversion_temp"
+
+# Set up Python environment paths
+if [ -n "$CONDA_PREFIX" ]; then
+    PYTHON="$CONDA_PREFIX/bin/python"
+    PIP="$CONDA_PREFIX/bin/pip"
+    SPHINX_BUILD="$CONDA_PREFIX/bin/sphinx-build"
+else
+    PYTHON="python"
+    PIP="pip"
+    SPHINX_BUILD="sphinx-build"
+fi
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}================================================${NC}"
+echo -e "${BLUE}Multi-Version Documentation Builder${NC}"
+echo -e "${BLUE}================================================${NC}"
+echo ""
+
+# Check prerequisites
+if [ ! -d "$UCLCHEM_REPO" ]; then
+    echo -e "${RED}Error: UCLCHEM repository not found at $UCLCHEM_REPO${NC}"
+    exit 1
+fi
+
+if [ ! -f "$DOCS_ROOT/conf.py" ]; then
+    echo -e "${RED}Error: Sphinx conf.py not found at $DOCS_ROOT/conf.py${NC}"
+    exit 1
+fi
+
+# Ensure we're using the right Python environment
+if [ -n "$CONDA_PREFIX" ]; then
+    echo -e "${GREEN}✓${NC} Using conda environment: $CONDA_PREFIX"
+else
+    echo -e "${YELLOW}⚠${NC} No conda environment detected. Using system Python."
+fi
+
+# Define versions to build
+# Format: "git_ref version_name display_name"
+VERSIONS=(
+    "develop develop Development"
+    "main v3.5.4 v3.5.4 (stable)"
+)
+
+# Clean previous builds
+echo ""
+echo -e "${YELLOW}Cleaning previous builds...${NC}"
+rm -rf "$BUILD_ROOT"
+rm -rf "$TEMP_DIR"
+mkdir -p "$TEMP_DIR"
+
+# Function to build a single version
+build_version() {
+    local git_ref=$1
+    local version_name=$2
+    local display_name=$3
+    
+    echo ""
+    echo -e "${BLUE}================================================${NC}"
+    echo -e "${BLUE}Building version: ${display_name}${NC}"
+    echo -e "${BLUE}Git ref: ${git_ref}${NC}"
+    echo -e "${BLUE}================================================${NC}"
+    
+    # Create temp directory for this version's notebooks and source
+    local notebooks_temp="$TEMP_DIR/notebooks_${version_name}"
+    local source_temp="$TEMP_DIR/source_${version_name}"
+    mkdir -p "$notebooks_temp"
+    mkdir -p "$source_temp"
+    
+    # Export notebooks and source from git ref
+    echo -e "${YELLOW}Extracting notebooks and source from git ref ${git_ref}...${NC}"
+    cd "$UCLCHEM_REPO"
+    
+    # Check if ref exists
+    if ! git rev-parse --verify "$git_ref" >/dev/null 2>&1; then
+        echo -e "${RED}Error: Git ref '$git_ref' not found in $UCLCHEM_REPO${NC}"
+        return 1
+    fi
+    
+    # Export notebooks directory from this ref
+    git archive "$git_ref" notebooks | tar -x -C "$notebooks_temp"
+    
+    if [ ! -d "$notebooks_temp/notebooks" ]; then
+        echo -e "${RED}Error: No notebooks directory found in git ref $git_ref${NC}"
+        return 1
+    fi
+    
+    local notebook_count=$(find "$notebooks_temp/notebooks" -name "*.ipynb" | wc -l)
+    echo -e "${GREEN}✓${NC} Extracted ${notebook_count} notebooks"
+    
+    # Extract entire repository for installation
+    echo -e "${YELLOW}Extracting repository from git ref ${git_ref}...${NC}"
+    git archive "$git_ref" . | tar -x -C "$source_temp"
+    
+    if [ ! -f "$source_temp/pyproject.toml" ]; then
+        echo -e "${RED}Error: No pyproject.toml found in git ref $git_ref${NC}"
+        return 1
+    fi
+    
+    echo -e "${GREEN}✓${NC} Repository extracted"
+    
+    # Install this version of UCLCHEM
+    echo -e "${YELLOW}Installing UCLCHEM from git ref ${git_ref}...${NC}"
+    cd "$source_temp"
+    
+    local install_log="$TEMP_DIR/install_${version_name}.log"
+    
+    # Install and capture output to log file
+    local install_output=$($PIP install . 2>&1 | tee "$install_log")
+    
+    if echo "$install_output" | grep -q "ERROR\|error\|failed\|FAILED"; then
+        echo -e "${RED}Warning: Installation had errors:${NC}"
+        echo "$install_output" | grep -i "error\|failed" | tail -5
+    fi
+    
+    if ! echo "$install_output" | grep -q "Successfully installed"; then
+        echo -e "${RED}Error: pip install did not complete successfully${NC}"
+        echo "$install_output" | tail -10
+        return 1
+    fi
+    
+    if ! $PYTHON -c "import uclchem" 2>/dev/null; then
+        echo -e "${RED}Error: Failed to import UCLCHEM from git ref $git_ref${NC}"
+        return 1
+    fi
+    
+    # Check if Fortran wrapper was compiled
+    if $PYTHON -c "import uclchemwrap" 2>/dev/null; then
+        echo -e "${GREEN}✓${NC} UCLCHEM ${version_name} installed (with Fortran wrapper)"
+    else
+        echo -e "${GREEN}✓${NC} UCLCHEM ${version_name} installed (Fortran wrapper not available)"
+    fi
+    
+    # Create symlink in docs root to point to this version's notebooks
+    echo -e "${YELLOW}Setting up notebooks symlink...${NC}"
+    cd "$DOCS_ROOT"
+    
+    # Remove existing notebooks directory/symlink if it exists
+    if [ -e "notebooks" ] || [ -L "notebooks" ]; then
+        rm -rf notebooks
+    fi
+    
+    # Create symlink to this version's notebooks
+    ln -s "$notebooks_temp/notebooks" notebooks
+    echo -e "${GREEN}✓${NC} Notebooks symlink created"
+    
+    # Build documentation with version-specific settings
+    echo -e "${YELLOW}Building Sphinx documentation...${NC}"
+    cd "$DOCS_ROOT"
+    
+    # Ensure doc requirements are installed
+    if [ -f "requirements.txt" ]; then
+        echo -e "${YELLOW}Installing documentation requirements...${NC}"
+        $PIP install -q -r requirements.txt
+    fi
+    
+    # Clean up dynamically generated API directories to force regeneration
+    if [ -d "api/fortran" ]; then
+        rm -rf "api/fortran"
+    fi
+    if [ -d "api/site-packages" ]; then
+        rm -rf "api/site-packages"
+    fi
+    
+    # Set environment variables for this build
+    export DOCS_VERSION="$version_name"
+    export DOCS_DISPLAY_NAME="$display_name"
+    export NOTEBOOKS_PATH="$notebooks_temp/notebooks"
+    export UCLCHEM_SOURCE_PATH="$source_temp/src"
+    
+    # Build to version-specific output directory
+    local output_dir="$BUILD_ROOT/$version_name"
+    local build_log="$TEMP_DIR/build_${version_name}.log"
+    
+    $SPHINX_BUILD -b html \
+        -d "$TEMP_DIR/doctrees_${version_name}" \
+        . \
+        "$output_dir" \
+        2>&1 | tee "$build_log"
+    
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}✓${NC} Successfully built version ${display_name}"
+        echo -e "   Output: ${output_dir}"
+    else
+        echo -e "${RED}✗${NC} Failed to build version ${display_name}"
+        return 1
+    fi
+    
+    # Clean up environment variables
+    unset DOCS_VERSION
+    unset DOCS_DISPLAY_NAME
+    unset NOTEBOOKS_PATH
+}
+
+# Build each version
+echo ""
+for version_spec in "${VERSIONS[@]}"; do
+    read -r git_ref version_name display_name <<< "$version_spec"
+    build_version "$git_ref" "$version_name" "$display_name"
+done
+
+# Create versions.json manifest
+echo ""
+echo -e "${YELLOW}Creating versions manifest...${NC}"
+cat > "$BUILD_ROOT/versions.json" << 'EOF'
+[
+  {
+    "name": "develop",
+    "version": "develop",
+    "url": "/develop/",
+    "preferred": false
+  },
+  {
+    "name": "v3.5.4 (stable)",
+    "version": "v3.5.4",
+    "url": "/v3.5.4/",
+    "preferred": true
+  }
+]
+EOF
+echo -e "${GREEN}✓${NC} Created versions.json"
+
+# Create root index.html that redirects to stable version
+echo ""
+echo -e "${YELLOW}Creating root index page...${NC}"
+cat > "$BUILD_ROOT/index.html" << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=v3.5.4/">
+    <title>UCLCHEM Documentation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo { font-size: 48px; font-weight: bold; color: #001158; margin-bottom: 20px; }
+        .versions { margin-top: 30px; }
+        .version-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: #001158;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .version-link:hover { background: #002880; }
+        .stable { background: #28a745; }
+        .stable:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <div class="logo">UCLCHEM</div>
+    <h1>Documentation</h1>
+    <p>Redirecting to stable documentation...</p>
+    <div class="versions">
+        <p>Or choose a version:</p>
+        <a href="v3.5.4/" class="version-link stable">v3.5.4 (stable)</a>
+        <a href="develop/" class="version-link">Development</a>
+    </div>
+</body>
+</html>
+EOF
+echo -e "${GREEN}✓${NC} Created root index.html"
+
+# Clean up temp directory
+echo ""
+echo -e "${YELLOW}Cleaning up temporary files (keeping logs)...${NC}"
+
+# Copy logs to build directory before cleanup
+mkdir -p "$BUILD_ROOT/logs"
+cp "$TEMP_DIR"/*.log "$BUILD_ROOT/logs/" 2>/dev/null || true
+
+rm -rf "$TEMP_DIR"
+echo -e "${GREEN}✓${NC} Cleanup complete"
+
+# Summary
+echo ""
+echo -e "${GREEN}================================================${NC}"
+echo -e "${GREEN}Multi-version build complete!${NC}"
+echo -e "${GREEN}================================================${NC}"
+echo ""
+echo "Built versions:"
+for version_spec in "${VERSIONS[@]}"; do
+    read -r git_ref version_name display_name <<< "$version_spec"
+    echo -e "  • ${display_name}: ${BUILD_ROOT}/${version_name}/"
+done
+echo ""
+echo "Build logs:"
+echo -e "  ${BLUE}ls -lh ${BUILD_ROOT}/logs/${NC}"
+echo ""
+echo "To view locally, run:"
+echo -e "  ${BLUE}cd ${BUILD_ROOT} && python3 -m http.server 8000${NC}"
+echo ""
+echo "Then open: http://localhost:8000"
+echo ""
