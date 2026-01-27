@@ -10,6 +10,14 @@ versions:
     execute: false
     description: Latest stable release
 
+  - git_ref: v4.0.0-rc1
+    version_name: v4.0.0-rc1
+    display_name: v4.0.0 Release Candidate 1
+    url_path: /v4.0.0-rc1/
+    preferred: false
+    execute: false
+    description: First release candidate for version v4.0.0 do not use in production
+
   - git_ref: develop
     version_name: develop
     display_name: Development
