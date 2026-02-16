@@ -9,7 +9,7 @@ If you use UCLCHEM in your research, please cite:
 > **Holdship, J., et al. (2017)**  
 > "UCLCHEM: A Gas-Grain Chemical Code for Clouds, Cores, and C-Shocks"  
 > *The Astronomical Journal*, 154(2), 38  
-> [DOI: 10.3847/1538-3881/aa773f](https://doi.org/10.3847/1538-3881/aa773f) • [arXiv:1707.06489](https://arxiv.org/abs/1707.06489)
+> [DOI: 10.3847/1538-3881/aa773f](https://doi.org/10.3847/1538-3881/aa773f) • [arXiv:1705.10677](https://arxiv.org/abs/1705.10677)
 
 ---
 
