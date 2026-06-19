@@ -6,10 +6,13 @@ This guide will walk you through running your first UCLCHEM model in less than 5
 
 Let's model a simple molecular cloud using UCLCHEM's object-oriented interface:
 
+```{warning}
+Use `if __name__ == "__main__":` and indent the code by one level if you want to run it as a script.
+```
+
 ```python
 import uclchem
-
-# Define model parameters
+    # Define model parameters
 params = {
     "initialDens": 1e4,      # Initial density (cm^-3)
     "initialTemp": 10.0,     # Initial temperature (K)
@@ -26,14 +29,18 @@ cloud = uclchem.model.Cloud(
 # Check if the model ran successfully
 cloud.check_error()
 
+# Obtain your results as dataframes:
+phys_df, chem_df = cloud.get_dataframes(joined=False)
+
 # Access final abundances for requested species
-print(f"Final CO abundance: {cloud.final_abundances['CO']:.2e}")
-print(f"Final H2O abundance: {cloud.final_abundances['H2O']:.2e}")
-print(f"Final CH3OH abundance: {cloud.final_abundances['CH3OH']:.2e}")
+print(f"Final time in years: {phys_df['Time'].iloc[-1]:.2e}")
+print(f"Final CO abundance: {chem_df['CO'].iloc[-1]:.2e}")
+print(f"Final H2O abundance: {chem_df['H2O'].iloc[-1]:.2e}")
+print(f"Final CH3OH abundance: {chem_df['CH3OH'].iloc[-1]:.2e}")
 ```
 
 ```{note}
-The first run may take a minute as Python imports the compiled Fortran modules. Subsequent runs are faster.
+The first run may take a minute as Python imports the compiled Fortran modules.
 ```
 
 ## Understanding the Model Object

@@ -6,7 +6,7 @@ Welcome to UCLCHEM! This guide will help you get up and running with UCLCHEM in 
 
 Before installing UCLCHEM, make sure you have:
 
-- **Python 3.8 or later**
+- **Python 3.12 or later**
 - **A Fortran compiler** (gfortran recommended)
 - **pip** package manager
 

@@ -109,16 +109,20 @@ If you plan to modify UCLCHEM or contribute to development:
 
 ```bash
 cd UCLCHEM
-pip install -e .
+pip install --no-build-isolation -e .
 ```
 
 Editable mode (`-e`) means changes to Python files take effect immediately without reinstalling.
+It does not install any of the dependencies, so those can be installed before
+by doing `pip install .`, and then installing again, but in editable mode.
 
 ```{warning}
 After modifying the chemical network or Fortran code, you must reinstall:
 \`\`\`bash
 pip install .
 \`\`\`
+The install will then again not be editable, meaning changes to the python code do 
+not take effect immediately.
 ```
 
 ## Updating UCLCHEM
