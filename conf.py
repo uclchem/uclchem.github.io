@@ -7,6 +7,7 @@
 # Standalone setup: Use installed UCLCHEM package (no relative paths)
 import os
 import sys
+from pathlib import Path
 
 # Add _ext directory for custom extensions
 sys.path.insert(0, os.path.abspath('_ext'))
