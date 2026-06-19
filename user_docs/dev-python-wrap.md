@@ -35,22 +35,21 @@ We could leave it at that. However, for ease of use, we write pure python functi
 
 ```python
 
-def cloud(param_dict=None, out_species=None):
+def cloud(param_dict=None):
     """Run cloud model from UCLCHEM
 
     Args:
-        param_dict (dict,optional): A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
-        out_species (list, optional): A list of species for which final abundance will be returned. If None, no abundances will be returned.. Defaults to None.
+        param_dict (dict, optional): A dictionary of parameters where keys are any of the variables in defaultparameters.f90 and values are value for current run.
 
     Returns:
-        int,list: A integer which is negative if the model failed to run, or a list of abundances of all species in `outSpecies`
+        int: A integer which is negative if the model failed to run, or 0 on success.
     """
-    n_out,param_dict,out_species=_reform_inputs(param_dict,out_species)
-    abunds, success_flag = wrap.cloud(dictionary=param_dict, outspeciesin=out_species)
-    if success_flag < 0 or n_out == 0:
+    n_out, param_dict = _reform_inputs(param_dict)
+    abunds, success_flag = wrap.cloud(dictionary=param_dict)
+    if success_flag < 0:
         return success_flag
     else:
-        return abunds[: n_out]
+        return abunds
 ```
 
 This allows us to make some arguments optional using python's keyword arguments. It also lets us write docstrings from which we can generate documentation for the functions. Finally, it lets us tidy up the output! For example, arrays passed too and from the Fortran subroutines must be of fixed length so in this function, we cut the output abundance array down to just the elements the user actually wanted.

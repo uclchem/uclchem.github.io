@@ -22,8 +22,7 @@ params = {
 
 # Create and run a Cloud model
 cloud = uclchem.model.Cloud(
-    param_dict=params,
-    out_species=["CO", "H2O", "CH3OH"]
+    param_dict=params
 )
 
 # Check if the model ran successfully
@@ -52,7 +51,7 @@ When you create a `Cloud` object, UCLCHEM automatically:
 
 Key attributes you can access:
 - `cloud.success_flag` - 0 if successful, negative if error
-- `cloud.final_abundances` - Dict of abundances for `out_species`
+- `cloud.final_abundances` - Dict of final abundances for all species
 - `cloud.physics_array` - All physical parameters vs time
 - `cloud.chemical_abun_array` - All species abundances vs time
 
@@ -157,10 +156,22 @@ Here are the most commonly used parameters:
 | `initialDens` | Initial gas density (cm⁻³) | 10² - 10⁶ |
 | `initialTemp` | Initial temperature (K) | 10 - 300 |
 | `finalTime` | Simulation end time (years) | 10⁴ - 10⁷ |
-cloud = uclchem.model.Cloud(
-    param_dict=params,
-    out_species=["H2O", "CO", "CH3OH"]
-)
+| `freefall` | Enable gravitational collapse | True / False |
+| `reltol` | ODE relative tolerance | 1e-4 to 1e-8 |
+
+## Common Scenarios
+
+### 1. Static Cloud
+
+```python
+params = {
+    "initialDens": 1e4,
+    "initialTemp": 10.0,
+    "finalTime": 1e6,
+    "freefall": False
+}
+
+cloud = uclchem.model.Cloud(param_dict=params)
 ```
 
 ### 2. Collapsing Cloud
@@ -176,7 +187,7 @@ params = {
     "freefall": True  # Enable collapse
 }
 
-cloud = uclchem.model.Cloud(param_dict=params, out_species=["CO"])
+cloud = uclchem.model.Cloud(param_dict=params)
 ```
 
 ### 3. Multi-Phase Chemistry
@@ -186,21 +197,37 @@ Chain models together using previous results:
 ```python
 # Phase 1: Cold cloud chemistry
 cold_cloud = uclchem.model.Cloud(
-    param_dict={"initialTemp": 10.0, "finalTime": 1e6},
-    out_species=["H2O", "$H2O"]
+    param_dict={"initialTemp": 10.0, "finalTime": 1e6}
 )
 
 # Phase 2: Use previous model's final abundances as starting point
-# The next_starting_chemistry provides the final abundances
 warm_cloud = uclchem.model.Cloud(
     param_dict={"initialTemp": 50.0, "finalTime": 1e5},
-    starting_chemistry=cold_cloud.next_starting_chemistry,
-    out_species=["H2O", "$H2O"]
+    starting_chemistry=cold_cloud.next_starting_chemistry
 )
+```
+
+### 4. Shock Chemistry
+
+Model chemistry in a C-type shock:
+
+```python
+params = {
+    "initialDens": 1e3,
+    "initialTemp": 10.0,
+    "shockVelocity": 20.0,  # km/s
+    "finalTime": 1e5
+}
+
+shock = uclchem.model.CShock(param_dict=params)
+```
+
+## Error Handling
+
 The model object provides built-in error checking:
 
 ```python
-cloud = uclchem.model.Cloud(param_dict=params, out_species=["CO"])
+cloud = uclchem.model.Cloud(param_dict=params)
 
 # Check for errors
 cloud.check_error()  # Prints detailed error message if success_flag < 0
@@ -224,7 +251,6 @@ Common error codes:
 Save model results to disk:
 
 ```python
-# Save abundances to a file during the run
 params = {
     "initialDens": 1e4,
     "initialTemp": 10.0,
@@ -236,61 +262,11 @@ params = {
 cloud = uclchem.model.Cloud(param_dict=params)
 ```
 
-Load a previous model from file:
+Load a previously saved model:
 
 ```python
-# Load a previously saved model
 cloud = uclchem.model.Cloud(read_file="cloud_output.dat")
-
-# Access the data
-df = cloud.get_dataframes(
-shock = uclchem.model.CShock(
-    param_dict=params,
-    out_species=["H2", "CO", "SiO"]
-
-
-# First phase: cold chemistry
-result1 = uclchem.model.cloud(param_dict=params, out_species=["H2O"])
-
-# Second phase: warm-up (requires different model)
-# See tutorials for complete example
-```
-
-### 3. Shock Chemistry
-
-Model chemistry in a C-type shock:
-
-```python
-params = {
-    "initialDens": 1e3,
-    "initialTemp": 10.0,
-    "shockVelocity": 20.0,  # km/s
-    "finalTime": 1e5
-}
-
-result = uclchem.model.cshock(param_dict=params, out_species=["H2", "CO"])
-```
-
-## Error Handling
-
-Check the success flag to handle errors:
-
-```python
-result = uclchem.model.cloud(param_dict=params, out_species=["CO"])
-
-if result[0] == 0:Always run `cloud.check_error()` and `cloud.check_conservation()` after each model.
-```
-
-```{tip}
-**Use objects**: The object-oriented interface makes it easy to chain models and analyze results.
-```
-
-```{tip}
-**Access everything**: Model objects store all parameters, arrays, and results for easy inspection
-    print("✗ Negative abundances encountered")
-else:
-    error_msg = uclchem.utils.check_error(result[0])
-    print(f"✗ Error: {error_msg}")
+df = cloud.get_dataframes()
 ```
 
 ## Next Steps

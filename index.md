@@ -66,8 +66,7 @@ params = {
 
 # Create and run a cloud model
 cloud = uclchem.model.Cloud(
-    param_dict=params,
-    out_species=["CO", "H2O", "CH3OH"]
+    param_dict=params
 )
 
 # Check results

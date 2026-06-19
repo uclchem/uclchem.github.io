@@ -11,18 +11,6 @@ These tutorials cover advanced UCLCHEM features for complex modeling scenarios.
 ../../notebooks/7_*
 ```
 
-:::{grid-item-card} Shock Models
-Tutorial coming soon - will cover C-type and J-type shocks
-:::
-
-::::
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-```
-
 ## Prerequisites
 
 These tutorials assume you have completed the [Basic Tutorials](../basics/index.md) and are comfortable with:

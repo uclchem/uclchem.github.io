@@ -17,8 +17,7 @@ cloud = uclchem.model.Cloud(
         "finalTime": 1e6,        # End time (years)
         "freefall": True,        # Enable freefall collapse
         "finalDens": 1e7,        # Final density for freefall
-    },
-    out_species=["CO", "H2O", "CH3OH"]
+    }
 )
 ```
 
@@ -176,10 +175,9 @@ cloud = uclchem.model.Cloud(
     param_dict={
         "initialDens": 1e4,
         "outputFile": "full_output.dat",      # All species, all timesteps
-        "columnFile": "selected_species.dat",  # Just out_species
+        "columnFile": "selected_species.dat",  # Selected species column output
         "ratesFile": "reaction_rates.dat",     # Reaction rates
-    },
-    out_species=["CO", "H2O", "CH3OH"]
+    }
 )
 ```
 

@@ -62,8 +62,7 @@ Quick Start
    
    # Create and run a cloud model
    cloud = uclchem.model.Cloud(
-       param_dict={'initialDens': 1e4, 'finalTime': 1e6},
-       out_species=['CO', 'H2O']
+       param_dict={'initialDens': 1e4, 'finalTime': 1e6}
    )
    
    # Access results as DataFrame

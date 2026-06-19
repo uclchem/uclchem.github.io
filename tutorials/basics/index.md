@@ -13,14 +13,6 @@ Saving and Loading UCLCHEM Models <../../notebooks/2c_save_load_model_objects.ip
 ../../notebooks/3_running_a_grid.ipynb
 ```
 
-::::
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-```
-
 ## What You'll Learn
 
 In these tutorials, you'll learn:

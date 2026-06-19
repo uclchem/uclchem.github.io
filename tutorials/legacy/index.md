@@ -27,5 +27,5 @@ These patterns remain useful when:
 
 For new projects, we recommend:
 
-- [In-Memory Modelling](../../notebooks/2b_modelling_objects_in_memory.ipynb) - More flexible and performant
+- [In-Memory Modelling](../../notebooks/2b_modeling_objects_in_memory.ipynb) - More flexible and performant
 - [Model Objects](../basics/index.md) - Object-oriented API with cleaner interfaces

@@ -9,14 +9,6 @@ Learn how to analyze UCLCHEM results, visualize chemical evolution, and identify
 ../../notebooks/4_chemical_analysis.ipynb
 ```
 
-::::
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-```
-
 ## What You'll Learn
 
 In these tutorials, you'll learn how to:

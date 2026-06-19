@@ -10,14 +10,6 @@ Learn how to customize UCLCHEM for your specific research needs.
 ../../notebooks/6_*
 ```
 
-::::
-
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-```
-
 ## What You'll Learn
 
 In these tutorials, you'll learn how to:
