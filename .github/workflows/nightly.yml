@@ -1,0 +1,119 @@
+name: Nightly Build
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Every day at 6am UTC
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'UCLCHEM version tag (e.g. v4.1.0). Leave empty to auto-detect from latest release.'
+        required: false
+
+permissions:
+  contents: write  # needed to commit versions.yaml updates
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout documentation repository
+      uses: actions/checkout@v4
+      with:
+        path: 'uclchem.github.io'
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Determine target UCLCHEM version
+      id: version
+      run: |
+        if [ -n "${{ github.event.inputs.version }}" ]; then
+          TAG="${{ github.event.inputs.version }}"
+          echo "Source: manual input"
+        else
+          TAG=$(curl -sf https://api.github.com/repos/uclchem/UCLCHEM/releases/latest | jq -r .tag_name)
+          echo "Source: GitHub releases API"
+        fi
+        echo "tag=$TAG" >> $GITHUB_OUTPUT
+        echo "Latest UCLCHEM release: $TAG"
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+
+    - name: Install documentation dependencies
+      working-directory: ./uclchem.github.io
+      run: pip install -r requirements.txt
+
+    - name: Update versions.yaml for new release
+      id: update
+      working-directory: ./uclchem.github.io
+      run: |
+        OUTPUT=$(python3 scripts/update_release.py "${{ steps.version.outputs.tag }}")
+        echo "$OUTPUT"
+        if echo "$OUTPUT" | grep -q "^changed=true"; then
+          echo "updated=true" >> $GITHUB_OUTPUT
+        else
+          echo "updated=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Checkout UCLCHEM repository
+      uses: actions/checkout@v4
+      with:
+        repository: 'uclchem/uclchem'
+        path: 'uclchem'
+        fetch-depth: 0
+
+    - name: Prepare UCLCHEM repository refs
+      working-directory: ./uclchem
+      run: |
+        git fetch origin develop:develop 2>/dev/null || echo "develop already exists"
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gfortran
+
+    - name: Build multi-version documentation
+      working-directory: ./uclchem.github.io
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        python3 scripts/build_docs.py \
+          --config scripts/versions.yaml \
+          --github-token "$GITHUB_TOKEN" \
+          --uclchem-repo ../uclchem \
+          --ci
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./uclchem.github.io/_build/html
+
+    - name: Commit updated versions.yaml
+      if: steps.update.outputs.updated == 'true'
+      working-directory: ./uclchem.github.io
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add scripts/versions.yaml
+        git commit -m "chore: update main to ${{ steps.version.outputs.tag }}"
+        git push
+
+  deploy:
+    needs: build-and-deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

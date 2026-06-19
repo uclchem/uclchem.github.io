@@ -8,7 +8,7 @@ UCLCHEM is a gas-grain chemical code for astrochemical modelling that can be use
 
 UCLCHEM integrates with our **MakeRates** system, a Python tool that produces all files required for the chemical network. By combining reaction lists from astrochemistry databases such as UMIST and KIDA with custom (ice) reactions, users can quickly generate complex networks tailored to their research. We provide no warranty for the chemical networks you choose to use.
 
-UCLCHEM is freely available for use and modification for any astrochemical purpose. We ask that users reference [our release paper](https://doi.org/10.3847/1538-3881/aa773f) if UCLCHEM is used in published work, and we welcome questions and suggestions. If you wish to contribute code, please refer to the contributing section.
+UCLCHEM is freely available for use and modification for any astrochemical purpose. We ask that users reference [our release paper](https://arxiv.org/abs/2606.20265) if UCLCHEM is used in published work, and we welcome questions and suggestions. If you wish to contribute code, please refer to the contributing section.
 
 ::::{grid} 1 1 2 2
 :gutter: 3

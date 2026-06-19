@@ -3,10 +3,7 @@ name: Build and Deploy Documentation
 on:
   push:
     branches: [main]
-  schedule:
-    # Rebuild weekly to catch UCLCHEM updates
-    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
-  workflow_dispatch:  # Allow manual triggers
+  workflow_dispatch:
     inputs:
       github_token:
         description: 'GitHub token for artifact access'

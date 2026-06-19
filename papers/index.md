@@ -6,6 +6,12 @@ Publications using UCLCHEM and related research.
 
 If you use UCLCHEM in your research, please cite:
 
+> **Vermariën, G. et al. (2026)**
+> UCLCHEM 4.0: An open source gas-grain astrochemistry simulation framework
+> Submitted to RASTI
+> [https://doi.org/10.48550/arXiv.2606.20265](https://doi.org/10.48550/arXiv.2606.20265) 
+
+
 > **Holdship, J., et al. (2017)**  
 > "UCLCHEM: A Gas-Grain Chemical Code for Clouds, Cores, and C-Shocks"  
 > *The Astronomical Journal*, 154(2), 38  
