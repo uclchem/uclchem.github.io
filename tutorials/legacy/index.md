@@ -6,7 +6,7 @@ These tutorials demonstrate older patterns that remain supported for backward co
 :maxdepth: 1
 :caption: Legacy Tutorials
 
-../../notebooks/2a_modelling_objects_on_disk.ipynb
+../../notebooks/2a_modeling_objects_on_disk.ipynb
 ```
 
 ## About Legacy Tutorials

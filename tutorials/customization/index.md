@@ -3,10 +3,11 @@
 Learn how to customize UCLCHEM for your specific research needs.
 
 ```{toctree}
+:glob:
 :maxdepth: 1
 :caption: Customization Tutorials
 
-../../notebooks/6_advanced_settings.ipynb
+../../notebooks/6_*
 ```
 
 ::::

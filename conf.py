@@ -67,13 +67,12 @@ extensions = [
 
 templates_path = ['_templates']
 exclude_patterns = [
-    '_build', 
-    'Thumbs.db', 
-    '.DS_Store', 
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
     '**.ipynb_checkpoints',
     'notebooks/dev_notebooks/**',      # Development notebooks (not for docs)
     'notebooks/functional_form/**',    # Old functional interface (deprecated)
-    'notebooks/1_first_model.ipynb',   # Duplicate of object-oriented version
     'notebooks/*.py',                  # Python script versions of notebooks
     'README.md',                       # Repository README (not for docs site)
     'DEPLOYMENT.md',                   # Deployment instructions (not for docs site)
@@ -81,6 +80,12 @@ exclude_patterns = [
     'user_docs/style-guide.md',        # Internal style guide (not for users)
     'user_docs/writing-style-prompt.md',  # Internal prompts (not for users)
 ]
+
+# 1_first_model.ipynb is superseded by 1_first_model_object.ipynb in develop,
+# but the object version doesn't exist in older stable releases. Only exclude
+# the legacy copy when the preferred version is actually present.
+if Path('notebooks/1_first_model_object.ipynb').exists():
+    exclude_patterns.append('notebooks/1_first_model.ipynb')
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

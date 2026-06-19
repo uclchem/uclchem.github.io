@@ -3,11 +3,13 @@
 Start here if you're new to UCLCHEM. These tutorials cover the fundamental concepts and workflows.
 
 ```{toctree}
+:glob:
 :maxdepth: 1
 :caption: Basic Tutorials
 
-../../notebooks/1_first_model_object.ipynb
-../../notebooks/2b_modelling_objects_in_memory.ipynb
+../../notebooks/1_first_model*
+../../notebooks/2b_modeling_objects_in_memory.ipynb
+Saving and Loading UCLCHEM Models <../../notebooks/2c_save_load_model_objects.ipynb>
 ../../notebooks/3_running_a_grid.ipynb
 ```
 

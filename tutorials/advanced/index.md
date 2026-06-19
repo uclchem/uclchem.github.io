@@ -3,11 +3,12 @@
 These tutorials cover advanced UCLCHEM features for complex modeling scenarios.
 
 ```{toctree}
+:glob:
 :maxdepth: 1
 :caption: Advanced Tutorials
 
-../../notebooks/5_heating_and_cooling.ipynb
-../../notebooks/7_heating_cooling_settings.ipynb
+../../notebooks/5_*
+../../notebooks/7_*
 ```
 
 :::{grid-item-card} Shock Models

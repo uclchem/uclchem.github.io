@@ -237,6 +237,34 @@ def check_fortran_available(python_path: Path) -> bool:
     return returncode == 0
 
 
+def convert_jupytext_notebooks(notebooks_dir: Path) -> int:
+    """Convert Jupytext .py notebooks to .ipynb format.
+
+    Skips .py files that don't contain a jupytext header.
+    Returns the number of files successfully converted.
+    """
+    converted = 0
+    for py_file in sorted(notebooks_dir.glob("*.py")):
+        try:
+            header = py_file.read_text(errors="ignore")[:300]
+        except OSError:
+            continue
+        if "jupytext" not in header:
+            continue
+
+        returncode, _, stderr = run_command(
+            ["jupytext", "--to", "notebook", str(py_file)],
+            cwd=notebooks_dir,
+            capture_output=True,
+        )
+        if returncode == 0:
+            converted += 1
+        else:
+            log(f"Jupytext conversion failed for {py_file.name}: {stderr}", LogLevel.WARNING)
+
+    return converted
+
+
 def run_sphinx_build(
     source_dir: Path,
     build_dir: Path,

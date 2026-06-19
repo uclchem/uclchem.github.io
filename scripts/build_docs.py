@@ -18,6 +18,7 @@ from build_utils import (
     check_fortran_available,
     check_notebook_artifacts,
     clean_directory,
+    convert_jupytext_notebooks,
     create_symlink,
     detect_environment,
     download_notebook_artifacts,
@@ -169,6 +170,10 @@ class MultiVersionBuilder:
         )
         
         if file_count > 0 and (notebooks_temp / "notebooks").exists():
+            nb_dir = notebooks_temp / "notebooks"
+            converted = convert_jupytext_notebooks(nb_dir)
+            if converted > 0:
+                log(f"Converted {converted} Jupytext .py notebooks to .ipynb", LogLevel.SUCCESS)
             log(f"Extracted {file_count} notebook files (no outputs)", LogLevel.SUCCESS)
             return True
         else:
